@@ -72,6 +72,10 @@ while (playing) {
     if (player) {
       // Ask the player for a number from ... 0 to 2, in fact
       force = readlineSync.keyInSelect(strength, yourTurn)
+      if (force < 0) {
+        console.log(endGame)
+        process.exit()
+      }
 
       // Read the value at this index from `strength` array and
       // prepare a comment, padded with just enough spaces.
@@ -160,4 +164,8 @@ while (playing) {
 
   // Ask the player if they want to play again
   playing    = readlineSync.keyInYN(replay) // true | ""
+  
+  if (!playing) {
+    console.log(endGame)
+  }
 }
