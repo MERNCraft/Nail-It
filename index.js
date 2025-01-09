@@ -7,9 +7,10 @@ const readlineSync = require('readline-sync')
 
 // Define the strings that will be used for feedback
 const invite = `Let's knock a nail into this computer!
+
 * Each player takes a turn to hit the nail once.
 * A player can use one of three levels of strength: gently, firmly, hard.
-* Depending on the strength used, the nail will be driven deeper or less deep into the Terminal.
+* Depending on the strength used, the nail will be driven more or less deeply into the Terminal.
 * The player who knocks the nail all the way in is the winner.
 
 Are you ready?
@@ -27,13 +28,12 @@ const endGame   = "Thanks for a good game!"
 const best     = 3
 const oneOver  = best + 1
 
-
 let playing    = true
 let force      = 0
-let toDelete   = 10
+let toDelete   = 11
 let prompt     // "The nail is X units long." | "Y hit the nail Z."
 let nail       // "-==========<|" ... "=====<|" ... "<|"
-let started    // false until first hit
+let started    // falsy until first hit
 
 let initial, length
 
@@ -164,7 +164,7 @@ while (playing) {
 
   // Ask the player if they want to play again
   playing    = readlineSync.keyInYN(replay) // true | ""
-  
+
   if (!playing) {
     console.log(endGame)
   }

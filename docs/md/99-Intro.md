@@ -19,7 +19,20 @@ This guide is designed for JavaScript beginners. It will show you not just how t
 
 You'll be writing in plain JavaScript, using NodeJS, running on your desktop computer.
 
-I'll start by showing you a simulation of the game that you will create - a simulation that will run here, in this page in your browser. **Your game will not do that.** My simulation is just to help you think about all the different pieces that you'll need to create and how you will need to make them interact.
+## Simulation
+
+I'll start by showing you a simulation of the game that you will create - a simulation that runs here, in this page in your browser. **Your game will not do that.** My simulation is just to help you think about all the different pieces that you'll need to create and how you will need to make them interact.
+
+<iframe
+  id="iframe-Nail-It"
+  title="Nail-It"
+  width="550"
+  height="420"
+  src="https://merncraft.github.io/Nail-It-Browser">
+</iframe>
+
+1. Click on the game to activate it
+2. Play until you get tired of losing
 
 ## Who I am writing this for
 At the school for web development where I work, students have seen all the code used in this game after only the first 10 days. The challenge for me was to create an activity for them that would impress their friends and family after such a short learning period.
