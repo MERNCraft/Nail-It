@@ -1,7 +1,7 @@
 {
   "scripts": {
     "pandoc": "pandoc -o docs/index.html --filter public/filter.js --template=public/template.html docs/md/*.md",
-    "watch": "node public/watch.js Hammer-Game",
+    "watch": "node public/watch.js Nail-It",
     "publish": "node publish.js"
   },
   "devDependencies": {

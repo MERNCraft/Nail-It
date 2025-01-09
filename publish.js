@@ -24,7 +24,7 @@ const body = JSON.stringify({
   }
 })
 
-const URL = "https://api.github.com/repos/MERNCraft/Hammer-Game/pages"
+const URL = "https://api.github.com/repos/MERNCraft/Nail-it/pages"
 
 fetch(URL, {
   method: 'POST',

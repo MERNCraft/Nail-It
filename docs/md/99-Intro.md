@@ -3,7 +3,7 @@ title: Amaze with your First JavaScript Game
 subtitle: A simple game that will beat your friends whenever it gets the chance
 month: January 2025
 organization: MERNCraft
-repo: Hammer-Game
+repo: Nail-it
 ---
 <section
   id="intro"

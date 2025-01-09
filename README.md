@@ -1,19 +1,9 @@
-# Hammer-Game #
+# Nail-it #
 
-To create your own content, edit the file at `docs/md/99-Intro.md` and add more `.md` files in the `docs/md/` folder
-```
-.
-├── README.md
-├── docs
-│   ├── images
-│   ├── index.html
-│   └── md
-│       ├── 99-Intro.md
-│       └── images -> ../images
-├── package.json
-└── public -> ../MERNCraft/public
-```
+[Full Guide](https://merncraft.github.io/Nail-It/)
 
-Visit [the HTM-Elves Organization site](https://HTM-Elves.github.io) for tutorials on how to work with the HTM-Elves workflow.
+This repository contains a NodeJS game that a complete newcomer to JavaScript can build. 
 
-Replace the contents of this README.md file with a summary of the tutorial that you are writing.
+[Online Simulation]() of the NodeJS game
+
+The Guide explains everything from setting up a comfortable development for writing JavaScript to troubleshooting problems that occur on the way.
