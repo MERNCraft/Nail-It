@@ -10,44 +10,57 @@ const invite = `Let's knock a nail into this computer.
 * The player who knocks the nail all the way in is the winner.
 `
 const whoStarts = "If you want to start, type Y. If you want me to start press any other key. "
-const replay    = "Do you want to play again? (Type Y for Yes)"
+const nailIs    = "The nail is "
+const long      = " units long."
+const replay    = "\nDo you want to play again? (Type Y for Yes)"
 const endGame   = "Thanks for a good game!"
 
 const yourTurn = "Your turn. How hard do you plan to hit?"
 const myTurn   = "My turn. I will hit the nail "
-const gameOver = "The nail is fully driven into the wood."
-// ...
+const gameOver = "The nail is fully driven into the wood.\n|"
 
-/* SET UP THE GAME */
-const initial  = 12
 const best     = 3
 const oneOver  = best + 1
 
 let playing    = true
-let unitsLeft  = initial
 let force      = 0
+let length
+let nail
+let hit
 
+// Start
 console.log(invite)
 let player = readlineSync.keyInYN(whoStarts)
+
+// Ensure that the player who starts alternates
 let nextPlayer = !player
 
 while (playing) {
-  while (unitsLeft) {
-    // Draw nail (remove previous drawing)
-    console.log(unitsLeft)
+  // Set the initial length of the nail
+  length  = 12 + Math.floor(Math.random() * oneOver)
+  console.log(nailIs + length + long)
+  hit = false
+
+  while (length) {
+    // Draw nail
+    if (hit) {
+      nail = "=".repeat(length - 1) + "<|"
+    } else {
+      nail = "-" + "=".repeat(length - 2) + "<|"
+    }
+    console.log(nail)
 
     // Choose force
     if (player) {
       force = readlineSync.keyInSelect(strength, yourTurn) + 1;
 
     } else {
-      if (unitsLeft < oneOver) {
-        force = unitsLeft
+      if (length < oneOver) {
+        force = length
 
       } else {
-        force = unitsLeft % oneOver
+        force = length % oneOver
         if (!force) {
-          console.log("forced to lose:")
           force = Math.floor(Math.random() * best) + 1
         }
       }
@@ -62,14 +75,15 @@ while (playing) {
     }
 
     // Calculate new length
-    unitsLeft -= force
+    length -= force
     player = !player
+    hit = true
   }
 
-  console.log(gameOver, winner[player + 0])
+  console.log(gameOver)
+  console.log(winner[player + 0])
 
   // Get ready to play again (switching to non-player)
-  unitsLeft  = initial
   player     = nextPlayer
   nextPlayer = !nextPlayer
   playing    = readlineSync.keyInYN(replay)

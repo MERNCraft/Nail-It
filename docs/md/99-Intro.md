@@ -1,6 +1,6 @@
 ---
-title: Hammer-Game
-subtitle: (set subtitle in 99-Intro.md, if required)
+title: Amaze with your First JavaScript Game
+subtitle: A simple game that will beat your friends whenever it gets the chance
 month: January 2025
 organization: MERNCraft
 repo: Hammer-Game
@@ -10,10 +10,20 @@ repo: Hammer-Game
   aria-labelledby="intro"
   data-item="Introduction"
 >
-  <h2><a href="#intro">Introduction</a></h2>
 
-To create your own content, edit the file at `docs/md/99-Intro.md` and add more `.md` files in the `docs/md/` folder.
+![](images/NailIt.webp)
 
-See [Writing Your Own Tutorials](https://htm-elves.github.io/Writing-Your-Own-Tutorials/) for tips and shortcuts.
+<h2><a href="#intro">Preview</a></h2>
+
+This guide is designed for JavaScript beginners. It will show you not just how to write simple code, but also how to convert an idea into a script, how to search online for ways to make progress, and how to think like a game developer.
+
+You'll be writing in plain JavaScript, using NodeJS, running on your desktop computer.
+
+I'll start by showing you a simulation of the game that you will create - a simulation that will run here, in this page in your browser. **Your game will not do that.** My simulation is just to help you think about all the different pieces that you'll need to create and how you will need to make them interact.
+
+## Who I am writing this for
+At the school for web development where I work, students have seen all the code used in this game after only the first 10 days. The challenge for me was to create an activity for them that would impress their friends and family after such a short learning period.
+
+Perhaps you haven't even begun learning JavaScript yet. That's OK. I'll explain how to get started, and how to check, step-by-step, that you are on the right path.
 
 </section>
