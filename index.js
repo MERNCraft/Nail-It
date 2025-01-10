@@ -55,11 +55,11 @@ while (playing) {
     // Prepare to draw the nail
     if (!started) {
       // Draw the whole nail, including the tip
-      nail = "-" + "=".repeat(length - 2) + "<|"
+      nail = "-" + "=".repeat(length - 1) + "|"
     } else {
-      // There will be at least one unit show, because the game
+      // There will be at least one unit showing, because the game
       // is not yet over
-      nail = "=".repeat(length - 1) + "<|"
+      nail = "=".repeat(length) + "|"
     }
     // Delete any outdated dialog
     clear = '\x1B[1A\x1B[K'.repeat(toDelete)

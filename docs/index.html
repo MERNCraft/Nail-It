@@ -41,6 +41,8 @@ that you could follow without thinking. At the end (and very quickly)
 you would have a game that works and amazes your friends, but all you
 would have learned would be <em>how to follow instructions</em>.</p>
 <p>I’m not going to do that.</p>
+<p>Remember: theres’s 10 days’ worth of course material here for you to
+work through. It’s worth making an effort.</p>
 <p>I choose to write this article as a guide. That means both “as
 someone who has already travelled this path” and “as a description of
 what you will see along the way, and what to look out for.” As a
@@ -67,10 +69,151 @@ JavaScript techniques, and not just used them.</p>
 then it shows that you have really learnt something. Perhaps this is
 what will truly amaze your friends.</p>
 </section>
-<section id="intro" aria-labelledby="intro" data-item="Introduction">
+<!-- What Needs to be Done -->
+<section id="what-needs-to-be-done" aria-labelledby="what-needs-to-be-done" data-item="What Needs To Be Done">
+<h2>
+<a href="#what-needs-to-be-done">What Needs To Be Done</a>
+</h2>
+<p>When you play the game, you get caught up in it. (At least, I hope
+you do.) But in order to create such a game, you have to step back and
+think, in detail, about what moving parts it needs, and how to make them
+move. So here’s a list of some of the things that you may have noticed,
+without realising it.</p>
+<h2 id="things-that-the-game-can-do">Things that the game can do</h2>
+<ol type="1">
+<li>The game uses text.</li>
+<li>Some of the text is fixed.</li>
+<li>Some of the text is dynamic. It changes a little depending on the
+circumstances.</li>
+<li>Some of the text sometimes disappears.</li>
+<li>The game uses numbers.</li>
+<li>The numbers can be random, like the initial length of the nail.</li>
+<li>The game asks you to make choices, and it asks you to type a number
+or a letter to represent your choice.</li>
+<li>The game can make its own choices: what text to show next, what move
+the computer should make,</li>
+<li>The game seems to use subtraction, because the nail gets shorter
+after each turn.</li>
+<li>The game uses repetition. You play, the computer plays, you play
+again, …</li>
+<li>The game makes calculations, so that the computer can win.</li>
+<li>The game knows when the game is over.</li>
+<li>In another kind of repetition, the game can start over from the
+begininning.</li>
+</ol>
+<details class="question" open>
+<summary>
+Yes, but <em>how</em>…?
+</summary>
+<p>You can turn each of the statements above into a question.
+“<strong>How does</strong> the game use text?”, “<strong>How
+does</strong> the game make its own choices?”, “<strong>How
+does</strong> the game know that the game is over?”</p>
+<p>If you already have some knowledge of JavaScript, read the list above
+again, and see if you can imagine how to deal with each of these
+items.</p>
+<p>You can think of this guide as a thirteen-part TV serial. These are
+the plot points that will keep you in suspense until the final episode,
+when all is revealed.</p>
+</details>
+</section>
+<!-- Setting up your Development Environment -->
+<section id="setting-up-your-development-environment" aria-labelledby="setting-up-your-development-environment" data-item="Setting Up Your Development Environment">
+<h2>
+<a href="#setting-up-your-development-environment">Setting Up Your
+Development Environment</a>
+</h2>
+<p>First, you need to set up a Development Environment. You need:</p>
+<ol type="1">
+<li>A way to run JavaScript or NodeJS scripts on your computer</li>
+<li>A code editor which will give you plenty of tools for writing
+JavaScript.</li>
+</ol>
+<details class="tip" open>
+<summary>
+You may already be ahead of me
+</summary>
+<p>If you already have Node and VS Code installed, you can skip this
+section</p>
+</details>
+<h2 id="install-nvm-nodejs-and-npm">Install NVM, NodeJS and npm</h2>
+<p>The most comfortable way to install an application that will run
+JavaScript files on your computer is to install a program called Node
+Version Manager, or NVM for short.</p>
+<p>Here is an <a
+href="https://www.freecodecamp.org/news/node-version-manager-nvm-install-guide/">excellent
+article on freeCodeCamp</a> which explains how to do just that.</p>
+<details class="trouble" open>
+<summary>
+Typing commands… where?
+</summary>
+<p>The article above asks you to type commands like <code>nvm -v</code>.
+Perhaps you have a question:</p>
+<p><strong>“<em>Where exactly</em> do I type these
+commands?”</strong></p>
+<p>The answer is: “In a Terminal window”.</p>
+<p>And the answer to your next question is: “Install Microsoft Virtual
+Studio Code first, as explained below, and VS Code (as it is called, for
+short) will provide you with a Terminal window.”</p>
+<p>As for the answer to your question: <strong>“Why didn’t you tell me
+this <em>before</em> you gave the link for installing
+Node?”</strong></p>
+<p>As you work your way through this guide, you’ll see that I have done
+my best to help troubleshoot any problems that might arise. But if a
+problem doesn’t arise for you, you don’t want to be bothered with Too
+Much Information about what <em>might</em> have gone wrong.</p>
+<p>In the future, if you run into difficulties, look a little ahead for
+an bright orange band with a lifebuoy logo, like the one at the top of
+this panel. Normally, it will be closed, because I hope that you do not
+often have problems. That’s where you should find troubleshooting
+suggestions.</p>
+</details>
+<details class="feedback" open>
+<summary>
+Let me know if anything is unclear…
+</summary>
+<p>If you find that you are blocked and none of the suggestions I give
+help you to make any progress, <a
+href="https://github.com/MERNCraft/Nail-it/issues/new">create an
+issue</a> for me, and I will deal with it as soon as I can.</p>
+</details>
+<h2 id="install-microsoft-virtual-studio-code">Install Microsoft Virtual
+Studio Code</h2>
+<p>Virtual Studio Code (or VS Code, for short) is a free code editor
+with many powerful tools that are either built-in or are availble as
+free extensions.</p>
+<p>You can follow the <a
+href="https://code.visualstudio.com/download">instructions to install VS
+Code for your operating system</a>, and enjoy all the hard work that
+other developers have contributed to make your experience of writing
+code so easy.</p>
+<details class="tip" open>
+<summary>
+A Terminal for installing Node?
+</summary>
+<p>If you need a Terminal for <a
+href="https://www.freecodecamp.org/news/node-version-manager-nvm-install-guide/">installing
+Node</a>, you can use <a
+href="https://code.visualstudio.com/docs/terminal/basics">VS Code’s
+integrated Terminal</a>.</p>
+<p>Indeed, the game you are going to create will be run from VS Code’s
+integrated Terminal, so you will be spending a lot of time working with
+it.</p>
+</details>
+</section>
+<!-- A First JavaScript File -->
+<section id="a-first-javascript-file" aria-labelledby="a-first-javascript-file" data-item="A First JavaScript File">
+<h2>
+<a href="#a-first-javascript-file">A First JavaScript File</a>
+</h2>
+<p>Now that you have got VS Code and NodeJS installed, you can start
+writing.</p>
+</details>
+</section>
+<section id="preview" aria-labelledby="preview" data-item="Preview">
 <p><img src="images/NailIt.webp" /></p>
 <h2>
-<a href="#intro">Preview</a>
+<a href="#preview">Preview</a>
 </h2>
 <p>This guide is designed for JavaScript beginners. It will show you not
 just how to write simple code, but also how to convert an idea into a
@@ -87,8 +230,9 @@ and how you will need to make them interact.</p>
 <iframe id="iframe-Nail-It" title="Nail-It" width="550" height="420" src="https://merncraft.github.io/Nail-It-Browser">
 </iframe>
 <ol type="1">
-<li>Click on the game to activate it</li>
-<li>Play until you get tired of losing</li>
+<li>Click on Start Game to activate it</li>
+<li>Play until you get tired of losing or until you are ready to start
+creating this for yourself.</li>
 </ol>
 <h2 id="who-i-am-writing-this-for">Who I am writing this for</h2>
 <p>At the school for web development where I work, students have seen

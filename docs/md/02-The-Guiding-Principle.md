@@ -15,6 +15,8 @@ If I wrote it as a recipe, I would give step-by-step instructions that you could
 
 I'm not going to do that.
 
+Remember: theres's 10 days' worth of course material here for you to work through. It's worth making an effort.
+
 I choose to write this article as a guide. That means both "as someone who has already travelled this path" and "as a description of what you will see along the way, and what to look out for." As a result:
 
 * Sometimes, I will lead you down a little side-path, to explore something interesting

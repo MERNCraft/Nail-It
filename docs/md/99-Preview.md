@@ -6,14 +6,14 @@ organization: MERNCraft
 repo: Nail-it
 ---
 <section
-  id="intro"
-  aria-labelledby="intro"
-  data-item="Introduction"
+  id="preview"
+  aria-labelledby="preview"
+  data-item="Preview"
 >
 
 ![](images/NailIt.webp)
 
-<h2><a href="#intro">Preview</a></h2>
+<h2><a href="#preview">Preview</a></h2>
 
 This guide is designed for JavaScript beginners. It will show you not just how to write simple code, but also how to convert an idea into a script, how to search online for ways to make progress, and how to think like a game developer.
 
@@ -31,8 +31,8 @@ I'll start by showing you a simulation of the game that you will create - a simu
   src="https://merncraft.github.io/Nail-It-Browser">
 </iframe>
 
-1. Click on the game to activate it
-2. Play until you get tired of losing
+1. Click on Start Game to activate it
+2. Play until you get tired of losing or until you are ready to start creating this for yourself.
 
 ## Who I am writing this for
 At the school for web development where I work, students have seen all the code used in this game after only the first 10 days. The challenge for me was to create an activity for them that would impress their friends and family after such a short learning period.
