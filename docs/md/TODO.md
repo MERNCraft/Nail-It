@@ -1,0 +1,1 @@
+Add permanent score boxes

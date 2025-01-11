@@ -13,7 +13,7 @@ First, you need to set up a Development Environment. You need:
 
 <details class="tip" open>
 <summary>You may already be ahead of me</summary>
-If you already have Node and VS Code installed, you can skip this section
+If you already have Node and VS Code installed, you can [skip this section and the next](#a-first-javascript-file).
 
 </details>
 
@@ -31,13 +31,13 @@ The article above asks you to type commands like `nvm -v`. Perhaps you have a qu
 
 The answer is: "In a Terminal window".
 
-And the answer to your next question is: "Install Microsoft Virtual Studio Code first, as explained below, and VS Code (as it is called, for short) will provide you with a Terminal window."
+And the answer to your next question is: "Install Microsoft Virtual Studio Code first, as explained below, and VS Code (as it is called, for short) will provide you with an integrated Terminal window."
 
 As for the answer to your question: **"Why didn't you tell me this *before* you gave the link for installing Node?"**
 
 As you work your way through this guide, you'll see that I have done my best to help troubleshoot any problems that might arise. But if a problem doesn't arise for you, you don't want to be bothered with Too Much Information about what _might_ have gone wrong.
 
-In the future, if you run into difficulties, look a little ahead for an bright orange band with a lifebuoy logo, like the one at the top of this panel. Normally, it will be closed, because I hope that you do not often have problems. That's where you should find troubleshooting suggestions.
+In the future, if you run into difficulties, look a little ahead for an bright orange band with a lifebuoy logo, like the one at the top of this panel. Normally, it will be closed, because I hope that you do not often have problems. Open it up to find troubleshooting suggestions.
 
 </details>
 <details class="feedback" open>

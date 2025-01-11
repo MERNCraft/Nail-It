@@ -133,8 +133,8 @@ JavaScript.</li>
 <summary>
 You may already be ahead of me
 </summary>
-<p>If you already have Node and VS Code installed, you can skip this
-section</p>
+<p>If you already have Node and VS Code installed, you can <a
+href="#a-first-javascript-file">skip this section and the next</a>.</p>
 </details>
 <h2 id="install-nvm-nodejs-and-npm">Install NVM, NodeJS and npm</h2>
 <p>The most comfortable way to install an application that will run
@@ -154,7 +154,7 @@ commands?”</strong></p>
 <p>The answer is: “In a Terminal window”.</p>
 <p>And the answer to your next question is: “Install Microsoft Virtual
 Studio Code first, as explained below, and VS Code (as it is called, for
-short) will provide you with a Terminal window.”</p>
+short) will provide you with an integrated Terminal window.”</p>
 <p>As for the answer to your question: <strong>“Why didn’t you tell me
 this <em>before</em> you gave the link for installing
 Node?”</strong></p>
@@ -165,8 +165,7 @@ Much Information about what <em>might</em> have gone wrong.</p>
 <p>In the future, if you run into difficulties, look a little ahead for
 an bright orange band with a lifebuoy logo, like the one at the top of
 this panel. Normally, it will be closed, because I hope that you do not
-often have problems. That’s where you should find troubleshooting
-suggestions.</p>
+often have problems. Open it up to find troubleshooting suggestions.</p>
 </details>
 <details class="feedback" open>
 <summary>
@@ -201,14 +200,178 @@ integrated Terminal, so you will be spending a lot of time working with
 it.</p>
 </details>
 </section>
+<!-- Welcome to VSCode -->
+<section id="welcome-to-vscode" aria-labelledby="welcome-to-vscode" data-item="Welcome To VSCode">
+<h2>
+<a href="#welcome-to-vscode">Welcome To VSCode</a>
+</h2>
+<p>NodeJS is not an application that you can open like a browser or
+social media app. It does not have a desktop icon you can click on or a
+Graphic User Interface (or GUI) where you can point and click with your
+mouse. Instead, you have to control NodeJS from a Terminal.</p>
+<p>The best place to find a Terminal is in VS Code. VS Code does have a
+GUI.</p>
+<h2 id="choosing-a-colour-scheme">Choosing a colour scheme</h2>
+<p>When you first launch VS Code, it asks you to choose your what
+colours to use for the GUI. As a developer, you are going to be looking
+at your computer screen a lot, so it’s good to be able to choose colours
+that you find clear and well-contrasted. Most developers choose a dark
+background with light text, as this is easier on the eyes.</p>
+<figure>
+<img src="images/01_VSCodeStartScreen.webp"
+alt="VS Code proposes that you choose a colour scheme" />
+<figcaption aria-hidden="true">VS Code proposes that you choose a colour
+scheme</figcaption>
+</figure>
+<p>For now, perhaps you will be happy with the default colour scheme.
+You can always make a different choice later. Click on the Welcome link
+to hide the Getting Started page.</p>
+<h2 id="the-welcome-page">The Welcome Page</h2>
+<p>The Welcome Page invites you to explore the possibilities of the app
+through mini slide shows.</p>
+<figure>
+<img src="images/02HideStartUp.webp"
+alt="The Welcome Page let you explore the possibilities of the app" />
+<figcaption aria-hidden="true">The Welcome Page let you explore the
+possibilities of the app</figcaption>
+</figure>
+<p>You can find these guides and more, later, through the Help menu. I
+suggest that you deselect the Show Welcome Page On Startup checkbox at
+the bottom of the page, so it won’t keep coming back.</p>
+<details class="pivot" open>
+<summary>
+Getting started
+</summary>
+<p>To get started, you should create:</p>
+<ul>
+<li>A folder to hold all your future coding projects</li>
+<li>A second folder inside this first folder for the game you are about
+to create</li>
+<li>A file called <code>main.js</code> where you will write your
+code.</li>
+</ul>
+</details>
+</details>
+</section>
 <!-- A First JavaScript File -->
 <section id="a-first-javascript-file" aria-labelledby="a-first-javascript-file" data-item="A First JavaScript File">
 <h2>
 <a href="#a-first-javascript-file">A First JavaScript File</a>
 </h2>
-<p>Now that you have got VS Code and NodeJS installed, you can start
-writing.</p>
+<p>A successful business has many employees, in many different offices
+on many different floors, often in many buildings in many cities. A
+successful development project has the same level of complexity. There
+will be many different files, in many different folders on many
+different computers…</p>
+<h2 id="organizing-your-files">Organizing your files</h2>
+<p>This project is simple. It will only use one file. But you should be
+ready to grow big quickly, and plan accordingly. It’s therefore
+important to structure your work properly.</p>
+<ol type="1">
+<li>From the File menu in VS Code, choose <code>Open Folder</code></li>
+<li>Use the dialog to create a new folder that will hold all your
+projects that you create from tutorials, like this one. Save it in your
+Documents folder, or in a place where you can quickly find it
+again.</li>
+<li>You could call it <code>My Learning Journey</code> or something like
+that.</li>
+<li>Inside this generic folder, create a folder specifically for this
+project. I’m going to assume that you call it <code>Nail_It</code>, and
+I will refer to it by that name from now on.</li>
+</ol>
+<figure>
+<img src="images/09NewFolder.webp"
+alt="Create a folder called Nail_It" />
+<figcaption aria-hidden="true">Create a folder called
+Nail_It</figcaption>
+</figure>
+<ol start="5" type="1">
+<li>Inside the <code>Nail_It</code> folder, create a file called
+<code>main.js</code></li>
+</ol>
+<figure>
+<img src="images/10NewFile.webp"
+alt="Create a file in Nail_It called main.js" />
+<figcaption aria-hidden="true">Create a file in Nail_It called
+main.js</figcaption>
+</figure>
+<p>The <code>.js</code> extension stands for JavaScript. The file that
+is at the heart of a project is often called <code>main</code>.</p>
+<h2 id="your-first-script">Your first script</h2>
+<p>The first thing on the <a href="#what-needs-to-be-done">list of
+things that the game can do</a> is “The game uses text”. So the first
+thing you should get your first JavaScript file to do is to use
+text.</p>
+<p><a
+href="https://en.wikipedia.org/wiki/%22Hello,_World!%22_program">The
+convention since 1978</a> is to get your very first program to say
+“Hello World!”</p>
+<ol type="1">
+<li>In your file at <code>Nail_it/main.js</code>, type the following
+text:</li>
+</ol>
+<pre class="language-javascript line-numbers"><code class="language-javascript line-numbers">console.log("Hello World")</code></pre>
+<ol start="2" type="1">
+<li>Save your file.</li>
+</ol>
+<details class="tip" open>
+<summary>
+Auto-save
+</summary>
+<p>Even better: use the menu item File &gt; Auto Save to tell VS Code to
+save your file as soon as you have made a change in it. This means that
+every time you run your code, you can be sure that you are running the
+most recent version, and not a file that you have changed but forgotten
+to save.</p>
+<figure>
+<img src="images/05AutoSave.webp"
+alt="Set up Auto Save, so that your latest changes are always saved" />
+<figcaption aria-hidden="true">Set up Auto Save, so that your latest
+changes are always saved</figcaption>
+</figure>
 </details>
+<h2 id="executing-your-script">Executing your script</h2>
+<p>To run this file as a program, you will need to open a Terminal.</p>
+<ol type="1">
+<li>Choose the menu item Terminal &gt; New Terminal.</li>
+</ol>
+<p>By default, a new Terminal will appear a the bottom of the VS Code
+window.</p>
+<ol start="3" type="1">
+<li>Check the name of the folder that is shown in the Terminal. If it is
+not <code>Nail_It</code>, then type <code>cd</code> (which means
+<code>change directory</code>) and drag the name of the Nail_It folder
+into the Terminal, then press Enter.</li>
+</ol>
+<figure>
+<img src="images/08cdToNailit.webp"
+alt="cd into the Nail_It directory" />
+<figcaption aria-hidden="true"><code>cd</code> into the Nail_It
+directory</figcaption>
+</figure>
+<ol start="4" type="1">
+<li><p>When the Terminal is active in the Nail_It directory, type…</p>
+<pre class="language-bash wrap"><code class="language-bash wrap">node main.js</code></pre>
+<p>… as shown in the Figure 5 above.</p></li>
+</ol>
+<p>You should see <code>Hello World!</code> printed into the
+Terminal.</p>
+<details class="pivot" open>
+<summary>
+main.js and the Terminal
+</summary>
+<p>For the rest of the project, this window, with the
+<code>main.js</code> file and the Terminal below it, is where you will
+be working. If you close the project and come back to work on it later,
+use VS Code to open the Nail_It folder, so you can continue from where
+you left off.</p>
+</details>
+</section>
+<!-- Instructions and Variables -->
+<section id="instructions-and-variables" aria-labelledby="instructions-and-variables" data-item="Instructions And Variables">
+<h2>
+<a href="#instructions-and-variables">Instructions And Variables</a>
+</h2>
 </section>
 <section id="preview" aria-labelledby="preview" data-item="Preview">
 <p><img src="images/NailIt.webp" /></p>
@@ -243,6 +406,7 @@ their friends and family after such a short learning period.</p>
 I’ll explain how to get started, and how to check, step-by-step, that
 you are on the right path.</p>
 </section>
+<p>Add permanent score boxes</p>
 
 <div class="spacer"></div>
 <footer id="footer">
