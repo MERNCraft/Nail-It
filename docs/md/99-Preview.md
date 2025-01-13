@@ -41,7 +41,7 @@ Perhaps you haven't even begun learning JavaScript yet. That's OK. I'll explain 
 
 <details class="tip" open>
 <summary>Download the source files</summary>
-You can download a ZIP file with three versions of the game in it from [here](https://github.com/MERNCraft/Nail-It/scripts.zip){download=""}.
+You can download a ZIP file with three versions of the game in it from [here](https://MERNCraft.github.io/Nail-It/scripts.zip){download=""}.
 
 * `main.js`: the script that you will be learning to write
 * `minified.js`: a compressed version of the script that works exactly like `main.js`, but which hides how it works
