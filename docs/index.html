@@ -117,6 +117,29 @@ the plot points that will keep you in suspense until the final episode,
 when all is revealed.</p>
 </details>
 </section>
+<!-- Understanding the Game Logic -->
+<section id="understanding-the-game-logic" aria-labelledby="understanding-the-game-logic" data-item="Understanding The Game Logic">
+<h2>
+<a href="#understanding-the-game-logic">Understanding The Game Logic</a>
+</h2>
+<p>The game is simple, but it beats you. Obviously, it is using a simple
+rule that is easy to implement in code.</p>
+<p>Here’s a video about the same game in two different formats, with an
+explanation by Matt Parker, the stand-up mathematician.</p>
+<p>Pay special attention to the part from 4:50 to 6:58. That’s where he
+describes the simple technique that you will be using in the game.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/9KABcmczPdg?si=Tx0HmyybicNpezW1" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+</iframe>
+<details class="question" open>
+<summary>
+Thinking in fours
+</summary>
+<p>For you, as a human, it seems easy to divide a number (of objects)
+into groups of four.</p>
+<p>How do you imagine you can get a computer to “think” in groups of
+four?</p>
+</details>
+</section>
 <!-- Setting up your Development Environment -->
 <section id="setting-up-your-development-environment" aria-labelledby="setting-up-your-development-environment" data-item="Setting Up Your Development Environment">
 <h2>
@@ -219,7 +242,7 @@ that you find clear and well-contrasted. Most developers choose a dark
 background with light text, as this is easier on the eyes.</p>
 <figure>
 <img src="images/01_VSCodeStartScreen.webp"
-alt="VS Code proposes that you choose a colour scheme" />
+alt="VS Code proposes that you choose a colour scheme">
 <figcaption aria-hidden="true">VS Code proposes that you choose a colour
 scheme</figcaption>
 </figure>
@@ -231,7 +254,7 @@ to hide the Getting Started page.</p>
 through mini slide shows.</p>
 <figure>
 <img src="images/02HideStartUp.webp"
-alt="The Welcome Page let you explore the possibilities of the app" />
+alt="The Welcome Page let you explore the possibilities of the app">
 <figcaption aria-hidden="true">The Welcome Page let you explore the
 possibilities of the app</figcaption>
 </figure>
@@ -250,7 +273,6 @@ to create</li>
 <li>A file called <code>main.js</code> where you will write your
 code.</li>
 </ul>
-</details>
 </details>
 </section>
 <!-- A First JavaScript File -->
@@ -281,7 +303,7 @@ I will refer to it by that name from now on.</li>
 </ol>
 <figure>
 <img src="images/09NewFolder.webp"
-alt="Create a folder called Nail_It" />
+alt="Create a folder called Nail_It">
 <figcaption aria-hidden="true">Create a folder called
 Nail_It</figcaption>
 </figure>
@@ -291,7 +313,7 @@ Nail_It</figcaption>
 </ol>
 <figure>
 <img src="images/10NewFile.webp"
-alt="Create a file in Nail_It called main.js" />
+alt="Create a file in Nail_It called main.js">
 <figcaption aria-hidden="true">Create a file in Nail_It called
 main.js</figcaption>
 </figure>
@@ -325,7 +347,7 @@ most recent version, and not a file that you have changed but forgotten
 to save.</p>
 <figure>
 <img src="images/05AutoSave.webp"
-alt="Set up Auto Save, so that your latest changes are always saved" />
+alt="Set up Auto Save, so that your latest changes are always saved">
 <figcaption aria-hidden="true">Set up Auto Save, so that your latest
 changes are always saved</figcaption>
 </figure>
@@ -345,7 +367,7 @@ into the Terminal, then press Enter.</li>
 </ol>
 <figure>
 <img src="images/08cdToNailit.webp"
-alt="cd into the Nail_It directory" />
+alt="cd into the Nail_It directory">
 <figcaption aria-hidden="true"><code>cd</code> into the Nail_It
 directory</figcaption>
 </figure>
@@ -356,25 +378,1164 @@ directory</figcaption>
 </ol>
 <p>You should see <code>Hello World!</code> printed into the
 Terminal.</p>
-<details class="pivot" open>
+<details class="tip" open>
 <summary>
-main.js and the Terminal
+Running any JavaScript file the Terminal
 </summary>
-<p>For the rest of the project, this window, with the
-<code>main.js</code> file and the Terminal below it, is where you will
-be working. If you close the project and come back to work on it later,
-use VS Code to open the Nail_It folder, so you can continue from where
-you left off.</p>
+<p>You’ll be using <code>node</code> to run other little test scripts
+soon.</p>
+<p>If you <a href="https://github.com/MERNCraft/Nail-It/scripts.zip"
+download>downloaded the source files</a> earlier, you can open the
+folder that contains them in a new VS Code window, and use the Terminal
+in that window to run any of the files. For example, you could try
+something like this:</p>
+<pre class="language-bash wrap"><code class="language-bash wrap">cd /path/to/downloaded/folder
+node completed.js</code></pre>
+<p>The completed game also remembers your score against the
+computer.</p>
+<p>(Remember that you type <code>cd</code> (followed by a space) and
+then can drag the icon of any folder into the Terminal window to
+navigate to that folder.)</p>
 </details>
 </section>
-<!-- Instructions and Variables -->
-<section id="instructions-and-variables" aria-labelledby="instructions-and-variables" data-item="Instructions And Variables">
+<!-- What is the Console -->
+<section id="what-is-the-console" aria-labelledby="what-is-the-console" data-item="What Is The Console?">
 <h2>
-<a href="#instructions-and-variables">Instructions And Variables</a>
+<a href="#what-is-the-console">What Is The Console?</a>
 </h2>
+<p>I can imagine a question in your mind: <strong>How does this code in
+<code>main.js</code> …</strong></p>
+<pre class="language-javascript line-numbers"><code class="language-javascript line-numbers">console.log("Hello World")</code></pre>
+<p><strong>… plus this command in the Terminal…</strong></p>
+<pre class="language-bash wrap"><code class="language-bash wrap">node main.js</code></pre>
+<p><strong>… make this text appear in the Terminal?</strong></p>
+<pre class="language-tex wrap"><code class="language-tex wrap">Hello World!</code></pre>
+<h2 id="the-console-and-console_log">The console and
+<code>console.log()</code></h2>
+<p>In NodeJS, “<a
+href="https://developer.mozilla.org/en-US/docs/Web/API/console">console</a>”
+is how JavaScript refers to the Terminal where the current script is
+running. (Later, you’ll see that browsers also have a Console, which
+behaves very like the Terminal.)</p>
+<h2 id="objects-and-methods">Objects and methods</h2>
+<p><code>console</code> is a <em>global object</em>. This means that you
+can use it anywhere (globally), and that it can have
+<code>methods</code> and <code>properties</code>. As you will see,
+JavaScript is built with objects.</p>
+<p>A method is something an object can do. A property is something it
+has. It doesn’t have to have any methods or properties. If you think of
+a method like a human being:</p>
+<ul>
+<li>It can be like a new-born baby, who can cry but has no possessions
+yet. (It has methods but no properties)</li>
+<li>It can be like a reclusive miser, who has many possessions but does
+nothing with them. (It has properties, but no methods)</li>
+<li>It can be like a regular person, who has stuff and does stuff.</li>
+</ul>
+<p>The <code>console</code> has several methods but no properties. (It’s
+like a house elf. It doesn’t need any possessions.)</p>
+<p>In this project, you will use the following methods:</p>
+<table>
+<thead>
+<tr>
+<th scope="col">method</th>
+<th scope="col">action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>console.log()</code></td>
+<td>prints the parameters in the Terminal</td>
+</tr>
+<tr>
+<td><code>console.clear()</code></td>
+<td>removes all text from the Terminal</td>
+</tr>
+</tbody>
+</table>
+<h2 id="parameters">Parameters</h2>
+<p>The data inside the round parentheses (<code>( ... )</code>) is
+called a <em>parameter</em>. In this case <code>"Hello World!"</code> is
+the only parameter.</p>
+<details class="pivot" open>
+<summary>
+Showing text in the Terminal
+</summary>
+<p>You’ll be using <code>console.log()</code> several times in your
+project, to show text in the Terminal.</p>
+<p>As you’ll discover, it can also be used to <em>hide</em> text, but
+not many people know this. (You don’t have to keep it a secret.)</p>
+</details>
+</section>
+<!-- Quotes or Backticks -->
+<section id="quotes-or-backticks" aria-labelledby="quotes-or-backticks" data-item="Quotes Or Backticks?">
+<h2>
+<a href="#quotes-or-backticks">Quotes Or Backticks?</a>
+</h2>
+<p>The game that you are about to create shows several lines of text,
+right at the beginning:</p>
+<pre class="language-tex wrap"><code class="language-tex wrap">Let's knock a nail into this computer!
+
+* Each player takes a turn to hit the nail once.
+* A player can use one of three levels of strength: gently, firmly, hard.
+* Depending on the strength used, the nail will be driven more or less deeply into the Terminal.
+* The player who knocks the nail all the way in is the winner.
+
+Are you ready?</code></pre>
+<p>You might have noticed that the text in <code>"Hello World!"</code>
+was surrounded by <em>double-quote</em> characters (<code>"</code>). You
+might think that all you need to do is paste the multiline text that you
+want to show inside double-quotes. But if you do, VS Code shows you lots
+of wavy red lines, and tells you that you have 52 problems, on for each
+word that is not in the first line.</p>
+<figure>
+<img src="images/multilineStringFail.webp"
+alt="VS Code tells you that you have problems with your text">
+<figcaption aria-hidden="true">VS Code tells you that you have problems
+with your text</figcaption>
+</figure>
+<h2 id="using-backticks">Using backticks</h2>
+<p>If you want to create a block of text with more than one line, in
+JavaScript, you need to use backticks (<code>`</code>).</p>
+<p>Backticks can make you feel like a real programmer, if only because
+you’ve probably never used them before. And also, because you might have
+to spend some time looking at your keyboard to find where the backtick
+key is hiding.</p>
+<p>Every keyboard manufacturer has their own idea of <a
+href="https://www.google.com/search?q=backtick+keyboard&amp;udm=2">where
+to hide the backtick character on your keyboard</a>.</p>
+<h2 id="fix-your-code">Fix your code</h2>
+<p>When you have found the backtick key:</p>
+<ol type="1">
+<li>In <code>main.js</code>, replace the double-quote characters with
+single backticks, one at the beginning, and one at the end of the
+text.</li>
+<li>In the Terminal, run:</li>
+</ol>
+<pre class="language-bash wrap"><code class="language-bash wrap">node main.js</code></pre>
+<p>You should see your multiline block of text appear, as shown in
+Figure 7 below.</p>
+<figure>
+<img src="images/backtickSuccess.webp"
+alt="Replace the ” double-quotes with ` backticks">
+<figcaption aria-hidden="true">Replace the ” double-quotes with `
+backticks</figcaption>
+</figure>
+<details class="tldr">
+<summary>
+All about backticks and template literals
+</summary>
+<p>Backticks are very powerful. They can be used to do much more than
+just contain multiple lines of text. You won’t need to use any of their
+other powers in this project, but it’s good to know that they can help
+in many ways.</p>
+<p>For more details, see <a
+href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals">MDN’s
+article on Template Literals</a></p>
+</details>
+<details class="tip" open>
+<summary>
+Multiple Cursors
+</summary>
+<p>If you look carefully at Figure 7, or less carefully at the images
+below, you will see that there are <em>two</em> text insertion cursors:
+one just after each backtick.</p>
+<figure>
+<img src="images/multipleCursors.webp"
+alt="VS Code allows you to use multiple text insertion cursors">
+<figcaption aria-hidden="true">VS Code allows you to use multiple text
+insertion cursors</figcaption>
+</figure>
+<p>Programmers type a lot. VS Code provides many techniques for allowing
+programmers to type less.</p>
+<p>For more details, see <a
+href="https://code.visualstudio.com/docs/editor/codebasics">the official
+Multicursor documentation</a>. Try the following:</p>
+<ol type="1">
+<li>Press <code>Alt</code> and Click wherever you want to add a
+cursor</li>
+<li>Press <code>Alt</code> and Click on a cursor if you want to delete
+it</li>
+<li>Press <code>Shift-Alt</code> and Click on a different line to select
+a rectangular block</li>
+<li>Press <code>Alt</code> and Double-Click on a word to select the
+entire word</li>
+</ol>
+</details>
+</section>
+<!-- Asking Questions -->
+<section id="asking-questions" aria-labelledby="asking-questions" data-item="Asking Questions with readline-sync">
+<h2>
+<a href="#asking-questions with readline-sync">Asking Questions</a>
+</h2>
+<p>To be exact, there is another line of text that appears when the game
+starts:</p>
+<figure>
+<img src="images/yesNoPrompt.webp"
+alt="The last line of text is a question about who is going to play first">
+<figcaption aria-hidden="true">The last line of text is a question about
+who is going to play first</figcaption>
+</figure>
+<h2 id="nodejs-packages">NodeJS Packages</h2>
+<p>NodeJS does not provide an out-of-the-box solution for asking
+questions.</p>
+<p>You can think of NodeJS like a food mixer: a powerful engine to which
+you can attach different accessories for different purposes. Some
+accessories are sold separately.</p>
+<figure>
+<img
+src="https://www.trustedreviews.com/wp-content/uploads/sites/54/2022/12/KitchenAid-Design-Series-Blossom-Stand-Mixer-1-920x613.jpg"
+alt="A food mixer with its standard accessories">
+<figcaption aria-hidden="true">A food mixer with its standard
+accessories</figcaption>
+</figure>
+<p>The “accessories” that you can add to NodeJS are called “modules” or
+“packages”. The web site <a
+href="https://www.npmjs.com/"><code>npm</code></a> (<a
+href="https://www.npmjs.com/package/npm/v/10.8.0#faq-on-branding">whose
+name <em>does not</em> mean Node Package Manager</a>) provides thousands
+of open-source packages, many of which are used <a
+href="https://www.bairesdev.com/blog/most-popular-npm-packages/#most-popular-npm-packages">millions
+of times every month</a>.</p>
+<p>A popular package that you can use to ask questions in the Terminal
+is <a
+href="https://www.npmjs.com/package/readline-sync">readline-sync</a>.
+(The “sync” is short for “synchronous”. )</p>
+<h2 id="installing-readline-sync">Installing readline-sync</h2>
+<p>When you installed NodeJS, a program called <code>npm</code> was
+installed at the same time. You can use this program to fetch NodeJS
+packages from the <code>npmjs.com</code> website, and include them in
+your project. Here’s how you can do this:</p>
+<ol type="1">
+<li>Make sure your computer is connected to the Internet</li>
+<li>In the Terminal for your <code>Nail_It</code> directory, run:</li>
+</ol>
+<pre class="language-bash wrap"><code class="language-bash wrap">npm install readline-sync</code></pre>
+<details class="tip" open>
+<summary>
+npm i
+</summary>
+<p>Like me, and most programmers, you can be lazy. You can use
+<code>i</code> as a shortcut for <code>install</code>.</p>
+<p>This command will have exactly the same effect:</p>
+<pre class="language-bash wrap"><code class="language-bash wrap">npm i readline-sync</code></pre>
+</details>
+<figure>
+<img src="images/installReadlineSync.webp"
+alt="Installing readline-sync">
+<figcaption aria-hidden="true">Installing readline-sync</figcaption>
+</figure>
+<p>You’ll see several things happen:</p>
+<ol type="1">
+<li>There will be a burst of activity in your Terminal as
+<code>npm</code> requests and then receives the files that you
+need.</li>
+<li>A folder called <code>node_modules</code> will be created in your
+<code>Nail_It</code> folder</li>
+<li>Two new files will be added to your <code>Nail_It</code> folder:
+<ul>
+<li><code>package.json</code></li>
+<li><code>package-lock.json</code></li>
+</ul></li>
+</ol>
+<h2 id="package_json"><code>package.json</code></h2>
+<p>The contents of <code>package.json</code> should look something like
+this (the version number may be different):</p>
+<pre class="language-json line-numbers"><code class="language-json line-numbers">{
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
+}</code></pre>
+<details class="tldr">
+<summary>
+JSON and package.json
+</summary>
+<p><code>JSON</code> stands for “JavaScript Object Notation”. A
+<code>.json</code> file can be used to store hierarchical information.
+It has a very strict file structure. If there is a comma too few or a
+comma too many in <code>package.json</code>, <code>npm</code> won’t be
+able to read it. If you use backticks or single-quotes (<code>'</code>)
+instead of double-quotes, <code>npm</code> won’t be able to read it.
+Treat <code>package.json</code> nicely.</p>
+<p>The file <code>package.json</code> contains information that ensures
+that your project will work even if it is copied to someone else’s
+computer. In this particular case, it says: “This project needs the
+<code>readline-sync</code> Node package, and it was built using
+version”1.4.10”, so it should work with that version or a more recent
+one.”</p>
+<p>Some Node packages require other Node packages in order to work
+correctly. The <code>package-lock.json</code> file contains details of
+every package that was installed, and every package that <em>each of
+those packages</em> installed. If you send a copy of your project to a
+colleague, the <code>package-lock.json</code> file will ensure that your
+colleague is working with exactly the same Node packages as you. This
+eliminates many cases where “It works on my computer!” is an issue.</p>
+</details>
+<h2 id="using-readline-sync">Using readline-sync</h2>
+<p>Before you can use <code>readline-sync</code>, you need to load its
+code into your own script. You can use the JavaScript function
+<code>require</code>, as shown in the code below.</p>
+<details class="pivot" open>
+<summary>
+Get it working, then learn how
+</summary>
+<p>Try this out.</p>
+<ol type="1">
+<li>Edit your script</li>
+<li>In the Terminal, run</li>
+</ol>
+<pre class="language-bash wrap"><code class="language-bash wrap">node main.js</code></pre>
+<ol start="3" type="1">
+<li>In the Terminal, press the <code>y</code> key, in response to the
+question.</li>
+</ol>
+<p>The expected output is shown in Figure 11 below.</p>
+<p>I’ll explain in the next section exactly what is happening, why
+<code>player: true</code> appears in the Terminal when you run your
+script, and how you can find out for yourself how to make all this
+happen.</p>
+</details>
+<pre class="language-javascript wrap"><code class="language-javascript wrap"><b>const readlineSync = require("readline-sync")
+const whoStarts = "If you want to start, type Y. If you want me to start press any other key. "
+</b>
+<i>console.log(`Let's knock a nail into this computer!
+
+* Each player takes a turn to hit the nail once.
+* A player can hit the nail in one of three ways: gently, firmly, hard.
+* Depending on the force used, the nail will be driven more or less deeply into the Terminal.
+* The player who knocks the nail all the way in is the winner.
+
+Are you ready?
+`)</i>
+
+<b>let player = readlineSync.keyInYN(whoStarts)
+console.log("player:", player)</b></code></pre>
+<figure>
+<img src="images/useReadlineSync.webp"
+alt="Integrating readline-sync into your project">
+<figcaption aria-hidden="true">Integrating <code>readline-sync</code>
+into your project</figcaption>
+</figure>
+</section>
+<!-- variables with const and let -->
+<section id="const-and-let" aria-labelledby="const-and-let" data-item="Declaring Variables with const and let">
+<h2>
+<a href="#const-and-let">Declaring Variables with <code>const</code> and
+<code>let</code></a>
+</h2>
+<p>Here are the new lines of code again:</p>
+<pre class="language-javascript wrap"><code class="language-javascript wrap">const readlineSync = require("readline-sync")
+const whoStarts = "If you want to start, type Y. If you want me to start, press any other key. "</code></pre>
+<pre class="skip"><code class="skip">// lines skipped //</code></pre>
+<pre class="language-js wrap"><code class="language-js wrap">let player = readlineSync.keyInYN(whoStarts)
+console.log("player:", player)</code></pre>
+<h2 id="whats-new">What’s new</h2>
+<p>Below is a list of things that you have not seen before, in the order
+in which they appear. I’ll explain items 1 - 3 and item 5 in this
+section, and deal with the others in the following sections.</p>
+<ol type="1">
+<li><code>const</code></li>
+<li>variables</li>
+<li>assignment with <code>=</code></li>
+<li><code>require()</code></li>
+<li><code>let</code></li>
+<li><code>readlineSync.keyInYN()</code></li>
+<li><code>console.log()</code> with two parameters</li>
+</ol>
+<h2 id="thinking-like-a-computer">Thinking like a computer</h2>
+<p>Here’s a new metaphor. You can think of NodeJS as being a long line
+of identical houses, each with its own specific address.</p>
+<figure>
+<img src="images/terracedHouses.jpg"
+data-title="Terraced Houses in Lower Park Street"
+data-credits="[cc-by-sa/2.0 ](http://creativecommons.org/licenses/by-sa/2.0/) - © [Rob Noble](https://www.geograph.org.uk/profile/4178) - [geograph.org.uk/p/1870300](https://www.geograph.org.uk/photo/1870300)"
+alt="Terraced Houses, each with its own address">
+<figcaption aria-hidden="true">Terraced Houses, each with its own
+address</figcaption>
+</figure>
+<p>People like to give their houses a name, but for the postal delivery
+worker, the house number is required and is the only official
+designation for the house.</p>
+<figure>
+<img
+src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Tucson-John_Dillinger_House_-_1925-2.jpg/272px-Tucson-John_Dillinger_House_-_1925-2.jpg"
+data-credits="[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en) by [Tony Santiago](https://commons.wikimedia.org/wiki/User:Marine_69-71) | [original](https://commons.wikimedia.org/wiki/File:Tucson-John_Dillinger_House_-_1925-2.jpg)"
+alt="Sign showning a house number and the house’s name">
+<figcaption aria-hidden="true">Sign showning a house number and the
+house’s name</figcaption>
+</figure>
+<p>When you write JavaScript, you talk about <em>variables</em>, not
+houses, and the space defined by each address is actually a block of
+Random Access Memory (RAM). However, the principle is the same. You, the
+human, create a name for a block of memory, and the NodeJS associates
+that name with a number in its index of available blocks, so it knows
+which memory block you are talking about.</p>
+<p>In my metaphor, you <em>put</em> an <em>agent, or just some
+stuff</em>, in each named <em>house</em>, then the agents work together
+with the stuff that you have given them to build a display on the street
+(the end-user’s screen) that the end-user can interact with.</p>
+<p>In the world of JavaScript, your code <em>assigns</em> a
+<em>value</em> to each named <em>variable</em>. When you use a variable
+name later, JavaScript looks up the number of the memory block in its
+index, and uses the <em>contents</em> of the block instead of its
+<em>name</em>.</p>
+<h2 id="const-vs-let"><code>const</code> vs <code>let</code></h2>
+<p><code>const</code> and <code>let</code> are two ways of telling
+JavaScript to create a named space in its RAM.</p>
+<p><code>const</code> tells JavaScript: “Here is some data, it will be
+<em>constant</em>, it will never change.” As a result, JavaScript can
+optimize the space for the data. This is like when you buy a house. You
+become the permanent owner, and once the initial paperwork is done,
+everything is simple. You live there: that’s it.</p>
+<p>Because the value in a variable created <code>const</code> has a
+fixed value, you must give a value as soon as you declare the
+variable.</p>
+<p><code>let</code> tells NodeJS: “You know, I need some space, but I
+can’t be sure how much or what I’ll use it for, and I might change my
+mind. Can you create a space that can get bigger or smaller and that can
+hold text or a number or an object with many functions… or just about
+anything?”</p>
+<p>When you use <code>let</code>, JavaScript has to be prepared for
+changes. This is like when you let out your house. You don’t know what
+the new tenants are going to do to it, so you need to make an inventory,
+prepare a lease, ask for a deposit, … all sort of extra things. And this
+has to be renewed each time the tenant changes.</p>
+<p>Because the value in a variable created <code>let</code> can change,
+you can declare the variable without giving it a value. This is
+perfectly good code:</p>
+<pre class="language-javascript"><code class="language-javascript">let variableWithNoInitialValue</code></pre>
+<p>This will cause an error:</p>
+<pre class="language-javascript"><code class="language-javascript">const constantsMustBeAssignedAValue</code></pre>
+<figure>
+<img src="images/missingInitializer.webp"
+alt="You must give a const variable a value when you create it">
+<figcaption aria-hidden="true">You must give a <code>const</code>
+variable a value when you create it</figcaption>
+</figure>
+<details class="tip" open>
+<summary>
+Use <code>const</code> when possible
+</summary>
+<p>Your code will work faster (and your end-users will be happier) if
+you declare your variables <code>const</code> every time you can.</p>
+</details>
+<h2 id="variable-names">Variable names</h2>
+<p>I’ve used the variable names <code>readlineSync</code>,
+<code>whoStarts</code> and <code>player</code>. The name of the Node
+Package that you installed was <code>readline-sync</code>. Why didn’t I
+use <code>readline-sync</code> for the name of the variable?</p>
+<p>Computing is all about speed. If JavaScript allowed me to use any
+name, then it would have to spend more time looking at each name to be
+sure that it was a name and not some other kind of data. So JavaScript
+has rules:</p>
+<ul>
+<li>A variable name can begin with a letter, a dollar sign
+(<code>$</code>) or an underscore (<code>_</code>)</li>
+<li>A variable name can contain letters, dollar signs, underscores and
+numbers (but it can’t start with a number)</li>
+<li>A variable name <em>cannot</em> contain a space (<code></code>) or a
+dash (<code>-</code>) (so <code>readline-sync</code> is not
+possible)</li>
+</ul>
+<h3 id="variable-naming-conventions">Variable naming conventions</h3>
+<p>By convention, when a variable is created from more than one word
+(like <code>whoStarts</code>), the first letter in each word is written
+in uppercase letters. This is called <em>camelCase</em>.</p>
+<details class="tldr">
+<summary>
+Other variable formats
+</summary>
+<p>In HTML and CSS, you will use <em>kebab-case</em> for <code>id</code>
+and <code>class</code> names.</p>
+<p>In JavaScript, you might also find some constants written in
+<em>SCREAMING_SNAKE_CASE</em> (but not in this project). These will be
+global constants that are set when the program first starts, and which
+can be used in many different places.</p>
+<p>NodeJS also provides some special variables, like
+<code>__dirname</code> and <code>__filename</code>, which start with a
+double underscore. Again, you won’t see these in this project.</p>
+<p>There are many different formats that can be used for variable names.
+The most comprehensive list I’ve found is <a
+href="https://stackoverflow.com/a/64293621/1927589">here</a>.</p>
+</details>
+<h2 id="equals-signs">Equals signs</h2>
+<p>In JavaScript, a single equals sign (<code>=</code>) is used to
+assign a value to a variable (or to use the house metaphor, to tell
+JavaScript to move a given piece of data into a named address). So…</p>
+<pre class="language-bash wrap"><code class="language-bash wrap">const whoStarts = "If you want to start..."</code></pre>
+<p>… tells JavaScript:</p>
+<ul>
+<li>Select a block of memory at an address that I will call
+<code>whoStarts</code>.</li>
+<li>The contents of this memory block are not going to change. They will
+be constant.</li>
+<li>Assign the text “If you want to start…” to this memory block.</li>
+<li>In the future, when I refer to <code>whoStarts</code>, use the
+contents of the memory block instead.</li>
+</ul>
+<details class="note" open>
+<summary>
+===
+</summary>
+<p>As you will see shortly, three equals signs together
+(<code>===</code>) means “is identical to”. This creates an expression
+which can be either true or false. For example: <code>2 + 2 === 4</code>
+is <code>true</code>, but <code>2 + 2 === "four"</code> is
+<code>false</code>. But more about this later.</p>
+</details>
+</section>
+<!-- require and modules -->
+<section id="require-and-modules" aria-labelledby="require-and-modules" data-item="require() and Modules">
+<h2>
+<a href="#require-and-modules"><code>require()</code> and Modules</a>
+</h2>
+<p>Here’s an edited version of the first few lines of code:</p>
+<pre class="language-javascript line-numbers"><code class="language-javascript line-numbers">const readlineSync = require("readline-sync")
+const whoStarts = "If you want to start, type Y..." // shortened</code></pre>
+<pre class="skip"><code class="skip">// lines skipped //</code></pre>
+<pre class="language-js line-numbers" data-start="14"><code class="language-js line-numbers">let player = readlineSync.keyInYN(whoStarts)
+console.log("player:", player)</code></pre>
+<p>You’ve seen that <code>readlineSync</code> somehow allows you to type
+a letter in the Terminal, and then JavaScript knows if that letter was a
+<code>Y</code> or not. But where does <code>readlineSync</code> get all
+this power from? And how could you have guessed to use
+<code>.keyInYN()</code> to make this happen?</p>
+<h2 id="require---a-global-function"><code>require()</code> - a global
+function</h2>
+<p>The function <code>require()</code> is a native part of JavaScript.
+You can use it anywhere. It expects the name the parameter to be
+either…</p>
+<ul>
+<li>The name of a module</li>
+</ul>
+<p>… or:</p>
+<ul>
+<li>The path to a file which contains a module script.</li>
+</ul>
+<p>It then loads the module script that it finds at the designated
+place, and makes it available to your script.</p>
+<h2 id="finding-readline-sync">Finding <code>readline-sync</code></h2>
+<p>When NodeJS reads <code>require("readline-sync")</code>, it
+understands that <code>"readline-sync"</code> is not the path to a file,
+so it looks:</p>
+<ul>
+<li>Inside the <code>node_modules</code> folder for a folder with the
+same name</li>
+<li>Inside that folder for a <code>package.json</code> file</li>
+<li>Inside the <code>package.json</code> file for an entry for
+“main”</li>
+<li>For the file named by “main”.</li>
+</ul>
+<p>Here’s what it finds:</p>
+<pre class="language-json line-numbers" data-start="21"><code class="language-json line-numbers">  "main": "./lib/readline-sync.js",</code></pre>
+<figure>
+<img src="images/requiring.webp"
+alt="How require finds the node_modules file to load">
+<figcaption aria-hidden="true">How require finds the node_modules file
+to load</figcaption>
+</figure>
+<p>JavaScript now reads all the code that it finds in the file at
+<code>node_modules/readline-sync/lib/readline-sync.js</code>, and
+executes it.</p>
+<details class="tldr" open>
+<summary>
+TL;DR
+</summary>
+<p><strong>Don’t worry. I don’t expect the code below to mean anything
+to you. I’m just showing you that all the code in a Node Module package
+is openly available. There’s no hidden magic.</strong></p>
+<p>The code in <code>readline-sync.js</code> includes the following
+(minor edit for clarity):</p>
+<pre class="language-javascript line-numbers" data-start="1220"><code class="language-javascript line-numbers"><i>function _keyInYN(query, options, limit) {
+  var res;
+  if (query == null) { query = 'Are you sure? '; }
+  if ((!options || options.guide !== false) &amp;&amp; (query += '')) {
+    query = query.replace(/\s*:?\s*$/, '') + ' [y/n]: ';
+  }
+  /* eslint-disable key-spacing */
+  res = exports.keyIn(query, margeOptions(options, {
+    // -------- forced
+    hideEchoBack:       false,
+    limit:              limit,
+    trueValue:          'y',
+    falseValue:         'n',
+    caseSensitive:      false
+    // mask doesn't work.
+  }));
+  // added:     guide
+  /* eslint-enable key-spacing */
+  return typeof res === 'boolean' ? res : '';
+}</i>
+<b>exports.keyInYN = function(query, options) {
+  return _keyInYN(query, options);
+};</b></code></pre>
+<p>There, on line 1240 in
+<code>node_modules/readline-sync/lib/readline-sync.js</code>, is the
+function <code>keyInYN</code>, which your JavaScript can now use, thanks
+to the <code>require()</code> function.</p>
+</details>
+<h2 id="a-black-box">A black box</h2>
+<p>You can consider the contents of <code>node_modules</code> to be a
+black box. You don’t need to understand how it works, just like you
+don’t need to understand how your phone works. All you need to know is
+that, if you give the right input, you will get the output that you
+need.</p>
+<p>I’ve just shown you how to look inside this black box, so that you
+can see the sort of content that it contains, but you may never need to
+do this again. It’s enough to know that it works.</p>
+</section>
+<!-- Using Documentation -->
+<section id="using-documentation" aria-labelledby="using-documentation" data-item="Using Documentation">
+<h2>
+<a href="#using-documentation">Using Documentation</a>
+</h2>
+<details class="tip" open>
+<summary>
+An important part of development
+</summary>
+<p>As a developer, you are going to being reading a lot of
+documentation. If you look at the <a
+href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference#built-ins">home
+page for JavaScript on the Mozilla Developers Network</a>, you’ll see
+that there are hundreds of topics to be covered. Look at the scrollbar
+in the image below, to understand how much is hidden.</p>
+<figure>
+<img src="images/MDN.webp"
+alt="Just part of the menu of topics in the MDN JavaScript reference">
+<figcaption aria-hidden="true">Just part of the menu of topics in the
+MDN JavaScript reference</figcaption>
+</figure>
+<p>No developer on Earth knows more than a fraction of this by heart. No
+developer on Earth even <em>uses</em> more than a fraction of all the
+possibilities available. As you will soon discover, you can do excellent
+work with only a few simple techniques.</p>
+<p>Even when you have used a particular feature regularly, after a few
+days your brain will start to forget the details. You will need to look
+up the exact wording to use. And new tools and features appear
+regularly, so there will always be something new to learn that did not
+exist until recently.</p>
+<p><strong>Consulting documentation is an important part of
+development.</strong></p>
+</details>
+</section>
+<!-- Playing with readline sync -->
+<section id="playing-with-readline-sync" aria-labelledby="playing-with-readline-sync" data-item="Playing with readline-sync">
+<h2>
+<a href="#playing-with-readline-sync">Playing with
+<code>readline-sync</code></a>
+</h2>
+<p>You can find the documentation for the <code>readline-sync</code>
+package <a href="https://www.npmjs.com/package/readline-sync">here</a>.
+Take your time to read it. And as you are reading it, try the examples
+for yourself, as described below.</p>
+<p>There is nothing that I can tell you about the
+<code>readline-sync</code> package that I did not find in this
+documentation page, so you can learn about it exactly the same way that
+I did.</p>
+<details class="sandbox" open>
+<summary>
+Micro projects in a sandbox
+</summary>
+<p>When I am working on a big project and I need to learn a new
+technique, I:</p>
+<ul>
+<li>Stop working on the big project</li>
+<li>Create a separate micro project, where I can:
+<ul>
+<li>Build a proof-of-concept</li>
+<li>Make experiments</li>
+<li>Make mistakes</li>
+<li>Test ideas</li>
+<li>Develop my understanding</li>
+<li>Build a working template that I can import into my big project</li>
+<li>Write up comprehensive notes for future-me</li>
+</ul></li>
+</ul>
+<p>Whenever you see a sand-coloured box like this, you’ll get the chance
+to do something similar.</p>
+<ol type="1">
+<li>Open a new Terminal</li>
+</ol>
+<figure>
+<img src="images/newTerminal.webp"
+alt="Click the + button to create a new Terminal">
+<figcaption aria-hidden="true">Click the + button to create a new
+Terminal</figcaption>
+</figure>
+<ol start="2" type="1">
+<li>Assuming that your Terminal is open on the parent directory
+(<code>My Learning Journey</code>), you can run:</li>
+</ol>
+<pre class="language-bash wrap"><code class="language-bash wrap">code Nail_It/Tests/readline-sync/index.js</code></pre>
+<p>The <code>code</code> at the beginning of the command refers to VS
+Code. This line tells VS Code to create a file called
+<code>index.js</code> at the location given. You will see a new editor
+tab open, with the name <code>index.js •</code>. The big round dot means
+“this file has not been saved yet”, so you need one more step to bring
+it into existence.</p>
+<figure>
+<img src="images/newFile.webp"
+alt="The code command will open a new tab in the text editor">
+<figcaption aria-hidden="true">The <code>code</code> command will open a
+new tab in the text editor</figcaption>
+</figure>
+<ol start="3" type="1">
+<li>Save the empty file</li>
+</ol>
+<p>VS Code will now create all the intervening folders and the
+<code>index.js</code> file itself.</p>
+<figure>
+<img src="images/savedFile.webp"
+alt="VS Code creates all the folders when it saves the index.js file">
+<figcaption aria-hidden="true">VS Code creates all the folders when it
+saves the <code>index.js</code> file</figcaption>
+</figure>
+<ol start="4" type="1">
+<li>Run the command:</li>
+</ol>
+<pre class="language-bash wrap"><code class="language-bash wrap">cd Nail_It/Tests/readline-sync </code></pre>
+<p>This will <a
+href="https://www.earthdatascience.org/courses/intro-to-earth-data-science/open-reproducible-science/bash/bash-commands-to-manage-directories-files/#change-current-working-directory-cd"><code>c</code>hange
+the <code>d</code>irectory</a> so that this new Terminal window will now
+be active in the new <code>readline-sync</code> directory.</p>
+<figure>
+<img src="images/cdToNewDir.webp" alt="Use cd to change directory">
+<figcaption aria-hidden="true">Use <code>cd</code> to change
+directory</figcaption>
+</figure>
+<ol start="5" type="1">
+<li>Visit the <a
+href="https://www.npmjs.com/package/readline-sync">readline-sync
+documentation page</a></li>
+<li>Copy the code that is given for the first “Simple case” (slightly
+edited below):</li>
+</ol>
+<pre class="language-javascript line-numbers"><code class="language-javascript line-numbers">const readlineSync = require('readline-sync');
+
+// Wait for user's response.
+const userName = readlineSync.question ('What is your name? ');
+console.log('Hi ' + userName + '!');
+
+// Handle secret text (e.g. password).
+const favFood = readlineSync.question (
+  'What is your favorite food? ',
+  { hideEchoBack: true } // shows `*` instead of typed text.
+);
+console.log('Oh, ' + userName + ' loves ' + favFood + '!');</code></pre>
+<details class="note" open>
+<summary>
+var
+</summary>
+<p>The original documentation uses <code>var</code> to declare a
+variable name.</p>
+<p>The <code>const</code> and <code>let</code> keywords were added in
+2016, and they do a much better job than <code>var</code>, which is now
+outdated. You will see <code>var</code> only in older projects, and in
+certain very specific cases where a variable may be re-declared.</p>
+<p>You can learn more about <code>var</code>, <code>const</code> and
+<code>let</code> in <a
+href="https://www.freecodecamp.org/news/var-let-and-const-whats-the-difference/">this
+freeCodeCamp article</a>.</p>
+</details>
+<ol start="7" type="1">
+<li>Paste this code into your file at
+<code>Nail_It/Tests/readline-sync/index.js</code></li>
+<li>Run the command:</li>
+</ol>
+<pre class="language-bash wrap"><code class="language-bash wrap">node index.js</code></pre>
+<ol start="9" type="1">
+<li><p>Answer the questions that you are given. Notice that you have to
+press Enter at the end of each answer.</p></li>
+<li><p>Now the playful part:</p>
+<ul>
+<li>Edit the code in <code>index.js</code> so that you see different
+questions when you run <code>node index.js</code>.</li>
+<li>After each change, and before you run <code>node index.js</code>,
+see if you can predict what will happen.</li>
+<li>Pay attention to where spaces are needed.</li>
+<li>See if you can understand how the <code>+</code> operator works when
+it is placed between two blocks of text. (You’ll see this in more detail
+later.)</li>
+<li>See what happens (if anything) when you change single quotes
+(<code>'</code>) to double quotes (<code>"</code>). What happens if you
+use on of each for the same block of text?</li>
+<li>What happens if you use <code>hideEchoBack: false</code>?</li>
+</ul></li>
+</ol>
+<details class="note" open>
+<summary>
+The options object
+</summary>
+<p>Notice how <code>hideEchoBack</code> is written inside curly braces
+(<code>{ ... }</code>). This structure generates an <em>object</em>
+which has key-value pairs. Here’s another object to illustrate this:</p>
+<pre class="language-javascript"><code class="language-javascript">{ key: "value", anotherKey: "another value", "a third key": 3 }</code></pre>
+<p>There are rules about how the names of the keys can be formed. They
+are similar to the rules for variable names. However, you can create a
+key name with any character in it, if you enclosed the key name with
+quotation marks.</p>
+</details>
+<p>Take your time. Have fun. Move on to the next section when you are
+ready.</p>
+</details>
+</section>
+<!-- Working with keyInYN -->
+<section id="working-with-keyinyn" aria-labelledby="working-with-keyinyn" data-item="Working with keyInYN">
+<h2>
+<a href="#working-with-keyinyn">Working with <code>keyInYN</code></a>
+</h2>
+<p>In the <a
+href="https://www.npmjs.com/package/readline-sync">documentation for the
+<code>readline-sync</code> package</a>, the next example is:</p>
+<blockquote>
+<ul>
+<li>Get the user’s response by a single key without the Enter key:</li>
+</ul>
+<pre class="language-javascript wrap"><code class="language-javascript wrap">const readlineSync = require('readline-sync');
+if (readlineSync.keyInYN('Do you want this module?')) {
+  // 'Y' key was pressed.
+  console.log('Installing now...');
+  // Do something...
+} else {
+  // Another key was pressed.
+  console.log('Searching for another...');
+  // Do something...
+}</code></pre>
+</blockquote>
+<ol type="1">
+<li>Create a new file in your <code>Tests/</code> folder and call it
+<code>keyInYN.js</code></li>
+<li>Look at the code above. Predict what you will see in the Terminal
+when you run it.</li>
+<li>Run:</li>
+</ol>
+<pre class="language-bash wrap"><code class="language-bash wrap">node keyInYN.js</code></pre>
+<ol start="4" type="1">
+<li>Press the <code>Y</code> key</li>
+<li>Look at the output. Was your prediction correct?</li>
+<li>Repeat steps 3 - 5 again, but press the <code>N</code> key.</li>
+<li>Repeat steps 3 - 5 again, but press a completely different key.</li>
+</ol>
+<p>When you press <code>Y</code>, you should see
+<code>Installing now...</code> in the Terminal. When you press
+<code>N</code> <em>or any other key</em> you should see
+<code>Searching for another...</code> in the Terminal.</p>
+<details class="challenge" open>
+<summary>
+Yes, No or …?
+</summary>
+<p>Here’s a challenge.</p>
+<p>Can you rewrite the code so that it shows exactly the value that the
+<code>keyInYN()</code> method returns, instead of a text like
+‘Installing now…’ or ‘Searching for another…’?</p>
+<p>It should show <code>true</code> if <code>Y</code> is pressed,
+<code>false</code> if <code>N</code> is pressed or nothing if another
+key is pressed.</p>
+<p>Hint: the file you created at <code>Nail_It/main.js</code> already
+does this. You can copy ideas from there.</p>
+<details class="solution">
+<summary>
+Solution
+</summary>
+<pre class="language-javascript line-numbers"><code class="language-javascript line-numbers">const readlineSync = require("readline-sync");
+const question = "Do you want this module?"
+const yesOrNo = readlineSync.keyInYN(question)
+console.log("yesOrNo: *", yesOrNo, "*")</code></pre>
+<p>I’ve added asterisk (<code>*</code>) characters around the value of
+<code>yesOrNo</code>, so that you can see when <code>yesOrNo</code>
+contains neither <code>true</code> nor <code>false</code>.</p>
+<p>Note that there will be a space added between each item that
+<code>console.log()</code> prints, so when <code>yesOrNo</code> contains
+an empty string, <code>console.log()</code> prints <code>*  *</code>,
+with two spaces between the asterisks.</p>
+<figure>
+<img src="images/yesOrNo.webp" alt="Showing the output of keyInYN">
+<figcaption aria-hidden="true">Showing the output of
+keyInYN</figcaption>
+</figure>
+</details>
+<details class="challenge">
+<summary>
+Bonus question
+</summary>
+<p>Search the documentation for more places where it talks about
+<code>keyInYN</code>, until you find this:</p>
+<blockquote>
+<h3 id="keyinyn">keyInYN</h3>
+<pre class="language-javascript wrap"><code class="language-javascript wrap">boolYesOrEmpty = readlineSync.keyInYN([query[, options]])</code></pre>
+</blockquote>
+<details class="question" open>
+<summary>
+Optional parameters
+</summary>
+<p>The square brackets in <code>keyInYN([query[, options]])</code> mean
+“The data inside these square brackets is optional.” This means that
+<code>readlineSync.keyInYN()</code> (with no parameters at all) should
+work.</p>
+<p>Why don’t you try it?<br>
+What does it do?<br>
+Where in the documentation can you find a description of what to
+expect?</p>
+</details>
+<p>And later, you should find this:</p>
+<blockquote>
+<p>… the following additional option is available.<br>
+<strong>guide</strong></p>
+<p><em>Type</em>: boolean<br>
+<em>Default</em>: true</p>
+<p>If true is specified, a string ‘[y/n]’ as guide for the user is added
+to query.</p>
+</blockquote>
+<p>Can you create an options object like <code>{ guide: false }</code>
+and add it as the second parameter of the <code>keyInYN()</code> method?
+What do you expect will happen if you do?</p>
+</details>
+<details class="solution">
+<summary>
+Bonus Solution
+</summary>
+<pre class="language-javascript line-numbers"><code class="language-javascript line-numbers">const readlineSync = require("readline-sync");
+const question = "Do you want this module?"
+const options = { guide: false }
+const yesOrNo = readlineSync.keyInYN(question, options)
+console.log("yesOrNo: *", yesOrNo, "*")</code></pre>
+<figure>
+<img src="images/bonus.webp"
+alt="With { guide: false }, the text [y\n] is not shown">
+<figcaption aria-hidden="true">With <code>{ guide: false }</code>, the
+text <code>[y\n]</code> is not shown</figcaption>
+</figure>
+</details>
+</details>
+</section>
+<!-- true and false -->
+<section id="true-and-false" aria-labelledby="true-and-false" data-item="A Few Words about True And False">
+<h2>
+<a href="#true-and-false">A Few Words about True And False</a>
+</h2>
+<p>You’ve seen the keywords <code>true</code> and <code>false</code> a
+few times now.</p>
+<p>In JavaScript, these two special values, <code>true</code> and
+<code>false</code>, are not words or numbers or objects: they are
+<em>boolean</em>.</p>
+<p>Boolean Logic is a branch of mathematics that deals with whether
+things are true or false. It is named after <a
+href="https://en.wikipedia.org/wiki/George_Boole">George Boole</a>, who
+invented this branch.</p>
+<p>For example, the expression <em>“The human player pressed the
+<code>Y</code> key”</em> can be either <code>true</code> (Yes, the
+player pressed the <code>Y</code> key) or <code>false</code> (The player
+hasn’t pressed any key yet, or the key the player pressed was not
+<code>Y</code>).</p>
+<h2 id="if-else"><code>if</code> … <code>else</code> …</h2>
+<p>You’ve also seen code in the <a
+href="https://www.npmjs.com/package/readline-sync">documentation for the
+<code>readline-sync</code> package</a> with a statement using
+<code>if ... else ...</code>:</p>
+<pre class="language-javascript"><code class="language-javascript"><b>if</b> <i>(readlineSync.keyInYN('Do you want this module?')) </i><b>{</b><i>
+  // 'Y' key was pressed.
+  console.log('Installing now...');
+  // Do something...</i>
+<b>} else {</b><i>
+  // Another key was pressed.
+  console.log('Searching for another...');
+  // Do something...</i>
+<b>}</b></code></pre>
+<p>Your Nail It! game needs to make decisions about what to do next. So
+far, you have got it to ask the user if they want to start. Your
+<code>main.js</code> script has a variable called <code>player</code>,
+whose value may be <code>true</code> (if the human player pressed the
+<code>Y</code> key), or something that is not <code>true</code>. So it
+knows whether the human player chose to go first or not.</p>
+<p>If the player chose to play first, your script needs to ask how hard
+they want to hit the nail. If the user chose not to play first, then the
+script must decide how hard the AI should hit the nail.</p>
+<p>To get your game to make such a decision, you can use a statement
+with two branches, like the one above. In your case, it will be more
+like:</p>
+<pre class="language-javascript line-numbers"><code class="language-javascript line-numbers">if (player) { // it's the human player's turn
+  // TODO: ask the human player for a number between 1 and 3
+} else { // it's the AI's turn to play
+  // TODO: choose the number between 1 and 3 to ensure AI wins
+  // (if possible)
+}</code></pre>
+<details class="note" open>
+<summary>
+Comments
+</summary>
+<p>Not everything in a JavaScript file is active code. You can add
+<em>comments</em>, like those shown above, by putting a double slash
+(<code>//</code>) to the left of any text that is not code. The
+JavaScript engine will ignore anything from that point until the end of
+the line.</p>
+<p>You can also put <code>/*</code> before a comment section and
+<code>*/</code> after it. You can do this in the middle of a line or to
+span many lines.</p>
+<p>In the code above, the comments indicate what code still has to be
+written. In other cases, you can use comments to explain what the code
+does. This is especially important if the logic is complex.</p>
+</details>
+<h2 id="truthy-and-falsy">Truthy and falsy</h2>
+<p>In the last section, you saw that the value generated by ’keyInYN()`
+can be:</p>
+<ul>
+<li><code>true</code> if the user presses the <code>Y</code> key</li>
+<li><code>false</code> if the user presses the <code>N</code> key</li>
+<li>“” (an empty string) if the user presses any other key</li>
+</ul>
+<p>JavaScript has an … interesting way of considering whether something
+is <code>true</code> or not. You can read more about this in the article
+for <a
+href="https://developer.mozilla.org/en-US/docs/Glossary/Truthy">Truthy</a>
+on the MDN web site.</p>
+<p>In short, JavaScript treats the number <code>0</code>, the empty
+string <code>""</code> and a few other empty values as
+<code>false</code>. These values are said to be <em>falsy</em>.</p>
+<p>Conversely, JavaScript treats anything that is not <code>false</code>
+or <code>0</code> or empty as <code>true</code>… even the word
+<code>"false"</code>, because <code>"false"</code> contains letters, so
+it’s not empty. Anything that is not <code>false</code> or falsy is
+<em>truthy</em>.</p>
+<p>Later in this project, you’ll see a trick to convert
+<code>true</code> to <code>1</code> and <code>false</code> to
+<code>0</code>.</p>
+<details class="sandbox" open>
+<summary>
+Playing with <code>node</code> in the Terminal
+</summary>
+<p>For testing, you can run an Interactive Development Environment (IDE)
+for Node in a Terminal.</p>
+<p>Open a new Terminal, and try this:</p>
+<pre class="language-tex wrap"><code class="language-tex wrap"><b>node</b>
+Welcome to Node.js v23.1.0.
+Type ".help" for more information.
+&gt; <b>if (true) console.log("This", /* "but not this", */ "and that")</b>
+This and that
+<i>undefined</i>
+&gt; <b>if (false) console.log("Nothing will be printed")</b>
+<i>undefined</i>
+&gt; <b>if ("false") console.log("The word 'false' is truthy")</b>
+The word 'false' is truthy
+<i>undefined</i>
+&gt; <b>if (0) console.log("Zero is falsy")</b>
+<i>undefined</i></code></pre>
+<p>When an expression is <code>false</code> or falsy, an <code>if</code>
+statement will ignore any instructions associated with it.</p>
+<p>The <code>undefined</code> text simply means that
+<code>console.log()</code> did not generate a value. When you call
+<code>readlineSync.keyInYN()</code>, it generates a value, but
+<code>console.log()</code> just logs data quietly to the console.</p>
+</details>
+</section>
+<!-- Choosing a Number -->
+<section id="choosing-a-number" aria-labelledby="choosing-a-number" data-item="Choosing A Number">
+<h2>
+<a href="#choosing-a-number">Choosing A Number</a>
+</h2>
+<p>The third example in <a
+href="https://www.npmjs.com/package/readline-sync">documentation for the
+<code>readline-sync</code> package</a>, is something like the code that
+follows.</p>
+<details class="note" open>
+<summary>
+Edited for clarity
+</summary>
+<p>I’ve edited a bit for clarity. In particular, the first line selects
+<code>keyInSelect</code> directly from the <code>readline-sync</code>
+code, using a technique known as <a
+href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">destructuring
+assignment</a>.</p>
+</details>
+<blockquote>
+<ul>
+<li>Let the user choose an item from a list:</li>
+</ul>
+<pre class="language-javascript line-numbers"><code class="language-javascript line-numbers">const { keyInSelect } = require('readline-sync')
+const animals = [
+  'Lion',
+  'Elephant',
+  'Crocodile',
+  'Giraffe',
+  'Hippo'
+]
+const question = 'Which animal?'
+const index = keyInSelect(animals, question);
+console.log(
+  'Ok, ' + animals[index] + ' goes to your room.'
+); </code></pre>
+<p>[1] Lion<br>
+[2] Elephant<br>
+[3] Crocodile<br>
+[4] Giraffe<br>
+[5] Hippo<br>
+[0] CANCEL</p>
+<p>Which animal? [1…5 / 0]: 2<br>
+Ok, Elephant goes to your room.</p>
+</blockquote>
+<p>To test this example:</p>
+<ol type="1">
+<li>Using your Terminal, create a new file:</li>
+</ol>
+<pre class="language-bash wrap"><code class="language-bash wrap">code keyInSelect.js</code></pre>
+<ol start="2" type="1">
+<li>Paste the four lines of code above into your new script file.</li>
+<li>In the Terminal, run:</li>
+</ol>
+<pre class="language-bash wrap"><code class="language-bash wrap">node keyInSelect.js</code></pre>
+<figure>
+<img src="images/keyInSelect.webp"
+alt="Testing keyInSelect() in a new script">
+<figcaption aria-hidden="true">Testing keyInSelect() in a new
+script</figcaption>
+</figure>
+<p>It works exactly as advertised. But for your game, you want a number,
+not an animal. You are going to have to change this code, and see
+exactly what is going on inside it.</p>
+<details class="sandbox" open>
+<summary>
+Adapting for the Nail It! game
+</summary>
+<p>You can edit the code in your new <code>keyInSelect.js</code> file so
+that it asks the question that you will need for the Nail It! game:</p>
+<pre class="language-javascript line-numbers"><code class="language-javascript line-numbers"><i>const { keyInSelect } = require('readline-sync')
+const </i><b>strength</b><i> = [
+  </i><b>'gently',
+  'firmly',
+  'hard'</b><i>
+]
+const question = '</i><b>How hard do you plan to hit?</b><i>'
+const index = keyInSelect(</i><b>strength</b><i>, question);
+console.log(</i>
+  <b>"index:", index</b>
+<i>)</i></code></pre>
+<p>Notice that instead of using <code>console.log()</code> to show the
+name of the item that is chosen, the code above logs the value of the
+<code>index</code> returned by <code>keyInSelect()</code>, directly. The
+result may surprise you.</p>
+<figure>
+<img src="images/howHard.webp"
+alt="The value of index is 1 less than the number you press">
+<figcaption aria-hidden="true">The value of <code>index</code> is 1 less
+than the number you press</figcaption>
+</figure>
+<p>You can try it several times. The value of <code>index</code> that is
+logged will always be 1 less than the number you press.</p>
+<pre class="language-tex"><code class="language-tex"><i>How hard do you plan to hit? [1, 2, 3, 0]: </i><b>0</b><i>
+index: </i><b>-1</b><i>
+
+How hard do you plan to hit? [1, 2, 3, 0]: </i><b>1</b><i>
+index: </i><b>0</b><i>
+
+How hard do you plan to hit? [1, 2, 3, 0]: </i><b>2</b><i>
+index: </i><b>1</b><i>
+
+How hard do you plan to hit? [1, 2, 3, 0]: </i><b>3</b><i>
+index: </i><b>2</b><i></i></code></pre>
+Is this a bug or a feature?
+</details>
 </section>
 <section id="preview" aria-labelledby="preview" data-item="Preview">
-<p><img src="images/NailIt.webp" /></p>
+<p><img src="images/NailIt.webp" alt=""></p>
 <h2>
 <a href="#preview">Preview</a>
 </h2>
@@ -405,8 +1566,31 @@ their friends and family after such a short learning period.</p>
 <p>Perhaps you haven’t even begun learning JavaScript yet. That’s OK.
 I’ll explain how to get started, and how to check, step-by-step, that
 you are on the right path.</p>
+<details class="tip" open>
+<summary>
+Download the source files
+</summary>
+<p>You can download a ZIP file with three versions of the game in it
+from <a href="https://github.com/MERNCraft/Nail-It/scripts.zip"
+download>here</a>.</p>
+<ul>
+<li><code>main.js</code>: the script that you will be learning to
+write</li>
+<li><code>minified.js</code>: a compressed version of the script that
+works exactly like <code>main.js</code>, but which hides how it
+works</li>
+<li><code>scores.js</code>: a more advanced script which also keeps
+score.</li>
+</ul>
+<p>See <a href="#a-first-javascript-file">6. A First JavaScript File</a>
+for information on how to use <code>node</code> to run any of these
+files.</p>
+<hr>
+<p>If you know about Git already, you can clone the repository for this
+whole project from <a
+href="https://github.com/MERNCraft/Nail-it">here</a>.</p>
+</details>
 </section>
-<p>Add permanent score boxes</p>
 
 <div class="spacer"></div>
 <footer id="footer">

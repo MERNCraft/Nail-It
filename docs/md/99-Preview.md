@@ -39,4 +39,19 @@ At the school for web development where I work, students have seen all the code 
 
 Perhaps you haven't even begun learning JavaScript yet. That's OK. I'll explain how to get started, and how to check, step-by-step, that you are on the right path.
 
+<details class="tip" open>
+<summary>Download the source files</summary>
+You can download a ZIP file with three versions of the game in it from [here](https://github.com/MERNCraft/Nail-It/scripts.zip){download=""}.
+
+* `main.js`: the script that you will be learning to write
+* `minified.js`: a compressed version of the script that works exactly like `main.js`, but which hides how it works
+* `scores.js`: a more advanced script which also keeps score.
+
+See [6. A First JavaScript File](#a-first-javascript-file) for information on how to use `node` to run any of these files.
+
+___
+
+If you know about Git already, you can clone the repository for this whole project from [here](https://github.com/MERNCraft/Nail-it).
+
+</details>
 </section>

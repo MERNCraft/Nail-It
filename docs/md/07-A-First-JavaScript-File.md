@@ -67,9 +67,20 @@ By default, a new Terminal will appear a the bottom of the VS Code window.
    
 You should see `Hello World!` printed into the Terminal.
 
-<details class="pivot" open>
-<summary>main.js and the Terminal</summary>
-For the rest of the project, this window, with the `main.js` file and the Terminal below it, is where you will be working. If you close the project and come back to work on it later, use VS Code to open the Nail_It folder, so you can continue from where you left off.
+<details class="tip" open>
+<summary>Running any JavaScript file the Terminal</summary>
+You'll be using `node` to run other little test scripts soon.
+
+If you [downloaded the source files](https://github.com/MERNCraft/Nail-It/scripts.zip){download=""} earlier, you can open the folder that contains them in a new VS Code window, and use the Terminal in that window to run any of the files. For example, you could try something like this:
+
+```bash-w
+cd /path/to/downloaded/folder
+node completed.js
+```
+
+The completed game also remembers your score against the computer.
+
+(Remember that you type `cd ` (followed by a space) and then can drag the icon of any folder into the Terminal window to navigate to that folder.)
 
 </details>
 
