@@ -55,10 +55,10 @@ For [practical and theoretical reasons](https://en.wikipedia.org/wiki/Zero-based
 In the script that you have originally copied, the variable `index` receives an integer from `keyInSelect()`. When you _press_ the number `2` key on your keyboard (to select the Elephant), `keyInSelect()` _returns_ the number `1`, because JavaScript considers that `animals[1]` is 'Elephant'.
 
 ```javascript-#7
-const index = keyInSelect(animals, question);
+const index = keyInSelect(animals, question)
 console.log(
   'Ok, ' + animals[index] + ' goes to your room.'
-); 
+)
 ```
 The adjusted value of `index` ensures that the output in the Terminal shows the correct animal name.
 
@@ -86,7 +86,7 @@ const strength = [
   'hard'
 ]
 const question = 'How hard do you plan to hit?'
-const index = keyInSelect(strength, question);
+const index = keyInSelect(strength, question)
 console.log(
   "index:", index</i><b>,
   "strength:", strength[index]</b><i>

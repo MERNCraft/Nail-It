@@ -131,7 +131,7 @@ You should always choose meaningful names for your variables, even if they are q
 
 In JavaScript, a single equals sign (`=`) is used to assign a value to a variable (or to use the house metaphor, to tell JavaScript to move a given piece of data into a named address). So...
 
-```bash-w
+```tex-w
 const whoStarts = "If you want to start..."
 ```
 ... tells JavaScript:

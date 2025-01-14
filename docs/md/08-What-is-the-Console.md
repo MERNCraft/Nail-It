@@ -12,7 +12,7 @@ console.log("Hello World")
 ```
 **... plus this command in the Terminal...**
 
-```bash-w
+```tex-w
 node main.js
 ```
 **... make this text appear in the Terminal?**

@@ -2,9 +2,9 @@
 <section
   id="setting-up-your-development-environment"
   aria-labelledby="setting-up-your-development-environment"
-  data-item="Setting Up your Development Environment"
+  data-item="Your Development Environment"
 >
-  <h2><a href="#setting-up-your-development-environment">Setting Up your Development Environment</a></h2>
+  <h2><a href="#setting-up-your-development-environment"> Setting up our Development Environment</a></h2>
   
 First, you need to set up a Development Environment. You need:
 

@@ -27,7 +27,7 @@
 2. Look at the code above. Predict what you will see in the Terminal when you run it.
 3. Run:
 
-```bash-w
+```tex-w
 node keyInYN.js
 ```
 
@@ -103,7 +103,7 @@ Can you create an options object like `{ guide: false }` and add it as the secon
 <details class="solution">
 <summary>Bonus Solution</summary>
 ```javascript
-const readlineSync = require("readline-sync");
+const readlineSync = require("readline-sync")
 const question = "Do you want this module?"
 const options = { guide: false }
 const yesOrNo = readlineSync.keyInYN(question, options) 

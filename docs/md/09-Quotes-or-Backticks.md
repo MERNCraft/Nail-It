@@ -38,7 +38,7 @@ When you have found the backtick key:
 1. In `main.js`, replace the double-quote characters with single backticks, one at the beginning, and one at the end of the text.
 2. In the Terminal, run:
 
-```bash-w
+```tex-w
 node main.js
 ```
 

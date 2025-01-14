@@ -35,7 +35,7 @@ If the player chose to play first, your script needs to ask how hard they want t
 
 To get your game to make such a decision, you can use a statement with two branches, like the one above. In your case, it will be more like:
 
-```javascript
+```javascript-w
 if (player) { // it's the human player's turn
   // TODO: ask the human player for a number between 1 and 3
 } else { // it's the AI's turn to play

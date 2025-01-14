@@ -42,7 +42,7 @@ This code creates an interactive slider. Here's how you can test it:
 
 1. Create a new file in your `Tests/readline-sync/` folder:
 
-```bash-w
+```tex-w
 code slider.js
 ```
 
@@ -50,7 +50,7 @@ code slider.js
 3. Save your changes.
 4. In the Terminal, execute the command:
 
-```bash-w
+```tex-w
 node slider.js
 ```
 
@@ -77,7 +77,7 @@ Do you think it might be connected with the way the slider bar updates itself.
 Here's how you could test what it does.
 
 1. Create a new file in a new subfolder of your `Nail_It/Tests/` folder:
-```bash-w
+```tex-w
 code ../strings/deleteLines.js
 ```
 
@@ -112,13 +112,13 @@ console.log('\x1B[1A\x1B[K')
 3. Save the new `deleteLines.js` file.
 4. Tell the Terminal that you want to change directories, to work in the new `Nail_It/Tests/strings/` folder:
 
-```bash-w
+```tex-w
 cd ../strings
 ```
 
 5. Run the script that you have just created:
 
-```bash-w
+```tex-w
 node deleteLines.js
 ```
 
@@ -135,7 +135,7 @@ Can you change `deleteLines.js` so that the last `console.log()` line deletes mo
 
 OK. I'll help you with this one. JavaScript has a method called [`repeat()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/repeat) that you can use with a string. Here's how it works:
 
-```bash-w
+```tex-w
 <b>node</b>
 Welcome to Node.js v23.1.0.
 Type ".help" for more information.

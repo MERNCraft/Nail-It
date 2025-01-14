@@ -46,7 +46,7 @@ In your game, you want to stop the game when the nail has been fully hammered in
 
 1. Create a new file called `while.js`:
 
-```bash-w
+```tex-w
 code while.js
 ```
 
@@ -63,7 +63,7 @@ console.log("length:", length)
 
 3. In the Terminal window, run:
 
-```bash-w
+```tex-w
 node while.js
 ```
 

@@ -28,10 +28,10 @@ In particular, the first line selects `keyInSelect` directly from the `readline-
 >   'Hippo'
 > ]
 > const question = 'Which animal?'
-> const index = keyInSelect(animals, question);
+> const index = keyInSelect(animals, question)
 > console.log(
 >   'Ok, ' + animals[index] + ' goes to your room.'
-> ); 
+> )
 > ```
 > In the Terminal:
 > ```tex-w
@@ -50,14 +50,14 @@ To test this example:
 
 1. Using your Terminal, create a new file:
 
-```bash-w
+```tex-w
 code keyInSelect.js
 ```
 
 1. Paste the code above into your new script file.
 2. In the Terminal, run:
 
-```bash-w
+```tex-w
 node keyInSelect.js
 ```
 
@@ -77,7 +77,7 @@ const </i><b>strength</b><i> = [
   'hard'</b><i>
 ]
 const question = '</i><b>How hard do you plan to hit?</b><i>'
-const index = keyInSelect(</i><b>strength</b><i>, question);
+const index = keyInSelect(</i><b>strength</b><i>, question)
 console.log(</i>
   <b>"index:", index</b>
 <i>)</i>

@@ -2,20 +2,29 @@
  * Nail-It/index.js
  */
 
-// Load a NodeJS package that allows a dialog with the Terminal
-const readlineSync = require("readline-sync")
+// Load methods from a NodeJS package that allows a dialog with
+// the Terminal
+const {
+  keyInYN,
+  keyInSelect,
+  keyInYNStrict
+} = require('readline-sync')
 
 // Define the strings that will be used for feedback
-const invite = `Let's knock a nail into this computer!
+const rules = `Let's knock a nail into this computer!
 
 * Each player takes a turn to hit the nail once.
-* A player can hit the nail in one of three ways: gently, firmly, hard.
-* Depending on the force used, the nail will be driven more or less deeply into the Terminal.
-* The player who knocks the nail all the way in is the winner.
+* A player can hit the nail in one of three ways:
+  gently, firmly, hard.
+* Depending on the force used, the nail will be
+  driven more or less deeply into the Terminal.
+* The player who knocks the nail all the way in
+  is the winner.
 
 Are you ready?
 `
-const whoStarts = "If you want to start, type Y. If you want me to start, press any other key. "
+const whoStarts = `If you want to start, type Y.
+If you want me to start, press any other key. `
 const board     = "-------------------------------------------\n"
                 + "|                  SCORE                  |\n"
                 + "-------------------------------------------\n"
@@ -50,8 +59,8 @@ let initial, length
 
 // Start the game
 console.clear()
-console.log(invite)
-let player = readlineSync.keyInYN(whoStarts, options) // true | ?
+console.log(rules)
+let player = keyInYN(whoStarts, options) // true | ?
 
 // Ensure that a different player starts each new round
 let nextPlayer = !player
@@ -94,7 +103,7 @@ while (playing) {
     // Choose force for next turn
     if (player) {
       // Ask the player for a number from ... 0 to 2, in fact
-      force = readlineSync.keyInSelect(strength, yourTurn)
+      force = keyInSelect(strength, yourTurn)
       if (force < 0) {
         console.log(endGame)
         process.exit()
@@ -187,7 +196,7 @@ while (playing) {
   nextPlayer = !nextPlayer
 
   // Ask the player if they want to play again
-  playing    = readlineSync.keyInYNStrict(replay, options)
+  playing    = keyInYNStrict(replay, options)
 
   if (!playing) {
     console.log(endGame)

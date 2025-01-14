@@ -32,7 +32,7 @@ Whenever you see a sand-coloured box like this, you'll get the chance to do some
 
 2. Assuming that your Terminal is open on the parent directory (`My Learning Journey`), you can run:
 
-```bash-w
+```tex-w
 code Nail_It/Tests/readline-sync/index.js
 ```
 The `code` at the beginning of the command refers to VS Code. This line tells VS Code to create a file called `index.js` at the location given. You will see a new editor tab open, with the name `index.js •`. The big round dot means "this file has not been saved yet", so you need one more step to bring it into existence.
@@ -47,7 +47,7 @@ VS Code will now create all the intervening folders and the `index.js` file itse
 
 4. Run the command:
 
-```bash-w
+```tex-w
 cd Nail_It/Tests/readline-sync 
 ```
 
@@ -86,7 +86,7 @@ You can learn more about `var`, `const` and `let` in [this freeCodeCamp article]
 7. Paste this code into your file at `Nail_It/Tests/readline-sync/index.js`
 8. Run the command:
 
-```bash-w
+```tex-w
 node index.js
 ```
 

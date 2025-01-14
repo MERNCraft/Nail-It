@@ -60,7 +60,7 @@ By default, a new Terminal will appear a the bottom of the VS Code window.
 
 4. When the Terminal is active in the Nail_It directory, type...
 
-   ```bash-w
+   ```tex-w
    node main.js
    ```
    ... as shown in the Figure 5 above.
@@ -73,7 +73,7 @@ You'll be using `node` to run other little test scripts soon.
 
 If you [downloaded the source files](https://github.com/MERNCraft/Nail-It/scripts.zip){download=""} earlier, you can open the folder that contains them in a new VS Code window, and use the Terminal in that window to run any of the files. For example, you could try something like this:
 
-```bash-w
+```tex-w
 cd /path/to/downloaded/folder
 node completed.js
 ```

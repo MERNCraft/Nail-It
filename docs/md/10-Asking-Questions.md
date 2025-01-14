@@ -29,7 +29,7 @@ When you installed NodeJS, a program called `npm` was installed at the same time
 1. Make sure your computer is connected to the Internet
 2. In the Terminal for your `Nail_It` directory, run:
 
-```bash-w
+```tex-w
 npm install readline-sync
 ```
 
@@ -39,7 +39,7 @@ Like me, and most programmers, you can be lazy. You can use `i` as a shortcut fo
 
 This command will have exactly the same effect:
 
-```bash-w
+```tex-w
 npm i readline-sync
 ```
 
@@ -88,7 +88,7 @@ Try this out.
 1. Edit your script
 2. In the Terminal, run
 
-```bash-w
+```tex-w
 node main.js
 ```
 3. In the Terminal, press the `y` key, in response to the question.
@@ -100,15 +100,19 @@ I'll explain in the next section exactly what is happening, why `player: true` a
 </details>
 
 ```javascript-w
-<b>const readlineSync = require("readline-sync")
-const whoStarts = "If you want to start, type Y. If you want me to start press any other key. "
-</b>
-<i>console.log(`Let's knock a nail into this computer!
+<i>const readlineSync = require('readline-sync')
+const whoStarts = `If you want to start, type Y.
+If you want me to start press any other key. `
+
+console.log(`Let's knock a nail into this computer!
 
 * Each player takes a turn to hit the nail once.
-* A player can hit the nail in one of three ways: gently, firmly, hard.
-* Depending on the force used, the nail will be driven more or less deeply into the Terminal.
-* The player who knocks the nail all the way in is the winner.
+* A player can hit the nail in one of three ways:
+  gently, firmly, hard.
+* Depending on the force used, the nail will be
+  driven more or less deeply into the Terminal.
+* The player who knocks the nail all the way in
+  is the winner.
 
 Are you ready?
 `)</i>

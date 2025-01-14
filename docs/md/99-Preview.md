@@ -27,7 +27,7 @@ I'll start by showing you a simulation of the game that you will create - a simu
   id="iframe-Nail-It"
   title="Nail-It"
   width="550"
-  height="420"
+  height="450"
   src="https://merncraft.github.io/Nail-It-Browser">
 </iframe>
 
