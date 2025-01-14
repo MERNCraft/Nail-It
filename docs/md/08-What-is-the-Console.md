@@ -2,9 +2,9 @@
 <section
   id="what-is-the-console"
   aria-labelledby="what-is-the-console"
-  data-item="What Is The Console?"
+  data-item="What is the Console?"
 >
-  <h2><a href="#what-is-the-console">What Is The Console?</a></h2>
+  <h2><a href="#what-is-the-console">What is the Console?</a></h2>
   
 I can imagine a question in your mind: **How does this code in `main.js` ...**
 ```javascript

@@ -28,7 +28,7 @@ Whenever you see a sand-coloured box like this, you'll get the chance to do some
 
 1. Open a new Terminal
 
-![Click the + button to create a new Terminal](images/newTerminal.webp)
+![Use Terminal > New Terminal, or click the + button to create a new Terminal](images/newTerminal.webp)
 
 2. Assuming that your Terminal is open on the parent directory (`My Learning Journey`), you can run:
 
@@ -96,8 +96,8 @@ node index.js
     * Edit the code in `index.js` so that you see different questions when you run `node index.js`.
     * After each change, and before you run `node index.js`, see if you can predict what will happen.
     * Pay attention to where spaces are needed.
-    * See if you can understand how the `+` operator works when it is placed between two blocks of text. (You'll see this in more detail later.)
-    * See what happens (if anything) when you change single quotes (`'`) to double quotes (`"`). What happens if you use on of each for the same block of text?
+    * See if you can understand how the `+` operator works when it is placed between two strings. (You'll see this in more detail later.)
+    * See what happens (if anything) when you change single quotes (`'`) to double quotes (`"`). What happens if you use one of each for the same string?
     * What happens if you use `hideEchoBack: false`?
   
 <details class="note" open>

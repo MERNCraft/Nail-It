@@ -2,9 +2,9 @@
 <section
   id="welcome-to-vscode"
   aria-labelledby="welcome-to-vscode"
-  data-item="Welcome To VSCode"
+  data-item="Welcome to VSCode"
 >
-  <h2><a href="#welcome-to-vscode">Welcome To VSCode</a></h2>
+  <h2><a href="#welcome-to-vscode">Welcome to VSCode</a></h2>
   
 NodeJS is not an application that you can open like a browser or social media app. It does not have a desktop icon you can click on or a  Graphic User Interface (or GUI) where you can point and click with your mouse. Instead, you have to control NodeJS from a Terminal.
 
@@ -33,10 +33,6 @@ To get started, you should create:
 * A folder to hold all your future coding projects
 * A second folder inside this first folder for the game you are about to create
 * A file called `main.js` where you will write your code.
-
-</details>
-
-
 
 </details>
 </section>

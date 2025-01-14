@@ -2,15 +2,17 @@
 <section
   id="choosing-a-number"
   aria-labelledby="choosing-a-number"
-  data-item="Choosing A Number"
+  data-item="Choosing a Number"
 >
-  <h2><a href="#choosing-a-number">Choosing A Number</a></h2>
+  <h2><a href="#choosing-a-number">Choosing a Number</a></h2>
   
 The third example in [documentation for the `readline-sync` package](https://www.npmjs.com/package/readline-sync), is something like the code that follows. 
 
 <details class="note" open>
 <summary>Edited for clarity</summary>
-I've edited a bit for clarity. In particular, the first line selects `keyInSelect` directly from the `readline-sync` code, using a technique known as [destructuring assignment](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment).
+I've edited a bit for clarity. Can you spot the differences?
+
+In particular, the first line selects `keyInSelect` directly from the `readline-sync` code, using a technique known as [destructuring assignment](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment).
 
 </details>
 
@@ -31,7 +33,8 @@ I've edited a bit for clarity. In particular, the first line selects `keyInSelec
 >   'Ok, ' + animals[index] + ' goes to your room.'
 > ); 
 > ```
->
+> In the Terminal:
+> ```tex-w
 > [1] Lion  
 > [2] Elephant  
 > [3] Crocodile  
@@ -41,6 +44,7 @@ I've edited a bit for clarity. In particular, the first line selects `keyInSelec
 >  
 > Which animal? [1...5 / 0]: 2  
 > Ok, Elephant goes to your room.
+> ```
 
 To test this example:
 
@@ -50,8 +54,8 @@ To test this example:
 code keyInSelect.js
 ```
 
-2. Paste the four lines of code above into your new script file.
-3. In the Terminal, run:
+1. Paste the code above into your new script file.
+2. In the Terminal, run:
 
 ```bash-w
 node keyInSelect.js

@@ -6,7 +6,7 @@
 >
   <h2><a href="#asking-questions with readline-sync">Asking Questions</a></h2>
   
-  To be exact, there is another line of text that appears when the game starts:
+To be exact, there is another line of text that appears when the game starts:
 
 ![The last line of text is a question about who is going to play first](images/yesNoPrompt.webp)
 

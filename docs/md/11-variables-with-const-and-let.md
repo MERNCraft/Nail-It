@@ -57,7 +57,7 @@ In the world of JavaScript, your code _assigns_ a _value_ to each named _variabl
 
 Because the value in a variable created `const` has a fixed value, you must give a value as soon as you declare the variable.
 
-`let` tells NodeJS: "You know, I need some space, but I can't be sure how much or what I'll use it for, and I might change my mind. Can you create a space that can get bigger or smaller and that can hold text or a number or an object with many functions... or just about anything?"
+`let` tells NodeJS: "You know, I need some space, but I can't be sure how much or what I'll use it for, and I might change my mind. Can you create a space that can get bigger or smaller and that can hold a string of text or a number or an object with many functions... or just about anything?"
 
 When you use `let`, JavaScript has to be prepared for changes. This is like when you let out your house. You don't know what the new tenants are going to do to it, so you need to make an inventory, prepare a lease, ask for a deposit, ... all sort of extra things. And this has to be renewed each time the tenant changes.
 
@@ -107,6 +107,26 @@ There are many different formats that can be used for variable names. The most c
 
 </details>
 
+<details class="tip" open>
+<summary>Variables should have descriptive names</summary>
+You _can_ call a variable anything. The [script `minified.js`](https://MERNCraft.github.io/Nail-It/scripts.zip){download=""} uses single letter names for each variable. Here's are a couple of extracts:
+
+```js-w
+const t="If you want to start, type Y. If you want me to start, press any other key. ";const n="The nail is ";const l=" units long."
+```
+```js-s
+// more obfuscated code //
+```
+```js-w
+let M=e.keyInYN(t,O);let T=!M
+```
+
+This code works, but it is very hard to read.
+
+You should always choose meaningful names for your variables, even if they are quite long. Each variable name should describe the data it contains. When future-you or a colleague reads your code, a good choice of names will save you a lot of time in understanding what the code does.
+
+</details>
+
 ## Equals signs
 
 In JavaScript, a single equals sign (`=`) is used to assign a value to a variable (or to use the house metaphor, to tell JavaScript to move a given piece of data into a named address). So...
@@ -118,7 +138,7 @@ const whoStarts = "If you want to start..."
 
 * Select a block of memory at an address that I will call `whoStarts`.
 * The contents of this memory block are not going to change. They will be constant.
-* Assign the text "If you want to start..." to this memory block.
+* Assign the string "If you want to start..." to this memory block.
 * In the future, when I refer to `whoStarts`, use the contents of the memory block instead.
 
 

@@ -2,9 +2,9 @@
 <section
   id="what-needs-to-be-done"
   aria-labelledby="what-needs-to-be-done"
-  data-item="What Needs To Be Done"
+  data-item="What Needs to be Done"
 >
-  <h2><a href="#what-needs-to-be-done">What Needs To Be Done</a></h2>
+  <h2><a href="#what-needs-to-be-done">What Needs to be Done</a></h2>
   
 When you play the game, you get caught up in it. (At least, I hope you do.) But in order to create such a game, you have to step back and think, in detail, about what moving parts it needs, and how to make them move. So here's a list of some of the things that you may have noticed, without realising it.
 

@@ -2,9 +2,9 @@
 <section
   id="quotes-or-backticks"
   aria-labelledby="quotes-or-backticks"
-  data-item="Quotes Or Backticks?"
+  data-item="Quotes or Backticks?"
 >
-  <h2><a href="#quotes-or-backticks">Quotes Or Backticks?</a></h2>
+  <h2><a href="#quotes-or-backticks">Quotes or Backticks?</a></h2>
   
 The game that you are about to create shows several lines of text, right at the beginning:
 
@@ -19,7 +19,7 @@ Let's knock a nail into this computer!
 Are you ready?
 ```
 
-You might have noticed that the text in `"Hello World!"` was surrounded by _double-quote_ characters (`"`). You might think that all you need to do is paste the multiline text that you want to show inside double-quotes. But if you do, VS Code shows you lots of wavy red lines, and tells you that you have 52 problems, on for each word that is not in the first line.
+You might have noticed that the text in `"Hello World!"` was surrounded by _double quote_ characters (`"`). You might think that all you need to do is paste the multiline text that you want to show inside double quotes. But if you do, VS Code shows you lots of wavy red lines, and tells you that you have 52 problems, on for each word that is not in the first line.
 
 ![VS Code tells you that you have problems with your text](images/multilineStringFail.webp)
 
@@ -45,6 +45,22 @@ node main.js
 You should see your multiline block of text appear, as shown in Figure 7 below.
 
 ![Replace the " double-quotes with ` backticks](images/backtickSuccess.webp)
+
+<details class="note" open>
+<summary>Strings</summary>
+From the early days of computing, sequences of characters have been referred to as _strings_. This is because they are treated as continuous groups, just like beads on a string.
+
+From now on, the word "string" will mean:
+
+A sequence of characters enclosed either by:
+
+* single quote marks (`'`) or by
+* double quote marks (`"`) or by
+* back-ticks (`` ` ``)
+
+In section [XX. Working with strings](), you'll see how to join strings together to create sentences dynamically.
+
+</details>
 
 <details class="tldr">
 <summary>All about backticks and template literals</summary>

@@ -43,7 +43,7 @@ When you press `N` _or any other key_ you should see `Searching for another...` 
 <summary>Yes, No or ...?</summary>
 Here's a challenge.
 
-Can you rewrite the code so that it shows exactly the value that the `keyInYN()` method returns, instead of a text like 'Installing now...' or 'Searching for another...'?
+Can you rewrite the code so that it shows exactly the value that the `keyInYN()` method returns, instead of a string like 'Installing now...' or 'Searching for another...'?
 
 It should show `true` if `Y` is pressed, `false` if `N` is pressed or nothing if another key is pressed.
 
@@ -110,7 +110,7 @@ const yesOrNo = readlineSync.keyInYN(question, options)
 console.log("yesOrNo: *", yesOrNo, "*")
 ```
 
-![With `{ guide: false }`, the text `[y\n]` is not shown](images/bonus.webp)
+![With `{ guide: false }`, the string `[y\n]` is not shown](images/bonus.webp)
 
 </details>
 </details>

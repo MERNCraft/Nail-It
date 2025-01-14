@@ -2,9 +2,9 @@
 <section
   id="understanding-the-game-logic"
   aria-labelledby="understanding-the-game-logic"
-  data-item="Understanding The Game Logic"
+  data-item="Understanding the Game Logic"
 >
-  <h2><a href="#understanding-the-game-logic">Understanding The Game Logic</a></h2>
+  <h2><a href="#understanding-the-game-logic">Understanding the Game Logic</a></h2>
   
 The game is simple, but it beats you. Obviously, it is using a simple rule that is easy to implement in code.
 

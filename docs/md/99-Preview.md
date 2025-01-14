@@ -34,6 +34,12 @@ I'll start by showing you a simulation of the game that you will create - a simu
 1. Click on Start Game to activate it
 2. Play until you get tired of losing or until you are ready to start creating this for yourself.
 
+<details class="tip" open>
+<summary>Open in a different window</summary>
+You can [open this game in a different window](https://merncraft.github.io/Nail-It-Browser){target="_blank"}, if you like, so that you can refer to it as you are working.
+
+</details>
+
 ## Who I am writing this for
 At the school for web development where I work, students have seen all the code used in this game after only the first 10 days. The challenge for me was to create an activity for them that would impress their friends and family after such a short learning period.
 

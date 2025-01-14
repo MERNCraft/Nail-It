@@ -2,9 +2,9 @@
 <section
   id="true-and-false"
   aria-labelledby="true-and-false"
-  data-item="A Few Words about True And False"
+  data-item="A Few Words about True and False"
 >
-  <h2><a href="#true-and-false">A Few Words about True And False</a></h2>
+  <h2><a href="#true-and-false">A Few Words about True and False</a></h2>
 
 You've seen the keywords `true` and `false` a few times now.
 
