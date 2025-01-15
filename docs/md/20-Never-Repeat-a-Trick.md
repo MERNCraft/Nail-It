@@ -2,9 +2,9 @@
 <section
   id="never-repeat-a-trick"
   aria-labelledby="never-repeat-a-trick"
-  data-item="Never Repeat A Trick?"
+  data-item="Never Repeat a Trick?"
 >
-  <h2><a href="#never-repeat-a-trick">Never Repeat A Trick?</a></h2>
+  <h2><a href="#never-repeat-a-trick">Never Repeat a Trick?</a></h2>
   
 One rule of illusionists is never to repeat a trick. If the audience knows what is going to happen, they will watch more closely, and they might notice something the illusionist does not want them to see.
 

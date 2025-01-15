@@ -63,7 +63,7 @@ The code in `readline-sync.js` includes the following (minor edit for clarity):
 <i>function _keyInYN(query, options, limit) {
   var res;
   if (query == null) { query = 'Are you sure? '; }
-  if ((!options || options.guide !== false) && (query += '')) {
+  if ((!options || options.guide !== false) &amp;&amp; (query += '')) {
     query = query.replace(/\s*:?\s*$/, '') + ' [y/n]: ';
   }
   /* eslint-disable key-spacing */

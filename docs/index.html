@@ -988,7 +988,7 @@ is openly available. There’s no hidden magic.</strong></p>
 <pre class="language-javascript line-numbers" data-start="1220"><code class="language-javascript line-numbers"><i>function _keyInYN(query, options, limit) {
   var res;
   if (query == null) { query = 'Are you sure? '; }
-  if ((!options || options.guide !== false) && (query += '')) {
+  if ((!options || options.guide !== false) &amp;&amp; (query += '')) {
     query = query.replace(/\s*:?\s*$/, '') + ' [y/n]: ';
   }
   /* eslint-disable key-spacing */
@@ -1873,9 +1873,9 @@ delete 9 lines</figcaption>
 </details>
 </section>
 <!-- Never Repeat a Trick -->
-<section id="never-repeat-a-trick" aria-labelledby="never-repeat-a-trick" data-item="Never Repeat A Trick?">
+<section id="never-repeat-a-trick" aria-labelledby="never-repeat-a-trick" data-item="Never Repeat a Trick?">
 <h2>
-<a href="#never-repeat-a-trick">Never Repeat A Trick?</a>
+<a href="#never-repeat-a-trick">Never Repeat a Trick?</a>
 </h2>
 <p>One rule of illusionists is never to repeat a trick. If the audience
 knows what is going to happen, they will watch more closely, and they
@@ -2071,9 +2071,9 @@ it executes the first line, because you place a breakpoint there.</li>
 </ol>
 <figure>
 <img src="images/StepOver.webp"
-alt="Click on the Step Over button in the Control Palette to execute the first line" />
-<figcaption aria-hidden="true">Click on the Step Over button in the
-Control Palette to execute the first line</figcaption>
+alt="The Control Palette lets you progress through your script" />
+<figcaption aria-hidden="true">The Control Palette lets you progress
+through your script</figcaption>
 </figure>
 <p>You will see:</p>
 <ul>
@@ -2110,7 +2110,8 @@ to be executed</figcaption>
 </figure>
 <h2 id="stepping-through-the-script">Stepping through the script</h2>
 <ol type="1">
-<li>Click on the Step Over button in the Control Panel</li>
+<li>Click on the Step Over button in the Control Panel, or press the
+shortcut key <code>F10</code>.</li>
 </ol>
 <figure>
 <img src="images/StepOverButton.webp"
@@ -2131,10 +2132,11 @@ alt="When the first line is executed, length = 12 is shown in the VARIABLES pane
 <code>length = 12</code> is shown in the VARIABLES pane</figcaption>
 </figure>
 <ol start="3" type="1">
-<li><p>Press the Step Over button again. The <code>while</code> loop
-will see that <code>length</code> is <em>truthy</em> because it has a
-non-zero value, and it will move your code into its code block.</p></li>
-<li><p>Press the Step Over button again, and the line
+<li><p>Press the Step Over button again or press <code>F10</code>. The
+<code>while</code> loop will see that <code>length</code> is
+<em>truthy</em> because it has a non-zero value, and it will move your
+code into its code block.</p></li>
+<li><p>Press the Step Over button again (<code>F10</code>), and the line
 <code>console.log("Nail length: " + length)</code> will be executed. You
 can see this output in the Debug Console panel, which replaces the
 Terminal.</p></li>
@@ -2222,12 +2224,13 @@ Debug Console, and an entry for <code>length = 1</code> showing in the
 VARIABLES pane. The line <code>length = length - 1</code> is ready to be
 executed.</p>
 <ol start="5" type="1">
-<li>Press the Step Over button to execute just this one line.</li>
+<li>Use the <code>F10</code> shortcut to activate the Step Over button
+and execute just this one line.</li>
 </ol>
 <figure>
 <img src="images/lengthIsZero.webp"
-alt="Press Step Over to set length to 0" />
-<figcaption aria-hidden="true">Press Step Over to set
+alt="Activate Step Over to set length to 0" />
+<figcaption aria-hidden="true">Activate Step Over to set
 <code>length</code> to <code>0</code></figcaption>
 </figure>
 <p>The entry <code>length = 0</code> will appear in the VARIABLES pane,
@@ -2242,8 +2245,8 @@ alt="When length === 0, the while loop will stop" />
 <figcaption aria-hidden="true">When <code>length === 0</code>, the
 <code>while</code> loop will stop</figcaption>
 </figure>
-<ol start="6" type="1">
-<li><p>Press the Step Over button again, to execute the final line
+<ol type="1">
+<li><p>Use Step Over again, to execute the final line
 <code>console.log("length:", length)</code>. One last entry will be
 printed in the Debug Console.</p></li>
 <li><p>Press the Step Over button again to execute the line after that…
@@ -3258,8 +3261,8 @@ You'll have to play solo.`)
 }
 
 length = length - force
+nail   = "-" + "=".repeat(length - 1) + "|"
 </i><b>console.log(clear.repeat(toDelete))</b><i>
-nail      = "-" + "=".repeat(length - 1) + "|"
 console.log(nail, prompt)</i></code></pre>
 </details>
 </details>
@@ -3291,6 +3294,698 @@ of DRY).</p>
 -| You hit the nail hard.</code></pre>
 </details>
 <h2 id="repetition-with-while">Repetition with <code>while</code></h2>
+<p>In section <a href="#never-repeat-a-trick">20: Never Repeat a
+Trick</a>, you wrote a script called <code>while.js</code>, which logged
+<code>Nail length:</code> from 12 down to 1.</p>
+<pre class="language-javascript line-numbers"><code class="language-javascript line-numbers">
+let length = 12
+while (length) {
+  console.log("Nail length: " + length)
+  length = length - 1
+}
+console.log("length:", length)</code></pre>
+<p>You can use a similar technique here.</p>
+<ol type="1">
+<li>In <code>main.js</code>, you can wrap the <code>if</code> statement
+that checks if the player is human or AI in a <code>while</code>
+loop:</li>
+</ol>
+<pre class="language-javascript line-numbers" data-start="37"><code class="language-javascript line-numbers"><i>console.log(rules)
+let player = keyInYN(whoStarts)
+console.log(clear.repeat(toDelete))
+console.log(nail, prompt)</i>
+
+<b>while (length) {</b>
+  <i>if (player) { // it's the human player's turn
+    const index = keyInSelect(strength, question)
+    force = index + 1
+    prompt = hit + strength[index] + "."
+    toDelete = 7
+  } else { // it's the AI's turn to play
+    console.log(`The AI is not ready yet.
+  You'll have to play solo.`)
+    player = true
+    force = 0
+  }
+
+  length = length - force
+  nail   = "-" + "=".repeat(length - 1) + "|"
+  console.log(clear.repeat(toDelete))
+  console.log(nail, prompt)</i>
+<b>}</b></code></pre>
+<ol start="2" type="1">
+<li>In the Terminal, run:</li>
+</ol>
+<pre class="language-tex wrap"><code class="language-tex wrap">node main.js</code></pre>
+<ol start="3" type="1">
+<li>Press <code>Y</code> to choose to start.</li>
+<li>Press a number from <code>1</code> to <code>3</code> each time you
+are asked.</li>
+</ol>
+<p>To begin with, all will be well, but finally you will get an
+error:</p>
+<details class="warn" open>
+<summary>
+Invalid count value: -1
+</summary>
+<pre class="language-tex wrap"><code class="language-tex wrap"><i>-===========| The nail is 12 units long.
+
+-========| You hit the nail hard.
+
+-======| You hit the nail firmly.
+
+-=====| You hit the nail gently.
+
+-===| You hit the nail firmly.
+
+-| You hit the nail hard.</i>
+
+<b>/Users/james/Tutorials/My Learning Journey/Nail_It/main.js:56
+  nail      = "-" + "=".repeat(length - 1) + "|"
+                        ^
+
+RangeError: Invalid count value: -1
+    at String.repeat (&lt;anonymous&gt;)
+    at Object.&lt;anonymous&gt; (/Users/james/Tutorials/My Learning Journey/Nail_It/main.js:56:25)</b></code></pre>
+</details>
+<h2 id="the-debugger-to-the-rescue">The debugger to the rescue!</h2>
+<p>It might be helpful to use VS Code’s debugger to see what the problem
+is.</p>
+<ol type="1">
+<li>Press the F5 shortcut (or use the menu item Run &gt; Start Debugging
+if you have the time, and no-one’s looking)</li>
+<li>As before, select Node.js in the Command Palette when asked which
+language you want to debug.</li>
+</ol>
+<figure>
+<img src="images/SelectNodeJS.webp"
+alt="Select the debugger for Node.js" />
+<figcaption aria-hidden="true">Select the debugger for
+Node.js</figcaption>
+</figure>
+<ol start="3" type="1">
+<li>Open the Debug Console.</li>
+<li>Yikes!</li>
+</ol>
+<figure>
+<img src="images/unsupported.webp"
+alt="The current environment doesn’t support interactive reading from TTY" />
+<figcaption aria-hidden="true">The current environment doesn’t support
+interactive reading from TTY</figcaption>
+</figure>
+<p>Here’s an extract of the error message. It shows that the error
+occurred on line 38 of <code>main.js</code>.</p>
+<details class="trouble" open>
+<summary>
+environment doesn’t support interactive reading from TTY
+</summary>
+<pre class="language-tex wrap"><code class="language-tex wrap">opt/homebrew/bin/node ./main.js
+Let's knock a nail into this computer!
+
+* Each player takes a turn to hit the nail once.
+* A player can hit the nail in one of three ways:
+  gently, firmly, hard.
+* Depending on the force used, the nail will be
+  driven more or less deeply into the Terminal.
+* The player who knocks the nail all the way in
+  is the winner.
+
+Are you ready?
+
+Process exited with code 1
+Uncaught Error Error: The current environment doesn't support interactive reading from TTY.
+stty: /dev/tty: Device not configured
+/Users/james/Tutorials/My Learning Journey/Nail_It/node_modules/readline-sync/lib/read.sh: line 49: /dev/tty: Device not configured
+stty: /dev/tty: Device not configured
+    at readlineExt (/Users/james/Tutorials/My Learning Journey/Nail_It/node_modules/readline-sync/lib/readline-sync.js:221:19)</code></pre>
+<pre class="skip"><code class="skip">  # lines skipped #</code></pre>
+<pre class="language-tex wrap"><code class="language-tex wrap">    at &lt;anonymous&gt; (/Users/james/Tutorials/My Learning Journey/Nail_It/<b>main.js:38:14)</b></code></pre>
+</details>
+<p>Here is line 38 of <code>main.js</code>:</p>
+<pre class="language-javascript line-numbers" data-start="38"><code class="language-javascript line-numbers">let player = keyInYN(whoStarts)</code></pre>
+<p>This is the line where <code>readline-sync</code> is used for the
+first time.</p>
+<p><strong>In other words, the error occurred because VS Code’s debugger
+doesn’t work with <code>readline-sync</code>.</strong></p>
+<p>The debugger is designed to work with Node.js and JavaScript.
+<code>readline-sync</code> interacts with the Terminal. Out of the box,
+they are incompatible.</p>
+<p>But you can guess that if I suggested that you use the debugger,
+there will be a solution. The question is: How to find the solution.</p>
+<p>Google is your friend. The problem you have just met is due to the
+interaction between three things: VS Code, <code>readline-sync</code>
+and the debugger. Here’s a Google query for exactly these three
+things:</p>
+<p><a
+href="https://www.google.com/search?q=vs+code+readline-sync+debugger">vs
+code readline-sync debugger</a></p>
+<ol type="1">
+<li>Click on the link above.</li>
+</ol>
+<figure>
+<img src="images/askingGoogle.webp"
+alt="Using Google to search for solutions" />
+<figcaption aria-hidden="true">Using Google to search for
+solutions</figcaption>
+</figure>
+<p>In my browser, the first link that Google gives is to a question on
+<a href="https://stackoverflow.com/">stackoverflow.com</a>.</p>
+<details class="note" open>
+<summary>
+stackoverflow.com
+</summary>
+<p><a href="https://stackoverflow.com/">stackoverflow.com</a> is a site
+where developers of all levels, using every imaginable coding language
+can ask questions and get answers.</p>
+<p>Most questions that you may have will already have been asked and
+answered, so you should search for existing answers before you ask a
+question of your own.</p>
+<p>The site is gamified. You earn points for asking good questions, you
+earn points for giving good answers. But you can also lose points if
+your question is badly written, or shows that you haven’t even tried to
+find a solution for yourself, or if it has already been asked many
+times.</p>
+<p>Good answers get upvoted. You can see how many points the person who
+answered the question has earned. You can easily see which answers you
+can trust.</p>
+</details>
+<h2 id="a-helpful-answer">A helpful answer</h2>
+<p>If I visit this stackoverflow link, I find that the question does not
+exactly match my problem. But I’m interested in answers.</p>
+<ol start="2" type="1">
+<li>Scroll down until I find <a
+href="https://stackoverflow.com/a/66850526/1927589">Muneeb’s
+answer</a></li>
+</ol>
+<figure>
+<img src="images/MuneebAnswer.webp" alt="Muneeb’s answer" />
+<figcaption aria-hidden="true">Muneeb’s answer</figcaption>
+</figure>
+<p><strong>“Well that’s very nice. An answer with 10 reputation
+poinst,”</strong> you think. <strong>“But what’s a
+<code>launch.json</code> file? And where do I put this line
+<code>"console": "integratedTerminal"</code>?”</strong></p>
+<ol start="3" type="1">
+<li>Look at the VS Code window where your error is showing.</li>
+<li>Make sure the Run panel is showing (menu View &gt; Run, Shift-Ctrl-D
+(for <em>Debug</em>), or click on the Run and Debug icon).</li>
+</ol>
+<figure>
+<img src="images/createLaunchJSON.webp"
+alt="The ‘create a launch.json file’ link" />
+<figcaption aria-hidden="true">The ‘create a launch.json file’
+link</figcaption>
+</figure>
+<ol start="5" type="1">
+<li>Look for the link to <code>create a launch.json file</code>, and
+click on it.</li>
+</ol>
+<figure>
+<img src="images/launchJSON.webp"
+alt="Composite image: creating the launch.json file" />
+<figcaption aria-hidden="true">Composite image: creating the
+<code>launch.json</code> file</figcaption>
+</figure>
+<p>VS Code will create a new file at
+<code>Nail_It/.vscode/launch.json</code>. This will tell VS Code that,
+in the future, when you run the debugger, you want to <code>node</code>
+to <code>launch</code> the file at
+<code>"${workspaceFolder}/main.js"</code> and not to bother you with any
+code written in <code>node_internals</code>.</p>
+<p>This is the file where you can add the line
+<code>"console": "integratedTerminal"</code>:</p>
+<pre class="language-json line-numbers"><code class="language-json line-numbers"><i>{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch Program",
+      "skipFiles": [
+        "&lt;node_internals&gt;/**"
+      ],
+      "program": "${workspaceFolder}/main.js"</i><b>,
+      "console": "integratedTerminal"</b><i>
+    }
+  ]
+}</i></code></pre>
+<ol start="6" type="1">
+<li>Add the line suggested by Muneeb to your new
+<code>launch.json</code> file.</li>
+<li>Be sure to place a comma (<code>,</code>) at the end of the previous
+line.</li>
+<li>Press <code>F5</code> again, to start the debugger.</li>
+</ol>
+<figure>
+<img src="images/debuggingWithReadlineSync.webp"
+alt="The debugger doesn’t complain now" />
+<figcaption aria-hidden="true">The debugger doesn’t complain
+now</figcaption>
+</figure>
+<p>This time everything works fine. The Terminal explains to you how
+helpful it is being, and then it runs your script.</p>
+<h2 id="add-a-breakpoint">Add a breakpoint</h2>
+<p>The debugger might not want to let you add a breakpoint while it is
+running.</p>
+<ol type="1">
+<li>Stop the debugger by pressing <code>Shift-F5</code>, or clicking on
+the little red square in the Control Panel.</li>
+</ol>
+<figure>
+<img src="images/stopButton.webp"
+alt="The Stop button in the Control Panel" />
+<figcaption aria-hidden="true">The Stop button in the Control
+Panel</figcaption>
+</figure>
+<ol start="2" type="1">
+<li>Check the first error you got, before you ran the debugger:</li>
+</ol>
+<pre class="language-tex wrap"><code class="language-tex wrap">RangeError: Invalid count value: -1
+    at String.repeat (&lt;anonymous&gt;)
+    at Object.&lt;anonymous&gt; (/Users/james/Tutorials/My Learning Journey/Nail_It/<b>main.js:56:25</b>)</code></pre>
+<ol start="3" type="1">
+<li>Put a debug breakpoint on line 56 of your <code>main.js</code>
+script:</li>
+</ol>
+<figure>
+<img src="images/breakpoint56.png" alt="Add a breakpoint to line 56" />
+<figcaption aria-hidden="true">Add a breakpoint to line 56</figcaption>
+</figure>
+<ol start="4" type="1">
+<li>Press the <code>F5</code> key to start debugging.</li>
+</ol>
+<p>Your game will ask you to press <code>Y</code> and then choose a
+number from 1 - 3.</p>
+<ol start="5" type="1">
+<li>Press <code>3</code> on your keyboard.</li>
+</ol>
+<p>The debugger will stop on line 56, before it executes that line.</p>
+<figure>
+<img src="images/debugFirstPass.webp"
+alt="Going through first pass off the while loop with the debugger" />
+<figcaption aria-hidden="true">Going through first pass off the
+<code>while</code> loop with the debugger</figcaption>
+</figure>
+<p>You can see that the value of <code>force</code> has been set to
+<code>3</code>, and that <code>length</code> has been updated to
+<code>9</code>. The value of <code>nail</code> is still exactly what you
+code calculated on line 33. The nail is 12 units long.</p>
+<ol start="6" type="1">
+<li>Click on the Step Over button in the Command Palette, or press the
+<code>F10</code> shortcut.</li>
+</ol>
+<figure>
+<img src="images/updateNail.webp"
+alt="The value for nail is updated when you activate Step Over" />
+<figcaption aria-hidden="true">The value for <code>nail</code> is
+updated when you activate Step Over</figcaption>
+</figure>
+<p>JavaScript has no problem creating a new string for
+<code>nail</code>.</p>
+<ol start="7" type="1">
+<li>Activate Step Over two more times.</li>
+</ol>
+<figure>
+<img src="images/redrawTheNail.webp"
+alt="The question is cleared and the nail is redrawn" />
+<figcaption aria-hidden="true">The question is cleared and the nail is
+redrawn</figcaption>
+</figure>
+<p>Three things will happen:</p>
+<ul>
+<li>The question will be cleared from the Terminal</li>
+<li>A new, shorter version of the nail will be drawn</li>
+<li>The debugger will jump back to the beginning of the
+<code>while</code> loop</li>
+</ul>
+<p>The debugger will stop showing any variables, because
+<code>readline-sync</code> has taken control.</p>
+<ol start="8" type="1">
+<li>Activate Step Over three more times. The debugger will step back
+into the <code>while</code> loop, because <code>length</code> is
+<code>9</code> and non-zero numbers are truthy. But on the third step,
+the debugger will stop showing which line is about to be executed and it
+will stop showing any variables.</li>
+</ol>
+<figure>
+<img src="images/readlineSyncIsActive.webp"
+alt="The debugger takes a break while readline-sync is active" />
+<figcaption aria-hidden="true">The debugger takes a break while
+readline-sync is active</figcaption>
+</figure>
+<p>This is because the <code>keyInSelect()</code> method of
+<code>readline-sync</code> has taken control. It’s busy listening for
+your input in the Terminal.</p>
+<ol start="9" type="1">
+<li>Click on the Terminal to activate it</li>
+<li>On your keyboard, press a number from 1 - 3.</li>
+</ol>
+<figure>
+<img src="images/debuggerActiveAgain.webp"
+alt="The debugger becomes active again after keyInSelect() returns a value" />
+<figcaption aria-hidden="true">The debugger becomes active again after
+<code>keyInSelect()</code> returns a value</figcaption>
+</figure>
+<p>The debugger becomes active again.</p>
+<p>Note that there is an entry for <code>index</code> in the
+<code>Block</code> section of the VARIABLES pane. (The value
+<code>this</code> is there for house-keeping reasons.)</p>
+<ol start="11" type="1">
+<li>Press the Continue button in the Control Panel, or press the
+shortcut key <code>F5</code>.</li>
+</ol>
+<p>The debugger will jump directly to line 56, executing all the code on
+the way.</p>
+<ol start="12" type="1">
+<li>In the WATCH panel, click on the <code>+</code> button and enter the
+expression <code>length - 1</code>.</li>
+</ol>
+<figure>
+<img src="images/watchLength-1.webp"
+alt="Using the WATCH panel to watch the value of an expression" />
+<figcaption aria-hidden="true">Using the WATCH panel to watch the value
+of an expression</figcaption>
+</figure>
+<p>You should see that its value is <code>5</code>. Again, JavaScript
+will have no problem creating a new string for <code>nail</code>.</p>
+<ol start="13" type="1">
+<li>Press <code>F5</code> to make your script continue running.</li>
+<li>Activate the Terminal, and press the <code>3</code> key on your
+keyboard</li>
+<li>Repeat steps 13 and 14 again.</li>
+</ol>
+<p>Now you can see the problem. In the WATCH panel, you can see that
+<code>length - 1 = -1</code>. The <a
+href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/repeat">string
+method <code>.repeat()</code></a> can’t handle negative numbers.</p>
+<figure>
+<img src="images/DebuggingTheLoop.webp"
+alt="Debugging the while loop" />
+<figcaption aria-hidden="true">Debugging the <code>while</code>
+loop</figcaption>
+</figure>
+<ol start="16" type="1">
+<li>Just for closure, activate Step Over one last time.</li>
+</ol>
+<figure>
+<img src="images/debuggerDisconnect.webp"
+alt="Your game exits with an error" />
+<figcaption aria-hidden="true">Your game exits with an
+error</figcaption>
+</figure>
+<details class="pivot" open>
+<summary>
+How to fix this?
+</summary>
+<p>The debugger disconnects and JavaScript shows the same error it gave
+you before:</p>
+<pre class="language-bash wrap"><code class="language-bash wrap">Invalid count value: -1 ... /Nail_It/main.js:56:25</code></pre>
+<p>This is the problem that you are going to have to fix, but the
+debugger has shown you how and where the error occurs.</p>
+Remember how I pointed out that there were problems with repeated lines
+of code? In the next section, you’ll see how to make your code work
+without them.
+</details>
+</section>
+<!-- Fixing the Problem with the while Loop -->
+<section id="fixing-the-problem-with-the-while-loop" aria-labelledby="fixing-the-problem-with-the-while-loop" data-item="Fixing the Problem with the while Loop">
+<h2>
+<a href="#fixing-the-problem-with-the-while-loop">Fixing the Problem
+with the <code>while</code> Loop</a>
+</h2>
+<p>When <code>length</code> reaches <code>0</code>, the expression
+<code>length - 1</code> takes on the value <code>-1</code>. And the <a
+href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/repeat">string
+method <code>.repeat()</code></a> can’t handle negative numbers. If you
+hit the nail too hard the last time, then <code>length</code> itself can
+become negative.</p>
+<p>So you need to make sure that the calculation for <code>nail</code>
+never happens <em>after</em> length has been reduced to <code>0</code>
+or less.</p>
+<h2
+id="length-is-tested-at-the-beginning-of-each-loop"><code>length</code>
+is tested at the beginning of each loop</h2>
+<p>In your current code, line 55 changes the value of
+<code>length</code> inside the <code>while</code> loop, and line 56 uses
+this new value.</p>
+<pre class="language-javascript line-numbers" data-start="55"><code class="language-javascript line-numbers">length = length - force
+nail   = "-" + "=".repeat(length - 1) + "|"</code></pre>
+<p>Before the <code>while</code> loop even starts, your code calculates
+and prints a value for <code>nail</code>:</p>
+<pre class="language-javascript line-numbers" data-start="33"><code class="language-javascript line-numbers"><b>let nail     = "-" + "=".repeat(length - 1) + "|"</b>
+<i>let prompt   = nailIs + length + long
+let force
+
+console.log(rules)
+let player = keyInYN(whoStarts)
+console.log(clear.repeat(toDelete))</i>
+<b>console.log(nail, prompt)</b></code></pre>
+<details class="question" open>
+<summary>
+What if you put these earlier lines inside the <code>while</code> loop?
+</summary>
+<p>If you move the earlier lines that clear the Terminal and draw the
+nail <em>inside</em> the <code>while</code> loop, you don’t need to
+repeat them at the <em>end</em> of the loop.</p>
+<p>If <code>length</code> gets set to <code>0</code> inside the
+<code>while</code> loop, it will just not run again. The value of
+<code>length - 1</code> can never become negative. (SPOILER: Or can
+it?)</p>
+<pre class="language-javascript line-numbers" data-start="31"><code class="language-javascript line-numbers"><i>let toDelete = 14
+let length   = 12
+let prompt   = nailIs + length + long
+</i><b>let nail</b><i>
+let force
+
+console.log(rules)
+let player = keyInYN(whoStarts)
+
+while (length) {
+  </i><b>console.log(clear.repeat(toDelete))
+  nail = "-" + "=".repeat(length - 1) + "|"
+  console.log(nail, prompt)</b></code></pre>
+<pre class="skip"><code class="skip">// lines skipped //</code></pre>
+<pre class="language-javascript line-numbers" data-start="55"><code class="language-javascript line-numbers">  length = length - force
+  <s>nail   = "-" + "=".repeat(length - 1) + "|"</s>
+  <s>console.log(clear.repeat(toDelete))</s>
+  <s>console.log(nail, prompt)</s>
+}</code></pre>
+</details>
+<h2 id="the-fix-first-attempt">The fix: first attempt</h2>
+<ol type="1">
+<li>Edit your <code>main.js</code> script to remove lines 56 - 58, and
+to adjust the code, as shown in the listing above.</li>
+<li>Run</li>
+</ol>
+<pre class="language-bash wrap"><code class="language-bash wrap">node main.js</code></pre>
+<ol start="3" type="1">
+<li>Press <code>Y</code></li>
+<li>Press the <code>3</code> key on your keyboard every time you are
+asked how hard you want to hit. If all goes well, your Terminal should
+look like this:</li>
+</ol>
+<pre class="language-tex wrap"><code class="language-tex wrap">-===========| The nail is 12 units long.
+
+-========| You hit the nail hard.
+
+-=====| You hit the nail hard.
+
+-==| You hit the nail hard.
+
+[1] gently
+[2] firmly
+[3] hard
+[0] CANCEL
+
+How hard do you plan to hit? [1, 2, 3, 0]: 3
+james@M1 Nail_It % </code></pre>
+<p>Your game stops when <code>length</code> becomes <code>0</code>, and
+the result of your last strike is not shown.</p>
+<h2 id="showing-that-the-fix-is-broken">Showing that the fix is
+broken</h2>
+<ol type="1">
+<li>Repeat steps 1 - 3 above,</li>
+<li>Press <code>2</code> the <em>first</em> time you are asked how hard
+you want to hit</li>
+<li>Press <code>3</code> every other time.</li>
+</ol>
+<p>It seems that the <code>length - 1</code> error is still present.</p>
+<details class="trouble" open>
+<summary>
+Invalid count value: -3
+</summary>
+<pre class="language-tex wrap"><code class="language-tex wrap">-===========| The nail is 12 units long.
+
+-=========| You hit the nail firmly.
+
+-======| You hit the nail hard.
+
+-===| You hit the nail hard.
+
+-| You hit the nail hard.
+
+[1] gently
+[2] firmly
+[3] hard
+[0] CANCEL
+
+How hard do you plan to hit? [1, 2, 3, 0]: 3
+/Users/james/Tutorials/My Learning Journey/Nail_It/main.js:41
+  nail   = "-" + "=".repeat(length - 1) + "|"
+                     ^
+
+RangeError: Invalid count value: -3
+    at String.repeat (&lt;anonymous&gt;)
+    at Object.&lt;anonymous&gt; (/Users/james/Tutorials/My Learning Journey/Nail_It/main.js:41:22)</code></pre>
+</details>
+<h2 id="troubleshooting-with-the-debugger">Troubleshooting with the
+debugger</h2>
+<ol type="1">
+<li>In <code>main.js</code>, remove the existing breakpoint</li>
+<li>Add a conditional breakpoint on line 41:</li>
+</ol>
+<figure>
+<img src="images/breakpoint41.webp" alt="Add a breakpoint on line 41" />
+<figcaption aria-hidden="true">Add a breakpoint on line 41</figcaption>
+</figure>
+<ol start="3" type="1">
+<li><p>Give it the condition <code>length &lt; 0</code>. This will
+become <code>true</code> if <code>length</code> becomes <code>-1</code>,
+<code>-2</code> or any other negative value</p></li>
+<li><p>Start the debugger.</p></li>
+<li><p>In the Terminal, press <code>Y</code> when asked</p></li>
+<li><p>As before, press <code>2</code> the <em>first</em> time you are
+asked how hard you want to hit</p></li>
+<li><p>Press <code>3</code> every other time.</p></li>
+</ol>
+<figure>
+<img src="images/length-2.webp" alt="length can become negative" />
+<figcaption aria-hidden="true"><code>length</code> can become
+negative</figcaption>
+</figure>
+<p>When <code>length</code> is reduced to <code>1</code>, and you press
+the <code>3</code> key, <code>length - force</code> evaluates to
+<code>-2</code>.</p>
+<details class="warn" open>
+<summary>
+Negative numbers are truthy
+</summary>
+<p>In section <a href="#true-and-false">16. A Few Words about
+<code>true</code> and <code>false</code></a>, I wrote:</p>
+<blockquote>
+<p>JavaScript treats the number <code>0</code>, the empty string
+<code>""</code> and a few other empty values as <code>false</code>.
+These values are said to be <em>falsy</em>.</p>
+<p>Conversely, JavaScript treats anything that is not <code>false</code>
+or <code>0</code> or empty as <code>true</code>… even the word
+<code>"false"</code>, because <code>"false"</code> contains letters, so
+it’s not empty. <strong>Anything that is not <code>false</code> or falsy
+is <em>truthy</em>.</strong></p>
+</blockquote>
+<p>As you have just discovered, negative numbers are neither
+<code>0</code> nor <code>false</code>, so JavaScript treats them as
+<em>truthy</em>. If you want the <code>while</code> loop to stop when
+the value for <code>length</code> is <code>0</code> <em>or less</em>,
+you need to change the condition, to while (length &gt;
+0)<code>, which you can read as "while</code>length` is greater than
+zero”.</p>
+</details>
+<details class="solution" open>
+<summary>
+Can you fix it yourself?
+</summary>
+<p>Can you fix this issue yourself?</p>
+<p>Hint: You only need to add four characters to <code>main.js</code>
+(and two of them are optional spaces).</p>
+<details class="solution">
+<summary>
+Solution
+</summary>
+<p>Here’s the full script of <code>main.js</code> with the required
+changes.</p>
+<pre class="language-javascript line-numbers"><code class="language-javascript line-numbers"><i>const {
+  keyInYN,
+  keyInSelect
+} = require('readline-sync')
+
+const rules = `Let's knock a nail into this computer!
+
+* Each player takes a turn to hit the nail once.
+* A player can hit the nail in one of three ways:
+  gently, firmly, hard.
+* Depending on the force used, the nail will be
+  driven more or less deeply into the Terminal.
+* The player who knocks the nail all the way in
+  is the winner.
+
+Are you ready?
+`
+const whoStarts = `If you want to start, type Y.
+If you want me to start press any other key. `
+const nailIs    = "The nail is "
+const long      = " units long."
+const clear     = "\x1B[1A\x1B[K"
+const strength  = [
+  'gently',
+  'firmly',
+  'hard'
+]
+const question = 'How hard do you plan to hit?'
+const hit      = "You hit the nail "
+
+let toDelete = 14
+let length   = 12
+let prompt   = nailIs + length + long
+</i><b>let nail</b><i>
+let force
+
+console.log(rules)
+let player = keyInYN(whoStarts)
+
+while (</i><b>length &gt; 0</b><i>) {
+  </i><b>nail = "-" + "=".repeat(length - 1) + "|"
+  console.log(clear.repeat(toDelete)) 
+  console.log(nail, prompt)</b><i>
+
+  if (player) { // it's the human player's turn
+    const index = keyInSelect(strength, question);
+    force = index + 1
+    prompt = hit + strength[index]
+    toDelete = 7
+
+  } else { // it's the AI's turn to play
+    console.log(`The AI is not ready yet.
+  You'll have to play solo.`)
+    player = true
+    force = 0
+  }
+
+  length = length - force
+}</i></code></pre>
+<p>Now when you run your script, the output in the Terminal should look
+something like this, even if you hit too hard the last time:</p>
+<pre class="language-tex wrap"><code class="language-tex wrap">-===========| The nail is 12 units long.
+
+-=========| You hit the nail firmly.
+
+-======| You hit the nail hard.
+
+-===| You hit the nail hard.
+
+-| You hit the nail hard.
+
+[1] gently
+[2] firmly
+[3] hard
+[0] CANCEL
+
+How hard do you plan to hit? [1, 2, 3, 0]: 3</code></pre>
+</details>
+</details>
 </section>
 <section id="preview" aria-labelledby="preview" data-item="Preview">
 <p><img src="images/NailIt.webp" /></p>

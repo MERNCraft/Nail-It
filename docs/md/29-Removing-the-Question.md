@@ -91,8 +91,8 @@ You'll have to play solo.`)
 }
 
 length = length - force
+nail   = "-" + "=".repeat(length - 1) + "|"
 </i><b>console.log(clear.repeat(toDelete))</b><i>
-nail      = "-" + "=".repeat(length - 1) + "|"
 console.log(nail, prompt)</i>
 ```
 

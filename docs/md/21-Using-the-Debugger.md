@@ -56,7 +56,7 @@ It is usually possible to toggle the function and media keys, so that you don't 
 
 4. The debugger will start running your script, but it will stop before it executes the first line, because you place a breakpoint there.
 
-![Click on the Step Over button in the Control Palette to execute the first line](images/StepOver.webp)
+![The Control Palette lets you progress through your script](images/StepOver.webp)
 
 You will see:
 
@@ -74,7 +74,7 @@ You will see:
 
 ## Stepping through the script
 
-1. Click on the Step Over button in the Control Panel
+1. Click on the Step Over button in the Control Panel, or press the shortcut key `F10`.
 
 ![The Step Over button in the Control Panel](images/StepOverButton.webp)
 
@@ -82,9 +82,9 @@ You will see:
 
 ![When the first line is executed, `length = 12` is shown in the VARIABLES pane](images/lengthSetTo12.webp)
 
-3. Press the Step Over button again. The `while` loop will see that `length` is _truthy_ because it has a non-zero value, and it will move your code into its code block.
+3. Press the Step Over button again or press `F10`. The `while` loop will see that `length` is _truthy_ because it has a non-zero value, and it will move your code into its code block.
 
-4. Press the Step Over button again, and the line `console.log("Nail length: " + length)` will be executed. You can see this output in the Debug Console panel, which replaces the Terminal.
+4. Press the Step Over button again (`F10`), and the line `console.log("Nail length: " + length)` will be executed. You can see this output in the Debug Console panel, which replaces the Terminal.
 
 ![`Nail length: 12` is logged to the Debug Console](images/lengthLogged.webp)
 
@@ -127,17 +127,17 @@ This will make the debugger run through every step automatically until it finds 
 
 You should see `Nail length` logged many times in the Debug Console, and an entry for `length = 1` showing in the VARIABLES pane. The line `length = length - 1` is ready to be executed.
 
-5. Press the Step Over button to execute just this one line.
+5. Use the `F10` shortcut to activate the Step Over button and execute just this one line.
 
-![Press Step Over to set `length` to `0`](images/lengthIsZero.webp)
+![Activate Step Over to set `length` to `0`](images/lengthIsZero.webp)
 
 The entry `length = 0` will appear in the VARIABLES pane, and the code will jump back to the beginning of the loop. This time, the `while` statement will see that `length` is `0`, and `0` is _falsy_, so it will _not_ move your code into its loop block. Instead, it will jump to the first line after the loop block.
 
 ![When `length === 0`, the `while` loop will stop](images/LeaveLoop.webp)
 
-6. Press the Step Over button again, to execute the final line `console.log("length:", length)`. One last entry will be printed in the Debug Console.
+1. Use Step Over again, to execute the final line `console.log("length:", length)`. One last entry will be printed in the Debug Console.
  
-7. Press the Step Over button again to execute the line after that... which doesn't exist. This will make the debugger close.
+2. Press the Step Over button again to execute the line after that... which doesn't exist. This will make the debugger close.
 
 The Control Panel will disappear, and so will the VARIABLES pane.
 
