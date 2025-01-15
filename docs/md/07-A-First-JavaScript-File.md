@@ -84,4 +84,15 @@ The completed game also remembers your score against the computer.
 
 </details>
 
+<details class="note" open>
+<summary>semicolons: `;`</summary>
+JavaScript considers that any block of code that is followed by a semicolon (`;`) is a complete instruction. But JavaScript is user-friendly. JavaScript also looks at any block of code that is followed by a new line character and thinks: "Hmm... is this a complete instruction?"
+
+In most cases, JavaScript programmers write one instruction per line, so putting a semicolon at the end of each line is usually not necessary. There are, however, some cases where a single instruction may take several lines. There are cases where a semicolon is essential.
+
+I prefer not to use semicolons except in these special cases.
+
+Sometimes, though, I will write two instructions on the same line, separated by a semicolon. So don't be surprised if you see this.
+</details>
+
 </section>

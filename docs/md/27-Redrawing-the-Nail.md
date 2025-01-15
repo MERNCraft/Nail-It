@@ -9,19 +9,19 @@
 
   
 <details class="challenge" open>
-<summary>After the nail is hit, can you show it at its new length?</summary>
+<summary>#1 <After the nail is hit, can you show it at its new length?</summary>
 Here's what you need to print in the Terminal:
 
 ```tex-w
--===========| The nail is 12 units long
+<i>-===========| The nail is 12 units long
 
 [1] gently
 [2] firmly
 [3] hard
 [0] CANCEL
 
-How hard do you plan to hit? [1, 2, 3, 0]: 3
--========|
+How hard do you plan to hit? [1, 2, 3, 0]: 3</i>
+<b>-========|</b>
 ```
 
 <details class="solution">

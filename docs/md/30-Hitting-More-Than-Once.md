@@ -7,23 +7,23 @@
   <h2><a href="#hitting-more-than-once">Hitting More Than Once</a></h2>
   
 <details class="challenge" open>
-<summary>Can you let the solo player hit the nail several times in a row?</summary>
+<summary>#4 Can you let the solo player hit the nail several times in a row?</summary>
 This challenge is more tricky. I expect that you will see a number of errors as you work on it, so I will walk you through it. Fixing these errors will also resolve the WET issue (We Enjoy Typing - the opposite of DRY).
 
 Here's the display in the Terminal that you are aiming for:
 
 ```tex-w
--===========| The nail is 12 units long.
+<i>-===========| The nail is 12 units long.
 
--========| You hit the nail hard.
+-========| You hit the nail hard.</i>
 
--======| You hit the nail firmly.
+<b>-======| You hit the nail firmly.
 
 -=====| You hit the nail gently.
 
 -===| You hit the nail firmly.
 
--| You hit the nail hard.
+-| You hit the nail hard.</b>
 ```
 
 </details>
@@ -193,11 +193,9 @@ Good answers get upvoted. You can see how many points the person who answered th
 
 </details>
 
-## A helpful answer
-
 If I visit this stackoverflow link, I find that the question does not exactly match my problem. But I'm interested in answers.
 
-2. Scroll down until I find [Muneeb's answer](https://stackoverflow.com/a/66850526/1927589)
+1. Scroll down until you find [Muneeb's answer](https://stackoverflow.com/a/66850526/1927589)
 
 ![Muneeb's answer](images/MuneebAnswer.webp)
 
@@ -212,7 +210,7 @@ If I visit this stackoverflow link, I find that the question does not exactly ma
 
 ![Composite image: creating the `launch.json` file](images/launchJSON.webp)
 
-VS Code will create a new file at `Nail_It/.vscode/launch.json`. This will tell VS Code that, in the future, when you run the debugger, you want to `node` to `launch` the file at `"${workspaceFolder}/main.js"` and not to bother you with any code written in `node_internals`.
+VS Code will create a new file at `Nail_It/.vscode/launch.json`. This will tell VS Code that, in the future, when you run the debugger, you want `node` to `launch` the file at `"${workspaceFolder}/main.js"` and not to bother you with any code written in `node_internals`.
 
 This is the file where you can add the line `"console": "integratedTerminal"`:
 
@@ -237,9 +235,9 @@ This is the file where you can add the line `"console": "integratedTerminal"`:
   ]
 }</i>
 ```
-6. Add the line suggested by Muneeb to your new `launch.json` file.
-7. Be sure to place a comma (`,`) at the end of the previous line.
-8. Press `F5` again, to start the debugger.
+1. Add the line suggested by Muneeb to your new `launch.json` file.
+2. Be sure to place a comma (`,`) at the end of the previous line.
+3. Press `F5` again, to start the debugger.
 
 ![The debugger doesn't complain now](images/debuggingWithReadlineSync.webp)
 
@@ -253,7 +251,7 @@ The debugger might not want to let you add a breakpoint while it is running.
 
 ![The Stop button in the Control Panel](images/stopButton.webp)
 
-2. Check the first error you got, before you ran the debugger:
+2. Check the first error you got, before you ran the debugger, to see where the error occurred:
 
 ```tex-w
 RangeError: Invalid count value: -1
@@ -275,7 +273,7 @@ The debugger will stop on line 56, before it executes that line.
 
 ![Going through first pass off the `while` loop with the debugger](images/debugFirstPass.webp)
 
-You can see that the value of `force` has been set to `3`, and that `length` has been updated to `9`. The value of `nail` is still exactly what you code calculated on line 33. The nail is 12 units long.
+You can see that the value of `force` has been set to `3`, and that `length` has been updated to `9`. The value of `nail` is still exactly what you code calculated on line 33. The nail is still 12 units long.
 
 6. Click on the Step Over button in the Command Palette, or press the `F10` shortcut.
 
@@ -292,8 +290,6 @@ Three things will happen:
 * The question will be cleared from the Terminal
 * A new, shorter version of the nail will be drawn
 * The debugger will jump back to the beginning of the `while` loop
-
-The debugger will stop showing any variables, because `readline-sync` has taken control.
 
 8. Activate Step Over three more times. The debugger will step back into the `while` loop, because `length` is `9` and non-zero numbers are truthy. But on the third step, the debugger will stop showing which line is about to be executed and it will stop showing any variables.
 
@@ -328,6 +324,14 @@ Now you can see the problem. In the WATCH panel, you can see that `length - 1 = 
 
 ![Debugging the `while` loop](images/DebuggingTheLoop.webp)
 
+<details class="question" open>
+<summary>Where has `index` gone?</summary>
+In the VARIABLES pane of the debugger, there is no entry for `index`. Why not?
+
+The debugger is paused on line 56, which is outside the curly-bracket code block where `index` is declared. At this point in the code JavaScript and the debugger have forgotten that `index` ever existed.
+
+</details>
+
 16. Just for closure, activate Step Over one last time.
 
 ![Your game exits with an error](images/debuggerDisconnect.webp)
@@ -343,6 +347,7 @@ Invalid count value: -1 ... /Nail_It/main.js:56:25
 This is the problem that you are going to have to fix, but the debugger has shown you how and where the error occurs.
 
 Remember how I pointed out that there were problems with repeated lines of code? In the next section, you'll see how to make your code work without them.
+
 </details>
 
 </section>

@@ -63,7 +63,7 @@ How hard do you plan to hit? [1, 2, 3, 0]: 2
 ```
 
 ### 5. Can you show the winning situation... even if the solo player hits the nail too hard the last time?
-   
+
 ```tex-w
 -===========|  The nail is 12 units long.
 
@@ -125,6 +125,15 @@ You win!
 
 You win!
 ```
+
+### 8. Can you give the nail a different length each time?
+
+For example: 
+
+```tex-w
+<i>-===========| The nail is </i><b>15</b><i> units long.</i>
+```
+
 
 
 </section>

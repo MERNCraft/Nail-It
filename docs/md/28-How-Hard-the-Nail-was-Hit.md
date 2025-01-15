@@ -7,12 +7,12 @@
   <h2><a href="#how-hard-the-nail-was-hit">How Hard the Nail was Hit</a></h2>
   
   <details class="challenge" open>
-  <summary>Can you show how hard the solo player chose to hit the nail?</summary>
+  <summary>#2 Can you show how hard the solo player chose to hit the nail?</summary>
 
 Here's what the Terminal should show when you have finished this challenge:
   
 ```tex-w
--===========| The nail is 12 units long
+<i>-===========| The nail is 12 units long
 
 [1] gently
 [2] firmly
@@ -20,7 +20,7 @@ Here's what the Terminal should show when you have finished this challenge:
 [0] CANCEL
 
 How hard do you plan to hit? [1, 2, 3, 0]: 2
--=========| You hit the nail firmly
+-=========|</i> <b>You hit the nail firmly</b>
 ```
 
 <details class="solution">

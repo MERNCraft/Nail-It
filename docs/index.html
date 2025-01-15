@@ -397,6 +397,23 @@ computer.</p>
 then can drag the icon of any folder into the Terminal window to
 navigate to that folder.)</p>
 </details>
+<details class="note" open>
+<summary>
+semicolons: <code>;</code>
+</summary>
+<p>JavaScript considers that any block of code that is followed by a
+semicolon (<code>;</code>) is a complete instruction. But JavaScript is
+user-friendly. JavaScript also looks at any block of code that is
+followed by a new line character and thinks: “Hmm… is this a complete
+instruction?”</p>
+<p>In most cases, JavaScript programmers write one instruction per line,
+so putting a semicolon at the end of each line is usually not necessary.
+There are, however, some cases where a single instruction may take
+several lines. There are cases where a semicolon is essential.</p>
+<p>I prefer not to use semicolons except in these special cases.</p>
+Sometimes, though, I will write two instructions on the same line,
+separated by a semicolon. So don’t be surprised if you see this.
+</details>
 </section>
 <!-- What is the Console -->
 <section id="what-is-the-console" aria-labelledby="what-is-the-console" data-item="What is the Console?">
@@ -1398,6 +1415,16 @@ like:</p>
   // TODO: choose the number between 1 and 3 to ensure AI wins
   // (if possible)
 }</code></pre>
+<p>If the expression in round parentheses (<code>( ... )</code>)
+immediately after <code>if</code> evaluates to <code>true</code>, the
+JavaScript will run the code inside the first block enclosed by curly
+brackets (<code>{ ... }</code>).</p>
+<p>If the expression in round parentheses (<code>( ... )</code>)
+immediately after <code>if</code> evaluates to <code>false</code>, the
+code inside the curly-bracket block after the word <code>else</code>
+will be run.</p>
+<p>Either the <code>if</code> code <em>or</em> the <code>else</code>
+code will be run, but not both.</p>
 <details class="note" open>
 <summary>
 Comments
@@ -1435,6 +1462,11 @@ or <code>0</code> or empty as <code>true</code>… even the word
 <code>"false"</code>, because <code>"false"</code> contains letters, so
 it’s not empty. Anything that is not <code>false</code> or falsy is
 <em>truthy</em>.</p>
+<p>To convert something truthy to <code>false</code>, or to convert
+something falsy to <code>true</code>, you can use the <a
+href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_NOT">logical
+not operator</a> (<code>!</code>). (See the examples in the sandbox
+below.)</p>
 <p>Later in this project, you’ll see a trick to convert
 <code>true</code> to <code>1</code> and <code>false</code> to
 <code>0</code>.</p>
@@ -1464,6 +1496,42 @@ statement will ignore any instructions associated with it.</p>
 <code>console.log()</code> did not generate a value. When you call
 <code>readlineSync.keyInYN()</code>, it generates a value, but
 <code>console.log()</code> just logs data quietly to the console.</p>
+<p>Try these expressions in the Node IDE. All the following should
+evaluate to <code>true</code>:</p>
+<pre class="language-javascript"><code class="language-javascript">2 === 2
+4 &gt; 2
+length = 2; length === 2
+force = 3; length - force === -1
+length + force &lt; 6
+"length" + "force" === "lengthforce"
+!false</code></pre>
+<p>Note my use of a semicolon in the line
+<code>length = 2; length === 2</code>. This means:</p>
+<ul>
+<li>Instruction 1: Assign the value <code>2</code> to the variable
+<code>length</code></li>
+<li>Instruction 2: Tell me if the value of <code>length</code> is
+identical to <code>2</code>.</li>
+</ul>
+<p>The semicolon allows me to write two instructions on one line.</p>
+<p>All the following should evaluate to <code>false</code></p>
+<pre class="language-javascript"><code class="language-javascript">!true
+2 != 2
+4 &lt; 2
+"length" === 2
+length - force &gt; 0
+"length" + "force" &lt; 6
+!"false"</code></pre>
+</details>
+<details class="note" open>
+<summary>
+No variable declarations in the Node IDE?
+</summary>
+<p>I did not declare any of the variables that I used in the Node IDE in
+the sandbox examples above. As a result, JavaScript automatically use
+created variables with the old-fashioned <code>var</code> method.</p>
+<p>Because I am using the Node IDE just to test simple ideas, it’s more
+convenient to create variables without declaring them.</p>
 </details>
 </section>
 <!-- Choosing a Number -->
@@ -2957,6 +3025,10 @@ nicely?</h3>
 |             You hit the nail firmly.
 
 You win!</code></pre>
+<h3 id="can-you-give-the-nail-a-different-length-each-time">8. Can you
+give the nail a different length each time?</h3>
+<p>For example:</p>
+<pre class="language-tex wrap"><code class="language-tex wrap"><i>-===========| The nail is </i><b>15</b><i> units long.</i></code></pre>
 </section>
 <!-- Redrawing the Nail -->
 <section id="redrawing-the-nail" aria-labelledby="redrawing-the-nail" data-item="Redrawing the Nail">
@@ -2965,18 +3037,18 @@ You win!</code></pre>
 </h2>
 <details class="challenge" open>
 <summary>
-After the nail is hit, can you show it at its new length?
+#1 &lt;After the nail is hit, can you show it at its new length?
 </summary>
 <p>Here’s what you need to print in the Terminal:</p>
-<pre class="language-tex wrap"><code class="language-tex wrap">-===========| The nail is 12 units long
+<pre class="language-tex wrap"><code class="language-tex wrap"><i>-===========| The nail is 12 units long
 
 [1] gently
 [2] firmly
 [3] hard
 [0] CANCEL
 
-How hard do you plan to hit? [1, 2, 3, 0]: 3
--========|</code></pre>
+How hard do you plan to hit? [1, 2, 3, 0]: 3</i>
+<b>-========|</b></code></pre>
 <details class="solution">
 <summary>
 Hints
@@ -3082,11 +3154,11 @@ different places. You’ll fix this in one of the future challenges.</p>
 </h2>
 <details class="challenge" open>
 <summary>
-Can you show how hard the solo player chose to hit the nail?
+#2 Can you show how hard the solo player chose to hit the nail?
 </summary>
 <p>Here’s what the Terminal should show when you have finished this
 challenge:</p>
-<pre class="language-tex wrap"><code class="language-tex wrap">-===========| The nail is 12 units long
+<pre class="language-tex wrap"><code class="language-tex wrap"><i>-===========| The nail is 12 units long
 
 [1] gently
 [2] firmly
@@ -3094,7 +3166,7 @@ challenge:</p>
 [0] CANCEL
 
 How hard do you plan to hit? [1, 2, 3, 0]: 2
--=========| You hit the nail firmly</code></pre>
+-=========|</i> <b>You hit the nail firmly</b></code></pre>
 <details class="solution">
 <summary>
 Hints:
@@ -3181,7 +3253,7 @@ that this should be fixed later.</p>
 </h2>
 <details class="challenge" open>
 <summary>
-Can you remove the question after it has been answered?
+#3 Can you remove the question after it has been answered?
 </summary>
 <p>The Terminal would look better if the question were removed, and just
 the result of answering the question were shown.</p>
@@ -3274,24 +3346,24 @@ console.log(nail, prompt)</i></code></pre>
 </h2>
 <details class="challenge" open>
 <summary>
-Can you let the solo player hit the nail several times in a row?
+#4 Can you let the solo player hit the nail several times in a row?
 </summary>
 <p>This challenge is more tricky. I expect that you will see a number of
 errors as you work on it, so I will walk you through it. Fixing these
 errors will also resolve the WET issue (We Enjoy Typing - the opposite
 of DRY).</p>
 <p>Here’s the display in the Terminal that you are aiming for:</p>
-<pre class="language-tex wrap"><code class="language-tex wrap">-===========| The nail is 12 units long.
+<pre class="language-tex wrap"><code class="language-tex wrap"><i>-===========| The nail is 12 units long.
 
--========| You hit the nail hard.
+-========| You hit the nail hard.</i>
 
--======| You hit the nail firmly.
+<b>-======| You hit the nail firmly.
 
 -=====| You hit the nail gently.
 
 -===| You hit the nail firmly.
 
--| You hit the nail hard.</code></pre>
+-| You hit the nail hard.</b></code></pre>
 </details>
 <h2 id="repetition-with-while">Repetition with <code>while</code></h2>
 <p>In section <a href="#never-repeat-a-trick">20: Never Repeat a
@@ -3469,11 +3541,10 @@ times.</p>
 answered the question has earned. You can easily see which answers you
 can trust.</p>
 </details>
-<h2 id="a-helpful-answer">A helpful answer</h2>
 <p>If I visit this stackoverflow link, I find that the question does not
 exactly match my problem. But I’m interested in answers.</p>
-<ol start="2" type="1">
-<li>Scroll down until I find <a
+<ol type="1">
+<li>Scroll down until you find <a
 href="https://stackoverflow.com/a/66850526/1927589">Muneeb’s
 answer</a></li>
 </ol>
@@ -3508,8 +3579,8 @@ alt="Composite image: creating the launch.json file" />
 </figure>
 <p>VS Code will create a new file at
 <code>Nail_It/.vscode/launch.json</code>. This will tell VS Code that,
-in the future, when you run the debugger, you want to <code>node</code>
-to <code>launch</code> the file at
+in the future, when you run the debugger, you want <code>node</code> to
+<code>launch</code> the file at
 <code>"${workspaceFolder}/main.js"</code> and not to bother you with any
 code written in <code>node_internals</code>.</p>
 <p>This is the file where you can add the line
@@ -3533,7 +3604,7 @@ code written in <code>node_internals</code>.</p>
     }
   ]
 }</i></code></pre>
-<ol start="6" type="1">
+<ol type="1">
 <li>Add the line suggested by Muneeb to your new
 <code>launch.json</code> file.</li>
 <li>Be sure to place a comma (<code>,</code>) at the end of the previous
@@ -3562,7 +3633,8 @@ alt="The Stop button in the Control Panel" />
 Panel</figcaption>
 </figure>
 <ol start="2" type="1">
-<li>Check the first error you got, before you ran the debugger:</li>
+<li>Check the first error you got, before you ran the debugger, to see
+where the error occurred:</li>
 </ol>
 <pre class="language-tex wrap"><code class="language-tex wrap">RangeError: Invalid count value: -1
     at String.repeat (&lt;anonymous&gt;)
@@ -3593,7 +3665,7 @@ alt="Going through first pass off the while loop with the debugger" />
 <p>You can see that the value of <code>force</code> has been set to
 <code>3</code>, and that <code>length</code> has been updated to
 <code>9</code>. The value of <code>nail</code> is still exactly what you
-code calculated on line 33. The nail is 12 units long.</p>
+code calculated on line 33. The nail is still 12 units long.</p>
 <ol start="6" type="1">
 <li>Click on the Step Over button in the Command Palette, or press the
 <code>F10</code> shortcut.</li>
@@ -3622,8 +3694,6 @@ redrawn</figcaption>
 <li>The debugger will jump back to the beginning of the
 <code>while</code> loop</li>
 </ul>
-<p>The debugger will stop showing any variables, because
-<code>readline-sync</code> has taken control.</p>
 <ol start="8" type="1">
 <li>Activate Step Over three more times. The debugger will step back
 into the <code>while</code> loop, because <code>length</code> is
@@ -3688,6 +3758,17 @@ alt="Debugging the while loop" />
 <figcaption aria-hidden="true">Debugging the <code>while</code>
 loop</figcaption>
 </figure>
+<details class="question" open>
+<summary>
+Where has <code>index</code> gone?
+</summary>
+<p>In the VARIABLES pane of the debugger, there is no entry for
+<code>index</code>. Why not?</p>
+<p>The debugger is paused on line 56, which is outside the curly-bracket
+code block where <code>index</code> is declared. At this point in the
+code JavaScript and the debugger have forgotten that <code>index</code>
+ever existed.</p>
+</details>
 <ol start="16" type="1">
 <li>Just for closure, activate Step Over one last time.</li>
 </ol>
@@ -3706,9 +3787,9 @@ you before:</p>
 <pre class="language-bash wrap"><code class="language-bash wrap">Invalid count value: -1 ... /Nail_It/main.js:56:25</code></pre>
 <p>This is the problem that you are going to have to fix, but the
 debugger has shown you how and where the error occurs.</p>
-Remember how I pointed out that there were problems with repeated lines
-of code? In the next section, you’ll see how to make your code work
-without them.
+<p>Remember how I pointed out that there were problems with repeated
+lines of code? In the next section, you’ll see how to make your code
+work without them.</p>
 </details>
 </section>
 <!-- Fixing the Problem with the while Loop -->
@@ -3984,6 +4065,611 @@ something like this, even if you hit too hard the last time:</p>
 [0] CANCEL
 
 How hard do you plan to hit? [1, 2, 3, 0]: 3</code></pre>
+</details>
+</details>
+<details class="tip" open>
+<summary>
+DRY code is good
+</summary>
+<p>This problem was created because the same lines of code were being
+executed in two different places. The original code broke the Don’t
+Repeat Yourself principle.</p>
+<p>The problem was solved by rethinking the code so that no repetition
+was necessary.</p>
+<p>At the very end of this guide, you will discover <em>functions</em>,
+which are reusable blocks of code where you can create functionality
+that you write in one place, and can use from many different places.</p>
+</details>
+</section>
+<!-- Showing the Winning Situation -->
+<section id="showing-the-winning-situation" aria-labelledby="showing-the-winning-situation" data-item="Showing the Winning Situation">
+<h2>
+<a href="#showing-the-winning-situation">Showing the Winning
+Situation</a>
+</h2>
+<details class="challenge" open>
+<summary>
+#5 Can you show the winning situation?
+</summary>
+<p>In the last challenge, your code stopped working when
+<code>length</code> was reduced to <code>0</code> or less.</p>
+<p>Now can you add some code after the end of the <code>while</code>
+loop that will show the final state and declare the human player the
+winner?</p>
+<p>Below you can see how the Terminal might look when you have completed
+this challenge. Note that the final hit can be stronger than
+necessary.</p>
+<pre class="language-tex wrap"><code class="language-tex wrap"><i>-===========|  The nail is 12 units long.
+
+-==========|  You hit the nail gently.
+
+-========|  You hit the nail firmly.
+
+-=====|  You hit the nail hard.
+
+-===|  You hit the nail firmly.
+
+-==|  You hit the nail gently.
+
+-|  You hit the nail firmly.</i>
+
+<b>| You hit the nail hard.
+
+You win!</b></code></pre>
+<details class="solution">
+<summary>
+Hints
+</summary>
+<ol type="1">
+<li>You will need to clear the question out of the Terminal</li>
+<li>The value for <code>prompt</code> set in line 48 will be
+correct</li>
+<li>You can create a new <code>const</code> variable to contain the text
+“You win!”</li>
+<li>If you use backticks (<code>`</code>) around your text, you can
+ensure that there is a blank line both before and after it.</li>
+</ol>
+</details>
+<details class="solution">
+<summary>
+Solution
+</summary>
+<pre class="language-javascript line-numbers"><code class="language-javascript line-numbers"><i>const {
+  keyInYN,
+  keyInSelect
+} = require('readline-sync')
+
+const rules = `Let's knock a nail into this computer!
+
+* Each player takes a turn to hit the nail once.
+* A player can hit the nail in one of three ways:
+  gently, firmly, hard.
+* Depending on the force used, the nail will be
+  driven more or less deeply into the Terminal.
+* The player who knocks the nail all the way in
+  is the winner.
+
+Are you ready?
+`
+const whoStarts = `If you want to start, type Y.
+If you want me to start press any other key. `
+const nailIs    = "The nail is "
+const long      = " units long."
+const clear     = "\x1B[1A\x1B[K"
+const strength  = [
+  'gently',
+  'firmly',
+  'hard'
+]
+const question = 'How hard do you plan to hit?'
+const hit      = "You hit the nail "
+</i><b>const win      = `
+You win!
+`</b><i>
+
+let toDelete = 14
+let length   = 12
+let prompt   = nailIs + length + long
+let force
+let nail
+
+console.log(rules)
+let player = keyInYN(whoStarts)
+
+while (length &gt; 0) {
+  nail   = "-" + "=".repeat(length - 1) + "|"
+  console.log(clear.repeat(toDelete))
+  console.log(nail, prompt)
+
+  if (player) { // it's the human player's turn
+    const index = keyInSelect(strength, question)
+    force = index + 1
+    prompt = hit + strength[index] + "."
+    toDelete = 7
+  } else { // it's the AI's turn to play
+    console.log(`The AI is ynot ready yet.
+  You'll have to play solo.`)
+    player = true
+    force = 0
+  }
+
+  length = length - force
+}</i>
+
+<b>console.log(clear.repeat(toDelete))
+console.log("|", prompt)
+console.log(win)</b></code></pre>
+</details>
+</details>
+</section>
+<!-- Don't Show the Point of the Nail -->
+<section id="dont-show-the-point-of-the-nail" aria-labelledby="dont-show-the-point-of-the-nail" data-item="Don&#39;t Show the Point of the Nail">
+<h2>
+<a href="#dont-show-the-point-of-the-nail">Don’t Show the Point of the
+Nail</a>
+</h2>
+<details class="challenge" open>
+<summary>
+#6. Can you show the point of the nail only at the start?
+</summary>
+<pre class="language-tex wrap"><code class="language-tex wrap"><i>-===========|  The nail is 12 units long.
+
+</i><b>=========|</b><i>  You hit the nail hard.
+
+</i><b>=======|</b><i>  You hit the nail firmly.
+
+</i><b>====|</b><i>  You hit the nail hard.
+
+</i><b>==|</b><i>  You hit the nail firmly.
+
+</i><b>=|</b><i>  You hit the nail gently.
+
+| You hit the nail firmly.
+
+You win!</i></code></pre>
+<details class="solution">
+<summary>
+Hints
+</summary>
+<ol type="1">
+<li>To solve this problem, you will need to tell JavaScript if a player
+has already chosen a value for <code>force</code></li>
+<li>You can create a new variable with <code>let</code> to hold this
+information</li>
+<li>You could call your variable <code>started</code>, and give it the
+value <code>false</code> before the game begins</li>
+<li>You can set <code>started</code> to <code>true</code> after the
+<code>if () {...} else {...}</code> statement, when you can be sure that
+one of the players will have chosen a value for <code>force</code></li>
+<li>You can create your own <code>if () {...} else {...}</code>
+statement to draw the nail with a point (<code>-</code>) if the game is
+not started, or without a point (only <code>=</code> characters) if the
+game has started.</li>
+<li>You can use the logical not operator (<code>!</code>) to check if
+the game is not started.</li>
+</ol>
+</details>
+<details class="solution">
+<summary>
+Solution
+</summary>
+<pre class="language-javascript line-numbers"><code class="language-javascript line-numbers"><i>const {
+  keyInYN,
+  keyInSelect
+} = require('readline-sync')
+
+const rules = `Let's knock a nail into this computer!
+
+* Each player takes a turn to hit the nail once.
+* A player can hit the nail in one of three ways:
+  gently, firmly, hard.
+* Depending on the force used, the nail will be
+  driven more or less deeply into the Terminal.
+* The player who knocks the nail all the way in
+  is the winner.
+
+Are you ready?
+`
+const whoStarts = `If you want to start, type Y.
+If you want me to start press any other key. `
+const nailIs    = "The nail is "
+const long      = " units long."
+const clear     = "\x1B[1A\x1B[K"
+const strength  = [
+  'gently',
+  'firmly',
+  'hard'
+]
+const question = 'How hard do you plan to hit?'
+const hit      = "You hit the nail "
+const win      = `
+You win!
+`
+
+let toDelete = 14
+let length   = 12
+let prompt   = nailIs + length + long</i>
+<b>let started  = false</b>
+<i>let force
+let nail
+
+console.log(rules)
+let player = keyInYN(whoStarts)
+
+while (length &gt; 0) {</i>
+  <b>if (!started) {</b>
+    <i>nail = "-" + "=".repeat(length - 1) + "|"</i>
+  <b>} else {
+    nail = "=".repeat(length) + "|"
+  }</b>
+
+  <i>console.log(clear.repeat(toDelete))
+  console.log(nail, prompt)
+
+  if (player) { // it's the human player's turn
+    const index = keyInSelect(strength, question)
+    force = index + 1
+    prompt = hit + strength[index] + "."
+    toDelete = 7
+  } else { // it's the AI's turn to play
+    console.log(`The AI is ynot ready yet.
+  You'll have to play solo.`)
+    player = true
+    force = 0
+  }
+
+  length = length - force</i>
+  <b>started = true</b>
+<i>}</i>
+
+console.log(clear.repeat(toDelete))
+console.log("|", prompt)
+console.log(win)</code></pre>
+</details>
+</details>
+</section>
+<!-- Align the Text Nicely -->
+<section id="align-the-text-nicely" aria-labelledby="align-the-text-nicely" data-item="Align the Text Nicely">
+<h2>
+<a href="#align-the-text-nicely">Align the Text Nicely</a>
+</h2>
+<details class="challenge" open>
+<summary>
+#7 Can you align all the text nicely?
+</summary>
+<p>Here’s how the Terminal should look when you have completed this
+challenge:</p>
+<pre class="language-tex wrap"><code class="language-tex wrap"><i>-===========| The nail is 12 units long.
+
+==========|   </i><b>You hit the nail firmly.</b><i>
+
+=========|    </i><b>You hit the nail gently.</b><i>
+
+=======|      </i><b>You hit the nail firmly.</b><i>
+
+====|         </i><b>You hit the nail hard.</b><i>
+
+==|           </i><b>You hit the nail firmly.</b><i>
+
+=|            </i><b>You hit the nail gently.</b><i>
+
+|             </i><b>You hit the nail firmly.</b><i>
+
+You win!</i></code></pre>
+<details class="solution">
+<summary>
+Hints
+</summary>
+<ol type="1">
+<li>Somehow, you are going to need to keep track of how much shorter the
+nail becomes each time it is hit.</li>
+<li>One way to do this is to create a <code>const</code> variable which
+remembers the initial length of the nail.</li>
+<li>Each time you hit the nail, you can calculate the difference between
+its initial length and its new length.</li>
+<li>You can use <code>" ".repeat()</code> to create a string of space
+characters that is the same length as the difference between its initial
+length and the nail’s new length</li>
+<li>You can combine this string of <code>" "</code> space characters
+with the string <code>prompt</code>, before you use
+<code>console.log()</code> to show the <code>prompt</code>.</li>
+<li>The very first time you show the nail (with its point), you won’t
+need any extra spaces.</li>
+</ol>
+</details>
+<details class="solution">
+<summary>
+Almost a solution
+</summary>
+<p>The following solution works fine, unless you hit the nail too hard
+the last time. For example, if there is only one unit left, and you hit
+the nail hard, you apply a <code>force</code> of <code>3</code>, not
+<code>1</code>, and the text is pushed two extra spaces to the
+right.</p>
+<pre class="language-tex wrap"><code class="language-tex wrap"><i>-===========| The nail is 12 units long.
+
+=========|    You hit the nail hard.
+
+======|       You hit the nail hard.
+
+===|          You hit the nail hard.
+
+=|            You hit the nail firmly.
+
+|               </i><b>You hit the nail hard.</b><i>
+
+You win!</i></code></pre>
+<p>Here’s the slightly buggy solution:</p>
+<pre class="language-javascript line-numbers"><code class="language-javascript line-numbers"><i>const {
+  keyInYN,
+  keyInSelect
+} = require('readline-sync')
+
+const rules = `Let's knock a nail into this computer!
+
+* Each player takes a turn to hit the nail once.
+* A player can hit the nail in one of three ways:
+  gently, firmly, hard.
+* Depending on the force used, the nail will be
+  driven more or less deeply into the Terminal.
+* The player who knocks the nail all the way in
+  is the winner.
+
+Are you ready?
+`
+const whoStarts = `If you want to start, type Y.
+If you want me to start press any other key. `
+const nailIs    = "The nail is "
+const long      = " units long."
+const clear     = "\x1B[1A\x1B[K"
+const strength  = [
+  'gently',
+  'firmly',
+  'hard'
+]
+const question = 'How hard do you plan to hit?'
+const hit      = "You hit the nail "
+const win      = `
+You win!
+`
+
+</i><b>const initial = 12
+let length    = initial</b><i>
+let toDelete  = 14
+let prompt    = nailIs + length + long
+let started   = false
+let force
+let nail
+
+console.log(rules)
+let player = keyInYN(whoStarts)
+
+while (length &gt; 0) {
+  if (!started) {
+    nail = "-" + "=".repeat(length - 1) + "|"
+  } else {
+    nail = "=".repeat(length) + "|"
+  }
+
+  console.log(clear.repeat(toDelete))
+  console.log(nail, prompt)
+
+  if (player) { // it's the human player's turn
+    const index = keyInSelect(strength, question)
+    force = index + 1
+    </i><b>prompt = " ".repeat(initial - length + force)
+           + hit + strength[index] + "."</b><i>
+    toDelete = 7
+  } else { // it's the AI's turn to play
+    console.log(`The AI is ynot ready yet.
+  You'll have to play solo.`)
+    player = true
+    force = 0
+  }
+
+  length = length - force
+  started = true
+}
+
+console.log(clear.repeat(toDelete))
+console.log("|", prompt)
+console.log(win)</i></code></pre>
+</details>
+<p>To fix the bug in the solution above, you’re going to have to find a
+way to reduce the value of <code>force</code> to just the right amount
+to drive the nail home. Here’s a Google query that might lead you in the
+right direction: <a
+href="https://www.google.com/search?q=js+find+minimum">js find
+minimum</a>. &lt;&lt;&lt; Click on it to see where it leads you.</p>
+<details class="solution">
+<summary>
+Fix the bug
+</summary>
+<p>To fix this glitch, you can use JavaScript’s built-in global <a
+href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math"><code>Math</code></a>
+library. This contains a <a
+href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/min"><code>.min()</code>
+method</a> that you can use to reduce <code>force</code> to just the
+right amount to drive the nail home.</p>
+<p>You’ll need to change just one line of your code.</p>
+<pre class="language-javascript line-numbers" data-start="57"><code class="language-javascript line-numbers">    force = Math.min(index + 1, length)</code></pre>
+</details>
+</details>
+</section>
+<!-- Nails with Random Lengths -->
+<section id="nails-with-random-lengths" aria-labelledby="nails-with-random-lengths" data-item="Nails with Random Lengths">
+<h2>
+<a href="#nails-with-random-lengths">Nails with Random Lengths</a>
+</h2>
+<details class="challenge" open>
+<summary>
+#8 Can you give the nail a different length each time?
+</summary>
+<p>Can you choose a nail length in the range 12 - 15 units, to make the
+game more interesting (when the AI starts to play)? For example:</p>
+<pre class="language-tex wrap"><code class="language-tex wrap"><i>-===========| The nail is </i><b>15</b><i> units long.</i></code></pre>
+</details>
+<h2 id="math.random">Math.random()</h2>
+<p>If you search on Google for <a
+href="https://www.google.com/search?q=js+random+number">js random
+number</a>, you can find a link to <a
+href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random">MDN’s
+article on Math.random()</a>. This includes a <strong>Try it</strong>
+demo</p>
+<figure>
+<img src="images/TryRandom.webp"
+alt="Click on the Run button to see new random numbers each time" />
+<figcaption aria-hidden="true">Click on the Run button to see new random
+numbers each time</figcaption>
+</figure>
+<p>There are three things to note here:</p>
+<ol type="1">
+<li><code>Math.random()</code> gives a number in the range between
+<code>0</code> and <em>almost</em> <code>1</code>. It will never return
+the value <code>1</code>.</li>
+<li>If you multiply this number-between-0-and-almost-1 by any number,
+you will get a number between <code>0</code> and <em>almost</em> the
+number you multiplied by.</li>
+<li><a
+href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor"><code>Math.floor()</code></a>
+takes a number and returns the next lowest integer. So
+<code>1.999</code> becomes <code>1</code>, and so does
+<code>1.001</code></li>
+</ol>
+<p>Using these three ideas together, you can create an integer (whole
+number) which is in the range <code>0</code> to <code>n - 1</code>,
+where <code>n</code> is the number that you multiply
+<code>Math.random()</code> by.</p>
+<details class="sandbox" open>
+<summary>
+Try in the Node IDE
+</summary>
+<p>To get a number between 12 and 15, you could use:</p>
+<pre class="language-javascript line-numbers"><code class="language-javascript line-numbers">12 + Math.floor(Math.random() * 4))</code></pre>
+<ol type="1">
+<li>In a new Terminal window, open the Node Interactive Development
+Environment (IDE) by typing:</li>
+</ol>
+<pre class="language-tex wrap"><code class="language-tex wrap">node</code></pre>
+<ol start="2" type="1">
+<li>Enter the expression <code>12 + Math.floor(Math.random() * 4)</code>
+and press Enter</li>
+</ol>
+<pre class="language-tex wrap"><code class="language-tex wrap"><b>node</b>
+<i>Welcome to Node.js v23.1.0.
+Type ".help" for more information.</i>
+&gt; <b>12 + Math.floor(Math.random() * 4)</b>
+13</code></pre>
+<p>The IDE will give you an number between <code>12</code> and
+<code>15</code> (or <code>12 + (4-1)</code>).</p>
+<ol start="3" type="1">
+<li>Press the Up Arrow on your keyboard to show the expression again,
+and press Enter.</li>
+<li>Repeat step 3 many times.</li>
+</ol>
+<p>You should get a different value most times, but sometimes you’ll get
+the same value twice. That’s how random it is.</p>
+<pre class="language-tex wrap"><code class="language-tex wrap">&gt; <b>12 + Math.floor(Math.random() * 4)</b>
+14
+&gt; <b>12 + Math.floor(Math.random() * 4)</b>
+14
+&gt; <b>12 + Math.floor(Math.random() * 4)</b>
+15
+&gt; <b>12 + Math.floor(Math.random() * 4)</b>
+15
+&gt; <b>12 + Math.floor(Math.random() * 4)</b>
+12</code></pre>
+</details>
+<details class="challenge" open>
+<summary>
+Choose a random nail length
+</summary>
+<details class="solution">
+<summary>
+Hint
+</summary>
+<p>Instead of <code>initial = 12</code>, you can use the new trick that
+you have learnt with `Math.random()</p>
+</details>
+<details class="solution">
+<summary>
+Solution
+</summary>
+<p>You just need to change one line.</p>
+<pre class="language-javascript line-numbers"><code class="language-javascript line-numbers"><i>&lt;const {
+  keyInYN,
+  keyInSelect
+} = require('readline-sync')
+
+const rules = `Let's knock a nail into this computer!
+
+* Each player takes a turn to hit the nail once.
+* A player can hit the nail in one of three ways:
+  gently, firmly, hard.
+* Depending on the force used, the nail will be
+  driven more or less deeply into the Terminal.
+* The player who knocks the nail all the way in
+  is the winner.
+
+Are you ready?
+`
+const whoStarts = `If you want to start, type Y.
+If you want me to start press any other key. `
+const nailIs    = "The nail is "
+const long      = " units long."
+const clear     = "\x1B[1A\x1B[K"
+const strength  = [
+  'gently',
+  'firmly',
+  'hard'
+]
+const question = 'How hard do you plan to hit?'
+const hit      = "You hit the nail "
+const win      = `
+You win!
+`
+
+const initial = 12 </i><b>+ Math.floor(Math.random() * 4)</b><i>
+let length    = initial
+let toDelete  = 14
+let prompt    = nailIs + length + long
+let started   = false
+let force
+let nail
+
+console.log(rules)
+let player = keyInYN(whoStarts)
+
+while (length &gt; 0) {
+  if (!started) {
+    nail = "-" + "=".repeat(length - 1) + "|"
+  } else {
+    nail = "=".repeat(length) + "|"
+  }
+
+  console.log(clear.repeat(toDelete))
+  console.log(nail, prompt)
+
+  if (player) { // it's the human player's turn
+    const index = keyInSelect(strength, question)
+    force = Math.min(index + 1, length)
+    prompt = " ".repeat(initial - length + force)
+           + hit + strength[index] + "."
+    toDelete = 7
+  } else { // it's the AI's turn to play
+    console.log(`The AI is ynot ready yet.
+  You'll have to play solo.`)
+    player = true
+    force = 0
+  }
+
+  length = length - force
+  started = true
+}
+
+console.log(clear.repeat(toDelete))
+console.log("|", prompt)
+console.log(win)</i></code></pre>
 </details>
 </details>
 </section>

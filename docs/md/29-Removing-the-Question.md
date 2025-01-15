@@ -7,7 +7,7 @@
   <h2><a href="#removing-the-question">Removing the Question</a></h2>
   
 <details class="challenge" open>
-<summary>Can you remove the question after it has been answered?</summary>
+<summary>#3 Can you remove the question after it has been answered?</summary>
 
 The Terminal would look better if the question were removed, and just the result of answering the question were shown.
 

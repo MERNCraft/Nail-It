@@ -262,4 +262,16 @@ How hard do you plan to hit? [1, 2, 3, 0]: 3
 
 </details>
 </details>
+
+
+
+<details class="tip" open>
+<summary>DRY code is good</summary>
+This problem was created because the same lines of code were being executed in two different places. The original code broke the Don't Repeat Yourself principle.
+
+The problem was solved by rethinking the code so that no repetition was necessary.
+
+At the very end of this guide, you will discover _functions_, which are reusable blocks of code where you can create functionality that you write in one place, and can use from many different places.
+
+</details>
 </section>

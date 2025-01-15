@@ -44,6 +44,12 @@ if (player) { // it's the human player's turn
 }
 ```
 
+If the expression in round parentheses (`( ... )`) immediately after `if` evaluates to `true`, the JavaScript will run the code inside the first block enclosed by curly brackets (`{ ... }`).
+
+If the expression in round parentheses (`( ... )`) immediately after `if` evaluates to `false`, the code inside the curly-bracket block after the word `else` will be run.
+
+Either the `if` code _or_ the `else` code will be run, but not both.
+
 <details class="note" open>
 <summary>Comments</summary>
 Not everything in a JavaScript file is active code. You can add _comments_, like those shown above, by putting a double slash (`//`) to the left of any text that is not code. The JavaScript engine will ignore anything from that point until the end of the line. 
@@ -67,6 +73,8 @@ JavaScript has an ... interesting way of considering whether something is `true`
 In short, JavaScript treats the number `0`, the empty string `""` and a few other empty values as `false`. These values are said to be _falsy_.
 
 Conversely, JavaScript treats anything that is not `false` or `0` or empty as `true`... even the word `"false"`, because `"false"` contains letters, so it's not empty. Anything that is not `false` or falsy is _truthy_.
+
+To convert something truthy to `false`, or to convert something falsy to `true`, you can use the [logical not operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_NOT) (`!`). (See the examples in the sandbox below.)
 
 Later in this project, you'll see a trick to convert `true` to `1` and `false` to `0`.
 
@@ -95,6 +103,44 @@ The word 'false' is truthy
 When an expression is `false` or falsy, an `if` statement will ignore any instructions associated with it.
 
 The `undefined` text simply means that `console.log()` did not generate a value. When you call `readlineSync.keyInYN()`, it generates a value, but `console.log()` just logs data quietly to the console.
+
+Try these expressions in the Node IDE. All the following should evaluate to  `true`:
+
+```javascript-#
+2 === 2
+4 > 2
+length = 2; length === 2
+force = 3; length - force === -1
+length + force < 6
+"length" + "force" === "lengthforce"
+!false
+```
+Note my use of a semicolon in the line `length = 2; length === 2`. This means: 
+
+* Instruction 1: Assign the value `2` to the variable `length`
+* Instruction 2: Tell me if the value of `length` is identical to `2`.
+
+The semicolon allows me to write two instructions on one line.
+
+All the following should evaluate to `false`
+
+```javascript-#
+!true
+2 != 2
+4 < 2
+"length" === 2
+length - force > 0
+"length" + "force" < 6
+!"false"
+```
+
+</details>
+
+<details class="note" open>
+<summary>No variable declarations in the Node IDE?</summary>
+I did not declare any of the variables that I used in the Node IDE in the sandbox examples above. As a result, JavaScript automatically use created variables with the old-fashioned `var` method.
+
+Because I am using the Node IDE just to test simple ideas, it's more convenient to create variables without declaring them.
 
 </details>
 
