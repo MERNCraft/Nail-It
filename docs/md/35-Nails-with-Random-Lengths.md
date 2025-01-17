@@ -73,12 +73,15 @@ You should get a different value most times, but sometimes you'll get the same v
 > <b>12 + Math.floor(Math.random() * 4)</b>
 12
 ```
+
+You can try other expressions with `Math.random()` and `Math.floor()`, to see how they work together and separately.
+
 </details>
 
 <details class="challenge" open>
 <summary>Choose a random nail length</summary>
  
-<details class="solution">
+<details class="hint">
 <summary>Hint</summary>
 Instead of `initial = 12`, you can use the new trick that you have learnt with `Math.random()
 
@@ -90,7 +93,7 @@ Instead of `initial = 12`, you can use the new trick that you have learnt with `
 You just need to change one line.
 
 ```javascript-
-<i><const {
+<i>const {
   keyInYN,
   keyInSelect
 } = require('readline-sync')
@@ -151,7 +154,7 @@ while (length > 0) {
            + hit + strength[index] + "."
     toDelete = 7
   } else { // it's the AI's turn to play
-    console.log(`The AI is ynot ready yet.
+    console.log(`The AI is not ready yet.
   You'll have to play solo.`)
     player = true
     force = 0

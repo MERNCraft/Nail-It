@@ -32,7 +32,7 @@ Here's how the Terminal should look when you have completed this challenge:
 You win!</i>
 ```
 
-<details class="solution">
+<details class="hint">
 <summary>Hints</summary>
 1. Somehow, you are going to need to keep track of how much shorter the nail becomes each time it is hit.
 2. One way to do this is to create a `const` variable which remembers the initial length of the nail.
@@ -128,7 +128,7 @@ while (length > 0) {
            + hit + strength[index] + "."</b><i>
     toDelete = 7
   } else { // it's the AI's turn to play
-    console.log(`The AI is ynot ready yet.
+    console.log(`The AI is not ready yet.
   You'll have to play solo.`)
     player = true
     force = 0
@@ -157,8 +157,13 @@ You'll need to change just one line of your code.
     force = Math.min(index + 1, length)
 ```
 
+</details>
 
 </details>
+
+<details class="note" open>
+<summary>`js`, or earching online for "JavaScript"</summary>
+In the Google search query I used above, I wrote `js` and not JavaScript. There are many many JavaScript programmers who work for search-engine companies, and they all like to type as little as possible. As a result, their algorithms understand that the extension `js` refers to JavaScript, and you don't have to type the full name each time you make a query.
 
 </details>
 

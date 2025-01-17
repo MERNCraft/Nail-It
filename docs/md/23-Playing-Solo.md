@@ -66,7 +66,7 @@ You already know how to ask the human player how hard they plan to hit the nail.
 
 Can you copy and paste the code that you wrote earlier into the the first branch of the `if` statement?
 
-<details class="solution">
+<details class="hint">
 <summary>Hint</summary>
 You wrote a script called `keyInSelect.js`, which originally asked about Elephants.
 

@@ -45,7 +45,7 @@ james@M1 Nail_It %
    node main.js
    ```
 
-<details class="solution">
+<details class="hint">
 <summary>Hints</summary>
 * You can use the [string concatenator operator `+`](https://www.freecodecamp.org/news/how-js-string-concatenation-works/) to join two strings together.
 * You can use the string method `.repeat()` to generate a long string by repeating a shorter string.

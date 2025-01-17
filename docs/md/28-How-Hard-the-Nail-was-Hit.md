@@ -23,7 +23,7 @@ How hard do you plan to hit? [1, 2, 3, 0]: 2
 -=========|</i> <b>You hit the nail firmly</b>
 ```
 
-<details class="solution">
+<details class="hint">
 <summary>Hints:</summary>
 1. In the last challenge, `prompt` was declared using `let`. This means that you can give a new value to `prompt`.
 2. You can declare a new `const` variable to hold the part of the prompt that will always be the same.

@@ -1456,6 +1456,8 @@ href="https://developer.mozilla.org/en-US/docs/Glossary/Truthy">Truthy</a>
 on the MDN web site.</p>
 <p>In short, JavaScript treats the number <code>0</code>, the empty
 string <code>""</code> and a few other empty values as
+<code>false</code>. In a moment, you’ll see the value
+<code>undefined</code>. That’s another value that JavaScript treats
 <code>false</code>. These values are said to be <em>falsy</em>.</p>
 <p>Conversely, JavaScript treats anything that is not <code>false</code>
 or <code>0</code> or empty as <code>true</code>… even the word
@@ -2404,7 +2406,7 @@ james@M1 Nail_It % </code></pre>
 open on your <code>Nail_It</code> directory, run:</p>
 <pre class="language-tex wrap"><code class="language-tex wrap">node main.js</code></pre></li>
 </ol>
-<details class="solution">
+<details class="hint">
 <summary>
 Hints
 </summary>
@@ -2557,7 +2559,7 @@ Ask the human player how hard to hit
 hit the nail. Where have you done this before?</p>
 <p>Can you copy and paste the code that you wrote earlier into the the
 first branch of the <code>if</code> statement?</p>
-<details class="solution">
+<details class="hint">
 <summary>
 Hint
 </summary>
@@ -3029,6 +3031,22 @@ You win!</code></pre>
 give the nail a different length each time?</h3>
 <p>For example:</p>
 <pre class="language-tex wrap"><code class="language-tex wrap"><i>-===========| The nail is </i><b>15</b><i> units long.</i></code></pre>
+<h3 id="can-you-stop-the-game-early-before-there-is-a-winner">9. Can you
+stop the game early, before there is a winner?</h3>
+<p>If the human player presses <code>0</code> when asked how hard to
+hit, can you make the game end gracefully?</p>
+<pre class="language-tex wrap"><code class="language-tex wrap"><i>-==============| The nail is 15 units long.
+
+============|    You hit the nail hard.
+
+[1] gently
+[2] firmly
+[3] hard
+[0] CANCEL
+
+How hard do you plan to hit? [1, 2, 3, 0]: </i> <b>0
+
+Thanks for playing!</b></code></pre>
 </section>
 <!-- Redrawing the Nail -->
 <section id="redrawing-the-nail" aria-labelledby="redrawing-the-nail" data-item="Redrawing the Nail">
@@ -3049,7 +3067,7 @@ give the nail a different length each time?</h3>
 
 How hard do you plan to hit? [1, 2, 3, 0]: 3</i>
 <b>-========|</b></code></pre>
-<details class="solution">
+<details class="hint">
 <summary>
 Hints
 </summary>
@@ -3167,7 +3185,7 @@ challenge:</p>
 
 How hard do you plan to hit? [1, 2, 3, 0]: 2
 -=========|</i> <b>You hit the nail firmly</b></code></pre>
-<details class="solution">
+<details class="hint">
 <summary>
 Hints:
 </summary>
@@ -3260,7 +3278,7 @@ the result of answering the question were shown.</p>
 <pre class="language-tex wrap"><code class="language-tex wrap">-===========| The nail is 12 units long.
 
 -==========| You hit the nail gently.</code></pre>
-<details class="solution">
+<details class="hint">
 <summary>
 Hints
 </summary>
@@ -4116,7 +4134,7 @@ necessary.</p>
 <b>| You hit the nail hard.
 
 You win!</b></code></pre>
-<details class="solution">
+<details class="hint">
 <summary>
 Hints
 </summary>
@@ -4187,7 +4205,7 @@ while (length &gt; 0) {
     prompt = hit + strength[index] + "."
     toDelete = 7
   } else { // it's the AI's turn to play
-    console.log(`The AI is ynot ready yet.
+    console.log(`The AI is not ready yet.
   You'll have to play solo.`)
     player = true
     force = 0
@@ -4227,7 +4245,7 @@ Nail</a>
 | You hit the nail firmly.
 
 You win!</i></code></pre>
-<details class="solution">
+<details class="hint">
 <summary>
 Hints
 </summary>
@@ -4312,7 +4330,7 @@ while (length &gt; 0) {</i>
     prompt = hit + strength[index] + "."
     toDelete = 7
   } else { // it's the AI's turn to play
-    console.log(`The AI is ynot ready yet.
+    console.log(`The AI is not ready yet.
   You'll have to play solo.`)
     player = true
     force = 0
@@ -4356,7 +4374,7 @@ challenge:</p>
 |             </i><b>You hit the nail firmly.</b><i>
 
 You win!</i></code></pre>
-<details class="solution">
+<details class="hint">
 <summary>
 Hints
 </summary>
@@ -4461,7 +4479,7 @@ while (length &gt; 0) {
            + hit + strength[index] + "."</b><i>
     toDelete = 7
   } else { // it's the AI's turn to play
-    console.log(`The AI is ynot ready yet.
+    console.log(`The AI is not ready yet.
   You'll have to play solo.`)
     player = true
     force = 0
@@ -4494,6 +4512,17 @@ right amount to drive the nail home.</p>
 <p>You’ll need to change just one line of your code.</p>
 <pre class="language-javascript line-numbers" data-start="57"><code class="language-javascript line-numbers">    force = Math.min(index + 1, length)</code></pre>
 </details>
+</details>
+<details class="note" open>
+<summary>
+<code>js</code>, or earching online for “JavaScript”
+</summary>
+<p>In the Google search query I used above, I wrote <code>js</code> and
+not JavaScript. There are many many JavaScript programmers who work for
+search-engine companies, and they all like to type as little as
+possible. As a result, their algorithms understand that the extension
+<code>js</code> refers to JavaScript, and you don’t have to type the
+full name each time you make a query.</p>
 </details>
 </section>
 <!-- Nails with Random Lengths -->
@@ -4579,12 +4608,15 @@ the same value twice. That’s how random it is.</p>
 15
 &gt; <b>12 + Math.floor(Math.random() * 4)</b>
 12</code></pre>
+<p>You can try other expressions with <code>Math.random()</code> and
+<code>Math.floor()</code>, to see how they work together and
+separately.</p>
 </details>
 <details class="challenge" open>
 <summary>
 Choose a random nail length
 </summary>
-<details class="solution">
+<details class="hint">
 <summary>
 Hint
 </summary>
@@ -4596,7 +4628,7 @@ you have learnt with `Math.random()</p>
 Solution
 </summary>
 <p>You just need to change one line.</p>
-<pre class="language-javascript line-numbers"><code class="language-javascript line-numbers"><i>&lt;const {
+<pre class="language-javascript line-numbers"><code class="language-javascript line-numbers"><i>const {
   keyInYN,
   keyInSelect
 } = require('readline-sync')
@@ -4657,7 +4689,7 @@ while (length &gt; 0) {
            + hit + strength[index] + "."
     toDelete = 7
   } else { // it's the AI's turn to play
-    console.log(`The AI is ynot ready yet.
+    console.log(`The AI is not ready yet.
   You'll have to play solo.`)
     player = true
     force = 0
@@ -4671,6 +4703,1609 @@ console.log(clear.repeat(toDelete))
 console.log("|", prompt)
 console.log(win)</i></code></pre>
 </details>
+</details>
+</section>
+<!-- What if the Human Player Presses 0 -->
+<section id="what-if-the-human-player-presses-0" aria-labelledby="what-if-the-human-player-presses-0" data-item="What if the Human Player Presses 0?">
+<h2>
+<a href="#what-if-the-human-player-presses-0">What if the Human Player
+Presses 0?</a>
+</h2>
+<p>By default, <code>readline-sync.keyInSelect()</code> considers that
+pressing <code>0</code> means <code>CANCEL</code>. But your game doesn’t
+cancel anything.</p>
+<p>If you press the <code>0</code> key now, the game will behave a
+little strangely. It will not make the nail any shorter, and it will
+show the string <code>undefined</code> instead of <code>gently</code>,
+<code>firmly</code> or <code>hard</code>. And it will continue to ask
+you to play.</p>
+<pre class="language-tex wrap"><code class="language-tex wrap"><i>-=============| The nail is 14 units long.
+
+==============| You hit the nail </i><b>undefined</b><i>.
+
+[1] gently
+[2] firmly
+[3] hard
+[0] CANCEL
+
+How hard do you plan to hit? [1, 2, 3, 0]: </i></code></pre>
+<details class="sandbox" open>
+<summary>
+Where does <code>undefined</code> come from?
+</summary>
+<p>Back in section <a href="#arrays-and-index-zero">18. Arrays and index
+Zero</a>, you saw that the first item in an array is at
+<code>index 0</code>. You saw that you could get the value at each entry
+in the array, by counting from <code>0</code> to
+the-number-of-items-in-the-array minus 1.</p>
+<p>Here’s how you can check this in the Node IDE in your Terminal:</p>
+<pre class="language-tex wrap"><code class="language-tex wrap"><b>node</b>
+Welcome to Node.js v23.1.0.
+Type ".help" for more information.
+&gt; <b>s = [ 'gently', 'firmly', 'hard' ]</b>
+[ 'gently', 'firmly', 'hard' ]
+&gt; <b>s[0]</b>
+'gently'
+&gt; <b>s[1]</b>
+'firmly'
+&gt; <b>s[2]</b>
+'hard'</code></pre>
+<p>Now try using index values that are out of range: greater than 2 or
+less than 0. You will get the value <a
+href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined"><code>undefined</code></a>:</p>
+<pre class="language-tex wrap"><code class="language-tex wrap">&gt; <b>s[3]</b>
+undefined
+&gt; <b>s[-1]</b>
+undefined</code></pre>
+<p>JavaScript looks for a value at the given place in the array, but
+there’s nothing there. In JavaScript-speak, this “nothing” is
+<code>undefined</code>. When you add this nothing to a string, it
+appears as the string <code>"undefined"</code>, but it’s not a
+string.</p>
+<p>You can create <code>undefined</code> in different ways</p>
+<ol type="1">
+<li>If you ask for an item in an array that doesn’t exist (as you gave
+just don.)</li>
+<li>If you don’t give any value to a variable that you create with
+<code>let</code>, its value will be <code>undefined</code></li>
+</ol>
+<pre class="language-tex wrap"><code class="language-tex wrap">&gt; <b>let empty</b>
+undefined</code></pre>
+<ol start="3" type="1">
+<li>If you ask an object for a property that it doesn’t have:</li>
+</ol>
+<pre class="language-tex wrap"><code class="language-tex wrap">
+&gt; <b>r = require("readline-sync")</b>
+{
+  _DBG_set_useExt: [Function (anonymous)],</code></pre>
+<pre class="skip"><code class="skip">// lines skipped //</code></pre>
+<pre class="language-tex wrap"><code class="language-tex wrap">  question: [Function (anonymous)],
+  prompt: [Function (anonymous)],
+  keyIn: [Function (anonymous)],</code></pre>
+<pre class="skip"><code class="skip">// lines skipped //</code></pre>
+<pre class="language-tex wrap"><code class="language-tex wrap">}
+&gt; <b>r.unknownProperty</b>
+undefined</code></pre>
+<ol start="4" type="1">
+<li>If you call a method that does not return any value:</li>
+</ol>
+<pre class="language-tex wrap"><code class="language-tex wrap"><b>console.log("This text will be followed by `undefined` because the method console.log() does not return a value")</b>
+This text will be followed by `undefined` because the method console.log() does not return a value
+undefined</code></pre>
+</details>
+<details class="note" open>
+<summary>
+<code>undefined</code> is falsy
+</summary>
+<p>As mentioned earlier, JavaScript treats the value
+<code>undefined</code> as if it were <code>false</code>.</p>
+</details>
+<details class="pivot" open>
+<summary>
+Stopping the game when you press <code>0</code>
+</summary>
+<p>When the AI starts playing (and making mistakes), there will be times
+when you are testing the game that you will want to stop the game and
+make a change to the code. Right now, you are forced to play all the way
+through to the end.</p>
+<p>As you have seen, when you press <code>0</code>,
+<code>keyInSelect()</code> returns the value <code>-1</code>.</p>
+<p>In the next section, you’ll see how to stop the game if the value
+return by <code>keyInSelect()</code> is less than 1.</p>
+</details>
+</section>
+<!-- process and process.exit() -->
+<section id="process-and-process-exit" aria-labelledby="process-and-process-exit" data-item="process and process exit()">
+<h2>
+<a href="#process-and-process-exit">process and process exit()</a>
+</h2>
+<p>When you run a script using <code>node</code> in the Terminal, NodeJS
+creates an object called <code>process</code>, which contains all
+properties and methods that let it do its job.</p>
+<p>One of these methods is <code>exit()</code>, which will allow you to
+stop the script from running. A property that you will probably use in
+future projects is <code>argv</code>, which is an array describing which
+version of <code>node</code> is running, which file it is running, and
+any more text you may have typed after <code>node main.js</code> in the
+Terminal.</p>
+<details class="tldr" open>
+<summary>
+What <code>process</code> looks like
+</summary>
+<p>Here’s how you can see what <code>process</code> looks like. (Your
+values for <code>version</code> and <code>argv</code> may be
+different.)</p>
+<ol type="1">
+<li><p>Add these two lines at the very beginning of your
+<code>main.js</code> script. (This is only temporary. You will remove
+them very soon.)</p>
+<pre class="language-javascript line-numbers"><code class="language-javascript line-numbers"><b>console.log(process)
+process.exit()</b><i>
+
+const {
+  keyInYN,
+  keyInSelect
+} = require('readline-sync')
+
+const rules = `Let's knock a nail into this computer!</i></code></pre>
+<pre class="skip"><code class="skip">// All the other lines skipped //</code></pre></li>
+<li><p>In the Terminal, run:</p></li>
+</ol>
+<pre class="language-tex wrap"><code class="language-tex wrap">node main.js</code></pre>
+<ol start="3" type="1">
+<li>In the Terminal, you should see over 800 lines of data printed. I
+have just given you the highlights below:</li>
+</ol>
+<pre class="language-bash line-numbers"><code class="language-bash line-numbers"><i>process {
+  version: 'v23.1.0',
+  versions: {
+    node: '23.1.0',
+    acorn: '8.12.1',</i></code></pre>
+<pre class="skip"><code class="skip">// many lines skipped //</code></pre>
+<pre class="language-bash line-numbers" data-start="29"><code class="language-bash line-numbers">    <i>zlib: '1.2.12'
+  },</i></code></pre>
+<pre class="skip"><code class="skip">// many lines skipped //</code></pre>
+<pre class="language-bash line-numbers" data-start="269"><code class="language-bash line-numbers">  <i>kill: [Function: kill],</i>
+  <b>exit: [Function: exit],</b>
+  <i>finalization: [Getter/Setter],</i></code></pre>
+<pre class="skip"><code class="skip">// many lines skipped //</code></pre>
+<pre class="language-bash line-numbers" data-start="384"><code class="language-bash line-numbers">  <i>title: 'node',</i>
+  <b>argv: [
+    '/opt/homebrew/Cellar/node/23.1.0_1/bin/node',
+    '/Users/james/My Learning Journey/Nail_It/main.js'
+  ],</b><i>
+  execArgv: [],</i></code></pre>
+<pre class="skip"><code class="skip">// many lines skipped //</code></pre>
+<pre class="language-bash line-numbers" data-start="826"><code class="language-bash line-numbers">  <i>[Symbol(shapeMode)]: false,
+  [Symbol(kCapture)]: false
+}</i></code></pre>
+<details class="question" open>
+<summary>
+process.exit() stops the script
+</summary>
+<p>Did you see how the line <code>process.exit()</code> prevented the
+rest of your script from running?</p>
+<p>Can you imagine how you will use this to stop the game if the human
+player presses <code>0</code> for the force for hitting the nail?</p>
+</details>
+<p>OK? That was too much information?</p>
+<ol start="4" type="1">
+<li>You can delete these two lines from the beginning of your script,
+now that you know about <code>process.exit()</code>.</li>
+</ol>
+<pre class="language-javascript"><code class="language-javascript">   <s>console.log(process)</s>
+   <s>process.exit()</s></code></pre>
+<pre class="skip"><code class="skip"></code></pre>
+<pre class="language-javascript line-numbers"><code class="language-javascript line-numbers">   const {
+     keyInYN,
+     keyInSelect
+   } = require('readline-sync')
+   
+   const rules = `Let's knock a nail into this computer!</i></code></pre>
+<pre class="skip"><code class="skip">// And your script continues //</code></pre>
+</details>
+</section>
+<!-- Stopping the Game -->
+<section id="stopping-the-game" aria-labelledby="stopping-the-game" data-item="Stopping the Game">
+<h2>
+<a href="#stopping-the-game">Stopping the Game</a>
+</h2>
+<details class="challenge" open>
+<summary>
+#9 Can you stop the game early, before there is a winner?
+</summary>
+<p>If the human player presses <code>0</code> when asked how hard to
+hit, can you make the game end gracefully?</p>
+<pre class="language-tex wrap"><code class="language-tex wrap"><i>-==============| The nail is 15 units long.
+
+============|    You hit the nail hard.
+
+[1] gently
+[2] firmly
+[3] hard
+[0] CANCEL
+
+How hard do you plan to hit? [1, 2, 3, 0]: </i> <b>0
+
+Thanks for playing!</b></code></pre>
+<details class="hint" open>
+<summary>
+Hints
+</summary>
+<ol type="1">
+<li>You can add a <code>const</code> variable called
+<code>endGame</code> with the text that you want to show when the game
+ends.</li>
+<li>You can check if <code>index &lt; 0</code> in the <code>if</code>
+statement for the player.</li>
+<li>If so, you can <code>console.log(endGame)</code> and then call
+<code>process.exit()</code></li>
+<li>It might be tidier to remove the question that the player just
+decided not to answer.</li>
+</ol>
+</details>
+<details class="solution" open>
+<summary>
+Solution
+</summary>
+<pre class="language-javascript line-numbers"><code class="language-javascript line-numbers"><i>const {
+  keyInYN,
+  keyInSelect
+} = require('readline-sync')
+
+const rules = `Let's knock a nail into this computer!
+
+* Each player takes a turn to hit the nail once.
+* A player can hit the nail in one of three ways:
+  gently, firmly, hard.
+* Depending on the force used, the nail will be
+  driven more or less deeply into the Terminal.
+* The player who knocks the nail all the way in
+  is the winner.
+
+Are you ready?
+`
+const whoStarts = `If you want to start, type Y.
+If you want me to start press any other key. `
+const nailIs    = "The nail is "
+const long      = " units long."
+const clear     = "\x1B[1A\x1B[K"
+const strength  = [
+  'gently',
+  'firmly',
+  'hard'
+]
+const question = 'How hard do you plan to hit?'
+const hit      = "You hit the nail "
+const win      = `
+You win!
+`
+</i><b>const endGame  = `Thanks for playing!
+`</b><i>
+
+const initial = 12 + Math.floor(Math.random() * 4)
+let length    = initial
+let toDelete  = 14
+let prompt    = nailIs + length + long
+let started   = false
+let force
+let nail
+
+console.log(rules)
+let player = keyInYN(whoStarts)
+
+while (length &gt; 0) {
+  if (!started) {
+    nail = "-" + "=".repeat(length - 1) + "|"
+  } else {
+    nail = "=".repeat(length) + "|"
+  }
+
+  console.log(clear.repeat(toDelete))
+  console.log(nail, prompt)
+
+  if (player) { // it's the human player's turn
+    const index = keyInSelect(strength, question)
+    </i><b>if (index &lt; 0) {
+      console.log(clear.repeat(toDelete))
+      console.log(endGame)
+      process.exit()
+    }</b><i>
+
+    force = Math.min(index + 1, length)
+    prompt = " ".repeat(initial - length + force)
+           + hit + strength[index] + "."
+    toDelete = 7
+  } else { // it's the AI's turn to play
+    console.log(`The AI is not ready yet.
+  You'll have to play solo.`)
+    player = true
+    force = 0
+  }
+
+  length = length - force
+  started = true
+}
+
+console.log(clear.repeat(toDelete))
+console.log("|", prompt)
+console.log(win)</i></code></pre>
+</details>
+</details>
+</section>
+<!-- The AI's Secret Weapon -->
+<section id="the-ais-secret-weapon" aria-labelledby="the-ais-secret-weapon" data-item="The AI&#39;s Secret Weapon">
+<h2>
+<a href="#the-ais-secret-weapon">The AI’s Secret Weapon</a>
+</h2>
+<p>Now it’s time to make your AI player as smart as the piece of plastic
+in <a href="https://www.youtube.com/watch?v=9KABcmczPdg">Matt Parker’s
+video</a>.</p>
+<p>Both you and the AI can choose a force that reduces the length of the
+nail by between 1 and 3 units. If the number of units left is a multiple
+of 4, the player whose turn it is to play is in a losing position. If
+the current player takes <code>n</code> units, their opponent can take
+<code>(4 - n)</code> units, and the number of units left will still be a
+multiple of four.</p>
+<p>In other words, the AI will have to:</p>
+<ul>
+<li>Look at the current length</li>
+<li>Divide it into groups of 4 units</li>
+<li>Check if there are any units left over</li>
+</ul>
+<p>For example: If the nail is <code>11</code> units long, this is
+<code>(2 x 4 = 8) + 3</code>. There will be <code>3</code> units left
+after dividing into groups of <code>4</code>.</p>
+<p>There are mathematical terms I could use like <em>modulo</em> or
+<em>remainder</em>, but let’s imagine that my schooldays are a long time
+ago, and that I have forgotten these words. Here’s a Google query that
+uses words that I do know:</p>
+<p><a
+href="https://www.google.com/search?q=js+find+number+left+over+after+divide">js
+find number left over after divide</a></p>
+<p>When I click on this link, the first result comes from the trusty MDN
+documentation: <a
+href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Remainder">Remainder
+(%)</a>. To quote this page:</p>
+<blockquote>
+<p>The remainder (%) operator returns the remainder left over when one
+operand is divided by a second operand. It always takes the sign of the
+dividend.</p>
+</blockquote>
+<p>There is also a <strong>Try It</strong> section, where you can edit
+the values given in the code, and then press the Run button to see the
+results.</p>
+<figure>
+<img src="images/modulo4.webp"
+alt="Calculating % 4 (modulo four), for different lengths of nail" />
+<figcaption aria-hidden="true">Calculating <code>% 4</code> (modulo
+four), for different lengths of nail</figcaption>
+</figure>
+<details class="sandbox" open>
+<summary>
+Testing in the Node IDE
+</summary>
+<p>You can also run your own tests in the Node IDE in the Terminal.</p>
+<ol type="1">
+<li>Open a new Terminal and type <code>node</code> (or return to the
+Terminal where the Node IDE is already running)</li>
+<li>Type expressions like <code>13 % 4</code> in the Terminal, and then
+press Enter</li>
+</ol>
+<pre class="language-tex wrap"><code class="language-tex wrap"><b>node</b>
+Welcome to Node.js v23.1.0.
+Type ".help" for more information.
+&gt; <b>13 % 4</b>
+1
+&gt; </code></pre>
+<p>You don’t need to type <code>console.log()</code>. The IDE will
+automatically print out the value of the expressions you type in. It may
+even not wait until you press Enter before showing you the value.</p>
+</details>
+<details class="pivot" open>
+<summary>
+Implementing the AI’s strategy
+</summary>
+<p>So the modulo (<code>%</code>) operator is the AI’s secret weapon. As
+with the solo player, building the AI’s strategy is going to take
+several steps. Some of them are going to break the existing game.</p>
+</details>
+</section>
+<!-- Getting the AI to Win -->
+<section id="getting-the-ai-to-win" aria-labelledby="getting-the-ai-to-win" data-item="Getting the AI to Win">
+<h2>
+<a href="#getting-the-ai-to-win">Getting the AI to Win</a>
+</h2>
+<p>Just as with the Solo Challenges, I’ll get you to apply the AI’s
+winning strategy little by little, one challenge at a time, and I’ll
+treat each challenge in a separate section.</p>
+<p>Here’s a list of challenges:</p>
+<h3 id="get-the-ai-to-join-the-game-at-all">1. Get the AI to join the
+game at all</h3>
+<p>Right now, if you do not press <code>Y</code> when asked if you want
+to start the game… well, you have to start the game anyway. To begin
+with, the AI will simply say something and do nothing.</p>
+<pre class="language-tex wrap"><code class="language-tex wrap">-=============| The nail is 14 units long.
+
+============|   You hit the nail firmly.
+Say that again? I won't play yet.
+
+============|   You hit the nail firmly.
+
+[1] gently
+[2] firmly
+[3] hard
+[0] CANCEL
+
+How hard do you plan to hit? [1, 2, 3, 0]: </code></pre>
+<h3 id="get-the-ai-to-play-a-move-and-claim-it">2. Get the AI to play a
+move, and claim it</h3>
+<p>This means that you’ll have to change the string
+<code>You hit the nail</code> to something more generic.</p>
+<pre class="language-tex wrap"><code class="language-tex wrap"><i>-============| The nail is 13 units long.
+
+==========|    You hit the nail gently.</i>
+
+<b>=========|     I hit the nail gently.</b></code></pre>
+<h3 id="get-the-ai-to-play-the-best-legal-move">3. Get the AI to play
+the best legal move</h3>
+<p>The AI must choose a value for <code>force</code> between
+<code>1</code> and <code>3</code>, so it can’t always choose to play
+<code>length % 4</code>.</p>
+<pre class="language-tex wrap"><code class="language-tex wrap"><i>-===========| The nail is 12 units long.
+
+</i><b>===========|  I hit the nail gently.</b><i>
+
+=========|    You hit the nail firmly.
+
+</i><b>========|     I hit the nail gently.</b><i>
+
+=====|        You hit the nail hard.
+
+</i><b>====|         I hit the nail gently.</b><i>
+
+[1] gently
+[2] firmly
+[3] hard
+[0] CANCEL
+
+How hard do you plan to hit? [1, 2, 3, 0]: </i></code></pre>
+<p>Now the AI is in a winning position.</p>
+<h3 id="get-the-ai-to-claim-victory-when-it-wins">4. Get the AI to claim
+victory, when it wins</h3>
+<pre class="language-tex wrap"><code class="language-tex wrap"><i>-==============| The nail is 15 units long.
+
+============|    I hit the nail hard.
+
+===========|     You hit the nail gently.
+
+========|        I hit the nail hard.
+
+=======|         You hit the nail gently.
+
+====|            I hit the nail hard.
+
+===|             You hit the nail gently.
+
+|                I hit the nail hard.</i>
+
+<b>I win!</b></code></pre>
+<h3 id="get-the-ai-to-invite-you-to-play-again">5. Get the AI to invite
+you to play again</h3>
+<pre class="language-tex wrap"><code class="language-tex wrap"><i>=|            You hit the nail hard.
+
+|             I hit the nail gently.
+
+I win!</i>
+
+<b>Do you want to play again?
+(Type Y for Yes, N for No): </b></code></pre>
+</section>
+<!-- Get the AI to Join the Game -->
+<section id="get-the-ai-to-join-the-game" aria-labelledby="get-the-ai-to-join-the-game" data-item="Get the AI to Join the Game">
+<h2>
+<a href="#get-the-ai-to-join-the-game">Get the AI to Join the Game</a>
+</h2>
+<details class="challenge" open>
+<summary>
+#1 Can you get the AI to join the game at all?
+</summary>
+<p>For now, the AI just lets you play. Can you make it print something
+into the Terminal to show that it exists? The simplest solution is to
+simply jump back to the beginning of the <code>while</code> loop after
+the AI’s turn, which means that these lines will be executed a second
+time:</p>
+<pre class="language-javascript line-numbers" data-start="54"><code class="language-javascript line-numbers">  console.log(clear.repeat(toDelete))
+  console.log(nail, prompt)</code></pre>
+<p>The output you are looking for could be something like this:</p>
+<pre class="language-tex wrap"><code class="language-tex wrap">
+-=============| The nail is 14 units long.
+
+============|   You hit the nail firmly.
+Say that again? I won't play yet.
+
+============|   You hit the nail firmly.
+
+[1] gently
+[2] firmly
+[3] hard
+[0] CANCEL
+
+How hard do you plan to hit? [1, 2, 3, 0]: </code></pre>
+<details class="hint">
+<summary>
+Hints
+</summary>
+<ol type="1">
+<li>Currently, the variable <code>player</code> is always set to
+<code>true</code>, to mean that it is the human player’s turn to play.
+If the AI is to play you will need to set <code>player</code> to
+false.</li>
+<li>The <a
+href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_NOT">logical
+not operator (<code>!</code>)</a> can flip a truthy value to
+<code>false</code>.</li>
+<li>Where is the best place to flip the value of
+<code>player</code>?</li>
+<li>If the AI is not going to play, you’ll need to make it choose
+<code>force = 0</code>, otherwise the nail will get shorter by itself.
+(Remember that I already set this for you earlier?)</li>
+<li>The AI doesn’t have to answer a question, so there will be no
+question lines to delete from the Terminal.</li>
+<li>You should make the AI print something to the Terminal, just to show
+that it noticed that it had a turn.</li>
+</ol>
+</details>
+<details class="solution">
+<summary>
+Solution
+</summary>
+<p>You can achieve the result I show above with just three changes, as
+shown below.</p>
+<pre class="language-javascript line-numbers"><code class="language-javascript line-numbers"><i>const {
+  keyInYN,
+  keyInSelect
+} = require('readline-sync')
+
+const rules = `Let's knock a nail into this computer!
+
+* Each player takes a turn to hit the nail once.
+* A player can hit the nail in one of three ways:
+  gently, firmly, hard.
+* Depending on the force used, the nail will be
+  driven more or less deeply into the Terminal.
+* The player who knocks the nail all the way in
+  is the winner.
+
+Are you ready?
+`
+const whoStarts = `If you want to start, type Y.
+If you want me to start press any other key. `
+const nailIs    = "The nail is "
+const long      = " units long."
+const clear     = "\x1B[1A\x1B[K"
+const strength  = [
+  'gently',
+  'firmly',
+  'hard'
+]
+const question = 'How hard do you plan to hit?'
+const hit      = "You hit the nail "
+const win      = `
+You win!
+`
+const endGame  = `Thanks for playing!
+`
+
+const initial = 12 + Math.floor(Math.random() * 4)
+let length    = initial
+let toDelete  = 14
+let prompt    = nailIs + length + long
+let started   = false
+let force
+let nail
+
+console.log(rules)
+let player = keyInYN(whoStarts)
+
+while (length &gt; 0) {
+  if (!started) {
+    nail = "-" + "=".repeat(length - 1) + "|"
+  } else {
+    nail = "=".repeat(length) + "|"
+  }
+
+  console.log(clear.repeat(toDelete))
+  console.log(nail, prompt)
+
+  if (player) { // it's the human player's turn
+    const index = keyInSelect(strength, question)
+    if (index &lt; 0) {
+      console.log(clear.repeat(toDelete))
+      console.log(endGame)
+      process.exit()
+    }
+
+    force = Math.min(index + 1, length)
+    prompt = " ".repeat(initial - length + force)
+           + hit + strength[index] + "."
+    toDelete = 7
+  } else { // it's the AI's turn to play
+    </i><b>console.log("Say that again? I won't play yet.")
+    toDelete = 0</b><i>
+    force = 0
+  }
+
+  length = length - force
+  started = true
+  </i><b>player = !player</b><i>
+}
+
+console.log(clear.repeat(toDelete))
+console.log("|", prompt)
+console.log(win)</i></code></pre>
+</details>
+</details>
+</section>
+<!-- Get AI to Play a Move -->
+<section id="get-ai-to-play-a-move" aria-labelledby="get-ai-to-play-a-move" data-item="Get AI to Play a Move">
+<h2>
+<a href="#get-ai-to-play-a-move">Get AI to Play a Move</a>
+</h2>
+<details class="challenge" open>
+<summary>
+#2 Can you get the AI to play a move, and claim it as its own?
+</summary>
+<p>Before, only the human player was playing, so you could use the fixed
+phrase <code>You hit the nail</code>, and then add <code>gently</code>
+or <code>firmly</code> or <code>hard</code> after it. Now you’ll need to
+get the the AI to say <code>I  hit the nail ...</code>.</p>
+<pre class="language-tex wrap"><code class="language-tex wrap"><i>-============| The nail is 13 units long.
+
+==========|    You hit the nail gently.</i>
+
+<b>=========|     I hit the nail gently.</b></code></pre>
+</details>
+<h2 id="coercion">Coercion</h2>
+<p>You’ve already seen that JavaScript allows you to use truthy values
+like <code>12</code> to act as if they were <code>true</code>. You’ve
+heard that <code>0</code> will behave like <code>false</code>.</p>
+<p>JavaScript uses a process called <em>coercion</em> when you try to
+combine values of two different types (like Boolean <code>true</code> or
+<code>false</code>) and numbers. Using coercion, JavaScript will convert
+one of the types into the other.</p>
+<details class="sandbox" open>
+<summary>
+Turn <code>false</code> into <code>0</code>
+</summary>
+<p>Here’s a trick for you to try in the Node IDE, to turn
+<code>false</code> into <code>0</code> and <code>true</code> into 1:</p>
+<ol type="1">
+<li>In a new Terminal, type <code>node</code></li>
+</ol>
+<pre class="language-tex wrap"><code class="language-tex wrap"><b>node</b>
+Welcome to Node.js v23.1.0.
+Type ".help" for more information.
+&gt; <b>false + 0</b>
+0
+&gt; <b>true + 0</b>
+1</code></pre>
+<p>And just for fun:</p>
+<pre class="language-tex wrap"><code class="language-tex wrap">&gt; true + false
+1</code></pre>
+<h2 id="coercing-numbers-and-strings">Coercing numbers and strings</h2>
+<p>Sometimes coercion has unexpected consequences. Try this in the Node
+IDE:</p>
+<pre class="language-tex wrap"><code class="language-tex wrap">&gt; 4 + "2"
+'42'
+&gt; 4 - "2"
+2</code></pre>
+<p>This happens because <code>+</code> can be use as a string
+concatenation operator, and so that’s how JavaScript decides to use it.
+The <code>-</code> operator is only used with numbers, so the string “2”
+is coerced to a number before the operation.</p>
+</details>
+<h2 id="using-an-array-to-get-the-current-players-pronoun">Using an
+array to get the current player’s pronoun</h2>
+<p>You could create an array with the different pronouns that your game
+needs: “I” for the AI, “You” for the human player that the AI is talking
+to.</p>
+<pre class="language-javascript line-numbers"><code class="language-javascript line-numbers">const players = [ "I", "You" ]</code></pre>
+<p>Now, <code>player</code> will have the value <code>true</code> or
+<code>false</code>. And <code>players[0]</code> will be “I”, while
+<code>player[1]</code> will be “You”.</p>
+<details class="challenge" open>
+<summary>
+Using <code>players</code> and <code>player</code>, coerced with
+<code>0</code>
+</summary>
+<p>Can you see how to use the ideas describe above to get the right
+pronoun for the current player?</p>
+<details class="solution">
+<summary>
+Solution
+</summary>
+<p>You can test this your solution in the Node IDE:</p>
+<pre class="language-tex wrap"><code class="language-tex wrap"><b>node</b>
+Welcome to Node.js v23.1.0.
+Type ".help" for more information.
+&gt; <b>players = [ "I", "You" ]</b>
+[ 'I', 'You' ]
+&gt; <b>player = true</b>
+true
+&gt; <b>players[player + 0] + " hit the nail"</b>
+'You hit the nail'
+&gt; <b>player = false</b>
+false
+&gt; <b>players[player + 0] + " hit the nail"</b>
+'I hit the nail'</code></pre>
+</details>
+</details>
+<details class="hint">
+<summary>
+Hints for solving the main challenge
+</summary>
+<ol type="1">
+<li><p>You can create an array called <code>players</code> with the
+value [ “I”, “You” ]</p></li>
+<li><p>You can change your current <code>hit</code> string to
+<code>hit the nail</code></p></li>
+<li><p>You can use…</p>
+<pre class="language-javascript line-numbers"><code class="language-javascript line-numbers">prompt = players[player + 0] + hit + strength[index] + "."</code></pre>
+<p>… to generate a prompt that will work for either player.</p></li>
+<li><p>Should you move this code from where it is to a better
+place?</p></li>
+<li><p>Currently, <code>index</code> is declared as a constant in the
+<code>if (player) { ... }</code> block, so it is not available outside
+that block. Can you declare it with <code>let</code> outside the
+<code>if</code> statement altogether?</p></li>
+<li><p>When the AI chooses a value for <code>force</code>, you will need
+to use an adjusted value of <code>index</code> to get the correct word
+from the <code>strengths</code> array.<br />
+</p></li>
+<li><p>For now, you can make the AI use a <code>force</code> of
+<code>1</code> every time.</p></li>
+</ol>
+</details>
+<details class="solution">
+<summary>
+Solution to the main challenge
+</summary>
+<pre class="language-javascript line-numbers"><code class="language-javascript line-numbers"><i>const {
+  keyInYN,
+  keyInSelect
+} = require('readline-sync')
+
+const rules = `Let's knock a nail into this computer!
+
+* Each player takes a turn to hit the nail once.
+* A player can hit the nail in one of three ways:
+  gently, firmly, hard.
+* Depending on the force used, the nail will be
+  driven more or less deeply into the Terminal.
+* The player who knocks the nail all the way in
+  is the winner.
+
+Are you ready?
+`
+const whoStarts = `If you want to start, type Y.
+If you want me to start press any other key. `
+const nailIs    = "The nail is "
+const long      = " units long."
+const clear     = "\x1B[1A\x1B[K"
+const strength  = [
+  'gently',
+  'firmly',
+  'hard'
+]
+const question = 'How hard do you plan to hit?'
+const players  = [ "I", "You" ]
+const hit      = " hit the nail "
+const win      = `
+You win!
+`
+const endGame  = `Thanks for playing!
+`
+
+const initial = 12 + Math.floor(Math.random() * 4)
+let length    = initial
+let toDelete  = 14
+let prompt    = nailIs + length + long
+let started   = false
+</i><b>let index</b><i>
+let force
+let nail
+
+console.log(rules)
+let player = keyInYN(whoStarts)
+
+while (length &gt; 0) {
+  if (!started) {
+    nail = "-" + "=".repeat(length - 1) + "|"
+  } else {
+    nail = "=".repeat(length) + "|"
+  }
+
+  console.log(clear.repeat(toDelete))
+  console.log(nail, prompt)
+
+  if (player) { // it's the human player's turn
+    </i><b>index = keyInSelect(strength, question)</b><i>
+    if (index &lt; 0) {
+      console.log(clear.repeat(toDelete))
+      console.log(endGame)
+      process.exit()
+    }
+    force = Math.min(index + 1, length)
+    toDelete = 7
+  } else { // it's the AI's turn to play
+    toDelete = 0
+    </i><b>force = 1
+    index = 0</b><i>
+  }
+
+  </i><b>prompt = " ".repeat(initial - length + force)
+         + players[player + 0] + hit + strength[index] + "."</b><i>
+
+  length = length - force
+  started = true
+  player = !player
+}
+
+console.log(clear.repeat(toDelete))
+console.log("|", prompt)
+console.log(win)</i></code></pre>
+</details>
+</section>
+<!-- Get AI to Play Best Legal Move -->
+<section id="get-ai-to-play-best-legal-move" aria-labelledby="get-ai-to-play-best-legal-move" data-item="Get AI to Play the Best Legal Move">
+<h2>
+<a href="#get-ai-to-play-best-legal-move">Get AI to Play the Best Legal
+Move</a>
+</h2>
+<p>As <a
+href="https://www.youtube.com/watch?v=9KABcmczPdg&amp;t=291s">Matt
+Parker explains</a>, the winning strategy is to leave a multiple of 4
+units when you complete your turn.</p>
+<p>It <a
+href="(https://www.youtube.com/watch?v=9KABcmczPdg&amp;t=531s)">will
+always play only one marble</a> if it is in a losing position. This is a
+good strategy when playing against a human who doesn’t understand the
+system, because the human has more marbles to make a mistake with. It’s
+certainly the easiest strategy for a piece of plastic to use.</p>
+<details class="challenge" open>
+<summary>
+#3 Get the AI to play the best legal move
+</summary>
+<p>The AI must choose a value for <code>force</code> between
+<code>1</code> and <code>3</code>, but it can’t always choose to play
+<code>length % 4</code>. If <code>length % 4</code> is 0, you can make
+the AI hit the nail gently, so that it only becomes one unit
+shorter.</p>
+<p>Here the AI starts in a losing position, so it plays gently:</p>
+<pre class="language-tex wrap"><code class="language-tex wrap"><i>-===========| The nail is 12 units long.
+
+</i><b>===========|  I hit the nail gently.</b></code></pre>
+<p>But if the human player makes a mistake, the AI seizes the
+opportunity to win.</p>
+<pre class="language-tex wrap"><code class="language-tex wrap"></i>==========|    You hit the nail gently.
+
+</i><b>========|     I hit the nail firmly.</b></code></pre>
+<p>After the AI’s turn, the number of units left is a multiple of four.
+Whatever the human player does, the AI can play to restore a multiple of
+four:</p>
+<pre class="language-tex wrap"><code class="language-tex wrap"><i>=====|        You hit the nail hard.
+
+</i><b>====|         I hit the nail gently.</b></code></pre>
+<p>After any move the human player can make, the AI is going to win:</p>
+<pre class="language-tex wrap"><code class="language-tex wrap"><i>[1] gently
+[2] firmly
+[3] hard
+[0] CANCEL</i>
+
+How hard do you plan to hit? [1, 2, 3, 0]: </i></code></pre>
+<details class="hint">
+<summary>
+Hints
+</summary>
+<ol type="1">
+<li><p>You’ve tested something like <code>length % 4</code> in the Node
+IDE. Would this be useful here?</p></li>
+<li><p>How do you prevent the AI from using <code>0</code> for
+<code>force</code>?</p></li>
+<li><p>You’ve already seen <code>Math.min()</code> in this line of
+code:</p>
+<pre class="language-javascript line-numbers"><code class="language-javascript line-numbers">force = Math.min(index + 1, length)</code></pre>
+<p>You used this to make sure that <code>force</code> never became more
+than was necessary to win, so that the text for the last hit was
+properly aligned.</p>
+<p>It won’t be a surprise that JavaScript also gives you <a
+href="https://developer.mozilla.org/en-US/docs/Web/%20JavaScript/Reference/Global_Objects/Math/max">Math.
+max()</a></p></li>
+<li><p>You want to make sure that the value of <code>force</code> used
+by the AI is always at least <code>1</code></p></li>
+<li><p>You’ll need to set <code>index</code> to <code>force - 1</code>,
+so that the correct value from the <code>strengths</code> array is used
+for the AI</p></li>
+</ol>
+</details>
+<details class="solution">
+<summary>
+Solution
+</summary>
+<pre class="language-javascript line-numbers"><code class="language-javascript line-numbers"><i>const {
+  keyInYN,
+  keyInSelect
+} = require('readline-sync')
+
+const rules = `Let's knock a nail into this computer!
+
+* Each player takes a turn to hit the nail once.
+* A player can hit the nail in one of three ways:
+  gently, firmly, hard.
+* Depending on the force used, the nail will be
+  driven more or less deeply into the Terminal.
+* The player who knocks the nail all the way in
+  is the winner.
+
+Are you ready?
+`
+const whoStarts = `If you want to start, type Y.
+If you want me to start press any other key. `
+const nailIs    = "The nail is "
+const long      = " units long."
+const clear     = "\x1B[1A\x1B[K"
+const strength  = [
+  'gently',
+  'firmly',
+  'hard'
+]
+const question = 'How hard do you plan to hit?'
+const players  = [ "I", "You" ]
+const hit      = " hit the nail "
+const win      = `
+You win!
+`
+const endGame  = `Thanks for playing!
+`
+
+const initial = 12 + Math.floor(Math.random() * 4)
+let length    = initial
+let toDelete  = 14
+let prompt    = nailIs + length + long
+let started   = false
+let index
+let force
+let nail
+
+console.log(rules)
+let player = keyInYN(whoStarts)
+
+while (length &gt; 0) {
+  if (!started) {
+    nail = "-" + "=".repeat(length - 1) + "|"
+  } else {
+    nail = "=".repeat(length) + "|"
+  }
+
+  console.log(clear.repeat(toDelete))
+  console.log(nail, prompt)
+
+  if (player) { // it's the human player's turn
+    index = keyInSelect(strength, question)
+    if (index &lt; 0) {
+      console.log(clear.repeat(toDelete))
+      console.log(endGame)
+      process.exit()
+    }
+
+    force = Math.min(index + 1, length)
+    toDelete = 7
+  } else { // it's the AI's turn to play
+    toDelete = 0
+    </i><b>force = Math.max(1, length % 4)
+    index = force - 1</b><i>
+  }
+
+  prompt = " ".repeat(initial - length + force)
+         + players[player + 0] + hit + strength[index] + "."
+
+  length = length - force
+  started = true
+  player = !player
+}
+
+console.log(clear.repeat(toDelete))
+console.log("|", prompt)
+console.log(win)</i></code></pre>
+</details>
+</details>
+</section>
+<!-- Get AI to Play an Interesting Move -->
+<section id="get-ai-to-play-an-interesting-move" aria-labelledby="get-ai-to-play-an-interesting-move" data-item="Get AI to Play an Interesting Move">
+<h2>
+<a href="#get-ai-to-play-an-interesting-move">Get AI to Play an
+Interesting Move</a>
+</h2>
+<details class="challenge" open>
+<summary>
+#3.1 Can you make the AI play randomly when it is stuck?
+</summary>
+<p>If the AI always hits gently when it is in a losing position, the
+human player might learn that always hitting hard can sometimes lead to
+victory.</p>
+<p>You can make your code a little bit smarter than a piece of plastic.
+You can make the AI choose a random value for <code>force</code> if it
+finds itself in a losing position. This means that even a human player
+who knows the winning strategy will have to pay attention on each
+turn.</p>
+<details class="hint">
+<summary>
+Hints
+</summary>
+<ol type="1">
+<li>If <code>force</code> is <code>0</code>, what will
+<code>!force</code> be? (Try it in the Node IDE).</li>
+<li>Can you create an <code>if () { }</code> statement that will only
+run if <code>force</code> is <code>0</code>?</li>
+<li>If <code>Math.floor(Math.random() * 4)</code> gives you a number
+between <code>0</code> and <code>3</code>, can you imagine how to create
+a number between <code>1</code> and <code>3</code>?</li>
+<li>If <code>Math.floor()</code> reduces a number to the next lower
+integer, can you imagine that there might be a method to raise a number
+to the next higher integer?</li>
+<li><code>Math.ceiling()</code> is not the answer to the last question.
+Programmers don’t like typing. Try this Google search: <a
+href="https://www.google.com/search?q=js+Math.ceiling">js
+Math.ceiling</a></li>
+</ol>
+</details>
+<details class="solution">
+<summary>
+Solution
+</summary>
+<pre class="language-javascript line-numbers"><code class="language-javascript line-numbers"><i>const {
+  keyInYN,
+  keyInSelect
+} = require('readline-sync')
+
+const rules = `Let's knock a nail into this computer!
+
+* Each player takes a turn to hit the nail once.
+* A player can hit the nail in one of three ways:
+  gently, firmly, hard.
+* Depending on the force used, the nail will be
+  driven more or less deeply into the Terminal.
+* The player who knocks the nail all the way in
+  is the winner.
+
+Are you ready?
+`
+const whoStarts = `If you want to start, type Y.
+If you want me to start press any other key. `
+const nailIs    = "The nail is "
+const long      = " units long."
+const clear     = "\x1B[1A\x1B[K"
+const strength  = [
+  'gently',
+  'firmly',
+  'hard'
+]
+const question = 'How hard do you plan to hit?'
+const players  = [ "I", "You" ]
+const hit      = " hit the nail "
+const win      = `
+You win!
+`
+const endGame  = `Thanks for playing!
+`
+
+const initial = 12 + Math.floor(Math.random() * 4)
+let length    = initial
+let toDelete  = 14
+let prompt    = nailIs + length + long
+let started   = false
+let index
+let force
+let nail
+
+console.log(rules)
+let player = keyInYN(whoStarts)
+
+while (length &gt; 0) {
+  if (!started) {
+    nail = "-" + "=".repeat(length - 1) + "|"
+  } else {
+    nail = "=".repeat(length) + "|"
+  }
+
+  console.log(clear.repeat(toDelete))
+  console.log(nail, prompt)
+
+  if (player) { // it's the human player's turn
+    index = keyInSelect(strength, question)
+    if (index &lt; 0) {
+      console.log(clear.repeat(toDelete))
+      console.log(endGame)
+      process.exit()
+    }
+
+    force = Math.min(index + 1, length)
+    toDelete = 7
+  } else { // it's the AI's turn to play
+    toDelete = 0
+    </i><b>force = length % 4
+    if (!force) {
+      force = Math.ceil(Math.random() * 3)
+    }</b><i>
+    index = force - 1
+  }
+
+  prompt = " ".repeat(initial - length + force)
+         + players[player + 0] + hit + strength[index] + "."
+
+  length = length - force
+  started = true
+  player = !player
+}
+
+console.log(clear.repeat(toDelete))
+console.log("|", prompt)
+console.log(win)</i></code></pre>
+</details>
+</details>
+</section>
+<!-- Get AI to Claim Victory -->
+<section id="get-ai-to-claim-victory" aria-labelledby="get-ai-to-claim-victory" data-item="Get AI to Claim Victory">
+<h2>
+<a href="#get-ai-to-claim-victory">Get AI to Claim Victory</a>
+</h2>
+<details class="challenge" open>
+<summary>
+#4 Can you make the AI claim victory when it wins?
+</summary>
+<p>Currently, when the game is over, the last line that is printed in
+the Terminal is “You win!”, even if the AI was the real winner.</p>
+<p>Your challenge here is to get the AI to print “I win!” when it beats
+you:</p>
+<pre class="language-tex wrap"><code class="language-tex wrap">====|            I hit the nail hard.
+
+===|             You hit the nail gently.
+
+|                I hit the nail hard.</i>
+
+<b>I win!</b></code></pre>
+<details class="hint">
+<summary>
+Hints
+</summary>
+<ol type="1">
+<li><p>You created an array called <code>players</code> with the value
+<code>[ "I", "You" ]</code>. Can you use that here?</p></li>
+<li><p>Or would it be better to create a new array with the exact texts
+for the winners?</p></li>
+<li><p>The last line inside the <code>while</code> loop is</p>
+<pre class="language-javascript line-numbers" data-start="86"><code class="language-javascript line-numbers">  player = !player</code></pre>
+<p>This means that when your script exits the <code>while</code> loop,
+if the AI is the winner, <code>player</code> will be <code>true</code>.
+If the human player is the winner, <code>player</code> will be
+<code>false</code>. This is the opposite to what happens inside the
+<code>while</code> loop.</p></li>
+</ol>
+</details>
+<details class="solution">
+<summary>
+Solution
+</summary>
+<pre class="language-javascript line-numbers"><code class="language-javascript line-numbers"><i>const {
+  keyInYN,
+  keyInSelect
+} = require('readline-sync')
+
+const rules = `Let's knock a nail into this computer!
+
+* Each player takes a turn to hit the nail once.
+* A player can hit the nail in one of three ways:
+  gently, firmly, hard.
+* Depending on the force used, the nail will be
+  driven more or less deeply into the Terminal.
+* The player who knocks the nail all the way in
+  is the winner.
+
+Are you ready?
+`
+const whoStarts = `If you want to start, type Y.
+If you want me to start press any other key. `
+const nailIs    = "The nail is "
+const long      = " units long."
+const clear     = "\x1B[1A\x1B[K"
+const strength  = [
+  'gently',
+  'firmly',
+  'hard'
+]
+const question = 'How hard do you plan to hit?'
+const players  = [ "I", "You" ]
+const hit      = " hit the nail "
+</i><b>const winner   = [`
+You win!
+`,
+`
+I win!
+`]</b><i>
+const endGame  = `Thanks for playing!
+`
+
+const initial = 12 + Math.floor(Math.random() * 4)
+let length    = initial
+let toDelete  = 14
+let prompt    = nailIs + length + long
+let started   = false
+let index
+let force
+let nail
+
+console.log(rules)
+let player = keyInYN(whoStarts)
+
+while (length &gt; 0) {
+  if (!started) {
+    nail = "-" + "=".repeat(length - 1) + "|"
+  } else {
+    nail = "=".repeat(length) + "|"
+  }
+
+  console.log(clear.repeat(toDelete))
+  console.log(nail, prompt)
+
+  if (player) { // it's the human player's turn
+    index = keyInSelect(strength, question)
+    if (index &lt; 0) {
+      console.log(clear.repeat(toDelete))
+      console.log(endGame)
+      process.exit()
+    }
+
+    force = Math.min(index + 1, length)
+    toDelete = 7
+  } else { // it's the AI's turn to play
+    toDelete = 0
+    force = length % 4
+    if (!force) {
+      force = Math.ceil(Math.random() * 3)
+    }
+    index = force - 1
+  }
+
+  prompt = " ".repeat(initial - length + force)
+         + players[player + 0] + hit + strength[index] + "."
+
+  length = length - force
+  started = true
+  player = !player
+}
+
+console.log(clear.repeat(toDelete))
+console.log("|", prompt)
+</i><b>console.log(winner[player + 0])</b></code></pre>
+</details>
+</details>
+</section>
+<!-- Get the AI to Offer to Play Again -->
+<section id="get-the-ai-to-offer-to-play-again" aria-labelledby="get-the-ai-to-offer-to-play-again" data-item="Get the AI to Offer to Play Again">
+<h2>
+<a href="#get-the-ai-to-offer-to-play-again">Get the AI to Offer to Play
+Again</a>
+</h2>
+<details class="challenge" open>
+<summary>
+#5 Get your friends to lose constantly against your game
+</summary>
+<p>If your friends play this game once and lose, they might just say
+“Cool game, bro!” and move on to something else. If the game offers them
+a chance for revenge, they might continue playing.</p>
+<p>Here’s how your Terminal should look after you complete this last
+challenge:</p>
+<pre class="language-tex wrap"><code class="language-tex wrap"><i>=|            You hit the nail hard.
+
+|             I hit the nail gently.
+
+I win!</i>
+
+<b>Do you want to play again?
+(Type Y for Yes, N for No): </b></code></pre>
+</details>
+<h2 id="a-more-complicated-challenge">A more complicated challenge</h2>
+<p>This challenge is not so easy, so I won’t hide the hints. I’ll walk
+you through it step by step.</p>
+<h2 id="keyinynstrict"><code>keyInYNStrict()</code></h2>
+<p>You’ve already used <code>readline-sync</code>’s method
+<code>keyInYNS()</code>. This returns <code>true</code> if the player
+presses the <code>Y</code> key and falsy value if they press any other.
+This is fine for starting the game. The game will start whatever key the
+player chooses to press.</p>
+<p>When you ask if the player wants to <em>end</em> the game, you don’t
+want the game to stop unexpectedly. You want to make sure that the
+player <em>explicitly</em> presses the <code>N</code> key to bring the
+game to an end.</p>
+<p><code>readline-sync</code> provides another method,
+<code>keyInYNStrict()</code>, which does just this.</p>
+<p>You’ll have to <code>require</code> this new method explicitly at the
+beginning of your script:</p>
+<pre class="language-javascript line-numbers"><code class="language-javascript line-numbers"><i>const {
+  keyInYN,
+  keyInSelect</i><b>,
+  keyInYNStrict</b><i>
+} = require('readline-sync')</i>
+</code></pre>
+<h2 id="the-options-object">The <code>options</code> object</h2>
+<p>Back in section <a href="#working-with-keyinyn">15. Working with
+keyInYN</a>, you did some tests with the <code>options</code>
+object.</p>
+<p>The object looks like this:</p>
+<pre class="language-javascript"><code class="language-javascript">const options   = { guide: false }</code></pre>
+<p>If you use it with <code>keyInYN()</code> or
+<code>keyInYNStrict()</code>, it hides the default text
+<code>[y/n]</code> that <code>readline-sync</code> wants to show. It
+makes your game look neater.</p>
+<pre class="language-javascript line-numbers"><code class="language-javascript line-numbers">let player = keyInYN(whoStarts, options)</code></pre>
+<h2 id="a-string-invitation-to-play-again">A string invitation to play
+again</h2>
+<p>You’ll need to create a variable to contain the string that you will
+print in the Terminal when the game is over. You could do something like
+this:</p>
+<pre class="language-javascript line-numbers"><code class="language-javascript line-numbers">const replay = `
+Do you want to play again?
+(Type Y for Yes, N for No): `</code></pre>
+<h2 id="alternating-players">Alternating players</h2>
+<p>If the same player starts each time, the game is not so interesting.
+When the game first begins, you can declare a variable with
+<code>let</code> which indicates who will start first next time:</p>
+<pre class="language-javascript wrap"><code class="language-javascript wrap"><i>let player = keyInYN(whoStarts, options)</i>
+<b>let nextPlayer = !player</b></code></pre>
+<h2 id="a-second-while-loop">A second <code>while</code> loop</h2>
+<p>You’ll need to wrap your current game inside a second
+<code>while</code> loop. If you create a variable called
+<code>playing</code>, you can keep looping in the outer loop so long as
+<code>playing</code> is true. Here’s a simplified version of how this
+can work.</p>
+<pre class="language-javascript line-numbers"><code class="language-javascript line-numbers">
+let playing   = true
+
+while (playing) {
+  // Initialize a new game
+
+  while (length &gt; 0) {   
+    // Your current game goes here
+  }
+
+  // Somebody won. Ask the player if they want to play again
+  playing    = keyInYNStrict(replay, options)</code></pre>
+<h2 id="initializing-a-new-game">Initializing a new game</h2>
+<p>The code that you currently use to set up the game will need to be
+inside the <code>while (playing) { }</code> loop, so that a new game is
+created each time.</p>
+<pre class="language-javascript"><code class="language-javascript"><b>while (playing) {
+  const initial = 12 + Math.floor(Math.random() * 4)
+  let length    = initial
+  let prompt    = nailIs + length + long
+  let started   = false</b>
+
+  <i>while (length &gt; 0) {</i></code></pre>
+<pre class="skip"><code class="skip">// Your current code goes here //</code></pre>
+<pre class="language-javascript"><code class="language-javascript">  }</code></pre>
+<pre class="skip"><code class="skip">// Preparing to play again //</code></pre>
+<pre class="language-javascript"><code class="language-javascript"><i>}</i></code></pre>
+<h2 id="when-someone-wins">When someone wins</h2>
+<p>After the game declares the winner of the current game, you will need
+to:</p>
+<ol type="1">
+<li>Ensure that play alternates between the players</li>
+<li>Prepare to clear the old game if a new game starts</li>
+<li>Ask if the player if they want to play again</li>
+<li>Print a farewell message if they decide to quit.</li>
+</ol>
+<pre class="language-javascript"><code class="language-javascript">  <i>console.log(clear.repeat(toDelete))
+  console.log("|", prompt)
+  console.log(winner[player + 0])</i>
+
+  <b>// Get ready to play again, alternating between
+  // player and AI
+  player     = nextPlayer
+  nextPlayer = !nextPlayer
+
+  // Prepare to delete the previous game
+  toDelete   = 23
+
+  // Ask the player if they want to play again
+  playing    = keyInYNStrict(replay, options)
+
+  if (!playing) {
+    console.clear()
+    console.log(endGame)
+  }</b>
+}</code></pre>
+<details class="note" open>
+<summary>
+All the code… but where to put it?
+</summary>
+<p>I’ve given you all the code that you need to solve this challenge.
+Before you look at the complete solution below, do your best to find
+where these pieces of code should go.</p>
+</details>
+<details class="solution">
+<summary>
+Solution
+</summary>
+<pre class="language-javascript line-numbers"><code class="language-javascript line-numbers"><i>const {
+  keyInYN,
+  keyInSelect</i><b>,
+  keyInYNStrict</b><i>
+} = require('readline-sync')
+
+const rules = `Let's knock a nail into this computer!
+
+* Each player takes a turn to hit the nail once.
+* A player can hit the nail in one of three ways:
+  gently, firmly, hard.
+* Depending on the force used, the nail will be
+  driven more or less deeply into the Terminal.
+* The player who knocks the nail all the way in
+  is the winner.
+
+Are you ready?
+`
+const whoStarts = `If you want to start, type Y.
+If you want me to start press any other key. `
+</i><b>const options   = { guide: false }</b><i>
+const nailIs    = "The nail is "
+const long      = " units long."
+const clear     = "\x1B[1A\x1B[K"
+const strength  = [
+  'gently',
+  'firmly',
+  'hard'
+]
+const question = 'How hard do you plan to hit?'
+const players  = [ "I", "You" ]
+const hit      = " hit the nail "
+const winner   = [`
+You win!
+`,
+`
+I win!
+`]
+</i><b>const replay = `
+Do you want to play again?
+(Type Y for Yes, N for No): `</b><i>
+const endGame  = `Thanks for playing!
+`
+let toDelete  = 14
+</i><b>let playing   = true</b><i>
+let index
+let force
+let nail
+
+console.log(rules)
+let player = keyInYN(whoStarts</i><b>, options</b><i>)
+</i><b>let nextPlayer = !player</b><i>
+
+while (playing) {
+  </i><b>const initial = 12 + Math.floor(Math.random() * 4)
+  let length    = initial
+  let prompt    = nailIs + length + long
+  let started   = false</b><i>
+
+  while (length &gt; 0) {
+    if (!started) {
+      nail = "-" + "=".repeat(length - 1) + "|"
+    } else {
+      nail = "=".repeat(length) + "|"
+    }
+
+    console.log(clear.repeat(toDelete))
+    console.log(nail, prompt)
+
+    if (player) { // it's the human player's turn
+      index = keyInSelect(strength, question)
+      if (index &lt; 0) {
+        console.log(clear.repeat(toDelete))
+        console.log(endGame)
+        process.exit()
+      }
+
+      force = Math.min(index + 1, length)
+      toDelete = 7
+    } else { // it's the AI's turn to play
+      toDelete = 0
+      force = length % 4
+      if (!force) {
+        force = Math.ceil(Math.random() * 3)
+      }
+      index = force - 1
+    }
+
+    prompt = " ".repeat(initial - length + force)
+          + players[player + 0] + hit + strength[index] + "."
+
+    length = length - force
+    started = true
+    player = !player
+  }
+
+  console.log(clear.repeat(toDelete))
+  console.log("|", prompt)
+  console.log(winner[player + 0])
+
+  </i><b>// Get ready to play again, alternating between
+  // player and AI
+  player     = nextPlayer
+  nextPlayer = !nextPlayer
+
+  // Prepare to delete the previous game
+  toDelete   = 23
+
+  // Ask the player if they want to play again
+  playing    = keyInYNStrict(replay, options)
+
+  if (!playing) {
+    console.clear()
+    console.log(endGame)
+  }</b><i>
+}</i></code></pre>
+</details>
+</details>
+</section>
+<!-- Conclusion -->
+<section id="conclusion" aria-labelledby="conclusion" data-item="Conclusion">
+<h2>
+<a href="#conclusion">Conclusion</a>
+</h2>
+<p>If you have got this far, and your game is working, well done!</p>
+<p>You have seen many basic ideas of JavaScript:</p>
+<ul>
+<li>Printing text to the Terminal</li>
+<li>Creating variables with <code>const</code> and <code>let</code></li>
+<li>Working with strings of text</li>
+<li>Installing and using a Node package</li>
+<li>Using objects (such as <code>options</code>)</li>
+<li>Working with arrays and their zero-index counting system</li>
+<li>Using <code>true</code> and <code>false</code></li>
+<li>How other values are treated as <code>true</code> or
+<code>false</code></li>
+<li>Using <code>if () { } else { }</code> statements to choose a
+parentheses</li>
+<li>Using a <code>while</code> loop</li>
+<li>Using the debugger</li>
+<li>Doing simple Arithmetic (addition, subtraction, modulo)</li>
+<li>Creating random numbers</li>
+<li>Rounding numbers up or down to the nearest integer</li>
+<li>Exiting a script cleanly</li>
+</ul>
+<p>You have also seen how the process of programming works:</p>
+<ul>
+<li>You create a mental image of what you are going to make</li>
+<li>You deal with one small problem at a time</li>
+<li>You test after each step that your code does what you expect it
+to</li>
+<li>You use a search engine to find answers to your questions</li>
+<li>You consult the documentation</li>
+<li>You run little tests, to check that you have understood</li>
+<li>You read error messages, to understand where your assumptions were
+wrong</li>
+<li>You enjoy taking on challenges</li>
+<li>You will be learning something new every day</li>
+</ul>
+<details class="feedback" open>
+<summary>
+Feedback
+</summary>
+<p>If you have any questions about this guide, or suggestions about how
+I can improve it, please <a
+href="https://github.com/MERNCraft/Nail-it/issues/new">create an
+issue</a> in this project’s GitHub repository. I’ll get back to you as
+soon as I can.</p>
+<h3 id="enjoy-everything"><em>Enjoy everything!</em></h3>
 </details>
 </section>
 <section id="preview" aria-labelledby="preview" data-item="Preview">

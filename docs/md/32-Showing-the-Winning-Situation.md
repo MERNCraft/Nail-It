@@ -34,7 +34,7 @@ Below you can see how the Terminal might look when you have completed this chall
 You win!</b>
 ```
 
-<details class="solution">
+<details class="hint">
 <summary>Hints</summary>
 
 1. You will need to clear the question out of the Terminal
@@ -101,7 +101,7 @@ while (length > 0) {
     prompt = hit + strength[index] + "."
     toDelete = 7
   } else { // it's the AI's turn to play
-    console.log(`The AI is ynot ready yet.
+    console.log(`The AI is not ready yet.
   You'll have to play solo.`)
     player = true
     force = 0

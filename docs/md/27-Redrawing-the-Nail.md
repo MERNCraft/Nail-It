@@ -24,7 +24,7 @@ How hard do you plan to hit? [1, 2, 3, 0]: 3</i>
 <b>-========|</b>
 ```
 
-<details class="solution">
+<details class="hint">
 <summary>Hints</summary>
 1. Line 24 creates a `const` variable called `nail`. 
 

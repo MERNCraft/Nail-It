@@ -17,7 +17,7 @@ The Terminal would look better if the question were removed, and just the result
 -==========| You hit the nail gently.
 ```
 
-<details class="solution">
+<details class="hint">
 <summary>Hints</summary>
 1. You originally set `const toDelete = 14`, so that you could use...
 

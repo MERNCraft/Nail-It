@@ -26,7 +26,7 @@
 You win!</i>
 ```
 
-<details class="solution">
+<details class="hint">
 <summary>Hints</summary>
 1. To solve this problem, you will need to tell JavaScript if a player has already chosen a value for `force`
 2. You can create a new variable with `let` to hold this information
@@ -100,7 +100,7 @@ while (length > 0) {</i>
     prompt = hit + strength[index] + "."
     toDelete = 7
   } else { // it's the AI's turn to play
-    console.log(`The AI is ynot ready yet.
+    console.log(`The AI is not ready yet.
   You'll have to play solo.`)
     player = true
     force = 0

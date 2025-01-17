@@ -134,6 +134,23 @@ For example:
 <i>-===========| The nail is </i><b>15</b><i> units long.</i>
 ```
 
+### 9. Can you stop the game early, before there is a winner?
 
+If the human player presses `0` when asked how hard to hit, can you make the game end gracefully?
+
+```tex-w
+<i>-==============| The nail is 15 units long.
+
+============|    You hit the nail hard.
+
+[1] gently
+[2] firmly
+[3] hard
+[0] CANCEL
+
+How hard do you plan to hit? [1, 2, 3, 0]: </i> <b>0
+
+Thanks for playing!</b>
+```
 
 </section>
