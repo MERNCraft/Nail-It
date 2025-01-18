@@ -38,6 +38,10 @@ You have also seen how the process of programming works:
 * You enjoy taking on challenges
 * You will be learning something new every day
 
+## Most importantly...
+
+**You have seen that it is possible to create something intriguing with only a little knowledge. You don't have to have years of experience to produce something that others will find valuable.**
+
 <details class="feedback" open>
 <summary>Feedback</summary>
 If you have any questions about this guide, or suggestions about how I can improve it, please [create an issue](https://github.com/MERNCraft/Nail-it/issues/new) in this project's GitHub repository. I'll get back to you as soon as I can.
