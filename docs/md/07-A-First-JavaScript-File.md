@@ -10,7 +10,7 @@ A successful business has many employees, in many different offices on many diff
 
 ## Organizing your files
 
-This project is simple. It will only use one file. But you should be ready to grow big quickly, and plan accordingly. It's therefore important to structure your work properly.
+This project is simple. It will only use one file, plus some simple test files for you to practise new ideas. But you should be ready to grow big quickly, and plan accordingly. It's therefore important to structure your work properly.
 
 1. From the File menu in VS Code, choose `Open Folder`
 2. Use the dialog to create a new folder that will hold all your projects that you create from tutorials, like this one. Save it in your Documents folder, or in a place where you can quickly find it again.
@@ -27,7 +27,11 @@ The `.js` extension stands for JavaScript. The file that is at the heart of a pr
 
 ## Your first script
 
-The first thing on the [list of things that the game can do](#what-needs-to-be-done) is "The game uses text". So the first thing you should get your first JavaScript file to do is to use text.
+The first thing on the [list of things that the game can do](#what-needs-to-be-done) is:
+
+* "The game uses text"
+  
+So the first thing you should get your first JavaScript file to do is to use text.
 
 [The convention since 1978](https://en.wikipedia.org/wiki/%22Hello,_World!%22_program) is to get your very first program to say "Hello World!"
 
@@ -54,13 +58,13 @@ To run this file as a program, you will need to open a Terminal.
 
 By default, a new Terminal will appear a the bottom of the VS Code window.
 
-3. Check the name of the folder that is shown in the Terminal. If it is not `Nail_It`, then type `cd` (which means `change directory`) and drag the name of the Nail_It folder into the Terminal, then press Enter.
+2. Check the name of the folder that is shown in the Terminal. If it is not `Nail_It`, then type `cd` (which means `change directory`) and drag the name of the Nail_It folder into the Terminal, then press Enter.
 
 ![`cd` into the Nail_It directory](images/08cdToNailit.webp)
 
-4. When the Terminal is active in the Nail_It directory, type...
+3. When the Terminal is active in the Nail_It directory, type...
 
-   ```tex-w
+   ```bash-w
    node main.js
    ```
    ... as shown in the Figure 5 above.
@@ -73,26 +77,29 @@ You'll be using `node` to run other little test scripts soon.
 
 If you [downloaded the source files](https://github.com/MERNCraft/Nail-It/scripts.zip){download=""} earlier, you can open the folder that contains them in a new VS Code window, and use the Terminal in that window to run any of the files. For example, you could try something like this:
 
-```tex-w
+```bash-w
 cd /path/to/downloaded/folder
 node completed.js
 ```
 
-The completed game also remembers your score against the computer.
-
 (Remember that you type `cd ` (followed by a space) and then can drag the icon of any folder into the Terminal window to navigate to that folder.)
+
+The completed game also remembers your score against the computer.
 
 </details>
 
 <details class="note" open>
-<summary>semicolons: `;`</summary>
+<summary>An aside about semicolons: `;`</summary>
 JavaScript considers that any block of code that is followed by a semicolon (`;`) is a complete instruction. But JavaScript is user-friendly. JavaScript also looks at any block of code that is followed by a new line character and thinks: "Hmm... is this a complete instruction?"
 
-In most cases, JavaScript programmers write one instruction per line, so putting a semicolon at the end of each line is usually not necessary. There are, however, some cases where a single instruction may take several lines. There are cases where a semicolon is essential.
+In most cases, JavaScript programmers write one instruction per line, so putting a semicolon at the end of each line is usually not necessary. There are, however, some cases where a single instruction may take several lines. For example, the first instruction in your script takes several lines, but JavaScript knows that if it finds a string that starts with an opening backtick, the instruction will continue at least until it finds a closing backtick.
+
+And there are cases where a semicolon is essential, but you won’t meet them yet.
 
 I prefer not to use semicolons except in these special cases.
 
 Sometimes, though, I will write two instructions on the same line, separated by a semicolon. So don't be surprised if you see this.
+
 </details>
 
 </section>

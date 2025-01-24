@@ -7,8 +7,10 @@
   <h2><a href="#dont-show-the-point-of-the-nail">Don't Show the Point of the Nail</a></h2>
 
 <details class="challenge" open>
-<summary>#6. Can you show the point of the nail only at the start?</summary>
-```tex-w
+<summary>Challenge 6. Can you show the point of the nail only at the start?</summary>
+After the first hit, the point of the nail be hidden. Here’s how the nail could be drawn more realistically:
+
+```bash-w
 <i>-===========|  The nail is 12 units long.
 
 </i><b>=========|</b><i>  You hit the nail hard.
@@ -31,14 +33,16 @@ You win!</i>
 1. To solve this problem, you will need to tell JavaScript if a player has already chosen a value for `force`
 2. You can create a new variable with `let` to hold this information
 3. You could call your variable `started`, and give it the value `false` before the game begins
-4. You can set `started` to `true` after the `if () {...} else {...}` statement, when you can be sure that one of the players will have chosen a value for `force`
-5. You can create your own `if () {...} else {...}` statement to draw the nail with a point (`-`) if the game is not started, or without a point (only `=` characters) if the game has started.
-6. You can use the logical not operator (`!`) to check if the game is not started.
+4. You can set `started` to `true` after the `if () {} else {}` statement, when you can be sure that one of the players will have chosen a value for `force`
+5. You can create your own `if () {} else {}` statement to draw the nail with a point (`-`) if the game is not started, or without a point (only `=` characters) if the game has started.
+6. You can use the [logical not operator (`!`)](https://hashnode.com/draft/logical%20not%20operator%20(%3Ccode%3E!%3C/code%3E)https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_NOT) to check if the game is not started.
 
 </details>
 
 <details class="solution">
 <summary>Solution</summary>
+
+There are six **changed** lines in the solution below.
 
 ```javascript-
 <i>const {

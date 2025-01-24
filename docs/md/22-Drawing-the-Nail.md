@@ -28,7 +28,7 @@ Here's what you need to print to the Terminal, using `console.log()`
 <summary>Need to change directory?</summary>
 If you have only the `strings` directory open, run...
 
-```tex-w
+```bash-w
 strings % <b>cd ../../</b>
 james@M1 Nail_It % 
 ```
@@ -37,11 +37,11 @@ james@M1 Nail_It %
 
 </details>
 
-1. Open `main.js` in VS Code's text editor.
-2. Edit `main.js`.
-3. To test if your edits are working as you expect, in a Terminal open on your `Nail_It` directory, run:
+2. Open `main.js` in VS Code's text editor.
+3. Edit `main.js`.
+4. To test if your edits are working as you expect, in a Terminal open on your `Nail_It` directory, run:
 
-   ```tex-w
+   ```bash-w
    node main.js
    ```
 
@@ -55,7 +55,7 @@ james@M1 Nail_It %
 
 </details>
 
-<details class="solution" open>
+<details class="solution">
 <summary>A simple solution</summary>
 The simplest solution is just to replace the line `console.log("player:", player)` with the two lines highlighted below:
 
@@ -85,7 +85,7 @@ console.log("-" + "=".repeat(11) + "| The nail is 12 units long.")</b>
 
 </details>
 
-<details class="solution" open>
+<details class="solution">
 <summary>A better solution, using variables</summary>
 The solution below allows you to change the value of the `length` variable. Not only will the length of the nail change, but the text given its length in units will change at the same time.
 
@@ -124,7 +124,7 @@ Try setting `const length = 15` and run `node main.js` again. Do you see the adv
 
 Note that if you set `const toDelete = 13` then not all of the rules will be deleted:
 
-```tex-w
+```bash-w
 <b>node main.js</b>
 Let's knock a nail into this computer!
 

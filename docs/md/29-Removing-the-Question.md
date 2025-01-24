@@ -7,11 +7,11 @@
   <h2><a href="#removing-the-question">Removing the Question</a></h2>
   
 <details class="challenge" open>
-<summary>#3 Can you remove the question after it has been answered?</summary>
+<summary>Challenge 3: Can you remove the question after it is answered?</summary>
 
 The Terminal would look better if the question were removed, and just the result of answering the question were shown.
 
-```tex-w
+```bash-w
 -===========| The nail is 12 units long.
 
 -==========| You hit the nail gently.
@@ -35,7 +35,7 @@ The Terminal would look better if the question were removed, and just the result
 
 <details class="solution">
 <summary>Solution</summary>
-
+There are three **changed** lines in the code below.
 ```javascript
 <i>const {
   keyInYN,

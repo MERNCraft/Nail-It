@@ -12,7 +12,7 @@
 <summary>#7 Can you align all the text nicely?</summary>
 Here's how the Terminal should look when you have completed this challenge:
 
-```tex-w
+```bash-w
 <i>-===========| The nail is 12 units long.
 
 ==========|   </i><b>You hit the nail firmly.</b><i>
@@ -48,7 +48,7 @@ You win!</i>
 
 The following solution works fine, unless you hit the nail too hard the last time. For example, if there is only one unit left, and you hit the nail hard, you apply a `force` of `3`, not `1`, and the text is pushed two extra spaces to the right.
 
-```tex-w
+```bash-w
 <i>-===========| The nail is 12 units long.
 
 =========|    You hit the nail hard.
@@ -145,7 +145,7 @@ console.log(win)</i>
 
 </details>
 
-To fix the bug in the solution above, you're going to have to find a way to reduce the value of `force` to just the right amount to drive the nail home. Here's a Google query that might lead you in the right direction: [js find minimum](https://www.google.com/search?q=js+find+minimum). <<< Click on it to see where it leads you.
+To fix the bug in the solution above, you're going to have to find a way to reduce the value of `force` to just the right amount to drive the nail home. Here's a Google query that might lead you in the right direction: [js find minimum](https://www.google.com/search?q=js+find+minimum). Click on it to see where it leads you.
 
 <details class="solution">
 <summary>Fix the bug</summary>
@@ -158,13 +158,6 @@ You'll need to change just one line of your code.
 ```
 
 </details>
-
-</details>
-
-<details class="note" open>
-<summary>`js`, or earching online for "JavaScript"</summary>
-In the Google search query I used above, I wrote `js` and not JavaScript. There are many many JavaScript programmers who work for search-engine companies, and they all like to type as little as possible. As a result, their algorithms understand that the extension `js` refers to JavaScript, and you don't have to type the full name each time you make a query.
-
 </details>
 
 </section>

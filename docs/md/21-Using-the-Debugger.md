@@ -78,7 +78,7 @@ You will see:
 
 ![The Step Over button in the Control Panel](images/StepOverButton.webp)
 
-2. The first line of code will be executed. Iou will see that the variable `length` is now shown in the VARIABLES pane. The yellow pointer and highlight will move to the next line that is about to be executed.
+2. The first line of code will be executed. You will see that the variable `length` is now shown in the VARIABLES pane. The yellow pointer and highlight will move to the next line that is about to be executed.
 
 ![When the first line is executed, `length = 12` is shown in the VARIABLES pane](images/lengthSetTo12.webp)
 
@@ -109,7 +109,7 @@ Here's how to set a conditional breakpoint that will only pause the debugger whe
 
 3. An editable frame will open where you can type an expression. The debugger will pause at this breakpoint only if this expression is `true`. Type:
 
-```tex-w
+```bash-w
 length === 1
 ```
 
@@ -121,7 +121,7 @@ This expression evaluates to `true` only if the value of the `length` variable i
 
 ![The Continue button in the Control Panel](images/ContinueButton.webp)
 
-This will make the debugger run through every step automatically until it finds itself on line `4` and the the value of the `length` variable is identical to the number `1`. Then it will pause.
+This will make the debugger run through every step automatically until it finds itself on line `4` and the value of the `length` variable is identical to the number `1`. Then it will pause.
 
 ![Press Continue to run your code until the next breakpoint](images/ContinueToNextBreakpoint.webp)
 
@@ -135,9 +135,9 @@ The entry `length = 0` will appear in the VARIABLES pane, and the code will jump
 
 ![When `length === 0`, the `while` loop will stop](images/LeaveLoop.webp)
 
-1. Use Step Over again, to execute the final line `console.log("length:", length)`. One last entry will be printed in the Debug Console.
+6. Use Step Over again, to execute the final line `console.log("length:", length)`. One last entry will be printed in the Debug Console.
  
-2. Press the Step Over button again to execute the line after that... which doesn't exist. This will make the debugger close.
+7. Press the Step Over button again to execute the line after that... which doesn't exist. This will make the debugger close.
 
 The Control Panel will disappear, and so will the VARIABLES pane.
 

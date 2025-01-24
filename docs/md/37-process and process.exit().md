@@ -34,7 +34,7 @@ Here's how you can see what `process` looks like. (Your values for `version` and
 
 2. In the Terminal, run:
 
-```tex-w
+```bash-w
 node main.js
 ```
 

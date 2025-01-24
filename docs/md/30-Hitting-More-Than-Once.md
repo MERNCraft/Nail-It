@@ -7,12 +7,12 @@
   <h2><a href="#hitting-more-than-once">Hitting More Than Once</a></h2>
   
 <details class="challenge" open>
-<summary>#4 Can you let the solo player hit the nail several times in a row?</summary>
+<summary>Challenge 4: Can you let the solo player hit the nail several times?</summary>
 This challenge is more tricky. I expect that you will see a number of errors as you work on it, so I will walk you through it. Fixing these errors will also resolve the WET issue (We Enjoy Typing - the opposite of DRY).
 
 Here's the display in the Terminal that you are aiming for:
 
-```tex-w
+```bash-w
 <i>-===========| The nail is 12 units long.
 
 -========| You hit the nail hard.</i>
@@ -33,7 +33,6 @@ Here's the display in the Terminal that you are aiming for:
 In section [20: Never Repeat a Trick](#never-repeat-a-trick), you wrote a script called `while.js`, which logged `Nail length: ` from 12 down to 1.
 
 ```javascript
-
 let length = 12
 while (length) {
   console.log("Nail length: " + length)
@@ -74,7 +73,7 @@ console.log(nail, prompt)</i>
 
 2. In the Terminal, run:
 
-```tex-w
+```bash-w
 node main.js
 ```
 
@@ -85,7 +84,7 @@ To begin with, all will be well, but finally you will get an error:
 
 <details class="warn" open>
 <summary>Invalid count value: -1</summary>
-```tex-w
+```bash-w
 <i>-===========| The nail is 12 units long.
 
 -========| You hit the nail hard.
@@ -98,13 +97,13 @@ To begin with, all will be well, but finally you will get an error:
 
 -| You hit the nail hard.</i>
 
-<b>/Users/james/Tutorials/My Learning Journey/Nail_It/main.js:56
+<b>/path/to/My Learning Journey/Nail_It/main.js:56
   nail      = "-" + "=".repeat(length - 1) + "|"
                         ^
 
 RangeError: Invalid count value: -1
     at String.repeat (<anonymous>)
-    at Object.<anonymous> (/Users/james/Tutorials/My Learning Journey/Nail_It/main.js:56:25)</b>
+    at Object.<anonymous> (/path/to/My Learning Journey/Nail_It/main.js:56:25)</b>
 ```
 
 </details>
@@ -113,7 +112,7 @@ RangeError: Invalid count value: -1
 
 It might be helpful to use VS Code's debugger to see what the problem is.
 
-1. Press the F5 shortcut (or use the menu item Run > Start Debugging if you have the time, and no-one's looking)
+1. Press the `F5` shortcut (or use the menu item Run > Start Debugging if you have the time, and no-one's looking)
 2. As before, select Node.js in the Command Palette when asked which language you want to debug.
 
 ![Select the debugger for Node.js](images/SelectNodeJS.webp)
@@ -127,7 +126,7 @@ Here's an extract of the error message. It shows that the error occurred on line
 
 <details class="trouble" open>
 <summary>environment doesn't support interactive reading from TTY</summary>
-```tex-w
+```bash-w
 opt/homebrew/bin/node ./main.js
 Let's knock a nail into this computer!
 
@@ -144,15 +143,15 @@ Are you ready?
 Process exited with code 1
 Uncaught Error Error: The current environment doesn't support interactive reading from TTY.
 stty: /dev/tty: Device not configured
-/Users/james/Tutorials/My Learning Journey/Nail_It/node_modules/readline-sync/lib/read.sh: line 49: /dev/tty: Device not configured
+/path/to/My Learning Journey/Nail_It/node_modules/readline-sync/lib/read.sh: line 49: /dev/tty: Device not configured
 stty: /dev/tty: Device not configured
-    at readlineExt (/Users/james/Tutorials/My Learning Journey/Nail_It/node_modules/readline-sync/lib/readline-sync.js:221:19)
+    at readlineExt (/path/to/My Learning Journey/Nail_It/node_modules/readline-sync/lib/readline-sync.js:221:19)
 ```
-```tex-s
+```bash-s
   # lines skipped #
 ```
-```tex-w
-    at <anonymous> (/Users/james/Tutorials/My Learning Journey/Nail_It/<b>main.js:38:14)</b>
+```bash-w
+    at <anonymous> (/path/to/My Learning Journey/Nail_It/<b>main.js:38:14)</b>
 ```
 
 </details>
@@ -169,7 +168,7 @@ This is the line where `readline-sync` is used for the first time.
 
 The debugger is designed to work with Node.js and JavaScript. `readline-sync` interacts with the Terminal. Out of the box, they are incompatible.
 
-But you can guess that if I suggested that you use the debugger, there will be a solution. The question is: How to find the solution.
+But you can guess that if I suggested that you use the debugger, there will be a solution. The question is: How to find the solution?
 
 Google is your friend. The problem you have just met is due to the interaction between three things: VS Code, `readline-sync` and the debugger. Here's a Google query for exactly these three things:
 
@@ -185,11 +184,13 @@ In my browser, the first link that Google gives is to a question on [stackoverfl
 <summary>stackoverflow.com</summary>
 [stackoverflow.com](https://stackoverflow.com/) is a site where developers of all levels, using every imaginable coding language can ask questions and get answers.
 
-Most questions that you may have will already have been asked and answered, so you should search for existing answers before you ask a question of your own.
+Most questions that you may have will already have been asked and answered, so you should search for existing answers before you ask a question of your own. If you don’t the seasoned developers (who have seen these questions so many times before) will politely but firmly tell you to look before you ask.
 
 The site is gamified. You earn points for asking good questions, you earn points for giving good answers. But you can also lose points if your question is badly written, or shows that you haven't even tried to find a solution for yourself, or if it has already been asked many times.
 
 Good answers get upvoted. You can see how many points the person who answered the question has earned. You can easily see which answers you can trust.
+
+Good questions also get upvoted. So when you write a question, take your time to write it carefully so that it will be useful for others.
 
 </details>
 
@@ -199,7 +200,7 @@ If I visit this stackoverflow link, I find that the question does not exactly ma
 
 ![Muneeb's answer](images/MuneebAnswer.webp)
 
-**"Well that's very nice. An answer with 10 reputation poinst,"** you think. **"But what's a `launch.json` file? And where do I put this line `"console": "integratedTerminal"`?"**
+**"Well that's very nice. An answer with 10 reputation points,"** you think. **"But what's a `launch.json` file? And where do I put this line `"console": "integratedTerminal"`?"**
 
 3. Look at the VS Code window where your error is showing.
 4. Make sure the Run panel is showing (menu View > Run, Shift-Ctrl-D (for _Debug_), or click on the Run and Debug icon).
@@ -235,9 +236,9 @@ This is the file where you can add the line `"console": "integratedTerminal"`:
   ]
 }</i>
 ```
-1. Add the line suggested by Muneeb to your new `launch.json` file.
-2. Be sure to place a comma (`,`) at the end of the previous line.
-3. Press `F5` again, to start the debugger.
+6. Add the line suggested by Muneeb to your new `launch.json` file.
+7. Be sure to place a comma (`,`) at the end of the previous line.
+8. Press `F5` again, to start the debugger.
 
 ![The debugger doesn't complain now](images/debuggingWithReadlineSync.webp)
 
@@ -253,68 +254,66 @@ The debugger might not want to let you add a breakpoint while it is running.
 
 2. Check the first error you got, before you ran the debugger, to see where the error occurred:
 
-```tex-w
+```bash-w
 RangeError: Invalid count value: -1
     at String.repeat (<anonymous>)
-    at Object.<anonymous> (/Users/james/Tutorials/My Learning Journey/Nail_It/<b>main.js:56:25</b>)
+    at Object.<anonymous> (/path/to/My Learning Journey/Nail_It/<b>main.js:56:25</b>)
 ```
 
 3. Put a debug breakpoint on line 56 of your `main.js` script:
 
 ![Add a breakpoint to line 56](images/breakpoint56.png)
 
-4. Press the `F5` key to start debugging.
-
-Your game will ask you to press `Y` and then choose a number from 1 - 3.
+4. Press the `F5` key to start debugging. Your game will ask you to press `Y` and then choose a number from 1 - 3.
 
 5. Press `3` on your keyboard.
 
-The debugger will stop on line 56, before it executes that line.
+   The debugger will stop on line 56, before it executes that line.
 
-![Going through first pass off the `while` loop with the debugger](images/debugFirstPass.webp)
+   ![Going through first pass off the `while` loop with the debugger](images/debugFirstPass.webp)
 
-You can see that the value of `force` has been set to `3`, and that `length` has been updated to `9`. The value of `nail` is still exactly what you code calculated on line 33. The nail is still 12 units long.
+   You can see that the value of `force` has been set to `3`, and that `length` has been updated to `9`. The value of `nail` is still exactly what you code calculated on line 33. The nail is still 12 units long.
 
 6. Click on the Step Over button in the Command Palette, or press the `F10` shortcut.
 
-![The value for `nail` is updated when you activate Step Over](images/updateNail.webp)
+   ![The value for `nail` is updated when you activate Step Over](images/updateNail.webp)
 
-JavaScript has no problem creating a new string for `nail`.
+   JavaScript has no problem creating a new string for `nail`.
 
 7. Activate Step Over two more times.
 
-![The question is cleared and the nail is redrawn](images/redrawTheNail.webp)
-
-Three things will happen:
-
-* The question will be cleared from the Terminal
-* A new, shorter version of the nail will be drawn
-* The debugger will jump back to the beginning of the `while` loop
+   ![The question is cleared and the nail is redrawn](images/redrawTheNail.webp)
+   
+   Three things will happen:
+   
+   * The question will be cleared from the Terminal
+   * A new, shorter version of the nail will be drawn
+   * The debugger will jump back to the beginning of the `while` loop
 
 8. Activate Step Over three more times. The debugger will step back into the `while` loop, because `length` is `9` and non-zero numbers are truthy. But on the third step, the debugger will stop showing which line is about to be executed and it will stop showing any variables.
 
-![The debugger takes a break while readline-sync is active](images/readlineSyncIsActive.webp)
+   ![The debugger takes a break while readline-sync is active](images/readlineSyncIsActive.webp)
 
-This is because the `keyInSelect()` method of `readline-sync` has taken control. It's busy listening for your input in the Terminal.
+   This is because the `keyInSelect()` method of `readline-sync` has taken control. It's busy listening for your input in the Terminal.
 
-9. Click on the Terminal to activate it
+9. Click on the Terminal to activate it.
 10. On your keyboard, press a number from 1 - 3.
 
-![The debugger becomes active again after `keyInSelect()` returns a value](images/debuggerActiveAgain.webp)
+    ![The debugger becomes active again after `keyInSelect()` returns a value](images/debuggerActiveAgain.webp)
 
-The debugger becomes active again.
+    The debugger becomes active again.
 
-Note that there is an entry for `index` in the `Block` section of the VARIABLES pane. (The value `this` is there for house-keeping reasons.)
+    **Note that there is an entry for `index` in the `Block` section of the VARIABLES pane.** (The value `this` is there for house-keeping reasons.)
 
 11. Press the Continue button in the Control Panel, or press the shortcut key `F5`.
     
-The debugger will jump directly to line 56, executing all the code on the way. 
+    The debugger will jump directly to line 56, executing all the code on the way. 
 
 12. In the WATCH panel, click on the `+` button and enter the expression `length - 1`.
 
-![Using the WATCH panel to watch the value of an expression](images/watchLength-1.webp)
+    ![Using the WATCH panel to watch the value of an expression](images/watchLength-1.webp)
 
-You should see that its value is `5`. Again, JavaScript will have no problem creating a new string for `nail`.
+    You should see that its value is `5`. Again, JavaScript will have no problem creating a new string for `nail`.
 
 13. Press `F5` to make your script continue running.
 14. Activate the Terminal, and press the `3` key on your keyboard

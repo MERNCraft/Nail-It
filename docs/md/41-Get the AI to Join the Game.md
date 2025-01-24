@@ -1,13 +1,13 @@
 <!-- Get the AI to Join the Game -->
 <section
-  id="get-the-ai-to-join-the-game"
-  aria-labelledby="get-the-ai-to-join-the-game"
-  data-item="Get the AI to Join the Game"
+  id="the-ai-joins-the-game"
+  aria-labelledby="the-ai-joins-the-game"
+  data-item="The AI Joins the Game"
 >
-  <h2><a href="#get-the-ai-to-join-the-game">Get the AI to Join the Game</a></h2>
+  <h2><a href="#the-ai-joins-the-game">The AI Joins the Game</a></h2>
   
 <details class="challenge" open>
-<summary>#1 Can you get the AI to join the game at all?</summary>
+<summary>Challenge 1: Can you get the AI to join the game at all?</summary>
 
 For now, the AI just lets you play. Can you make it print something into the Terminal to show that it exists? The simplest solution is to simply jump back to the beginning of the `while` loop after the AI's turn, which means that these lines will be executed a second time:
 
@@ -18,12 +18,12 @@ For now, the AI just lets you play. Can you make it print something into the Ter
 
 The output you are looking for could be something like this:
 
-```tex-w
+```bash-w
 
 -=============| The nail is 14 units long.
 
 ============|   You hit the nail firmly.
-Say that again? I won't play yet.
+I'll say that again. I won't play yet.
 
 ============|   You hit the nail firmly.
 
@@ -51,7 +51,7 @@ How hard do you plan to hit? [1, 2, 3, 0]:
 <details class="solution">
 <summary>Solution</summary>
 
-You can achieve the result I show above with just three changes, as shown below.
+You can achieve the result I show above with just three changes, as shown in **bold** below.
 
 ```javascript-
 <i>const {
@@ -123,7 +123,7 @@ while (length > 0) {
            + hit + strength[index] + "."
     toDelete = 7
   } else { // it's the AI's turn to play
-    </i><b>console.log("Say that again? I won't play yet.")
+    </i><b>console.log("I'll say that again. I won't play yet.")
     toDelete = 0</b><i>
     force = 0
   }

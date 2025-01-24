@@ -12,12 +12,12 @@ console.log("Hello World")
 ```
 **... plus this command in the Terminal...**
 
-```tex-w
+```bash-w
 node main.js
 ```
 **... make this text appear in the Terminal?**
 
-```tex-w
+```bash-w
 Hello World!
 ```
 
@@ -26,7 +26,7 @@ In NodeJS, "[console](https://developer.mozilla.org/en-US/docs/Web/API/console)"
 
 ## Objects and methods
 
-`console` is a _global object_. This means that you can use it anywhere (globally), and that it can have `methods` and `properties`. As you will see, JavaScript is built with objects.
+`console` is a _global object_. The word “object” has a special meaning in programming. An object can have methods and properties. As you will see, JavaScript is built with objects. And because it is global, console can be used anywhere in your project.
 
 A method is something an object can do. A property is something it has. It doesn't have to have any methods or properties. If you think of a method like a human being:
 
@@ -41,7 +41,7 @@ In this project, you will use the following methods:
 
 | method | action |
 | ------ | ------ |
-| `console.log()` | prints the parameters in the Terminal |
+| `console.log()` | prints the parameters in the Terminal, with a space between each parameter |
 | `console.clear()` | removes all text from the Terminal |
 
 ## Parameters

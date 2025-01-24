@@ -38,7 +38,7 @@ You can also run your own tests in the Node IDE in the Terminal.
 1. Open a new Terminal and type `node` (or return to the Terminal where the Node IDE is already running)
 2. Type expressions like `13 % 4` in the Terminal, and then press Enter
 
-```tex-w
+```bash-w
 <b>node</b>
 Welcome to Node.js v23.1.0.
 Type ".help" for more information.
@@ -53,7 +53,7 @@ You don't need to type `console.log()`. The IDE will automatically print out the
 
 <details class="pivot" open>
 <summary>Implementing the AI's strategy</summary>
-So the modulo (`%`) operator is the AI's secret weapon. As with the solo player, building the AI's strategy is going to take several steps. Some of them are going to break the existing game.
+So the modulo (`%`) operator is the AI's secret weapon. As with the solo player, building the AI's strategy is going to take several steps. Some of them are going to break the existing game. But you are used to that now. You build a tower of wooden bricks. You knock it down and you build it back with better balance.
 
 </details>
 

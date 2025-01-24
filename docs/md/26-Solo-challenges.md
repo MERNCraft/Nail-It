@@ -12,7 +12,7 @@ I'll treat each one in a separate section.
   
 ### 1. After the nail is hit, can you show it at its new length?
   
-```tex-w
+```bash-w
 -===========| The nail is 12 units long.
 
 [1] gently
@@ -24,9 +24,9 @@ How hard do you plan to hit? [1, 2, 3, 0]: 3
 -========|
 ```
 
-### 2. Can you show how hard the solo player chose to hit the nail?
+### 2. Can you show how hard the solo player hits the nail?
 
-```tex-w
+```bash-w
 -===========| The nail is 12 units long.
 
 [1] gently
@@ -38,17 +38,17 @@ How hard do you plan to hit? [1, 2, 3, 0]: 2
 -=========| You hit the nail firmly.
 ```
 
-### 3. Can you remove the question after it has been answered?
+### 3. Can you remove the question after it is answered?
 
-```tex-w
+```bash-w
 -===========| The nail is 12 units long.
 
 -==========| You hit the nail gently.
 ```
 
-### 4. Can you let the solo player hit the nail several times in a row?
+### 4. Can you let the solo player hit the nail several times?
 
-```tex-w
+```bash-w
 -===========| The nail is 12 units long.
 
 -========| You hit the nail hard.
@@ -64,7 +64,7 @@ How hard do you plan to hit? [1, 2, 3, 0]: 2
 
 ### 5. Can you show the winning situation... even if the solo player hits the nail too hard the last time?
 
-```tex-w
+```bash-w
 -===========|  The nail is 12 units long.
 
 -==========|  You hit the nail gently.
@@ -86,7 +86,7 @@ You win!
 
 ### 6. Can you show the point of the nail only at the start of the game?
 
-```tex-w
+```bash-w
 -===========|  The nail is 12 units long.
 
 =========|  You hit the nail hard.
@@ -106,7 +106,7 @@ You win!
 
 ### 7. Can you align all the text nicely?
 
-```tex-w
+```bash-w
 -===========| The nail is 12 units long.
 
 ==========|   You hit the nail firmly.
@@ -130,15 +130,15 @@ You win!
 
 For example: 
 
-```tex-w
+```bash-w
 <i>-===========| The nail is </i><b>15</b><i> units long.</i>
 ```
 
-### 9. Can you stop the game early, before there is a winner?
+### 9. Can you stop the game early, before anyone wins?
 
 If the human player presses `0` when asked how hard to hit, can you make the game end gracefully?
 
-```tex-w
+```bash-w
 <i>-==============| The nail is 15 units long.
 
 ============|    You hit the nail hard.

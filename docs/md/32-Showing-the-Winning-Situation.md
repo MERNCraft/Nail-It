@@ -7,14 +7,14 @@
   <h2><a href="#showing-the-winning-situation">Showing the Winning Situation</a></h2>
   
 <details class="challenge" open>
-<summary>#5 Can you show the winning situation?</summary>
+<summary>Challenge 5: Can you show the winning situation?</summary>
 In the last challenge, your code stopped working when `length` was reduced to `0` or less.
 
 Now can you add some code after the end of the `while` loop that will show the final state and declare the human player the winner?
 
 Below you can see how the Terminal might look when you have completed this challenge. Note that the final hit can be stronger than necessary.
 
-```tex-w
+```bash-w
 <i>-===========|  The nail is 12 units long.
 
 -==========|  You hit the nail gently.

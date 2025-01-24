@@ -6,7 +6,7 @@
 >
   <h2><a href="#never-repeat-a-trick">Never Repeat a Trick?</a></h2>
   
-One rule of illusionists is never to repeat a trick. If the audience knows what is going to happen, they will watch more closely, and they might notice something the illusionist does not want them to see.
+One rule of stage magicians is never to repeat a trick. If the audience knows what is going to happen, they will watch more closely, and they might notice something the illusionist does not want them to see.
 
 But the `slider.js` example allowed you to press the `Z` and the `X` keys multiple times. Each time, the `0` moved one step to the left or right. How did the code do that?
 
@@ -31,7 +31,7 @@ console.log('\n\n' + (new Array(20)).join(' ') +
 <b>}</b>
 ```
 
-## A `while` loops
+## A `while` loop
 The slider example uses a [`while` loop](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/while).
 
 It loops around, checking if you have typed in one of the characters `Z`, `X` or `space`. If you typed `Z` or `X`, it updates the position of the `0` and the number on the right. If you pressed the `space` bar, it `breaks` out of the loop and stops.
@@ -42,11 +42,11 @@ A loop that is set up using `while (true)` will continue forever unless the comm
 In your game, you want to stop the game when the nail has been fully hammered in. Here's how you could do that:
 
 <details class="sandbox" open>
-<summary>Solution</summary>
+<summary>Leaving a `while` loop</summary>
 
 1. Create a new file called `while.js`:
 
-```tex-w
+```bash-w
 code while.js
 ```
 
@@ -63,7 +63,7 @@ console.log("length:", length)
 
 3. In the Terminal window, run:
 
-```tex-w
+```bash-w
 node while.js
 ```
 

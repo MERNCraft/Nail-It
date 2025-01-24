@@ -10,7 +10,7 @@ By default, `readline-sync.keyInSelect()` considers that pressing `0` means `CAN
 
 If you press the `0` key now, the game will behave a little strangely. It will not make the nail any shorter, and it will show the string `undefined` instead of `gently`, `firmly` or `hard`. And it will continue to ask you to play.
 
-```tex-w
+```bash-w
 <i>-=============| The nail is 14 units long.
 
 ==============| You hit the nail </i><b>undefined</b><i>.
@@ -30,7 +30,7 @@ Back in section [18. Arrays and index Zero](#arrays-and-index-zero), you saw tha
 
 Here's how you can check this in the Node IDE in your Terminal:
 
-```tex-w
+```bash-w
 <b>node</b>
 Welcome to Node.js v23.1.0.
 Type ".help" for more information.
@@ -46,7 +46,7 @@ Type ".help" for more information.
 
 Now try using index values that are out of range: greater than 2 or less than 0. You will get the value [`undefined`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined):
 
-```tex-w
+```bash-w
 > <b>s[3]</b>
 undefined
 > <b>s[-1]</b>
@@ -60,31 +60,30 @@ You can create `undefined` in different ways
 1. If you ask for an item in an array that doesn't exist (as you gave just don.)
 2. If you don't give any value to a variable that you create with `let`, its value will be `undefined`
 
-```tex-w
+```bash-w
 > <b>let empty</b>
 undefined
 ```
 
 3. If you ask an object for a property that it doesn't have:
 
-```tex-w
-
+```bash-w
 > <b>r = require("readline-sync")</b>
 {
   _DBG_set_useExt: [Function (anonymous)],
 ```
-```tex-s
+```bash-s
 // lines skipped //
 ```
-```tex-w
+```bash-w
   question: [Function (anonymous)],
   prompt: [Function (anonymous)],
   keyIn: [Function (anonymous)],
 ```
-```tex-s
+```bash-s
 // lines skipped //
 ```
-```tex-w
+```bash-w
 }
 > <b>r.unknownProperty</b>
 undefined
@@ -92,7 +91,7 @@ undefined
 
 4. If you call a method that does not return any value:
 
-```tex-w
+```bash-w
 <b>console.log("This text will be followed by `undefined` because the method console.log() does not return a value")</b>
 This text will be followed by `undefined` because the method console.log() does not return a value
 undefined

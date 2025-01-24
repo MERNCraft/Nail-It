@@ -12,7 +12,7 @@ The third example in [documentation for the `readline-sync` package](https://www
 <summary>Edited for clarity</summary>
 I've edited a bit for clarity. Can you spot the differences?
 
-In particular, the first line selects `keyInSelect` directly from the `readline-sync` code, using a technique known as [destructuring assignment](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment).
+In particular, the first line selects `keyInSelect` directly from the `readline-sync` code, using a technique known as [destructuring assignment](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment).  This allows you to ask an object for one of its properties or methods by name. You can actually ask for several at once, as you will see shortly.
 
 </details>
 
@@ -34,7 +34,7 @@ In particular, the first line selects `keyInSelect` directly from the `readline-
 > )
 > ```
 > In the Terminal:
-> ```tex-w
+> ```bash-w
 > [1] Lion  
 > [2] Elephant  
 > [3] Crocodile  
@@ -50,14 +50,14 @@ To test this example:
 
 1. Using your Terminal, create a new file:
 
-```tex-w
+```bash-w
 code keyInSelect.js
 ```
 
-1. Paste the code above into your new script file.
-2. In the Terminal, run:
+2. Paste the code above into your new script file.
+3. In the Terminal, run:
 
-```tex-w
+```bash-w
 node keyInSelect.js
 ```
 
@@ -89,7 +89,7 @@ Notice that instead of using `console.log()` to show the name of the item that i
 
 You can try it several times. The value of `index` that is logged will always be 1 less than the number you press.
 
-```tex-#
+```bash-#
 <i>How hard do you plan to hit? [1, 2, 3, 0]: </i><b>0</b><i>
 index: </i><b>-1</b><i>
 

@@ -27,7 +27,7 @@
 2. Look at the code above. Predict what you will see in the Terminal when you run it.
 3. Run:
 
-```tex-w
+```bash-w
 node keyInYN.js
 ```
 
@@ -51,6 +51,8 @@ Hint: the file you created at `Nail_It/main.js` already does this. You can copy 
 
 <details class="solution">
 <summary>Solution</summary>
+You don't need the `if ... else` statement. You can create a `const` variable to hold the response from `readline-sync`:
+
 ```javascript
 const readlineSync = require("readline-sync");
 const question = "Do you want this module?"
@@ -68,7 +70,7 @@ Note that there will be a space added between each item that `console.log()` pri
 
 <details class="challenge">
 <summary>Bonus question</summary>
-Search the documentation for more places where it talks about `keyInYN`, until you find this:
+Search [the documentation](https://www.npmjs.com/package/readline-sync) for more places where it talks about `keyInYN`, until you find this:
 
 > ### keyInYN
 >

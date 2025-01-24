@@ -1,15 +1,13 @@
 <!-- Get AI to Play an Interesting Move -->
 <section
-  id="get-ai-to-play-an-interesting-move"
-  aria-labelledby="get-ai-to-play-an-interesting-move"
-  data-item="Get AI to Play an Interesting Move"
+  id="the-ai-plays-an-interesting-move"
+  aria-labelledby="the-ai-plays-an-interesting-move"
+  data-item="The AI Plays an Interesting Move"
 >
-  <h2><a href="#get-ai-to-play-an-interesting-move">Get AI to Play an Interesting Move</a></h2>
-
-
+  <h2><a href="#the-ai-plays-an-interesting-move">The AI Plays an Interesting Move</a></h2>
 
 <details class="challenge" open>
-<summary>#3.1 Can you make the AI play randomly when it is stuck?</summary>
+<summary>Challenge 3.1: Can you make the AI play randomly when it is losing?</summary>
 If the AI always hits gently when it is in a losing position, the human player might learn that always hitting hard can sometimes lead to victory.
 
 You can make your code a little bit smarter than a piece of plastic. You can make the AI choose a random value for `force` if it finds itself in a losing position. This means that even a human player who knows the winning strategy will have to pay attention on each turn.
@@ -19,13 +17,14 @@ You can make your code a little bit smarter than a piece of plastic. You can mak
 1. If `force` is `0`, what will `!force` be? (Try it in the Node IDE).
 2. Can you create an `if () { }` statement that will only run if `force` is `0`?
 3. If `Math.floor(Math.random() * 4)` gives you a number between `0` and `3`, can you imagine how to create a number between `1` and `3`?
-4. If `Math.floor()` reduces a number to the next lower integer, can you imagine that there might be a method to raise a number to the next higher integer?
-5. `Math.ceiling()` is not the answer to the last question. Programmers don't like typing. Try this Google search: [js Math.ceiling](https://www.google.com/search?q=js+Math.ceiling)
+4. If `Math.floor()` reduces a number to the next lower integer, can you imagine that there might be a method to raise a number to the nearest higher integer?
+5. `Math.ceiling()` is not the answer to the last question. Remember that programmers don't like typing. Try this Google search: [js Math.ceiling](https://www.google.com/search?q=js+Math.ceiling)
 </details>
-
 
 <details class="solution">
 <summary>Solution</summary>
+
+There is one changed line and three new lines near the end of the script.
 
 ```javascript-
 <i>const {

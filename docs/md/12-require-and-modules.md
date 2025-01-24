@@ -10,7 +10,7 @@ Here's an edited version of the first few lines of code:
 
 ```javascript
 const readlineSync = require("readline-sync")
-const whoStarts = "If you want to start, type Y..." // shortened
+const whoStarts = `If you want to start, type Y...` // shortened
 ```
 ```javascript-s
 // lines skipped //
@@ -20,7 +20,7 @@ let player = readlineSync.keyInYN(whoStarts)
 console.log("player:", player)
 ```
 
-You've seen that `readlineSync` somehow allows you to type a letter in the Terminal, and then JavaScript knows if that letter was a `Y` or not. But where does `readlineSync` get all this power from? And how could you have guessed to use `.keyInYN()` to make this happen?
+You've seen that `readlineSync` somehow allows you to type a letter in the Terminal, and then JavaScript knows if that letter was a `Y` or not. But where does `readlineSync` get all this power from? And how could you have guessed to use `.keyInYN()` to make this happen? (Actually, I've already given you a link 😈)
 
 ## `require()` - a global function
 
@@ -53,7 +53,7 @@ Here's what it finds:
 
 JavaScript now reads all the code that it finds in the file at `node_modules/readline-sync/lib/readline-sync.js`, and executes it.
 
-<details class="tldr" open>
+<details class="tldr">
 <summary>TL;DR</summary>
 **Don't worry. I don't expect the code below to mean anything to you. I'm just showing you that all the code in a Node Module package is openly available. There's no hidden magic.** 
 

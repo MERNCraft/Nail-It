@@ -1,18 +1,18 @@
 <!-- Get the AI to Offer to Play Again -->
 <section
-  id="get-the-ai-to-offer-to-play-again"
-  aria-labelledby="get-the-ai-to-offer-to-play-again"
-  data-item="Get the AI to Offer to Play Again"
+  id="the-ai-offers-to-play-again"
+  aria-labelledby="the-ai-offers-to-play-again"
+  data-item="The AI Offers to Play Again"
 >
-  <h2><a href="#get-the-ai-to-offer-to-play-again">Get the AI to Offer to Play Again</a></h2>
+  <h2><a href="#the-ai-offers-to-play-again">The AI Offers to Play Again</a></h2>
   
 <details class="challenge" open>
-<summary>#5 Get your friends to lose constantly against your game</summary>
-If your friends play this game once and lose, they might just say "Cool game, bro!" and move on to something else. If the game offers them a chance for revenge, they might continue playing.
+<summary>Challenge 5: Can you get the AI to offer to play again?</summary>
+If your friends play this game once and lose, they might just say "Cool game!" and move on to something else. If the game offers them a chance for revenge, they might continue playing.
 
 Here's how your Terminal should look after you complete this last challenge:
 
-```tex-w
+```bash-w
 <i>=|            You hit the nail hard.
 
 |             I hit the nail gently.
@@ -49,24 +49,24 @@ You'll have to `require` this new method explicitly at the beginning of your scr
 
 ## The `options` object
 
-Back in section [15. Working with keyInYN](#working-with-keyinyn), you did some tests with the `options` object.
+Back in section [15. Working with `keyInYN`](#working-with-keyinyn), you did some tests with the `options` object.
 
-The object looks like this:
+If you remember, the `options` object looks like this:
 
 ```javascript-#
 const options   = { guide: false }
 ```
 
-If you use it with `keyInYN()` or `keyInYNStrict()`, it hides the default text ` [y/n]` that `readline-sync` wants to show. It makes your game look neater.
+If you use this `options` object with `keyInYN()` or `keyInYNStrict()`, it hides the default text ` [y/n]` that `readline-sync` wants to show. Without this default text, your game look neater.
 
-```javascript
+```javascript-#
 let player = keyInYN(whoStarts, options)
 ```
 
 ## A string invitation to play again
 You'll need to create a variable to contain the string that you will print in the Terminal when the game is over. You could do something like this:
 
-```javascript
+```javascript-#
 const replay = `
 Do you want to play again?
 (Type Y for Yes, N for No): `
@@ -76,7 +76,7 @@ Do you want to play again?
 
 If the same player starts each time, the game is not so interesting. When the game first begins, you can declare a variable with `let` which indicates who will start first next time:
 
-```javascript-w
+```javascript-#
 <i>let player = keyInYN(whoStarts, options)</i>
 <b>let nextPlayer = !player</b>
 ```
@@ -85,8 +85,7 @@ If the same player starts each time, the game is not so interesting. When the ga
 
 You'll need to wrap your current game inside a second `while` loop. If you create a variable called `playing`, you can keep looping in the outer loop so long as `playing` is true. Here's a simplified version of how this can work.
 
-```javascript
-
+```javascript-#
 let playing   = true
 
 while (playing) {
@@ -96,8 +95,9 @@ while (playing) {
     // Your current game goes here
   }
 
-  // Somebody won. Ask the player if they want to play again
+  // Somebody won. Ask the human player if they want to play again
   playing    = keyInYNStrict(replay, options)
+}
 ```
 
 ## Initializing a new game
@@ -167,6 +167,8 @@ I've given you all the code that you need to solve this challenge. Before you lo
 
 <details class="solution">
 <summary>Solution</summary>
+
+Here you will find all the code snippets that are shown above, each in its correct place.
 
 ```javascript-
 <i>const {

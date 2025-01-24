@@ -12,6 +12,8 @@ As a developer, you are going to being reading a lot of documentation. If you lo
 
 ![Just part of the menu of topics in the MDN JavaScript reference](images/MDN.webp)
 
+But you don’t need to know all of this. The Beatles’ best-selling single (“I Want to Hold Your Hand", 1963) sold more than 12 million copies worldwide, and it only uses 40 different words.
+
 No developer on Earth knows more than a fraction of this by heart. No developer on Earth even _uses_ more than a fraction of all the possibilities available. As you will soon discover, you can do excellent work with only a few simple techniques.
 
 Even when you have used a particular feature regularly, after a few days your brain will start to forget the details. You will need to look up the exact wording to use. And new tools and features appear regularly, so there will always be something new to learn that did not exist until recently.

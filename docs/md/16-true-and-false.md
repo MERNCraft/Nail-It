@@ -58,6 +58,8 @@ You can also put `/*` before a comment section and `*/` after it. You can do thi
 
 In the code above, the comments indicate what code still has to be written. In other cases, you can use comments to explain what the code does. This is especially important if the logic is complex.
 
+The code in the main.js and complete.js files that you can [download in a ZIP file](https://merncraft.github.io/Nail-It/scripts.zip){download=""} contain many comments to help you understand what each block of code does. This is good practice. You won’t always remember how code your wrote three months ago worked, so you can’t expect other developers to understand it immediately either.
+
 </details>
 
 ## Truthy and falsy
@@ -72,7 +74,7 @@ JavaScript has an ... interesting way of considering whether something is `true`
 
 In short, JavaScript treats the number `0`, the empty string `""` and a few other empty values as `false`. In a moment, you'll see the value `undefined`. That's another value that JavaScript treats `false`. These values are said to be _falsy_.
 
-Conversely, JavaScript treats anything that is not `false` or `0` or empty as `true`... even the word `"false"`, because `"false"` contains letters, so it's not empty. Anything that is not `false` or falsy is _truthy_.
+Conversely, JavaScript treats anything that is not `false` or `0` or empty as `true`. Perhaps surprisingly, even the word `"false"`, is treated as `true`, because `"false"` contains letters, so it's not empty. Anything that is not `false` or falsy is _truthy_.
 
 To convert something truthy to `false`, or to convert something falsy to `true`, you can use the [logical not operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_NOT) (`!`). (See the examples in the sandbox below.)
 
@@ -82,9 +84,9 @@ Later in this project, you'll see a trick to convert `true` to `1` and `false` t
 <summary>Playing with `node` in the Terminal</summary>
 For testing, you can run an Interactive Development Environment (IDE) for Node in a Terminal.
 
-Open a new Terminal, and try this:
+Open a new Terminal, and type the word `node`:
 
-```tex-w
+```bash-w
 <b>node</b>
 Welcome to Node.js v23.1.0.
 Type ".help" for more information.
@@ -104,7 +106,7 @@ When an expression is `false` or falsy, an `if` statement will ignore any instru
 
 The `undefined` text simply means that `console.log()` did not generate a value. When you call `readlineSync.keyInYN()`, it generates a value, but `console.log()` just logs data quietly to the console.
 
-Try these expressions in the Node IDE. All the following should evaluate to  `true`:
+Try these expressions in the Node IDE. **All the following should evaluate to  `true`:**
 
 ```javascript-#
 2 === 2
@@ -115,14 +117,17 @@ length + force < 6
 "length" + "force" === "lengthforce"
 !false
 ```
-Note my use of a semicolon in the line `length = 2; length === 2`. This means: 
+Remember that three equals signs together (===) means "is identical to".
 
+The first expression says: “2 is identical to 2”, and this is true. The second expression says “4 is greater than 2”, and this also true.
+
+In the third line, note my use of a semicolon: length = 2; length === 2. This means:
 * Instruction 1: Assign the value `2` to the variable `length`
 * Instruction 2: Tell me if the value of `length` is identical to `2`.
 
 The semicolon allows me to write two instructions on one line.
 
-All the following should evaluate to `false`
+**All the following should evaluate to `false`:**
 
 ```javascript-#
 !true

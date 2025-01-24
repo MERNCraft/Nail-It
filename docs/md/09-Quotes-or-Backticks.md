@@ -8,7 +8,7 @@
   
 The game that you are about to create shows several lines of text, right at the beginning:
 
-```tex-w
+```bash-w
 Let's knock a nail into this computer!
 
 * Each player takes a turn to hit the nail once.
@@ -35,30 +35,28 @@ Every keyboard manufacturer has their own idea of [where to hide the backtick ch
 
 When you have found the backtick key:
 
-1. In `main.js`, replace the double-quote characters with single backticks, one at the beginning, and one at the end of the text.
+1. In `main.js`, replace the double quote characters with single backticks, one at the beginning, and one at the end of the text.
 2. In the Terminal, run:
 
-```tex-w
+```bash-w
 node main.js
 ```
 
 You should see your multiline block of text appear, as shown in Figure 7 below.
 
-![Replace the " double-quotes with ` backticks](images/backtickSuccess.webp)
+![Replace the " double quotes with ` backticks](images/backtickSuccess.webp)
 
 <details class="note" open>
 <summary>Strings</summary>
 From the early days of computing, sequences of characters have been referred to as _strings_. This is because they are treated as continuous groups, just like beads on a string.
 
-From now on, the word "string" will mean:
+From now on, the word "string" will mean a sequence of characters enclosed by one of the following:
 
-A sequence of characters enclosed either by:
-
-* single quote marks (`'`) or by
-* double quote marks (`"`) or by
+* single quote marks (`'`)
+* double quote marks (`"`)
 * back-ticks (`` ` ``)
 
-In section [XX. Working with strings](), you'll see how to join strings together to create sentences dynamically.
+In section [14. Playing with `readline-sync`](#quotes-or-backticks), you'll see how strings can be joined together with the [`+` string concatenation operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#string_operators) to create sentences dynamically.
 
 </details>
 

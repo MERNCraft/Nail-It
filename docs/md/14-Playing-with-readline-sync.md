@@ -32,14 +32,14 @@ Whenever you see a sand-coloured box like this, you'll get the chance to do some
 
 2. Assuming that your Terminal is open on the parent directory (`My Learning Journey`), you can run:
 
-```tex-w
+```bash-w
 code Nail_It/Tests/readline-sync/index.js
 ```
 The `code` at the beginning of the command refers to VS Code. This line tells VS Code to create a file called `index.js` at the location given. You will see a new editor tab open, with the name `index.js •`. The big round dot means "this file has not been saved yet", so you need one more step to bring it into existence.
 
 ![The `code` command will open a new tab in the text editor](images/newFile.webp)
 
-3. Save the empty file
+3. Save the empty file. VS Code will now create all the intervening folders and the index.js file itself.
 
 VS Code will now create all the intervening folders and the `index.js` file itself.
 
@@ -47,7 +47,7 @@ VS Code will now create all the intervening folders and the `index.js` file itse
 
 4. Run the command:
 
-```tex-w
+```bash-w
 cd Nail_It/Tests/readline-sync 
 ```
 
@@ -74,29 +74,31 @@ console.log('Oh, ' + userName + ' loves ' + favFood + '!');
 ```
 
 <details class="note" open>
-<summary>var</summary>
-The original documentation uses `var` to declare a variable name.
+<summary>Variations on a theme</summary>
+Notice how each line of code here ends with a semicolon (`;`). If you remove the semicolons, the code will still work.
+
+Notice also that the original documentation uses `var` to declare a variable name.
 
 The `const` and `let` keywords were added in 2016, and they do a much better job than `var`, which is now outdated. You will see `var` only in older projects, and in certain very specific cases where a variable may be re-declared.
 
-You can learn more about `var`, `const` and `let` in [this freeCodeCamp article](https://www.freecodecamp.org/news/var-let-and-const-whats-the-difference/).
+You can learn more about `var`, `const` and `let` in [this article](https://www.freecodecamp.org/news/var-let-and-const-whats-the-difference/).
 
 </details>
 
-7. Paste this code into your file at `Nail_It/Tests/readline-sync/index.js`
-8. Run the command:
+1. Paste this code into your file at `Nail_It/Tests/readline-sync/index.js`
+2. Run the command:
 
-```tex-w
+```bash-w
 node index.js
 ```
 
 9. Answer the questions that you are given. Notice that you have to press Enter at the end of each answer.
 
 10. Now the playful part:
-    * Edit the code in `index.js` so that you see different questions when you run `node index.js`.
+    * Edit the code in `index.js` so that you see different questions when you run `node index.js`. For example, you can ask for the user’s favourite colour, or their quest, or [what is the capital of Assyria?](https://www.youtube.com/watch?v=0D7hFHfLEyk&t=52s)
     * After each change, and before you run `node index.js`, see if you can predict what will happen.
     * Pay attention to where spaces are needed.
-    * See if you can understand how the `+` operator works when it is placed between two strings. (You'll see this in more detail later.)
+    * **See if you can understand how the `+` operator works when it is placed between two strings. (You'll see this in more detail later.)**
     * See what happens (if anything) when you change single quotes (`'`) to double quotes (`"`). What happens if you use one of each for the same string?
     * What happens if you use `hideEchoBack: false`?
   
@@ -110,6 +112,8 @@ Notice how `hideEchoBack` is written inside curly braces (`{ ... }`). This struc
 ```
 
 There are rules about how the names of the keys can be formed. They are similar to the rules for variable names. However, you can create a key name with any character in it, if you enclosed the key name with quotation marks.
+
+**Almost everything in JavaScript is structured as an object.** You will learn more and more about them on your journey into JavaScript.
 
 </details>
 

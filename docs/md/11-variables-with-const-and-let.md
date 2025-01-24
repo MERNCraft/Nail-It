@@ -10,7 +10,8 @@ Here are the new lines of code again:
 
 ```javascript-w
 const readlineSync = require("readline-sync")
-const whoStarts = "If you want to start, type Y. If you want me to start, press any other key. "
+const whoStarts = `If you want to start, type Y.
+If you want me to start, press any other key. `
 ```
 ```javascript-s
 // lines skipped //
@@ -30,18 +31,16 @@ Below is a list of things that you have not seen before, in the order in which t
 4. `require()`
 5. `let`
 6. `readlineSync.keyInYN()`
-7. `console.log()` with two parameters
-
 
 ## Thinking like a computer
 
-Here's a new metaphor. You can think of NodeJS as being a long line of identical houses, each with its own specific address.
+Here's a new metaphor. You can think of the memory in a computer  as being a long line of identical houses, each with its own specific address.
 
 ![Terraced Houses, each with its own address](images/terracedHouses.jpg){data-title="Terraced Houses in Lower Park Street" data-credits="[cc-by-sa/2.0 ](http://creativecommons.org/licenses/by-sa/2.0/) - © [Rob Noble](https://www.geograph.org.uk/profile/4178) - [geograph.org.uk/p/1870300](https://www.geograph.org.uk/photo/1870300)"}
 
 People like to give their houses a name, but for the postal delivery worker, the house number is required and is the only official designation for the house.
 
- ![Sign showning a house number and the house's name](https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Tucson-John_Dillinger_House_-_1925-2.jpg/272px-Tucson-John_Dillinger_House_-_1925-2.jpg){data-credits="[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en) by [Tony Santiago](https://commons.wikimedia.org/wiki/User:Marine_69-71) | [original](https://commons.wikimedia.org/wiki/File:Tucson-John_Dillinger_House_-_1925-2.jpg)"}
+ ![Sign showning a house number and the house's name](images/Tucson-John_Dillinger_House_-_1925-2.jpg){data-credits="[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en) by [Tony Santiago](https://commons.wikimedia.org/wiki/User:Marine_69-71) | [original](https://commons.wikimedia.org/wiki/File:Tucson-John_Dillinger_House_-_1925-2.jpg)"}
 
 When you write JavaScript, you talk about _variables_, not houses, and the space defined by each address is actually a block of Random Access Memory (RAM). However, the principle is the same. You, the human, create a name for a block of memory, and the NodeJS associates that name with a number in its index of available blocks, so it knows which memory block you are talking about.
 
@@ -53,7 +52,7 @@ In the world of JavaScript, your code _assigns_ a _value_ to each named _variabl
 
 `const` and `let` are two ways of telling JavaScript to create a named space in its RAM.
 
-`const` tells JavaScript: "Here is some data, it will be _constant_, it will never change." As a result, JavaScript can optimize the space for the data. This is like when you buy a house. You become the permanent owner, and once the initial paperwork is done, everything is simple. You live there: that's it.
+`const` tells JavaScript: "Here is some data, it will be _constant_, it will never change." As a result, JavaScript can optimize the space for the data. This is like when you buy a house. You become the permanent owner, and once the initial paperwork is done, everything is simple. You live there, with your stuff: that's it.
 
 Because the value in a variable created `const` has a fixed value, you must give a value as soon as you declare the variable.
 
@@ -77,7 +76,7 @@ const constantsMustBeAssignedAValue
 
 <details class="tip" open>
 <summary>Use `const` when possible</summary>
-Your code will work faster (and your end-users will be happier) if you declare your variables `const` every time you can.
+Your code will work faster (and your end-users will be happier, even if they don't notice it) if you declare your variables `const` every time you can.
 
 </details>
 
@@ -89,7 +88,7 @@ Computing is all about speed. If JavaScript allowed me to use any name, then it 
 
 * A variable name can begin with a letter, a dollar sign (`$`) or an underscore (`_`)
 * A variable name can contain letters, dollar signs, underscores and numbers (but it can't start with a number)
-* A variable name _cannot_ contain a space (` `) or a dash (`-`) (so `readline-sync` is not possible)
+* A variable name _cannot_ contain a space (` `) or a dash (`-`) (so `readline-sync`, which contains a dash, is not possible)
 
 ### Variable naming conventions
 
@@ -109,7 +108,7 @@ There are many different formats that can be used for variable names. The most c
 
 <details class="tip" open>
 <summary>Variables should have descriptive names</summary>
-You _can_ call a variable anything. The [script `minified.js`](https://MERNCraft.github.io/Nail-It/scripts.zip){download=""} uses single letter names for each variable. Here's are a couple of extracts:
+You _can_ call a variable anything. The [script `minified.js`](https://MERNCraft.github.io/Nail-It/scripts.zip){download=""} uses single letter names for each variable. Here are a couple of extracts:
 
 ```js-w
 const t="If you want to start, type Y. If you want me to start, press any other key. ";const n="The nail is ";const l=" units long."
@@ -127,12 +126,12 @@ You should always choose meaningful names for your variables, even if they are q
 
 </details>
 
-## Equals signs
+## The equals sign `=`
 
-In JavaScript, a single equals sign (`=`) is used to assign a value to a variable (or to use the house metaphor, to tell JavaScript to move a given piece of data into a named address). So...
+In JavaScript, a single equals sign (`=`) is used to assign a value to a variable. To use the house metaphor, the equals sign tells JavaScript to move a given piece of data into a named address. So...
 
-```tex-w
-const whoStarts = "If you want to start..."
+```bash-w
+const whoStarts = `If you want to start...`
 ```
 ... tells JavaScript:
 

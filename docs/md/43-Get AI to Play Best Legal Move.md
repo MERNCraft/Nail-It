@@ -1,22 +1,22 @@
 <!-- Get AI to Play Best Legal Move -->
 <section
-  id="get-ai-to-play-best-legal-move"
-  aria-labelledby="get-ai-to-play-best-legal-move"
-  data-item="Get AI to Play the Best Legal Move"
+  id="the-ai-plays-a-smart-move"
+  aria-labelledby="the-ai-plays-a-smart-move"
+  data-item="The AI Plays a Smart Move"
 >
-  <h2><a href="#get-ai-to-play-best-legal-move">Get AI to Play the Best Legal Move</a></h2>
+  <h2><a href="#the-ai-plays-a-smart-move">The AI Plays a Smart Move</a></h2>
 
-As [Matt Parker explains](https://www.youtube.com/watch?v=9KABcmczPdg&t=291s), the winning strategy is to leave a multiple of 4 units when you complete your turn.
+As [Matt Parker explains](https://www.youtube.com/watch?v=9KABcmczPdg&t=291s), the winning strategy is to leave a multiple of 4 units when you complete your turn. His Dr Nim game [will always play only one marble]((https://www.youtube.com/watch?v=9KABcmczPdg&t=531s)) if it is in a losing position.
 
-It [will always play only one marble]((https://www.youtube.com/watch?v=9KABcmczPdg&t=531s)) if it is in a losing position. This is a good strategy when playing against a human who doesn't understand the system, because the human has more marbles to make a mistake with. It's certainly the easiest strategy for a piece of plastic to use.
+This is a good strategy when playing against a human who doesn't understand the system, because the human has more marbles to make a mistake with. It's certainly the easiest strategy for a piece of plastic to use.
 
 <details class="challenge" open>
-<summary>#3 Get the AI to play the best legal move</summary>
-The AI must choose a value for `force` between `1` and `3`, but it can't always choose to play `length % 4`. If `length % 4` is 0, you can make the AI hit the nail gently, so that it only becomes one unit shorter.
+<summary>Challenge 3: Can you get the AI to play a smart legal move?</summary>
+The AI must choose a value for `force` between `1` and `3`, but it can't always choose to play `length % 4`. If `length % 4` is 0, you can make the AI hit the nail gently (the equivalent of Dr Nim taking only one marble), so that the nail only becomes one unit shorter.
 
 Here the AI starts in a losing position, so it plays gently:
 
-```tex-w
+```bash-w
 <i>-===========| The nail is 12 units long.
 
 </i><b>===========|  I hit the nail gently.</b>
@@ -24,7 +24,7 @@ Here the AI starts in a losing position, so it plays gently:
 
 But if the human player makes a mistake, the AI seizes the opportunity to win.
 
-```tex-w
+```bash-w
 </i>==========|    You hit the nail gently.
 
 </i><b>========|     I hit the nail firmly.</b>
@@ -32,15 +32,15 @@ But if the human player makes a mistake, the AI seizes the opportunity to win.
 
 After the AI's turn, the number of units left is a multiple of four. Whatever the human player does, the AI can play to restore a multiple of four:
 
-```tex-w
+```bash-w
 <i>=====|        You hit the nail hard.
 
 </i><b>====|         I hit the nail gently.</b>
 ```
 
-After any move the human player can make, the AI is going to win:
+After any move the human player can make, the AI is sure to win:
 
-```tex-w
+```bash-w
 <i>[1] gently
 [2] firmly
 [3] hard
@@ -71,6 +71,8 @@ How hard do you plan to hit? [1, 2, 3, 0]: </i>
 
 <details class="solution">
 <summary>Solution</summary>
+
+There are only two lines that you need to **change**.
 
 ```javascript-
 <i>const {

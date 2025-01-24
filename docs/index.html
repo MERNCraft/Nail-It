@@ -17,7 +17,7 @@ content="width=device-width, initial-scale=1.0"
 </head>
 
 <body>
-<main id="main">
+<main id="content">
 <header>
 <a href="https://MERNCraft.github.io"><img src="../public/svg/home.svg" alt="home"></a>
 <h1>Amaze with your First JavaScript Game</h1>
@@ -25,6 +25,20 @@ content="width=device-width, initial-scale=1.0"
 chance</h3>
 <h4>January 2025</h4>
 </header>
+<nav
+  id="content-header"
+  aria-labelledby="content-header"
+>
+  <button type="button" class="previous" disabled>
+    <img src="../public/svg/prev.svg" alt="previous" draggable="false">
+  </button>
+  <span class="previous-name"></span>
+  <span class="spacer"></span>
+  <button type="button" class="next">
+    <img src="../public/svg/next.svg" alt="next" draggable="false">
+  </button>
+  <span class="next-name"></span>
+</nav>
 
 <!-- The Guiding Principle -->
 <section id="guiding-principle" aria-labelledby="guiding-principle" data-item="The Guiding Principle">
@@ -165,7 +179,7 @@ JavaScript files on your computer is to install a program called Node
 Version Manager, or NVM for short.</p>
 <p>Here is an <a
 href="https://www.freecodecamp.org/news/node-version-manager-nvm-install-guide/">excellent
-article on freeCodeCamp</a> which explains how to do just that.</p>
+articlea</a> which explains how to do just that.</p>
 <details class="trouble" open>
 <summary>
 Typing commands… where?
@@ -179,16 +193,38 @@ commands?”</strong></p>
 Studio Code first, as explained below, and VS Code (as it is called, for
 short) will provide you with an integrated Terminal window.”</p>
 <p>As for the answer to your question: <strong>“Why didn’t you tell me
-this <em>before</em> you gave the link for installing
-Node?”</strong></p>
+this <em>before</em> you gave the link for installing Node?”</strong>
+The punchline before the joke</p>
+<p>If you hear the punchline of a joke, but you didn’t hear the build up
+to the punchline, the joke is not funny. You feel nothing. For example,
+here’s a punchline:</p>
+<blockquote>
+<p>A woolly jumper</p>
+</blockquote>
+<p>If you hear the build-up first (“What do you get if you cross a sheep
+with a kangaroo?”) then you start with a problem, and when you hear the
+solution, you feel some kind of emotion. And emotions trigger your brain
+to remember. Your brain wants you to remember how to repeat (or avoid)
+this kind of emotion in the future. Telling a joke well means giving the
+audience just enough time to feel uncomfortable about the problem the
+joke poses, before giving the key to resolving it.</p>
 <p>As you work your way through this guide, you’ll see that I have done
 my best to help troubleshoot any problems that might arise. But if a
 problem doesn’t arise for you, you don’t want to be bothered with Too
-Much Information about what <em>might</em> have gone wrong.</p>
+Much Information about what might have gone wrong. And when it does
+arise, it helps to think about it first, before someone feeds you the
+answer.</p>
 <p>In the future, if you run into difficulties, look a little ahead for
-an bright orange band with a lifebuoy logo, like the one at the top of
-this panel. Normally, it will be closed, because I hope that you do not
-often have problems. Open it up to find troubleshooting suggestions.</p>
+a header with a lifebuoy and a disclosure button, like the one below.
+Open it up to find troubleshooting suggestions.</p>
+<p>And just for fun, here’s another punchline. Think about it for a
+moment before you look at the whole joke.</p>
+<details class="sandbox">
+<summary>
+Halfway
+</summary>
+<p>What do you get if you cross the Atlantic with the Titanic?</p>
+</details>
 </details>
 <details class="feedback" open>
 <summary>
@@ -286,9 +322,10 @@ successful development project has the same level of complexity. There
 will be many different files, in many different folders on many
 different computers…</p>
 <h2 id="organizing-your-files">Organizing your files</h2>
-<p>This project is simple. It will only use one file. But you should be
-ready to grow big quickly, and plan accordingly. It’s therefore
-important to structure your work properly.</p>
+<p>This project is simple. It will only use one file, plus some simple
+test files for you to practise new ideas. But you should be ready to
+grow big quickly, and plan accordingly. It’s therefore important to
+structure your work properly.</p>
 <ol type="1">
 <li>From the File menu in VS Code, choose <code>Open Folder</code></li>
 <li>Use the dialog to create a new folder that will hold all your
@@ -321,9 +358,12 @@ main.js</figcaption>
 is at the heart of a project is often called <code>main</code>.</p>
 <h2 id="your-first-script">Your first script</h2>
 <p>The first thing on the <a href="#what-needs-to-be-done">list of
-things that the game can do</a> is “The game uses text”. So the first
-thing you should get your first JavaScript file to do is to use
-text.</p>
+things that the game can do</a> is:</p>
+<ul>
+<li>“The game uses text”</li>
+</ul>
+<p>So the first thing you should get your first JavaScript file to do is
+to use text.</p>
 <p><a
 href="https://en.wikipedia.org/wiki/%22Hello,_World!%22_program">The
 convention since 1978</a> is to get your very first program to say
@@ -359,7 +399,7 @@ changes are always saved</figcaption>
 </ol>
 <p>By default, a new Terminal will appear a the bottom of the VS Code
 window.</p>
-<ol start="3" type="1">
+<ol start="2" type="1">
 <li>Check the name of the folder that is shown in the Terminal. If it is
 not <code>Nail_It</code>, then type <code>cd</code> (which means
 <code>change directory</code>) and drag the name of the Nail_It folder
@@ -371,9 +411,9 @@ alt="cd into the Nail_It directory" />
 <figcaption aria-hidden="true"><code>cd</code> into the Nail_It
 directory</figcaption>
 </figure>
-<ol start="4" type="1">
+<ol start="3" type="1">
 <li><p>When the Terminal is active in the Nail_It directory, type…</p>
-<pre class="language-tex wrap"><code class="language-tex wrap">node main.js</code></pre>
+<pre class="language-bash wrap"><code class="language-bash wrap">node main.js</code></pre>
 <p>… as shown in the Figure 5 above.</p></li>
 </ol>
 <p>You should see <code>Hello World!</code> printed into the
@@ -389,17 +429,17 @@ download="">downloaded the source files</a> earlier, you can open the
 folder that contains them in a new VS Code window, and use the Terminal
 in that window to run any of the files. For example, you could try
 something like this:</p>
-<pre class="language-tex wrap"><code class="language-tex wrap">cd /path/to/downloaded/folder
+<pre class="language-bash wrap"><code class="language-bash wrap">cd /path/to/downloaded/folder
 node completed.js</code></pre>
-<p>The completed game also remembers your score against the
-computer.</p>
 <p>(Remember that you type <code>cd</code> (followed by a space) and
 then can drag the icon of any folder into the Terminal window to
 navigate to that folder.)</p>
+<p>The completed game also remembers your score against the
+computer.</p>
 </details>
 <details class="note" open>
 <summary>
-semicolons: <code>;</code>
+An aside about semicolons: <code>;</code>
 </summary>
 <p>JavaScript considers that any block of code that is followed by a
 semicolon (<code>;</code>) is a complete instruction. But JavaScript is
@@ -409,10 +449,15 @@ instruction?”</p>
 <p>In most cases, JavaScript programmers write one instruction per line,
 so putting a semicolon at the end of each line is usually not necessary.
 There are, however, some cases where a single instruction may take
-several lines. There are cases where a semicolon is essential.</p>
+several lines. For example, the first instruction in your script takes
+several lines, but JavaScript knows that if it finds a string that
+starts with an opening backtick, the instruction will continue at least
+until it finds a closing backtick.</p>
+<p>And there are cases where a semicolon is essential, but you won’t
+meet them yet.</p>
 <p>I prefer not to use semicolons except in these special cases.</p>
-Sometimes, though, I will write two instructions on the same line,
-separated by a semicolon. So don’t be surprised if you see this.
+<p>Sometimes, though, I will write two instructions on the same line,
+separated by a semicolon. So don’t be surprised if you see this.</p>
 </details>
 </section>
 <!-- What is the Console -->
@@ -424,9 +469,9 @@ separated by a semicolon. So don’t be surprised if you see this.
 <code>main.js</code> …</strong></p>
 <pre class="language-javascript line-numbers"><code class="language-javascript line-numbers">console.log("Hello World")</code></pre>
 <p><strong>… plus this command in the Terminal…</strong></p>
-<pre class="language-tex wrap"><code class="language-tex wrap">node main.js</code></pre>
+<pre class="language-bash wrap"><code class="language-bash wrap">node main.js</code></pre>
 <p><strong>… make this text appear in the Terminal?</strong></p>
-<pre class="language-tex wrap"><code class="language-tex wrap">Hello World!</code></pre>
+<pre class="language-bash wrap"><code class="language-bash wrap">Hello World!</code></pre>
 <h2 id="the-console-and-console.log">The console and
 <code>console.log()</code></h2>
 <p>In NodeJS, “<a
@@ -435,10 +480,10 @@ is how JavaScript refers to the Terminal where the current script is
 running. (Later, you’ll see that browsers also have a Console, which
 behaves very like the Terminal.)</p>
 <h2 id="objects-and-methods">Objects and methods</h2>
-<p><code>console</code> is a <em>global object</em>. This means that you
-can use it anywhere (globally), and that it can have
-<code>methods</code> and <code>properties</code>. As you will see,
-JavaScript is built with objects.</p>
+<p><code>console</code> is a <em>global object</em>. The word “object”
+has a special meaning in programming. An object can have methods and
+properties. As you will see, JavaScript is built with objects. And
+because it is global, console can be used anywhere in your project.</p>
 <p>A method is something an object can do. A property is something it
 has. It doesn’t have to have any methods or properties. If you think of
 a method like a human being:</p>
@@ -453,6 +498,10 @@ nothing with them. (It has properties, but no methods)</li>
 like a house elf. It doesn’t need any possessions.)</p>
 <p>In this project, you will use the following methods:</p>
 <table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
 <thead>
 <tr>
 <th>method</th>
@@ -462,7 +511,8 @@ like a house elf. It doesn’t need any possessions.)</p>
 <tbody>
 <tr>
 <td><code>console.log()</code></td>
-<td>prints the parameters in the Terminal</td>
+<td>prints the parameters in the Terminal, with a space between each
+parameter</td>
 </tr>
 <tr>
 <td><code>console.clear()</code></td>
@@ -491,7 +541,7 @@ not many people know this. (You don’t have to keep it a secret.)</p>
 </h2>
 <p>The game that you are about to create shows several lines of text,
 right at the beginning:</p>
-<pre class="language-tex wrap"><code class="language-tex wrap">Let's knock a nail into this computer!
+<pre class="language-bash wrap"><code class="language-bash wrap">Let's knock a nail into this computer!
 
 * Each player takes a turn to hit the nail once.
 * A player can use one of three levels of strength: gently, firmly, hard.
@@ -524,18 +574,18 @@ to hide the backtick character on your keyboard</a>.</p>
 <h2 id="fix-your-code">Fix your code</h2>
 <p>When you have found the backtick key:</p>
 <ol type="1">
-<li>In <code>main.js</code>, replace the double-quote characters with
+<li>In <code>main.js</code>, replace the double quote characters with
 single backticks, one at the beginning, and one at the end of the
 text.</li>
 <li>In the Terminal, run:</li>
 </ol>
-<pre class="language-tex wrap"><code class="language-tex wrap">node main.js</code></pre>
+<pre class="language-bash wrap"><code class="language-bash wrap">node main.js</code></pre>
 <p>You should see your multiline block of text appear, as shown in
 Figure 7 below.</p>
 <figure>
 <img src="images/backtickSuccess.webp"
-alt="Replace the ” double-quotes with ` backticks" />
-<figcaption aria-hidden="true">Replace the ” double-quotes with `
+alt="Replace the ” double quotes with ` backticks" />
+<figcaption aria-hidden="true">Replace the ” double quotes with `
 backticks</figcaption>
 </figure>
 <details class="note" open>
@@ -545,15 +595,18 @@ Strings
 <p>From the early days of computing, sequences of characters have been
 referred to as <em>strings</em>. This is because they are treated as
 continuous groups, just like beads on a string.</p>
-<p>From now on, the word “string” will mean:</p>
-<p>A sequence of characters enclosed either by:</p>
+<p>From now on, the word “string” will mean a sequence of characters
+enclosed by one of the following:</p>
 <ul>
-<li>single quote marks (<code>'</code>) or by</li>
-<li>double quote marks (<code>"</code>) or by</li>
+<li>single quote marks (<code>'</code>)</li>
+<li>double quote marks (<code>"</code>)</li>
 <li>back-ticks (<code>`</code>)</li>
 </ul>
-<p>In section <a href="">XX. Working with strings</a>, you’ll see how to
-join strings together to create sentences dynamically.</p>
+<p>In section <a href="#quotes-or-backticks">14. Playing with
+<code>readline-sync</code></a>, you’ll see how strings can be joined
+together with the <a
+href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#string_operators"><code>+</code>
+string concatenation operator</a> to create sentences dynamically.</p>
 </details>
 <details class="tldr">
 <summary>
@@ -617,10 +670,11 @@ questions.</p>
 you can attach different accessories for different purposes. Some
 accessories are sold separately.</p>
 <figure>
-<img
-src="https://www.trustedreviews.com/wp-content/uploads/sites/54/2022/12/KitchenAid-Design-Series-Blossom-Stand-Mixer-1-920x613.jpg"
-alt="A food mixer with its standard accessories" />
-<figcaption aria-hidden="true">A food mixer with its standard
+<img src="images/Kenwood_Chef-01ASD.jpg"
+data-title="File:Kenwood Chef-01ASD.jpg"
+data-credits="[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en) by [Asurnipal](https://commons.wikimedia.org/wiki/User:Asurnipal) | [source](https://commons.wikimedia.org/wiki/File:Kenwood_Chef-01ASD.jpg)"
+alt="A food mixer with extra accessories" />
+<figcaption aria-hidden="true">A food mixer with extra
 accessories</figcaption>
 </figure>
 <p>The “accessories” that you can add to NodeJS are called “modules” or
@@ -633,8 +687,10 @@ href="https://www.bairesdev.com/blog/most-popular-npm-packages/#most-popular-npm
 of times every month</a>.</p>
 <p>A popular package that you can use to ask questions in the Terminal
 is <a
-href="https://www.npmjs.com/package/readline-sync">readline-sync</a>.
-(The “sync” is short for “synchronous”. )</p>
+href="https://www.npmjs.com/package/readline-sync">readline-sync</a>.</p>
+<p>The “sync” part of the name is short for “synchronous”, meaning that
+you get an answer immediately, like during a telephone call, rather than
+eventually (asynchronously) like when you send text message.</p>
 <h2 id="installing-readline-sync">Installing readline-sync</h2>
 <p>When you installed NodeJS, a program called <code>npm</code> was
 installed at the same time. You can use this program to fetch NodeJS
@@ -644,7 +700,7 @@ your project. Here’s how you can do this:</p>
 <li>Make sure your computer is connected to the Internet</li>
 <li>In the Terminal for your <code>Nail_It</code> directory, run:</li>
 </ol>
-<pre class="language-tex wrap"><code class="language-tex wrap">npm install readline-sync</code></pre>
+<pre class="language-bash wrap"><code class="language-bash wrap">npm install readline-sync</code></pre>
 <details class="tip" open>
 <summary>
 npm i
@@ -652,7 +708,7 @@ npm i
 <p>Like me, and most programmers, you can be lazy. You can use
 <code>i</code> as a shortcut for <code>install</code>.</p>
 <p>This command will have exactly the same effect:</p>
-<pre class="language-tex wrap"><code class="language-tex wrap">npm i readline-sync</code></pre>
+<pre class="language-bash wrap"><code class="language-bash wrap">npm i readline-sync</code></pre>
 </details>
 <figure>
 <img src="images/installReadlineSync.webp"
@@ -684,19 +740,22 @@ this (the version number may be different):</p>
 <summary>
 JSON and package.json
 </summary>
-<p><code>JSON</code> stands for “JavaScript Object Notation”. A
-<code>.json</code> file can be used to store hierarchical information.
-It has a very strict file structure. If there is a comma too few or a
-comma too many in <code>package.json</code>, <code>npm</code> won’t be
-able to read it. If you use backticks or single-quotes (<code>'</code>)
-instead of double-quotes, <code>npm</code> won’t be able to read it.
-Treat <code>package.json</code> nicely.</p>
+<p><code>JSON</code> stands for <a
+href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/JSON">“JavaScript
+Object Notation”</a>. A <code>.json</code> file can be used to store
+hierarchical information. It has a very strict file structure. If there
+is a comma too few or a comma too many in <code>package.json</code>,
+<code>npm</code> won’t be able to read it. If you use backticks or
+single-quotes (<code>'</code>) instead of double-quotes,
+<code>npm</code> won’t be able to read it.</p>
+<p>Treat <code>package.json</code> nicely.</p>
 <p>The file <code>package.json</code> contains information that ensures
 that your project will work even if it is copied to someone else’s
 computer. In this particular case, it says: “This project needs the
 <code>readline-sync</code> Node package, and it was built using
 version”1.4.10”, so it should work with that version or a more recent
 one.”</p>
+<h3 id="package-lock.json"><code>package-lock.json</code></h3>
 <p>Some Node packages require other Node packages in order to work
 correctly. The <code>package-lock.json</code> file contains details of
 every package that was installed, and every package that <em>each of
@@ -709,26 +768,13 @@ eliminates many cases where “It works on my computer!” is an issue.</p>
 <p>Before you can use <code>readline-sync</code>, you need to load its
 code into your own script. You can use the JavaScript function
 <code>require</code>, as shown in the code below.</p>
-<details class="pivot" open>
-<summary>
-Get it working, then learn how
-</summary>
+<h2 id="get-it-working-then-learn-how">Get it working, then learn
+how</h2>
+<p>Before I explain how it works, you can run a test to see something
+working.</p>
 <p>Try this out.</p>
 <ol type="1">
-<li>Edit your script</li>
-<li>In the Terminal, run</li>
-</ol>
-<pre class="language-tex wrap"><code class="language-tex wrap">node main.js</code></pre>
-<ol start="3" type="1">
-<li>In the Terminal, press the <code>y</code> key, in response to the
-question.</li>
-</ol>
-<p>The expected output is shown in Figure 11 below.</p>
-<p>I’ll explain in the next section exactly what is happening, why
-<code>player: true</code> appears in the Terminal when you run your
-script, and how you can find out for yourself how to make all this
-happen.</p>
-</details>
+<li><p>Edit your script using the code listing below</p>
 <pre class="language-javascript wrap"><code class="language-javascript wrap"><i>const readlineSync = require('readline-sync')
 const whoStarts = `If you want to start, type Y.
 If you want me to start press any other key. `
@@ -747,7 +793,17 @@ Are you ready?
 `)</i>
 
 <b>let player = readlineSync.keyInYN(whoStarts)
-console.log("player:", player)</b></code></pre>
+console.log("player:", player)</b></code></pre></li>
+<li><p>In the Terminal, run</p>
+<pre class="language-bash wrap"><code class="language-bash wrap">node main.js</code></pre></li>
+<li><p>In the Terminal, press the <code>y</code> key, in response to the
+question.</p></li>
+</ol>
+<p>The expected output is shown in Figure 11 below.</p>
+<p>I’ll explain in the next section exactly what is happening, why
+<code>player: true</code> appears in the Terminal when you run your
+script, and how you can find out for yourself how to make all this
+happen.</p>
 <figure>
 <img src="images/useReadlineSync.webp"
 alt="Integrating readline-sync into your project" />
@@ -763,7 +819,8 @@ into your project</figcaption>
 </h2>
 <p>Here are the new lines of code again:</p>
 <pre class="language-javascript wrap"><code class="language-javascript wrap">const readlineSync = require("readline-sync")
-const whoStarts = "If you want to start, type Y. If you want me to start, press any other key. "</code></pre>
+const whoStarts = `If you want to start, type Y.
+If you want me to start, press any other key. `</code></pre>
 <pre class="skip"><code class="skip">// lines skipped //</code></pre>
 <pre class="language-js wrap"><code class="language-js wrap">let player = readlineSync.keyInYN(whoStarts)
 console.log("player:", player)</code></pre>
@@ -778,11 +835,11 @@ section, and deal with the others in the following sections.</p>
 <li><code>require()</code></li>
 <li><code>let</code></li>
 <li><code>readlineSync.keyInYN()</code></li>
-<li><code>console.log()</code> with two parameters</li>
 </ol>
 <h2 id="thinking-like-a-computer">Thinking like a computer</h2>
-<p>Here’s a new metaphor. You can think of NodeJS as being a long line
-of identical houses, each with its own specific address.</p>
+<p>Here’s a new metaphor. You can think of the memory in a computer as
+being a long line of identical houses, each with its own specific
+address.</p>
 <figure>
 <img src="images/terracedHouses.jpg"
 data-title="Terraced Houses in Lower Park Street"
@@ -795,8 +852,7 @@ address</figcaption>
 worker, the house number is required and is the only official
 designation for the house.</p>
 <figure>
-<img
-src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Tucson-John_Dillinger_House_-_1925-2.jpg/272px-Tucson-John_Dillinger_House_-_1925-2.jpg"
+<img src="images/Tucson-John_Dillinger_House_-_1925-2.jpg"
 data-credits="[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en) by [Tony Santiago](https://commons.wikimedia.org/wiki/User:Marine_69-71) | [original](https://commons.wikimedia.org/wiki/File:Tucson-John_Dillinger_House_-_1925-2.jpg)"
 alt="Sign showning a house number and the house’s name" />
 <figcaption aria-hidden="true">Sign showning a house number and the
@@ -824,7 +880,7 @@ JavaScript to create a named space in its RAM.</p>
 <em>constant</em>, it will never change.” As a result, JavaScript can
 optimize the space for the data. This is like when you buy a house. You
 become the permanent owner, and once the initial paperwork is done,
-everything is simple. You live there: that’s it.</p>
+everything is simple. You live there, with your stuff: that’s it.</p>
 <p>Because the value in a variable created <code>const</code> has a
 fixed value, you must give a value as soon as you declare the
 variable.</p>
@@ -854,8 +910,9 @@ variable a value when you create it</figcaption>
 <summary>
 Use <code>const</code> when possible
 </summary>
-<p>Your code will work faster (and your end-users will be happier) if
-you declare your variables <code>const</code> every time you can.</p>
+<p>Your code will work faster (and your end-users will be happier, even
+if they don’t notice it) if you declare your variables
+<code>const</code> every time you can.</p>
 </details>
 <h2 id="variable-names">Variable names</h2>
 <p>I’ve used the variable names <code>readlineSync</code>,
@@ -872,8 +929,8 @@ has rules:</p>
 <li>A variable name can contain letters, dollar signs, underscores and
 numbers (but it can’t start with a number)</li>
 <li>A variable name <em>cannot</em> contain a space (<code></code>) or a
-dash (<code>-</code>) (so <code>readline-sync</code> is not
-possible)</li>
+dash (<code>-</code>) (so <code>readline-sync</code>, which contains a
+dash, is not possible)</li>
 </ul>
 <h3 id="variable-naming-conventions">Variable naming conventions</h3>
 <p>By convention, when a variable is created from more than one word
@@ -903,7 +960,7 @@ Variables should have descriptive names
 <p>You <em>can</em> call a variable anything. The <a
 href="https://MERNCraft.github.io/Nail-It/scripts.zip"
 download="">script <code>minified.js</code></a> uses single letter names
-for each variable. Here’s are a couple of extracts:</p>
+for each variable. Here are a couple of extracts:</p>
 <pre class="language-js wrap"><code class="language-js wrap">const t="If you want to start, type Y. If you want me to start, press any other key. ";const n="The nail is ";const l=" units long."</code></pre>
 <pre class="skip"><code class="skip">// more obfuscated code //</code></pre>
 <pre class="language-js wrap"><code class="language-js wrap">let M=e.keyInYN(t,O);let T=!M</code></pre>
@@ -914,11 +971,12 @@ contains. When future-you or a colleague reads your code, a good choice
 of names will save you a lot of time in understanding what the code
 does.</p>
 </details>
-<h2 id="equals-signs">Equals signs</h2>
+<h2 id="the-equals-sign">The equals sign <code>=</code></h2>
 <p>In JavaScript, a single equals sign (<code>=</code>) is used to
-assign a value to a variable (or to use the house metaphor, to tell
-JavaScript to move a given piece of data into a named address). So…</p>
-<pre class="language-tex wrap"><code class="language-tex wrap">const whoStarts = "If you want to start..."</code></pre>
+assign a value to a variable. To use the house metaphor, the equals sign
+tells JavaScript to move a given piece of data into a named address.
+So…</p>
+<pre class="language-bash wrap"><code class="language-bash wrap">const whoStarts = `If you want to start...`</code></pre>
 <p>… tells JavaScript:</p>
 <ul>
 <li>Select a block of memory at an address that I will call
@@ -947,7 +1005,7 @@ is <code>true</code>, but <code>2 + 2 === "four"</code> is
 </h2>
 <p>Here’s an edited version of the first few lines of code:</p>
 <pre class="language-javascript line-numbers"><code class="language-javascript line-numbers">const readlineSync = require("readline-sync")
-const whoStarts = "If you want to start, type Y..." // shortened</code></pre>
+const whoStarts = `If you want to start, type Y...` // shortened</code></pre>
 <pre class="skip"><code class="skip">// lines skipped //</code></pre>
 <pre class="language-js line-numbers" data-start="14"><code class="language-js line-numbers">let player = readlineSync.keyInYN(whoStarts)
 console.log("player:", player)</code></pre>
@@ -955,7 +1013,8 @@ console.log("player:", player)</code></pre>
 a letter in the Terminal, and then JavaScript knows if that letter was a
 <code>Y</code> or not. But where does <code>readlineSync</code> get all
 this power from? And how could you have guessed to use
-<code>.keyInYN()</code> to make this happen?</p>
+<code>.keyInYN()</code> to make this happen? (Actually, I’ve already
+given you a link 😈)</p>
 <h2 id="require---a-global-function"><code>require()</code> - a global
 function</h2>
 <p>The function <code>require()</code> is a native part of JavaScript.
@@ -993,7 +1052,7 @@ to load</figcaption>
 <p>JavaScript now reads all the code that it finds in the file at
 <code>node_modules/readline-sync/lib/readline-sync.js</code>, and
 executes it.</p>
-<details class="tldr" open>
+<details class="tldr">
 <summary>
 TL;DR
 </summary>
@@ -1061,6 +1120,9 @@ alt="Just part of the menu of topics in the MDN JavaScript reference" />
 <figcaption aria-hidden="true">Just part of the menu of topics in the
 MDN JavaScript reference</figcaption>
 </figure>
+<p>But you don’t need to know all of this. The Beatles’ best-selling
+single (“I Want to Hold Your Hand”, 1963) sold more than 12 million
+copies worldwide, and it only uses 40 different words.</p>
 <p>No developer on Earth knows more than a fraction of this by heart. No
 developer on Earth even <em>uses</em> more than a fraction of all the
 possibilities available. As you will soon discover, you can do excellent
@@ -1122,7 +1184,7 @@ the + button to create a new Terminal</figcaption>
 <li>Assuming that your Terminal is open on the parent directory
 (<code>My Learning Journey</code>), you can run:</li>
 </ol>
-<pre class="language-tex wrap"><code class="language-tex wrap">code Nail_It/Tests/readline-sync/index.js</code></pre>
+<pre class="language-bash wrap"><code class="language-bash wrap">code Nail_It/Tests/readline-sync/index.js</code></pre>
 <p>The <code>code</code> at the beginning of the command refers to VS
 Code. This line tells VS Code to create a file called
 <code>index.js</code> at the location given. You will see a new editor
@@ -1136,7 +1198,8 @@ alt="The code command will open a new tab in the text editor" />
 new tab in the text editor</figcaption>
 </figure>
 <ol start="3" type="1">
-<li>Save the empty file</li>
+<li>Save the empty file. VS Code will now create all the intervening
+folders and the index.js file itself.</li>
 </ol>
 <p>VS Code will now create all the intervening folders and the
 <code>index.js</code> file itself.</p>
@@ -1149,7 +1212,7 @@ saves the <code>index.js</code> file</figcaption>
 <ol start="4" type="1">
 <li>Run the command:</li>
 </ol>
-<pre class="language-tex wrap"><code class="language-tex wrap">cd Nail_It/Tests/readline-sync </code></pre>
+<pre class="language-bash wrap"><code class="language-bash wrap">cd Nail_It/Tests/readline-sync </code></pre>
 <p>This will <a
 href="https://www.earthdatascience.org/courses/intro-to-earth-data-science/open-reproducible-science/bash/bash-commands-to-manage-directories-files/#change-current-working-directory-cd"><code>c</code>hange
 the <code>d</code>irectory</a> so that this new Terminal window will now
@@ -1180,10 +1243,13 @@ const favFood = readlineSync.question (
 console.log('Oh, ' + userName + ' loves ' + favFood + '!');</code></pre>
 <details class="note" open>
 <summary>
-var
+Variations on a theme
 </summary>
-<p>The original documentation uses <code>var</code> to declare a
-variable name.</p>
+<p>Notice how each line of code here ends with a semicolon
+(<code>;</code>). If you remove the semicolons, the code will still
+work.</p>
+<p>Notice also that the original documentation uses <code>var</code> to
+declare a variable name.</p>
 <p>The <code>const</code> and <code>let</code> keywords were added in
 2016, and they do a much better job than <code>var</code>, which is now
 outdated. You will see <code>var</code> only in older projects, and in
@@ -1191,27 +1257,30 @@ certain very specific cases where a variable may be re-declared.</p>
 <p>You can learn more about <code>var</code>, <code>const</code> and
 <code>let</code> in <a
 href="https://www.freecodecamp.org/news/var-let-and-const-whats-the-difference/">this
-freeCodeCamp article</a>.</p>
+article</a>.</p>
 </details>
-<ol start="7" type="1">
+<ol type="1">
 <li>Paste this code into your file at
 <code>Nail_It/Tests/readline-sync/index.js</code></li>
 <li>Run the command:</li>
 </ol>
-<pre class="language-tex wrap"><code class="language-tex wrap">node index.js</code></pre>
+<pre class="language-bash wrap"><code class="language-bash wrap">node index.js</code></pre>
 <ol start="9" type="1">
 <li><p>Answer the questions that you are given. Notice that you have to
 press Enter at the end of each answer.</p></li>
 <li><p>Now the playful part:</p>
 <ul>
 <li>Edit the code in <code>index.js</code> so that you see different
-questions when you run <code>node index.js</code>.</li>
+questions when you run <code>node index.js</code>. For example, you can
+ask for the user’s favourite colour, or their quest, or <a
+href="https://www.youtube.com/watch?v=0D7hFHfLEyk&amp;t=52s">what is the
+capital of Assyria?</a></li>
 <li>After each change, and before you run <code>node index.js</code>,
 see if you can predict what will happen.</li>
 <li>Pay attention to where spaces are needed.</li>
-<li>See if you can understand how the <code>+</code> operator works when
-it is placed between two strings. (You’ll see this in more detail
-later.)</li>
+<li><strong>See if you can understand how the <code>+</code> operator
+works when it is placed between two strings. (You’ll see this in more
+detail later.)</strong></li>
 <li>See what happens (if anything) when you change single quotes
 (<code>'</code>) to double quotes (<code>"</code>). What happens if you
 use one of each for the same string?</li>
@@ -1230,6 +1299,9 @@ which has key-value pairs. Here’s another object to illustrate this:</p>
 are similar to the rules for variable names. However, you can create a
 key name with any character in it, if you enclosed the key name with
 quotation marks.</p>
+<p><strong>Almost everything in JavaScript is structured as an
+object.</strong> You will learn more and more about them on your journey
+into JavaScript.</p>
 </details>
 <p>Take your time. Have fun. Move on to the next section when you are
 ready.</p>
@@ -1265,7 +1337,7 @@ if (readlineSync.keyInYN('Do you want this module?')) {
 when you run it.</li>
 <li>Run:</li>
 </ol>
-<pre class="language-tex wrap"><code class="language-tex wrap">node keyInYN.js</code></pre>
+<pre class="language-bash wrap"><code class="language-bash wrap">node keyInYN.js</code></pre>
 <ol start="4" type="1">
 <li>Press the <code>Y</code> key</li>
 <li>Look at the output. Was your prediction correct?</li>
@@ -1293,6 +1365,9 @@ does this. You can copy ideas from there.</p>
 <summary>
 Solution
 </summary>
+<p>You don’t need the <code>if ... else</code> statement. You can create
+a <code>const</code> variable to hold the response from
+<code>readline-sync</code>:</p>
 <pre class="language-javascript line-numbers"><code class="language-javascript line-numbers">const readlineSync = require("readline-sync");
 const question = "Do you want this module?"
 const yesOrNo = readlineSync.keyInYN(question) 
@@ -1314,7 +1389,8 @@ keyInYN</figcaption>
 <summary>
 Bonus question
 </summary>
-<p>Search the documentation for more places where it talks about
+<p>Search <a href="https://www.npmjs.com/package/readline-sync">the
+documentation</a> for more places where it talks about
 <code>keyInYN</code>, until you find this:</p>
 <blockquote>
 <h3 id="keyinyn">keyInYN</h3>
@@ -1440,6 +1516,13 @@ span many lines.</p>
 <p>In the code above, the comments indicate what code still has to be
 written. In other cases, you can use comments to explain what the code
 does. This is especially important if the logic is complex.</p>
+<p>The code in the main.js and complete.js files that you can <a
+href="https://merncraft.github.io/Nail-It/scripts.zip"
+download="">download in a ZIP file</a> contain many comments to help you
+understand what each block of code does. This is good practice. You
+won’t always remember how code your wrote three months ago worked, so
+you can’t expect other developers to understand it immediately
+either.</p>
 </details>
 <h2 id="truthy-and-falsy">Truthy and falsy</h2>
 <p>In the last section, you saw that the value generated by ’keyInYN()`
@@ -1460,10 +1543,10 @@ string <code>""</code> and a few other empty values as
 <code>undefined</code>. That’s another value that JavaScript treats
 <code>false</code>. These values are said to be <em>falsy</em>.</p>
 <p>Conversely, JavaScript treats anything that is not <code>false</code>
-or <code>0</code> or empty as <code>true</code>… even the word
-<code>"false"</code>, because <code>"false"</code> contains letters, so
-it’s not empty. Anything that is not <code>false</code> or falsy is
-<em>truthy</em>.</p>
+or <code>0</code> or empty as <code>true</code>. Perhaps surprisingly,
+even the word <code>"false"</code>, is treated as <code>true</code>,
+because <code>"false"</code> contains letters, so it’s not empty.
+Anything that is not <code>false</code> or falsy is <em>truthy</em>.</p>
 <p>To convert something truthy to <code>false</code>, or to convert
 something falsy to <code>true</code>, you can use the <a
 href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_NOT">logical
@@ -1478,8 +1561,8 @@ Playing with <code>node</code> in the Terminal
 </summary>
 <p>For testing, you can run an Interactive Development Environment (IDE)
 for Node in a Terminal.</p>
-<p>Open a new Terminal, and try this:</p>
-<pre class="language-tex wrap"><code class="language-tex wrap"><b>node</b>
+<p>Open a new Terminal, and type the word <code>node</code>:</p>
+<pre class="language-bash wrap"><code class="language-bash wrap"><b>node</b>
 Welcome to Node.js v23.1.0.
 Type ".help" for more information.
 &gt; <b>if (true) console.log("This", /* "but not this", */ "and that")</b>
@@ -1498,8 +1581,8 @@ statement will ignore any instructions associated with it.</p>
 <code>console.log()</code> did not generate a value. When you call
 <code>readlineSync.keyInYN()</code>, it generates a value, but
 <code>console.log()</code> just logs data quietly to the console.</p>
-<p>Try these expressions in the Node IDE. All the following should
-evaluate to <code>true</code>:</p>
+<p>Try these expressions in the Node IDE. <strong>All the following
+should evaluate to <code>true</code>:</strong></p>
 <pre class="language-javascript"><code class="language-javascript">2 === 2
 4 &gt; 2
 length = 2; length === 2
@@ -1507,16 +1590,18 @@ force = 3; length - force === -1
 length + force &lt; 6
 "length" + "force" === "lengthforce"
 !false</code></pre>
-<p>Note my use of a semicolon in the line
-<code>length = 2; length === 2</code>. This means:</p>
-<ul>
-<li>Instruction 1: Assign the value <code>2</code> to the variable
-<code>length</code></li>
-<li>Instruction 2: Tell me if the value of <code>length</code> is
-identical to <code>2</code>.</li>
-</ul>
+<p>Remember that three equals signs together (===) means “is identical
+to”.</p>
+<p>The first expression says: “2 is identical to 2”, and this is true.
+The second expression says “4 is greater than 2”, and this also
+true.</p>
+<p>In the third line, note my use of a semicolon: length = 2; length ===
+2. This means: * Instruction 1: Assign the value <code>2</code> to the
+variable <code>length</code> * Instruction 2: Tell me if the value of
+<code>length</code> is identical to <code>2</code>.</p>
 <p>The semicolon allows me to write two instructions on one line.</p>
-<p>All the following should evaluate to <code>false</code></p>
+<p><strong>All the following should evaluate to
+<code>false</code>:</strong></p>
 <pre class="language-javascript"><code class="language-javascript">!true
 2 != 2
 4 &lt; 2
@@ -1554,7 +1639,9 @@ Edited for clarity
 directly from the <code>readline-sync</code> code, using a technique
 known as <a
 href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">destructuring
-assignment</a>.</p>
+assignment</a>. This allows you to ask an object for one of its
+properties or methods by name. You can actually ask for several at once,
+as you will see shortly.</p>
 </details>
 <blockquote>
 <ul>
@@ -1574,7 +1661,7 @@ console.log(
   'Ok, ' + animals[index] + ' goes to your room.'
 )</code></pre>
 <p>In the Terminal:</p>
-<pre class="language-tex wrap"><code class="language-tex wrap">[1] Lion  
+<pre class="language-bash wrap"><code class="language-bash wrap">[1] Lion  
 [2] Elephant  
 [3] Crocodile  
 [4] Giraffe  
@@ -1588,12 +1675,12 @@ Ok, Elephant goes to your room.</code></pre>
 <ol type="1">
 <li>Using your Terminal, create a new file:</li>
 </ol>
-<pre class="language-tex wrap"><code class="language-tex wrap">code keyInSelect.js</code></pre>
-<ol type="1">
+<pre class="language-bash wrap"><code class="language-bash wrap">code keyInSelect.js</code></pre>
+<ol start="2" type="1">
 <li>Paste the code above into your new script file.</li>
 <li>In the Terminal, run:</li>
 </ol>
-<pre class="language-tex wrap"><code class="language-tex wrap">node keyInSelect.js</code></pre>
+<pre class="language-bash wrap"><code class="language-bash wrap">node keyInSelect.js</code></pre>
 <figure>
 <img src="images/keyInSelect.webp"
 alt="Testing keyInSelect() in a new script" />
@@ -1632,7 +1719,7 @@ than the number you press</figcaption>
 </figure>
 <p>You can try it several times. The value of <code>index</code> that is
 logged will always be 1 less than the number you press.</p>
-<pre class="language-tex"><code class="language-tex"><i>How hard do you plan to hit? [1, 2, 3, 0]: </i><b>0</b><i>
+<pre class="language-bash"><code class="language-bash"><i>How hard do you plan to hit? [1, 2, 3, 0]: </i><b>0</b><i>
 index: </i><b>-1</b><i>
 
 How hard do you plan to hit? [1, 2, 3, 0]: </i><b>1</b><i>
@@ -1703,7 +1790,8 @@ followed by square brackets which contain an integer. For example:</p>
 href="https://en.wikipedia.org/wiki/Zero-based_numbering">practical and
 theoretical reasons</a>, arrays in JavaScript start counting from zero,
 not from 1. There are zero items <em>before</em> ‘Lion’, so
-<code>animals[0]</code> refers to ‘Lion’.</p>
+<code>animals[0]</code> refers to ‘Lion’. There is one item before
+‘Elephant’, so <code>animals[1]</code> refers to ‘Elephant’.</p>
 <h2 id="animalsindex"><code>animals[index]</code></h2>
 <p>In the script that you have originally copied, the variable
 <code>index</code> receives an integer from <code>keyInSelect()</code>.
@@ -1717,7 +1805,7 @@ console.log(
 )</code></pre>
 <p>The adjusted value of <code>index</code> ensures that the output in
 the Terminal shows the correct animal name.</p>
-<pre class="language-tex wrap"><code class="language-tex wrap"><i>[1] Lion  
+<pre class="language-bash wrap"><code class="language-bash wrap"><i>[1] Lion  
 </i><b>[2] Elephant</b><i>  
 [3] Crocodile  
 [4] Giraffe  
@@ -1753,7 +1841,7 @@ you get the value you expect</figcaption>
 </figure>
 </details>
 <h2 id="adjusting-for-force">Adjusting for force</h2>
-<p>In the final version of your game, vhen you hit the nail “gently”,
+<p>In the final version of your game, when you hit the nail “gently”,
 the value returned by <code>keyInSelect()</code> will be <code>0</code>,
 but nail will get driven <code>1</code> unit into its support.</p>
 <p>Conversely, when the AI hits the nail with a force of <code>3</code>
@@ -1787,7 +1875,7 @@ Terminal</a>
 <li>Ask the player to press a number key.</li>
 </ol>
 <p>That’s good progress.</p>
-<p>Before moving on to drawing the nail, there are still two more trick
+<p>Before moving on to drawing the nail, there are still two more tricks
 that you can learn from the <a
 href="https://www.npmjs.com/package/readline-sync"><code>readline-sync</code>
 documentation</a>.</p>
@@ -1821,13 +1909,13 @@ it:</p>
 <li>Create a new file in your <code>Tests/readline-sync/</code>
 folder:</li>
 </ol>
-<pre class="language-tex wrap"><code class="language-tex wrap">code slider.js</code></pre>
+<pre class="language-bash wrap"><code class="language-bash wrap">code slider.js</code></pre>
 <ol start="2" type="1">
 <li>Paste the code shown above into the new file.</li>
 <li>Save your changes.</li>
 <li>In the Terminal, execute the command:</li>
 </ol>
-<pre class="language-tex wrap"><code class="language-tex wrap">node slider.js</code></pre>
+<pre class="language-bash wrap"><code class="language-bash wrap">node slider.js</code></pre>
 <ol start="5" type="1">
 <li>Press the <code>Z</code> and the <code>X</code> keys to make the
 <code>0</code> move left and right, and to update the number shown on
@@ -1846,8 +1934,8 @@ Terminal, with a different value each time.</p>
 strange?</p>
 <p>Or to put it another way: Can you guess what this code does?</p>
 <pre class="language-js wrap"><code class="language-js wrap">console.log('\x1B[1A\x1B[K')</code></pre>
-Do you think it might be connected with the way the slider bar updates
-itself.
+<p>Do you think it might be connected with the way the slider bar
+updates itself?</p>
 </details>
 <details class="sandbox" open>
 <summary>
@@ -1858,15 +1946,16 @@ Exploring something new
 <li>Create a new file in a new subfolder of your
 <code>Nail_It/Tests/</code> folder:</li>
 </ol>
-<pre class="language-tex wrap"><code class="language-tex wrap">code ../strings/deleteLines.js</code></pre>
+<pre class="language-bash wrap"><code class="language-bash wrap">code ../strings/deleteLines.js</code></pre>
 <p>This line says:</p>
-<pre class="language-tex wrap"><code class="language-tex wrap">* <b>code</b>             Hey VS Code!
+<pre class="language-bash wrap"><code class="language-bash wrap">* <b>code</b>             Hey VS Code!
 * <b>..</b>               Move to the parent folder of this
                    `readline-sync/` folder (that is: move
                    to the `Nail_It/Tests/` folder)
-* <b>/string</b>          Create a new folder there called `string`
-* <b>/deleteLines.js</b>  Create a JavaScript file there called
-                   `deleteLines.js`</code></pre>
+* <b>/string</b>          Imagine  a new folder there called `string`
+* <b>/deleteLines.js</b>  Imagine a JavaScript file there called
+                   `deleteLines.js`, and open this imaginary file
+                   in your text editor</code></pre>
 <ol start="2" type="1">
 <li>Paste the following code into your new file:</li>
 </ol>
@@ -1886,11 +1975,11 @@ console.log('\x1B[1A\x1B[K')</code></pre>
 <li>Tell the Terminal that you want to change directories, to work in
 the new <code>Nail_It/Tests/strings/</code> folder:</li>
 </ol>
-<pre class="language-tex wrap"><code class="language-tex wrap">cd ../strings</code></pre>
+<pre class="language-bash wrap"><code class="language-bash wrap">cd ../strings</code></pre>
 <ol start="5" type="1">
 <li>Run the script that you have just created:</li>
 </ol>
-<pre class="language-tex wrap"><code class="language-tex wrap">node deleteLines.js</code></pre>
+<pre class="language-bash wrap"><code class="language-bash wrap">node deleteLines.js</code></pre>
 <figure>
 <img src="images/deleteLine.webp"
 alt="console.log(&#39;\\x1B\[1A\\x1B\[K&#39;) deletes the last line" />
@@ -1912,7 +2001,7 @@ Can you delete more than one line?
 <p>OK. I’ll help you with this one. JavaScript has a method called <a
 href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/repeat"><code>repeat()</code></a>
 that you can use with a string. Here’s how it works:</p>
-<pre class="language-tex wrap"><code class="language-tex wrap"><b>node</b>
+<pre class="language-bash wrap"><code class="language-bash wrap"><b>node</b>
 Welcome to Node.js v23.1.0.
 Type ".help" for more information.
 &gt; <b>"blah ".repeat(3)</b>
@@ -1947,9 +2036,10 @@ delete 9 lines</figcaption>
 <h2>
 <a href="#never-repeat-a-trick">Never Repeat a Trick?</a>
 </h2>
-<p>One rule of illusionists is never to repeat a trick. If the audience
-knows what is going to happen, they will watch more closely, and they
-might notice something the illusionist does not want them to see.</p>
+<p>One rule of stage magicians is never to repeat a trick. If the
+audience knows what is going to happen, they will watch more closely,
+and they might notice something the illusionist does not want them to
+see.</p>
 <p>But the <code>slider.js</code> example allowed you to press the
 <code>Z</code> and the <code>X</code> keys multiple times. Each time,
 the <code>0</code> moved one step to the left or right. How did the code
@@ -1972,7 +2062,7 @@ console.log('\n\n' + (new Array(20)).join(' ') +
   else if (key === 'x') { if (value &lt; MAX) { value++; } }
   else { </i><b>break</b><i>; }</i>
 <b>}</b></code></pre>
-<h2 id="a-while-loops">A <code>while</code> loops</h2>
+<h2 id="a-while-loop">A <code>while</code> loop</h2>
 <p>The slider example uses a <a
 href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/while"><code>while</code>
 loop</a>.</p>
@@ -1990,12 +2080,12 @@ the loop.</p>
 hammered in. Here’s how you could do that:</p>
 <details class="sandbox" open>
 <summary>
-Solution
+Leaving a <code>while</code> loop
 </summary>
 <ol type="1">
 <li>Create a new file called <code>while.js</code>:</li>
 </ol>
-<pre class="language-tex wrap"><code class="language-tex wrap">code while.js</code></pre>
+<pre class="language-bash wrap"><code class="language-bash wrap">code while.js</code></pre>
 <ol start="2" type="1">
 <li>Paste the following code into it:</li>
 </ol>
@@ -2008,7 +2098,7 @@ console.log("length:", length)</code></pre>
 <ol start="3" type="1">
 <li>In the Terminal window, run:</li>
 </ol>
-<pre class="language-tex wrap"><code class="language-tex wrap">node while.js</code></pre>
+<pre class="language-bash wrap"><code class="language-bash wrap">node while.js</code></pre>
 <p>This is what you should see in the Terminal:</p>
 <figure>
 <img src="images/whileLength.webp"
@@ -2190,7 +2280,7 @@ alt="The Step Over button in the Control Panel" />
 Panel</figcaption>
 </figure>
 <ol start="2" type="1">
-<li>The first line of code will be executed. Iou will see that the
+<li>The first line of code will be executed. You will see that the
 variable <code>length</code> is now shown in the VARIABLES pane. The
 yellow pointer and highlight will move to the next line that is about to
 be executed.</li>
@@ -2260,7 +2350,7 @@ breakpoint</figcaption>
 debugger will pause at this breakpoint only if this expression is
 <code>true</code>. Type:</li>
 </ol>
-<pre class="language-tex wrap"><code class="language-tex wrap">length === 1</code></pre>
+<pre class="language-bash wrap"><code class="language-bash wrap">length === 1</code></pre>
 <p>This expression evaluates to <code>true</code> only if the value of
 the <code>length</code> variable is identical to the number
 <code>1</code>.</p>
@@ -2280,7 +2370,7 @@ alt="The Continue button in the Control Panel" />
 Panel</figcaption>
 </figure>
 <p>This will make the debugger run through every step automatically
-until it finds itself on line <code>4</code> and the the value of the
+until it finds itself on line <code>4</code> and the value of the
 <code>length</code> variable is identical to the number <code>1</code>.
 Then it will pause.</p>
 <figure>
@@ -2315,7 +2405,7 @@ alt="When length === 0, the while loop will stop" />
 <figcaption aria-hidden="true">When <code>length === 0</code>, the
 <code>while</code> loop will stop</figcaption>
 </figure>
-<ol type="1">
+<ol start="6" type="1">
 <li><p>Use Step Over again, to execute the final line
 <code>console.log("length:", length)</code>. One last entry will be
 printed in the Debug Console.</p></li>
@@ -2394,17 +2484,17 @@ directory.</li>
 Need to change directory?
 </summary>
 <p>If you have only the <code>strings</code> directory open, run…</p>
-<pre class="language-tex wrap"><code class="language-tex wrap">strings % <b>cd ../../</b>
+<pre class="language-bash wrap"><code class="language-bash wrap">strings % <b>cd ../../</b>
 james@M1 Nail_It % </code></pre>
 <p>… to change directory to the grandparent of the
 <code>Nail_It/Tests/strings</code> directory.</p>
 </details>
-<ol type="1">
+<ol start="2" type="1">
 <li><p>Open <code>main.js</code> in VS Code’s text editor.</p></li>
 <li><p>Edit <code>main.js</code>.</p></li>
 <li><p>To test if your edits are working as you expect, in a Terminal
 open on your <code>Nail_It</code> directory, run:</p>
-<pre class="language-tex wrap"><code class="language-tex wrap">node main.js</code></pre></li>
+<pre class="language-bash wrap"><code class="language-bash wrap">node main.js</code></pre></li>
 </ol>
 <details class="hint">
 <summary>
@@ -2426,7 +2516,7 @@ will automatically be added between the paramaters in the output.</li>
 <code>node main.js</code>.</li>
 </ul>
 </details>
-<details class="solution" open>
+<details class="solution">
 <summary>
 A simple solution
 </summary>
@@ -2455,7 +2545,7 @@ let player = readlineSync.keyInYN(whoStarts)</i>
 <b>console.log('\x1B[1A\x1B[K'.repeat(14))
 console.log("-" + "=".repeat(11) + "| The nail is 12 units long.")</b></code></pre>
 </details>
-<details class="solution" open>
+<details class="solution">
 <summary>
 A better solution, using variables
 </summary>
@@ -2496,7 +2586,7 @@ console.log(nail, prompt)</b></code></pre>
 variable to store the length?</p>
 <p>Note that if you set <code>const toDelete = 13</code> then not all of
 the rules will be deleted:</p>
-<pre class="language-tex wrap"><code class="language-tex wrap"><b>node main.js</b>
+<pre class="language-bash wrap"><code class="language-bash wrap"><b>node main.js</b>
 Let's knock a nail into this computer!
 
 -==============| The nail is 15 units long.</code></pre>
@@ -2515,7 +2605,7 @@ player to play solo.</p>
 about <code>true</code> and <code>false</code></a>, you saw this
 <code>if</code> statement with two branches?</p>
 <pre class="language-javascript wrap"><code class="language-javascript wrap">if (player) { // it's the human player's turn
-  
+  // TODO: ask the human player for a number between 1 and 3
 } else { // it's the AI's turn to play
   // TODO: choose the number between 1 and 3 to ensure AI wins
   // (if possible)
@@ -2539,7 +2629,7 @@ Placeholder for AI
 <p>Question: What do you expect will happen if you run your script and
 press any key except <code>Y</code>?</p>
 <p>Answer: The game will print the string in the Terminal. And stop.</p>
-<pre class="language-tex wrap"><code class="language-tex wrap"><b>node main.js</b>
+<pre class="language-bash wrap"><code class="language-bash wrap"><b>node main.js</b>
 
 -===========| The nail is 12 units long.
 The AI is not ready yet. You'll have to play solo.
@@ -2548,6 +2638,8 @@ james@M1 Nail_It % </code></pre>
 <pre class="language-javascript line-numbers" data-start="33"><code class="language-javascript line-numbers">player = true
 force = 0</code></pre>
 <p>… have no effect. (So why are they there? 🤔)</p>
+<p>I’ve included them so that your game won’t break unexpectedly later.
+You can ignore them for now.</p>
 </details>
 <p>Until you have added real code for the AI, just remember to press
 <code>Y</code> each time you launch the game.</p>
@@ -2613,9 +2705,9 @@ Do you really need to require(‘readline-sync’) twice?
 <p>Because this solution used copy and paste, there is a <em>second</em>
 instruction to <code>require('readline-sync')</code></p>
 <pre class="language-javascript line-numbers" data-start="29"><code class="language-javascript line-numbers">  const { keyInSelect } = require('readline-sync')</code></pre>
-The Don’t Repeat Yourself principle (DRY) recommends that you never
+<p>The Don’t Repeat Yourself principle (DRY) recommends that you never
 repeat code if you can help it. Can you think of a better way to handle
-the way the <code>keyInSelect()</code> method is loaded?
+the way the <code>keyInSelect()</code> method is loaded?</p>
 </details>
 </details>
 <details class="solution">
@@ -2628,7 +2720,7 @@ elegant:</p>
 <li>The <code>keyInYN</code> and <code>keyInSelect</code> methods of
 <code>readline-sync</code> are loaded explicitly at the beginning of the
 script.</li>
-<li>The strings used to display text in the Terminal have been place
+<li>The strings used to display text in the Terminal have been placed
 together with all the other strings, so that it will be easy to find
 them if they need to be updated or translated.</li>
 <li>The string <code>"\x1B[1A\x1B[K"</code> has been assigned to its own
@@ -2705,7 +2797,7 @@ You'll have to play solo.`)
 </ul>
 <p>It’s good to have code that works. It’s better to keep your code
 well-organized. The process of tidying up code that is already working
-is called <em>refactoring</em>. You can read more about it <a
+is called <em>refactoring</em>. You can read more about refactoring <a
 href="https://www.techtarget.com/searchapparchitecture/definition/refactoring">here</a>.</p>
 <p><strong>During refactoring, you don’t fix anything that is broken,
 you don’t add any new features, you just simplify the
@@ -2760,7 +2852,7 @@ You'll have to play solo.`)
 index is not defined
 </summary>
 <p>Here’s the error that you will see:</p>
-<pre class="language-tex wrap"><code class="language-tex wrap"><i>-===========| The nail is 12 units long.
+<pre class="language-bash wrap"><code class="language-bash wrap"><i>-===========| The nail is 12 units long.
 
 [1] gently
 [2] firmly
@@ -2769,12 +2861,12 @@ index is not defined
 
 How hard do you plan to hit? [1, 2, 3, 0]: 3
 index: 2 strength: hard
-</i><b>/Users/james/Tutorials/My Learning Journey/Nail_It/main.js:51
+</i><b>/path/to/My Learning Journey/Nail_It/main.js:51
 length = length - index
                   ^
 
 ReferenceError: index is not defined
-    at Object.&lt;anonymous&gt; (/Users/james/Tutorials/My Learning Journey/Nail_It/main.js:51:19)</b></code></pre>
+    at Object.&lt;anonymous&gt; (/path/to/My Learning Journey/Nail_It/main.js:51:19)</b></code></pre>
 <p>In fact, there will be more information printed in the Terminal, but
 the key information is shown above.</p>
 </details>
@@ -2795,8 +2887,20 @@ You'll have to play solo.`)
 
 length = length - </i><b>index</b></code></pre>
 <h2 id="block-scope">Block scope</h2>
-<p>For JavaScript, the <code>index</code> that is declared inside curly
-braces (<code>{ ... }</code>) is accessible only inside those curly
+<p>JavaScript sets up barriers between different blocks of code so that
+data in one block doesn’t interfere with data from another. It uses
+curly braces (<code>{ ... }</code>) to do this. Humans do something
+similar with walls and fences and hedges.</p>
+<figure>
+<img src="images/HausWildenrathGarten.jpg"
+data-title="File:HausWildenrathGarten.jpg"
+data-credits="[CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.en) by [Bodoklecksel](https://de.wikipedia.org/wiki/Benutzer:Bodoklecksel) | [source](https://commons.wikimedia.org/wiki/File:HausWildenrathGarten.jpg)"
+alt="Fences and hedges to keep things safely in place" />
+<figcaption aria-hidden="true">Fences and hedges to keep things safely
+in place</figcaption>
+</figure>
+<p>For JavaScript, the <code>index</code> that is <em>declared</em>
+inside curly braces is <em>accessible</em> only inside those curly
 braces. This is due to a concept called <em>scope</em>. Any time a
 variable is declared inside curly braces, the world outside those curly
 braces cannot touch it. See <a
@@ -2814,14 +2918,28 @@ But if you hear a stranger on the street use the same word, you know
 that they are talking about someone else. Within the <em>scope</em> of
 your family, “Mum” refers to a particular person. Outside the scope of
 your family, “Mum” means something different.</p>
+<p>The scope of a celebrity, on the other hand, is much wider than the
+scope of your family. If you say “the president”, the word will have the
+same public meaning for every family in your country. However, if you
+are talking to another member of your local chess club, “the president”
+may privately mean “the president of the local chess club.” The name can
+be redefined in certain contexts.</p>
+<p>The same is true in JavaScript: a variable that is declared outside a
+pair of curly braces has the same meaning when it is used inside the
+curly braces… unless a new variable with the same name is declared
+inside the curly braces, in which case the two
+variables-with-the-same-name can have different values. The value set
+inside the curly braces will not be available outside, and the value set
+outides the curly braces will not be available inside. Each variable is
+exclusive to its own scope.</p>
 <p>In the code above, the <code>index</code> on line 51 has not been
 declared using <code>const</code> or <code>let</code> or even
 <code>var</code>. So JavaScript gives you an error:</p>
-<pre class="language-tex wrap"><code class="language-tex wrap">ReferenceError: index is not defined</code></pre>
+<pre class="language-bash wrap"><code class="language-bash wrap">ReferenceError: index is not defined</code></pre>
 <h2 id="fixing-the-problem">Fixing the problem</h2>
-<p>To tell the truth, <code>index</code> does not hold the right number.
-As you saw in section <a href="#choosing-a-number">17. Choosing a
-Number</a>, <code>index</code> refers to the position of the word
+<p>To tell the truth, <code>index</code> does even not hold the right
+number. As you saw in section <a href="#choosing-a-number">17. Choosing
+a Number</a>, <code>index</code> refers to the position of the word
 <code>"hard"</code> inside the <code>strength</code> array, and
 positions in an array are counted starting from zero.</p>
 <p>What you want is a number that is <code>index + 1</code>. Here’s how
@@ -2868,7 +2986,7 @@ length = length - </i><b>force</b></code></pre>
 Assignment to constant variable
 </summary>
 <p>Now you get a new error:</p>
-<pre class="language-tex wrap"><code class="language-tex wrap"><i>-===========| The nail is 12 units long.
+<pre class="language-bash wrap"><code class="language-bash wrap"><i>-===========| The nail is 12 units long.
 
 [1] gently
 [2] firmly
@@ -2877,12 +2995,12 @@ Assignment to constant variable
 
 How hard do you plan to hit? [1, 2, 3, 0]: 3
 index: 2 strength: hard</i>
-<b>/Users/james/Tutorials/My Learning Journey/Nail_It/main.js:54
+<b>/path/to/My Learning Journey/Nail_It/main.js:54
 length = length - force
        ^
 
 TypeError: Assignment to constant variable.
-    at Object.&lt;anonymous&gt; (/Users/james/Tutorials/My Learning Journey/Nail_It/main.js:54:8)</b></code></pre>
+    at Object.&lt;anonymous&gt; (/path/to/My Learning Journey/Nail_It/main.js:54:8)</b></code></pre>
 <p>This is my fault (but I did it on purpose). On line 22, I got you to
 declare <code>length</code> using <code>const</code>. This tells
 JavaScript that its value will never change.</p>
@@ -2890,7 +3008,7 @@ JavaScript that its value will never change.</p>
 <p>So, when on line 54, the script tries to set <code>length</code> to a
 different value…</p>
 <pre class="language-javascript line-numbers" data-start="54"><code class="language-javascript line-numbers">length = length - force</code></pre>
-<p>… JavaScript complains.</p>
+<p>… JavaScript rightly complains.</p>
 </details>
 <details class="challenge" open>
 <summary>
@@ -2906,7 +3024,7 @@ Solution
 <code>let</code> instead of const.</p>
 <pre class="language-javascript line-numbers" data-start="22"><code class="language-javascript line-numbers">let length    = 12</code></pre>
 <p>Now the output in the Terminal looks good. No errors.</p>
-<pre class="language-tex wrap"><code class="language-tex wrap">-===========| The nail is 12 units long.
+<pre class="language-bash wrap"><code class="language-bash wrap">-===========| The nail is 12 units long.
 
 [1] gently
 [2] firmly
@@ -2930,7 +3048,7 @@ activity for a solo player. Below is a list of challenges for you.</p>
 <p>I’ll treat each one in a separate section.</p>
 <h3 id="after-the-nail-is-hit-can-you-show-it-at-its-new-length">1.
 After the nail is hit, can you show it at its new length?</h3>
-<pre class="language-tex wrap"><code class="language-tex wrap">-===========| The nail is 12 units long.
+<pre class="language-bash wrap"><code class="language-bash wrap">-===========| The nail is 12 units long.
 
 [1] gently
 [2] firmly
@@ -2939,9 +3057,9 @@ After the nail is hit, can you show it at its new length?</h3>
 
 How hard do you plan to hit? [1, 2, 3, 0]: 3
 -========|</code></pre>
-<h3 id="can-you-show-how-hard-the-solo-player-chose-to-hit-the-nail">2.
-Can you show how hard the solo player chose to hit the nail?</h3>
-<pre class="language-tex wrap"><code class="language-tex wrap">-===========| The nail is 12 units long.
+<h3 id="can-you-show-how-hard-the-solo-player-hits-the-nail">2. Can you
+show how hard the solo player hits the nail?</h3>
+<pre class="language-bash wrap"><code class="language-bash wrap">-===========| The nail is 12 units long.
 
 [1] gently
 [2] firmly
@@ -2950,15 +3068,14 @@ Can you show how hard the solo player chose to hit the nail?</h3>
 
 How hard do you plan to hit? [1, 2, 3, 0]: 2
 -=========| You hit the nail firmly.</code></pre>
-<h3 id="can-you-remove-the-question-after-it-has-been-answered">3. Can
-you remove the question after it has been answered?</h3>
-<pre class="language-tex wrap"><code class="language-tex wrap">-===========| The nail is 12 units long.
+<h3 id="can-you-remove-the-question-after-it-is-answered">3. Can you
+remove the question after it is answered?</h3>
+<pre class="language-bash wrap"><code class="language-bash wrap">-===========| The nail is 12 units long.
 
 -==========| You hit the nail gently.</code></pre>
-<h3
-id="can-you-let-the-solo-player-hit-the-nail-several-times-in-a-row">4.
-Can you let the solo player hit the nail several times in a row?</h3>
-<pre class="language-tex wrap"><code class="language-tex wrap">-===========| The nail is 12 units long.
+<h3 id="can-you-let-the-solo-player-hit-the-nail-several-times">4. Can
+you let the solo player hit the nail several times?</h3>
+<pre class="language-bash wrap"><code class="language-bash wrap">-===========| The nail is 12 units long.
 
 -========| You hit the nail hard.
 
@@ -2973,7 +3090,7 @@ Can you let the solo player hit the nail several times in a row?</h3>
 id="can-you-show-the-winning-situation-even-if-the-solo-player-hits-the-nail-too-hard-the-last-time">5.
 Can you show the winning situation… even if the solo player hits the
 nail too hard the last time?</h3>
-<pre class="language-tex wrap"><code class="language-tex wrap">-===========|  The nail is 12 units long.
+<pre class="language-bash wrap"><code class="language-bash wrap">-===========|  The nail is 12 units long.
 
 -==========|  You hit the nail gently.
 
@@ -2993,7 +3110,7 @@ You win!</code></pre>
 <h3
 id="can-you-show-the-point-of-the-nail-only-at-the-start-of-the-game">6.
 Can you show the point of the nail only at the start of the game?</h3>
-<pre class="language-tex wrap"><code class="language-tex wrap">-===========|  The nail is 12 units long.
+<pre class="language-bash wrap"><code class="language-bash wrap">-===========|  The nail is 12 units long.
 
 =========|  You hit the nail hard.
 
@@ -3010,7 +3127,7 @@ Can you show the point of the nail only at the start of the game?</h3>
 You win!</code></pre>
 <h3 id="can-you-align-all-the-text-nicely">7. Can you align all the text
 nicely?</h3>
-<pre class="language-tex wrap"><code class="language-tex wrap">-===========| The nail is 12 units long.
+<pre class="language-bash wrap"><code class="language-bash wrap">-===========| The nail is 12 units long.
 
 ==========|   You hit the nail firmly.
 
@@ -3030,12 +3147,12 @@ You win!</code></pre>
 <h3 id="can-you-give-the-nail-a-different-length-each-time">8. Can you
 give the nail a different length each time?</h3>
 <p>For example:</p>
-<pre class="language-tex wrap"><code class="language-tex wrap"><i>-===========| The nail is </i><b>15</b><i> units long.</i></code></pre>
-<h3 id="can-you-stop-the-game-early-before-there-is-a-winner">9. Can you
-stop the game early, before there is a winner?</h3>
+<pre class="language-bash wrap"><code class="language-bash wrap"><i>-===========| The nail is </i><b>15</b><i> units long.</i></code></pre>
+<h3 id="can-you-stop-the-game-early-before-anyone-wins">9. Can you stop
+the game early, before anyone wins?</h3>
 <p>If the human player presses <code>0</code> when asked how hard to
 hit, can you make the game end gracefully?</p>
-<pre class="language-tex wrap"><code class="language-tex wrap"><i>-==============| The nail is 15 units long.
+<pre class="language-bash wrap"><code class="language-bash wrap"><i>-==============| The nail is 15 units long.
 
 ============|    You hit the nail hard.
 
@@ -3055,10 +3172,10 @@ Thanks for playing!</b></code></pre>
 </h2>
 <details class="challenge" open>
 <summary>
-#1 &lt;After the nail is hit, can you show it at its new length?
+Challenge 1: After the nail is hit, can you show it at its new length?
 </summary>
 <p>Here’s what you need to print in the Terminal:</p>
-<pre class="language-tex wrap"><code class="language-tex wrap"><i>-===========| The nail is 12 units long
+<pre class="language-bash wrap"><code class="language-bash wrap"><i>-===========| The nail is 12 units long
 
 [1] gently
 [2] firmly
@@ -3104,6 +3221,7 @@ might be a clue for challenge N° 2.</li>
 <li>I’ve removed the <code>console.log()</code> statement from the first
 branch of the <code>if</code> statement, because it’s not needed
 anymore.</li>
+<li>Changed lines are shown in bold.</li>
 </ol>
 <pre class="language-javascript line-numbers"><code class="language-javascript line-numbers"><i>const {
   keyInYN,
@@ -3182,7 +3300,7 @@ Redrawing the Nail</a>, each challenge has three parts:</p>
 different places in the code.</p>
 <details class="tip" open>
 <summary>
-Tip
+Tip 1
 </summary>
 <h3
 id="you-wont-learn-much-if-you-simply-copy-and-paste-the-changed-lines-of-code.">You
@@ -3199,7 +3317,7 @@ reproduce them.</p>
 </details>
 <details class="tip" open>
 <summary>
-Tip
+Tip 2
 </summary>
 <h3 id="if-you-dont-understand-the-changed-lines-do-some-research.">If
 you don’t understand the changed lines, do some research.</h3>
@@ -3207,21 +3325,48 @@ you don’t understand the changed lines, do some research.</h3>
 <ol type="1">
 <li>In your browser, create a query for <code>js ...</code> followed by
 the keywords in the code that you don’t understand</li>
-<li>Add a breakpoint to your code, open your debugger and step through
-the code line by line
-<ul>
-<li>Watch how the value of variables change in the VARIABLES panel</li>
-<li>Use the WATCH pane to check the value of longer expressions</li>
-<li>Check which path your code takes through an
-<code>if ... else ...</code> statement</li>
-<li>Check if the value of the expression in any
-<code>while (expression) { ... }</code> statements is still true</li>
-</ul></li>
+<li>Look at different articles until you find one that make everything
+clear for you</li>
+<li>Run tests in separate .js files or in the Node IDE, using examples
+from the articles that you read</li>
+<li>Do your best to predict what the outcome of each test will be, and
+review your understanding if your prediction is wrong.</li>
 </ol>
+</details>
+<details class="note" open>
+<summary>
+<code>js</code>, or searching online for “JavaScript”
+</summary>
+<p>In the Google search query I used above, I wrote <code>js</code> and
+not <code>JavaScript</code>. There are many many JavaScript programmers
+who work for search-engine companies, and they all like to type as
+little as possible. As a result, their algorithms understand that the
+extension <code>js</code> refers to JavaScript, and you don’t have to
+type the full name each time you make a query.</p>
 </details>
 <details class="tip" open>
 <summary>
-Tip
+Tip 3
+</summary>
+<h3 id="learning-anything-feels-awkward">Learning anything feels
+awkward</h3>
+<p>Whenever you learn something new, like playing a musical instrument,
+touch-typing, driving a car, moon-walking, cooking an egg, playing
+basketball, or whatever, you have to focus and think actively about what
+order to make what move. As the skill becomes familiar to you, your
+brain develops pathways for your thoughts to follow, without you being
+conscious of them.</p>
+<p>Learning to be a developer is no different. When you start, you keep
+having to look at your notes and the instructions you are following, the
+concepts you are learning seem strange and arbitrary and disconnected,
+you feel that the process should be easier.</p>
+<p>Just remember that even when you were learning to walk, you kept
+falling and kept getting up. And finally, you were able to reach the
+cookie jar all by yourself.</p>
+</details>
+<details class="tip" open>
+<summary>
+Tip 4
 </summary>
 <h3
 id="if-you-think-you-have-correctly-altered-your-code-but-it-doesnt-work-as-expected-compare-your-code-with-mine.">If
@@ -3269,16 +3414,19 @@ inline…</p>
 </details>
 <details class="tip" open>
 <summary>
-Tip
+Tip 5
 </summary>
 <h3 id="embrace-your-mistakes">Embrace your mistakes</h3>
 <p>If you get everything right the first time, then your brain has not
 had to work very hard, so it’s not going to make the effort to
 remember.</p>
-<p>If you make a mistake, you will feel some kind of emotion. Your
-memory is triggered by emotions. After you fix the mistake, your memory
-will store your experience for later, so that you can avoid these
-emotions later.</p>
+<p>If you make a mistake, you will feel some kind of emotion. Research
+shows that your <a
+href="https://en.wikipedia.org/wiki/Emotion_and_memory">memory is
+triggered by emotions</a>.</p>
+<p><a
+href="https://www.brainyquote.com/quotes/bill_ackman_666894">“Experience
+is making mistakes and learning from them.”</a></p>
 <p>In other words: making mistakes is one of the keys to learning.</p>
 </details>
 </section>
@@ -3289,11 +3437,11 @@ emotions later.</p>
 </h2>
 <details class="challenge" open>
 <summary>
-#2 Can you show how hard the solo player chose to hit the nail?
+Challenge 2: Can you show how hard the solo player hits the nail?
 </summary>
 <p>Here’s what the Terminal should show when you have finished this
 challenge:</p>
-<pre class="language-tex wrap"><code class="language-tex wrap"><i>-===========| The nail is 12 units long
+<pre class="language-bash wrap"><code class="language-bash wrap"><i>-===========| The nail is 12 units long
 
 [1] gently
 [2] firmly
@@ -3316,10 +3464,12 @@ of the prompt that will always be the same.</li>
 They will be separated by a space.</li>
 </ol>
 </details>
-<details class="solution">
+<details class="solution" open>
 <summary>
 Solution
 </summary>
+<p>There are three changed lines of code. Look for <strong>bold</strong>
+text.</p>
 <pre class="language-javascript line-numbers"><code class="language-javascript line-numbers"><i>const {
   keyInYN,
   keyInSelect
@@ -3388,11 +3538,11 @@ that this should be fixed later.</p>
 </h2>
 <details class="challenge" open>
 <summary>
-#3 Can you remove the question after it has been answered?
+Challenge 3: Can you remove the question after it is answered?
 </summary>
 <p>The Terminal would look better if the question were removed, and just
 the result of answering the question were shown.</p>
-<pre class="language-tex wrap"><code class="language-tex wrap">-===========| The nail is 12 units long.
+<pre class="language-bash wrap"><code class="language-bash wrap">-===========| The nail is 12 units long.
 
 -==========| You hit the nail gently.</code></pre>
 <details class="hint">
@@ -3414,6 +3564,7 @@ could use…</p>
 <summary>
 Solution
 </summary>
+<p>There are three <strong>changed</strong> lines in the code below.</p>
 <pre class="language-javascript line-numbers"><code class="language-javascript line-numbers"><i>const {
   keyInYN,
   keyInSelect
@@ -3481,14 +3632,14 @@ console.log(nail, prompt)</i></code></pre>
 </h2>
 <details class="challenge" open>
 <summary>
-#4 Can you let the solo player hit the nail several times in a row?
+Challenge 4: Can you let the solo player hit the nail several times?
 </summary>
 <p>This challenge is more tricky. I expect that you will see a number of
 errors as you work on it, so I will walk you through it. Fixing these
 errors will also resolve the WET issue (We Enjoy Typing - the opposite
 of DRY).</p>
 <p>Here’s the display in the Terminal that you are aiming for:</p>
-<pre class="language-tex wrap"><code class="language-tex wrap"><i>-===========| The nail is 12 units long.
+<pre class="language-bash wrap"><code class="language-bash wrap"><i>-===========| The nail is 12 units long.
 
 -========| You hit the nail hard.</i>
 
@@ -3504,8 +3655,7 @@ of DRY).</p>
 <p>In section <a href="#never-repeat-a-trick">20: Never Repeat a
 Trick</a>, you wrote a script called <code>while.js</code>, which logged
 <code>Nail length:</code> from 12 down to 1.</p>
-<pre class="language-javascript line-numbers"><code class="language-javascript line-numbers">
-let length = 12
+<pre class="language-javascript line-numbers"><code class="language-javascript line-numbers">let length = 12
 while (length) {
   console.log("Nail length: " + length)
   length = length - 1
@@ -3543,7 +3693,7 @@ console.log(nail, prompt)</i>
 <ol start="2" type="1">
 <li>In the Terminal, run:</li>
 </ol>
-<pre class="language-tex wrap"><code class="language-tex wrap">node main.js</code></pre>
+<pre class="language-bash wrap"><code class="language-bash wrap">node main.js</code></pre>
 <ol start="3" type="1">
 <li>Press <code>Y</code> to choose to start.</li>
 <li>Press a number from <code>1</code> to <code>3</code> each time you
@@ -3555,7 +3705,7 @@ error:</p>
 <summary>
 Invalid count value: -1
 </summary>
-<pre class="language-tex wrap"><code class="language-tex wrap"><i>-===========| The nail is 12 units long.
+<pre class="language-bash wrap"><code class="language-bash wrap"><i>-===========| The nail is 12 units long.
 
 -========| You hit the nail hard.
 
@@ -3567,20 +3717,20 @@ Invalid count value: -1
 
 -| You hit the nail hard.</i>
 
-<b>/Users/james/Tutorials/My Learning Journey/Nail_It/main.js:56
+<b>/path/to/My Learning Journey/Nail_It/main.js:56
   nail      = "-" + "=".repeat(length - 1) + "|"
                         ^
 
 RangeError: Invalid count value: -1
     at String.repeat (&lt;anonymous&gt;)
-    at Object.&lt;anonymous&gt; (/Users/james/Tutorials/My Learning Journey/Nail_It/main.js:56:25)</b></code></pre>
+    at Object.&lt;anonymous&gt; (/path/to/My Learning Journey/Nail_It/main.js:56:25)</b></code></pre>
 </details>
 <h2 id="the-debugger-to-the-rescue">The debugger to the rescue!</h2>
 <p>It might be helpful to use VS Code’s debugger to see what the problem
 is.</p>
 <ol type="1">
-<li>Press the F5 shortcut (or use the menu item Run &gt; Start Debugging
-if you have the time, and no-one’s looking)</li>
+<li>Press the <code>F5</code> shortcut (or use the menu item Run &gt;
+Start Debugging if you have the time, and no-one’s looking)</li>
 <li>As before, select Node.js in the Command Palette when asked which
 language you want to debug.</li>
 </ol>
@@ -3606,7 +3756,7 @@ occurred on line 38 of <code>main.js</code>.</p>
 <summary>
 environment doesn’t support interactive reading from TTY
 </summary>
-<pre class="language-tex wrap"><code class="language-tex wrap">opt/homebrew/bin/node ./main.js
+<pre class="language-bash wrap"><code class="language-bash wrap">opt/homebrew/bin/node ./main.js
 Let's knock a nail into this computer!
 
 * Each player takes a turn to hit the nail once.
@@ -3622,11 +3772,11 @@ Are you ready?
 Process exited with code 1
 Uncaught Error Error: The current environment doesn't support interactive reading from TTY.
 stty: /dev/tty: Device not configured
-/Users/james/Tutorials/My Learning Journey/Nail_It/node_modules/readline-sync/lib/read.sh: line 49: /dev/tty: Device not configured
+/path/to/My Learning Journey/Nail_It/node_modules/readline-sync/lib/read.sh: line 49: /dev/tty: Device not configured
 stty: /dev/tty: Device not configured
-    at readlineExt (/Users/james/Tutorials/My Learning Journey/Nail_It/node_modules/readline-sync/lib/readline-sync.js:221:19)</code></pre>
+    at readlineExt (/path/to/My Learning Journey/Nail_It/node_modules/readline-sync/lib/readline-sync.js:221:19)</code></pre>
 <pre class="skip"><code class="skip">  # lines skipped #</code></pre>
-<pre class="language-tex wrap"><code class="language-tex wrap">    at &lt;anonymous&gt; (/Users/james/Tutorials/My Learning Journey/Nail_It/<b>main.js:38:14)</b></code></pre>
+<pre class="language-bash wrap"><code class="language-bash wrap">    at &lt;anonymous&gt; (/path/to/My Learning Journey/Nail_It/<b>main.js:38:14)</b></code></pre>
 </details>
 <p>Here is line 38 of <code>main.js</code>:</p>
 <pre class="language-javascript line-numbers" data-start="38"><code class="language-javascript line-numbers">let player = keyInYN(whoStarts)</code></pre>
@@ -3638,7 +3788,7 @@ doesn’t work with <code>readline-sync</code>.</strong></p>
 <code>readline-sync</code> interacts with the Terminal. Out of the box,
 they are incompatible.</p>
 <p>But you can guess that if I suggested that you use the debugger,
-there will be a solution. The question is: How to find the solution.</p>
+there will be a solution. The question is: How to find the solution?</p>
 <p>Google is your friend. The problem you have just met is due to the
 interaction between three things: VS Code, <code>readline-sync</code>
 and the debugger. Here’s a Google query for exactly these three
@@ -3666,7 +3816,9 @@ where developers of all levels, using every imaginable coding language
 can ask questions and get answers.</p>
 <p>Most questions that you may have will already have been asked and
 answered, so you should search for existing answers before you ask a
-question of your own.</p>
+question of your own. If you don’t the seasoned developers (who have
+seen these questions so many times before) will politely but firmly tell
+you to look before you ask.</p>
 <p>The site is gamified. You earn points for asking good questions, you
 earn points for giving good answers. But you can also lose points if
 your question is badly written, or shows that you haven’t even tried to
@@ -3675,6 +3827,9 @@ times.</p>
 <p>Good answers get upvoted. You can see how many points the person who
 answered the question has earned. You can easily see which answers you
 can trust.</p>
+<p>Good questions also get upvoted. So when you write a question, take
+your time to write it carefully so that it will be useful for
+others.</p>
 </details>
 <p>If I visit this stackoverflow link, I find that the question does not
 exactly match my problem. But I’m interested in answers.</p>
@@ -3688,7 +3843,7 @@ answer</a></li>
 <figcaption aria-hidden="true">Muneeb’s answer</figcaption>
 </figure>
 <p><strong>“Well that’s very nice. An answer with 10 reputation
-poinst,”</strong> you think. <strong>“But what’s a
+points,”</strong> you think. <strong>“But what’s a
 <code>launch.json</code> file? And where do I put this line
 <code>"console": "integratedTerminal"</code>?”</strong></p>
 <ol start="3" type="1">
@@ -3739,7 +3894,7 @@ code written in <code>node_internals</code>.</p>
     }
   ]
 }</i></code></pre>
-<ol type="1">
+<ol start="6" type="1">
 <li>Add the line suggested by Muneeb to your new
 <code>launch.json</code> file.</li>
 <li>Be sure to place a comma (<code>,</code>) at the end of the previous
@@ -3771,9 +3926,9 @@ Panel</figcaption>
 <li>Check the first error you got, before you ran the debugger, to see
 where the error occurred:</li>
 </ol>
-<pre class="language-tex wrap"><code class="language-tex wrap">RangeError: Invalid count value: -1
+<pre class="language-bash wrap"><code class="language-bash wrap">RangeError: Invalid count value: -1
     at String.repeat (&lt;anonymous&gt;)
-    at Object.&lt;anonymous&gt; (/Users/james/Tutorials/My Learning Journey/Nail_It/<b>main.js:56:25</b>)</code></pre>
+    at Object.&lt;anonymous&gt; (/path/to/My Learning Journey/Nail_It/<b>main.js:56:25</b>)</code></pre>
 <ol start="3" type="1">
 <li>Put a debug breakpoint on line 56 of your <code>main.js</code>
 script:</li>
@@ -3783,13 +3938,10 @@ script:</li>
 <figcaption aria-hidden="true">Add a breakpoint to line 56</figcaption>
 </figure>
 <ol start="4" type="1">
-<li>Press the <code>F5</code> key to start debugging.</li>
-</ol>
-<p>Your game will ask you to press <code>Y</code> and then choose a
-number from 1 - 3.</p>
-<ol start="5" type="1">
-<li>Press <code>3</code> on your keyboard.</li>
-</ol>
+<li><p>Press the <code>F5</code> key to start debugging. Your game will
+ask you to press <code>Y</code> and then choose a number from 1 -
+3.</p></li>
+<li><p>Press <code>3</code> on your keyboard.</p>
 <p>The debugger will stop on line 56, before it executes that line.</p>
 <figure>
 <img src="images/debugFirstPass.webp"
@@ -3800,11 +3952,9 @@ alt="Going through first pass off the while loop with the debugger" />
 <p>You can see that the value of <code>force</code> has been set to
 <code>3</code>, and that <code>length</code> has been updated to
 <code>9</code>. The value of <code>nail</code> is still exactly what you
-code calculated on line 33. The nail is still 12 units long.</p>
-<ol start="6" type="1">
-<li>Click on the Step Over button in the Command Palette, or press the
-<code>F10</code> shortcut.</li>
-</ol>
+code calculated on line 33. The nail is still 12 units long.</p></li>
+<li><p>Click on the Step Over button in the Command Palette, or press
+the <code>F10</code> shortcut.</p>
 <figure>
 <img src="images/updateNail.webp"
 alt="The value for nail is updated when you activate Step Over" />
@@ -3812,10 +3962,8 @@ alt="The value for nail is updated when you activate Step Over" />
 updated when you activate Step Over</figcaption>
 </figure>
 <p>JavaScript has no problem creating a new string for
-<code>nail</code>.</p>
-<ol start="7" type="1">
-<li>Activate Step Over two more times.</li>
-</ol>
+<code>nail</code>.</p></li>
+<li><p>Activate Step Over two more times.</p>
 <figure>
 <img src="images/redrawTheNail.webp"
 alt="The question is cleared and the nail is redrawn" />
@@ -3828,14 +3976,12 @@ redrawn</figcaption>
 <li>A new, shorter version of the nail will be drawn</li>
 <li>The debugger will jump back to the beginning of the
 <code>while</code> loop</li>
-</ul>
-<ol start="8" type="1">
-<li>Activate Step Over three more times. The debugger will step back
+</ul></li>
+<li><p>Activate Step Over three more times. The debugger will step back
 into the <code>while</code> loop, because <code>length</code> is
 <code>9</code> and non-zero numbers are truthy. But on the third step,
 the debugger will stop showing which line is about to be executed and it
-will stop showing any variables.</li>
-</ol>
+will stop showing any variables.</p>
 <figure>
 <img src="images/readlineSyncIsActive.webp"
 alt="The debugger takes a break while readline-sync is active" />
@@ -3844,11 +3990,9 @@ readline-sync is active</figcaption>
 </figure>
 <p>This is because the <code>keyInSelect()</code> method of
 <code>readline-sync</code> has taken control. It’s busy listening for
-your input in the Terminal.</p>
-<ol start="9" type="1">
-<li>Click on the Terminal to activate it</li>
-<li>On your keyboard, press a number from 1 - 3.</li>
-</ol>
+your input in the Terminal.</p></li>
+<li><p>Click on the Terminal to activate it.</p></li>
+<li><p>On your keyboard, press a number from 1 - 3.</p>
 <figure>
 <img src="images/debuggerActiveAgain.webp"
 alt="The debugger becomes active again after keyInSelect() returns a value" />
@@ -3856,19 +4000,15 @@ alt="The debugger becomes active again after keyInSelect() returns a value" />
 <code>keyInSelect()</code> returns a value</figcaption>
 </figure>
 <p>The debugger becomes active again.</p>
-<p>Note that there is an entry for <code>index</code> in the
-<code>Block</code> section of the VARIABLES pane. (The value
-<code>this</code> is there for house-keeping reasons.)</p>
-<ol start="11" type="1">
-<li>Press the Continue button in the Control Panel, or press the
-shortcut key <code>F5</code>.</li>
-</ol>
+<p><strong>Note that there is an entry for <code>index</code> in the
+<code>Block</code> section of the VARIABLES pane.</strong> (The value
+<code>this</code> is there for house-keeping reasons.)</p></li>
+<li><p>Press the Continue button in the Control Panel, or press the
+shortcut key <code>F5</code>.</p>
 <p>The debugger will jump directly to line 56, executing all the code on
-the way.</p>
-<ol start="12" type="1">
-<li>In the WATCH panel, click on the <code>+</code> button and enter the
-expression <code>length - 1</code>.</li>
-</ol>
+the way.</p></li>
+<li><p>In the WATCH panel, click on the <code>+</code> button and enter
+the expression <code>length - 1</code>.</p>
 <figure>
 <img src="images/watchLength-1.webp"
 alt="Using the WATCH panel to watch the value of an expression" />
@@ -3876,12 +4016,13 @@ alt="Using the WATCH panel to watch the value of an expression" />
 of an expression</figcaption>
 </figure>
 <p>You should see that its value is <code>5</code>. Again, JavaScript
-will have no problem creating a new string for <code>nail</code>.</p>
-<ol start="13" type="1">
-<li>Press <code>F5</code> to make your script continue running.</li>
-<li>Activate the Terminal, and press the <code>3</code> key on your
-keyboard</li>
-<li>Repeat steps 13 and 14 again.</li>
+will have no problem creating a new string for
+<code>nail</code>.</p></li>
+<li><p>Press <code>F5</code> to make your script continue
+running.</p></li>
+<li><p>Activate the Terminal, and press the <code>3</code> key on your
+keyboard</p></li>
+<li><p>Repeat steps 13 and 14 again.</p></li>
 </ol>
 <p>Now you can see the problem. In the WATCH panel, you can see that
 <code>length - 1 = -1</code>. The <a
@@ -3950,8 +4091,9 @@ is tested at the beginning of each loop</h2>
 this new value.</p>
 <pre class="language-javascript line-numbers" data-start="55"><code class="language-javascript line-numbers">length = length - force
 nail   = "-" + "=".repeat(length - 1) + "|"</code></pre>
-<p>Before the <code>while</code> loop even starts, your code calculates
-and prints a value for <code>nail</code>:</p>
+<p>But also, at line 33 and line 40, before the <code>while</code> loop
+even starts, your code calculates and prints a value for
+<code>nail</code>:</p>
 <pre class="language-javascript line-numbers" data-start="33"><code class="language-javascript line-numbers"><b>let nail     = "-" + "=".repeat(length - 1) + "|"</b>
 <i>let prompt   = nailIs + length + long
 let force
@@ -4004,7 +4146,7 @@ to adjust the code, as shown in the listing above.</li>
 asked how hard you want to hit. If all goes well, your Terminal should
 look like this:</li>
 </ol>
-<pre class="language-tex wrap"><code class="language-tex wrap">-===========| The nail is 12 units long.
+<pre class="language-bash wrap"><code class="language-bash wrap">-===========| The nail is 12 units long.
 
 -========| You hit the nail hard.
 
@@ -4029,12 +4171,13 @@ broken</h2>
 you want to hit</li>
 <li>Press <code>3</code> every other time.</li>
 </ol>
-<p>It seems that the <code>length - 1</code> error is still present.</p>
+<p>Ouch. It seems that the <code>length - 1</code> error is still
+present. Here’s the error that the Terminal shows:</p>
 <details class="trouble" open>
 <summary>
 Invalid count value: -3
 </summary>
-<pre class="language-tex wrap"><code class="language-tex wrap">-===========| The nail is 12 units long.
+<pre class="language-bash wrap"><code class="language-bash wrap">-===========| The nail is 12 units long.
 
 -=========| You hit the nail firmly.
 
@@ -4050,13 +4193,13 @@ Invalid count value: -3
 [0] CANCEL
 
 How hard do you plan to hit? [1, 2, 3, 0]: 3
-/Users/james/Tutorials/My Learning Journey/Nail_It/main.js:41
+/path/to/My Learning Journey/Nail_It/main.js:41
   nail   = "-" + "=".repeat(length - 1) + "|"
                      ^
 
 RangeError: Invalid count value: -3
     at String.repeat (&lt;anonymous&gt;)
-    at Object.&lt;anonymous&gt; (/Users/james/Tutorials/My Learning Journey/Nail_It/main.js:41:22)</code></pre>
+    at Object.&lt;anonymous&gt; (/path/to/My Learning Journey/Nail_It/main.js:41:22)</code></pre>
 </details>
 <h2 id="troubleshooting-with-the-debugger">Troubleshooting with the
 debugger</h2>
@@ -4119,10 +4262,12 @@ Can you fix it yourself?
 (and two of them are optional spaces).</p>
 <details class="solution">
 <summary>
-Solution
+Full solution
 </summary>
-<p>Here’s the full script of <code>main.js</code> with the required
-changes.</p>
+<p>Here’s the full script of <code>main.js</code> with the changes
+required to allow the player to hit the nail several times shown in
+<strong>bold</strong>. Note that <code>while (length)</code> becomes
+<code>while (length &gt; 0)</code>.</p>
 <pre class="language-javascript line-numbers"><code class="language-javascript line-numbers"><i>const {
   keyInYN,
   keyInSelect
@@ -4184,7 +4329,7 @@ while (</i><b>length &gt; 0</b><i>) {
 }</i></code></pre>
 <p>Now when you run your script, the output in the Terminal should look
 something like this, even if you hit too hard the last time:</p>
-<pre class="language-tex wrap"><code class="language-tex wrap">-===========| The nail is 12 units long.
+<pre class="language-bash wrap"><code class="language-bash wrap">-===========| The nail is 12 units long.
 
 -=========| You hit the nail firmly.
 
@@ -4211,9 +4356,6 @@ executed in two different places. The original code broke the Don’t
 Repeat Yourself principle.</p>
 <p>The problem was solved by rethinking the code so that no repetition
 was necessary.</p>
-<p>At the very end of this guide, you will discover <em>functions</em>,
-which are reusable blocks of code where you can create functionality
-that you write in one place, and can use from many different places.</p>
 </details>
 </section>
 <!-- Showing the Winning Situation -->
@@ -4224,7 +4366,7 @@ Situation</a>
 </h2>
 <details class="challenge" open>
 <summary>
-#5 Can you show the winning situation?
+Challenge 5: Can you show the winning situation?
 </summary>
 <p>In the last challenge, your code stopped working when
 <code>length</code> was reduced to <code>0</code> or less.</p>
@@ -4234,7 +4376,7 @@ winner?</p>
 <p>Below you can see how the Terminal might look when you have completed
 this challenge. Note that the final hit can be stronger than
 necessary.</p>
-<pre class="language-tex wrap"><code class="language-tex wrap"><i>-===========|  The nail is 12 units long.
+<pre class="language-bash wrap"><code class="language-bash wrap"><i>-===========|  The nail is 12 units long.
 
 -==========|  You hit the nail gently.
 
@@ -4345,9 +4487,11 @@ Nail</a>
 </h2>
 <details class="challenge" open>
 <summary>
-#6. Can you show the point of the nail only at the start?
+Challenge 6. Can you show the point of the nail only at the start?
 </summary>
-<pre class="language-tex wrap"><code class="language-tex wrap"><i>-===========|  The nail is 12 units long.
+<p>After the first hit, the point of the nail be hidden. Here’s how the
+nail could be drawn more realistically:</p>
+<pre class="language-bash wrap"><code class="language-bash wrap"><i>-===========|  The nail is 12 units long.
 
 </i><b>=========|</b><i>  You hit the nail hard.
 
@@ -4374,20 +4518,24 @@ information</li>
 <li>You could call your variable <code>started</code>, and give it the
 value <code>false</code> before the game begins</li>
 <li>You can set <code>started</code> to <code>true</code> after the
-<code>if () {...} else {...}</code> statement, when you can be sure that
-one of the players will have chosen a value for <code>force</code></li>
-<li>You can create your own <code>if () {...} else {...}</code>
-statement to draw the nail with a point (<code>-</code>) if the game is
-not started, or without a point (only <code>=</code> characters) if the
-game has started.</li>
-<li>You can use the logical not operator (<code>!</code>) to check if
-the game is not started.</li>
+<code>if () {} else {}</code> statement, when you can be sure that one
+of the players will have chosen a value for <code>force</code></li>
+<li>You can create your own <code>if () {} else {}</code> statement to
+draw the nail with a point (<code>-</code>) if the game is not started,
+or without a point (only <code>=</code> characters) if the game has
+started.</li>
+<li>You can use the <a
+href="https://hashnode.com/draft/logical%20not%20operator%20(%3Ccode%3E!%3C/code%3E)https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_NOT">logical
+not operator (<code>!</code>)</a> to check if the game is not
+started.</li>
 </ol>
 </details>
 <details class="solution">
 <summary>
 Solution
 </summary>
+<p>There are six <strong>changed</strong> lines in the solution
+below.</p>
 <pre class="language-javascript line-numbers"><code class="language-javascript line-numbers"><i>const {
   keyInYN,
   keyInSelect
@@ -4474,7 +4622,7 @@ console.log(win)</code></pre>
 </summary>
 <p>Here’s how the Terminal should look when you have completed this
 challenge:</p>
-<pre class="language-tex wrap"><code class="language-tex wrap"><i>-===========| The nail is 12 units long.
+<pre class="language-bash wrap"><code class="language-bash wrap"><i>-===========| The nail is 12 units long.
 
 ==========|   </i><b>You hit the nail firmly.</b><i>
 
@@ -4521,7 +4669,7 @@ the last time. For example, if there is only one unit left, and you hit
 the nail hard, you apply a <code>force</code> of <code>3</code>, not
 <code>1</code>, and the text is pushed two extra spaces to the
 right.</p>
-<pre class="language-tex wrap"><code class="language-tex wrap"><i>-===========| The nail is 12 units long.
+<pre class="language-bash wrap"><code class="language-bash wrap"><i>-===========| The nail is 12 units long.
 
 =========|    You hit the nail hard.
 
@@ -4615,7 +4763,7 @@ way to reduce the value of <code>force</code> to just the right amount
 to drive the nail home. Here’s a Google query that might lead you in the
 right direction: <a
 href="https://www.google.com/search?q=js+find+minimum">js find
-minimum</a>. &lt;&lt;&lt; Click on it to see where it leads you.</p>
+minimum</a>. Click on it to see where it leads you.</p>
 <details class="solution">
 <summary>
 Fix the bug
@@ -4630,17 +4778,6 @@ right amount to drive the nail home.</p>
 <pre class="language-javascript line-numbers" data-start="57"><code class="language-javascript line-numbers">    force = Math.min(index + 1, length)</code></pre>
 </details>
 </details>
-<details class="note" open>
-<summary>
-<code>js</code>, or earching online for “JavaScript”
-</summary>
-<p>In the Google search query I used above, I wrote <code>js</code> and
-not JavaScript. There are many many JavaScript programmers who work for
-search-engine companies, and they all like to type as little as
-possible. As a result, their algorithms understand that the extension
-<code>js</code> refers to JavaScript, and you don’t have to type the
-full name each time you make a query.</p>
-</details>
 </section>
 <!-- Nails with Random Lengths -->
 <section id="nails-with-random-lengths" aria-labelledby="nails-with-random-lengths" data-item="Nails with Random Lengths">
@@ -4649,11 +4786,11 @@ full name each time you make a query.</p>
 </h2>
 <details class="challenge" open>
 <summary>
-#8 Can you give the nail a different length each time?
+Challenge 8: Can you give the nail a different length each time?
 </summary>
 <p>Can you choose a nail length in the range 12 - 15 units, to make the
 game more interesting (when the AI starts to play)? For example:</p>
-<pre class="language-tex wrap"><code class="language-tex wrap"><i>-===========| The nail is </i><b>15</b><i> units long.</i></code></pre>
+<pre class="language-bash wrap"><code class="language-bash wrap"><i>-===========| The nail is </i><b>15</b><i> units long.</i></code></pre>
 </details>
 <h2 id="math.random">Math.random()</h2>
 <p>If you search on Google for <a
@@ -4678,7 +4815,7 @@ you will get a number between <code>0</code> and <em>almost</em> the
 number you multiplied by.</li>
 <li><a
 href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor"><code>Math.floor()</code></a>
-takes a number and returns the next lowest integer. So
+takes a number and returns the nearest lower integer. So
 <code>1.999</code> becomes <code>1</code>, and so does
 <code>1.001</code></li>
 </ol>
@@ -4696,12 +4833,12 @@ Try in the Node IDE
 <li>In a new Terminal window, open the Node Interactive Development
 Environment (IDE) by typing:</li>
 </ol>
-<pre class="language-tex wrap"><code class="language-tex wrap">node</code></pre>
+<pre class="language-bash wrap"><code class="language-bash wrap">node</code></pre>
 <ol start="2" type="1">
 <li>Enter the expression <code>12 + Math.floor(Math.random() * 4)</code>
 and press Enter</li>
 </ol>
-<pre class="language-tex wrap"><code class="language-tex wrap"><b>node</b>
+<pre class="language-bash wrap"><code class="language-bash wrap"><b>node</b>
 <i>Welcome to Node.js v23.1.0.
 Type ".help" for more information.</i>
 &gt; <b>12 + Math.floor(Math.random() * 4)</b>
@@ -4715,7 +4852,7 @@ and press Enter.</li>
 </ol>
 <p>You should get a different value most times, but sometimes you’ll get
 the same value twice. That’s how random it is.</p>
-<pre class="language-tex wrap"><code class="language-tex wrap">&gt; <b>12 + Math.floor(Math.random() * 4)</b>
+<pre class="language-bash wrap"><code class="language-bash wrap">&gt; <b>12 + Math.floor(Math.random() * 4)</b>
 14
 &gt; <b>12 + Math.floor(Math.random() * 4)</b>
 14
@@ -4836,7 +4973,7 @@ little strangely. It will not make the nail any shorter, and it will
 show the string <code>undefined</code> instead of <code>gently</code>,
 <code>firmly</code> or <code>hard</code>. And it will continue to ask
 you to play.</p>
-<pre class="language-tex wrap"><code class="language-tex wrap"><i>-=============| The nail is 14 units long.
+<pre class="language-bash wrap"><code class="language-bash wrap"><i>-=============| The nail is 14 units long.
 
 ==============| You hit the nail </i><b>undefined</b><i>.
 
@@ -4856,7 +4993,7 @@ Zero</a>, you saw that the first item in an array is at
 in the array, by counting from <code>0</code> to
 the-number-of-items-in-the-array minus 1.</p>
 <p>Here’s how you can check this in the Node IDE in your Terminal:</p>
-<pre class="language-tex wrap"><code class="language-tex wrap"><b>node</b>
+<pre class="language-bash wrap"><code class="language-bash wrap"><b>node</b>
 Welcome to Node.js v23.1.0.
 Type ".help" for more information.
 &gt; <b>s = [ 'gently', 'firmly', 'hard' ]</b>
@@ -4870,7 +5007,7 @@ Type ".help" for more information.
 <p>Now try using index values that are out of range: greater than 2 or
 less than 0. You will get the value <a
 href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined"><code>undefined</code></a>:</p>
-<pre class="language-tex wrap"><code class="language-tex wrap">&gt; <b>s[3]</b>
+<pre class="language-bash wrap"><code class="language-bash wrap">&gt; <b>s[3]</b>
 undefined
 &gt; <b>s[-1]</b>
 undefined</code></pre>
@@ -4886,27 +5023,26 @@ just don.)</li>
 <li>If you don’t give any value to a variable that you create with
 <code>let</code>, its value will be <code>undefined</code></li>
 </ol>
-<pre class="language-tex wrap"><code class="language-tex wrap">&gt; <b>let empty</b>
+<pre class="language-bash wrap"><code class="language-bash wrap">&gt; <b>let empty</b>
 undefined</code></pre>
 <ol start="3" type="1">
 <li>If you ask an object for a property that it doesn’t have:</li>
 </ol>
-<pre class="language-tex wrap"><code class="language-tex wrap">
-&gt; <b>r = require("readline-sync")</b>
+<pre class="language-bash wrap"><code class="language-bash wrap">&gt; <b>r = require("readline-sync")</b>
 {
   _DBG_set_useExt: [Function (anonymous)],</code></pre>
 <pre class="skip"><code class="skip">// lines skipped //</code></pre>
-<pre class="language-tex wrap"><code class="language-tex wrap">  question: [Function (anonymous)],
+<pre class="language-bash wrap"><code class="language-bash wrap">  question: [Function (anonymous)],
   prompt: [Function (anonymous)],
   keyIn: [Function (anonymous)],</code></pre>
 <pre class="skip"><code class="skip">// lines skipped //</code></pre>
-<pre class="language-tex wrap"><code class="language-tex wrap">}
+<pre class="language-bash wrap"><code class="language-bash wrap">}
 &gt; <b>r.unknownProperty</b>
 undefined</code></pre>
 <ol start="4" type="1">
 <li>If you call a method that does not return any value:</li>
 </ol>
-<pre class="language-tex wrap"><code class="language-tex wrap"><b>console.log("This text will be followed by `undefined` because the method console.log() does not return a value")</b>
+<pre class="language-bash wrap"><code class="language-bash wrap"><b>console.log("This text will be followed by `undefined` because the method console.log() does not return a value")</b>
 This text will be followed by `undefined` because the method console.log() does not return a value
 undefined</code></pre>
 </details>
@@ -4968,7 +5104,7 @@ const rules = `Let's knock a nail into this computer!</i></code></pre>
 <pre class="skip"><code class="skip">// All the other lines skipped //</code></pre></li>
 <li><p>In the Terminal, run:</p></li>
 </ol>
-<pre class="language-tex wrap"><code class="language-tex wrap">node main.js</code></pre>
+<pre class="language-bash wrap"><code class="language-bash wrap">node main.js</code></pre>
 <ol start="3" type="1">
 <li>In the Terminal, you should see over 800 lines of data printed. I
 have just given you the highlights below:</li>
@@ -5029,11 +5165,11 @@ now that you know about <code>process.exit()</code>.</li>
 </h2>
 <details class="challenge" open>
 <summary>
-#9 Can you stop the game early, before there is a winner?
+Challenge 9: Can you stop the game early, before anyone wins?
 </summary>
 <p>If the human player presses <code>0</code> when asked how hard to
 hit, can you make the game end gracefully?</p>
-<pre class="language-tex wrap"><code class="language-tex wrap"><i>-==============| The nail is 15 units long.
+<pre class="language-bash wrap"><code class="language-bash wrap"><i>-==============| The nail is 15 units long.
 
 ============|    You hit the nail hard.
 
@@ -5045,7 +5181,7 @@ hit, can you make the game end gracefully?</p>
 How hard do you plan to hit? [1, 2, 3, 0]: </i> <b>0
 
 Thanks for playing!</b></code></pre>
-<details class="hint" open>
+<details class="hint">
 <summary>
 Hints
 </summary>
@@ -5061,10 +5197,12 @@ statement for the player.</li>
 decided not to answer.</li>
 </ol>
 </details>
-<details class="solution" open>
+<details class="solution">
 <summary>
 Solution
 </summary>
+<p>There are seven <strong>new lines</strong> in two different
+places.</p>
 <pre class="language-javascript line-numbers"><code class="language-javascript line-numbers"><i>const {
   keyInYN,
   keyInSelect
@@ -5209,7 +5347,7 @@ Terminal where the Node IDE is already running)</li>
 <li>Type expressions like <code>13 % 4</code> in the Terminal, and then
 press Enter</li>
 </ol>
-<pre class="language-tex wrap"><code class="language-tex wrap"><b>node</b>
+<pre class="language-bash wrap"><code class="language-bash wrap"><b>node</b>
 Welcome to Node.js v23.1.0.
 Type ".help" for more information.
 &gt; <b>13 % 4</b>
@@ -5225,7 +5363,9 @@ Implementing the AI’s strategy
 </summary>
 <p>So the modulo (<code>%</code>) operator is the AI’s secret weapon. As
 with the solo player, building the AI’s strategy is going to take
-several steps. Some of them are going to break the existing game.</p>
+several steps. Some of them are going to break the existing game. But
+you are used to that now. You build a tower of wooden bricks. You knock
+it down and you build it back with better balance.</p>
 </details>
 </section>
 <!-- Getting the AI to Win -->
@@ -5241,11 +5381,12 @@ treat each challenge in a separate section.</p>
 game at all</h3>
 <p>Right now, if you do not press <code>Y</code> when asked if you want
 to start the game… well, you have to start the game anyway. To begin
-with, the AI will simply say something and do nothing.</p>
-<pre class="language-tex wrap"><code class="language-tex wrap">-=============| The nail is 14 units long.
+with, the AI will simply say something and do nothing, and get you to
+play again. Something like this:</p>
+<pre class="language-bash wrap"><code class="language-bash wrap">-=============| The nail is 14 units long.
 
 ============|   You hit the nail firmly.
-Say that again? I won't play yet.
+I'll say that again. I won't play yet.
 
 ============|   You hit the nail firmly.
 
@@ -5258,18 +5399,20 @@ How hard do you plan to hit? [1, 2, 3, 0]: </code></pre>
 <h3 id="get-the-ai-to-play-a-move-and-claim-it">2. Get the AI to play a
 move, and claim it</h3>
 <p>This means that you’ll have to change the string
-<code>You hit the nail</code> to something more generic.</p>
-<pre class="language-tex wrap"><code class="language-tex wrap"><i>-============| The nail is 13 units long.
+<code>You hit the nail</code> to something that can adapt to each
+player.</p>
+<pre class="language-bash wrap"><code class="language-bash wrap"><i>-============| The nail is 13 units long.
 
 ==========|    You hit the nail gently.</i>
 
 <b>=========|     I hit the nail gently.</b></code></pre>
-<h3 id="get-the-ai-to-play-the-best-legal-move">3. Get the AI to play
-the best legal move</h3>
+<h3 id="get-the-ai-to-play-a-smart-legal-move">3. Get the AI to play a
+smart legal move</h3>
 <p>The AI must choose a value for <code>force</code> between
 <code>1</code> and <code>3</code>, so it can’t always choose to play
-<code>length % 4</code>.</p>
-<pre class="language-tex wrap"><code class="language-tex wrap"><i>-===========| The nail is 12 units long.
+<code>length % 4</code>, , as that may have the value
+<code>0</code>.</p>
+<pre class="language-bash wrap"><code class="language-bash wrap"><i>-===========| The nail is 12 units long.
 
 </i><b>===========|  I hit the nail gently.</b><i>
 
@@ -5287,10 +5430,13 @@ the best legal move</h3>
 [0] CANCEL
 
 How hard do you plan to hit? [1, 2, 3, 0]: </i></code></pre>
-<p>Now the AI is in a winning position.</p>
+<p>After the human player’s mistake on move 3, the AI is in a winning
+position.</p>
 <h3 id="get-the-ai-to-claim-victory-when-it-wins">4. Get the AI to claim
 victory, when it wins</h3>
-<pre class="language-tex wrap"><code class="language-tex wrap"><i>-==============| The nail is 15 units long.
+<p>Instead of saying “You win!” every time, the AI should say “I win”
+when it beats you.</p>
+<pre class="language-bash wrap"><code class="language-bash wrap"><i>-==============| The nail is 15 units long.
 
 ============|    I hit the nail hard.
 
@@ -5309,7 +5455,10 @@ victory, when it wins</h3>
 <b>I win!</b></code></pre>
 <h3 id="get-the-ai-to-invite-you-to-play-again">5. Get the AI to invite
 you to play again</h3>
-<pre class="language-tex wrap"><code class="language-tex wrap"><i>=|            You hit the nail hard.
+<p>The first time your game beats one of your friends, it might be luck.
+If your game shows that it can win at least half the time, your friends
+will be more impressed.</p>
+<pre class="language-bash wrap"><code class="language-bash wrap"><i>=|            You hit the nail hard.
 
 |             I hit the nail gently.
 
@@ -5319,13 +5468,13 @@ I win!</i>
 (Type Y for Yes, N for No): </b></code></pre>
 </section>
 <!-- Get the AI to Join the Game -->
-<section id="get-the-ai-to-join-the-game" aria-labelledby="get-the-ai-to-join-the-game" data-item="Get the AI to Join the Game">
+<section id="the-ai-joins-the-game" aria-labelledby="the-ai-joins-the-game" data-item="The AI Joins the Game">
 <h2>
-<a href="#get-the-ai-to-join-the-game">Get the AI to Join the Game</a>
+<a href="#the-ai-joins-the-game">The AI Joins the Game</a>
 </h2>
 <details class="challenge" open>
 <summary>
-#1 Can you get the AI to join the game at all?
+Challenge 1: Can you get the AI to join the game at all?
 </summary>
 <p>For now, the AI just lets you play. Can you make it print something
 into the Terminal to show that it exists? The simplest solution is to
@@ -5335,11 +5484,11 @@ time:</p>
 <pre class="language-javascript line-numbers" data-start="54"><code class="language-javascript line-numbers">  console.log(clear.repeat(toDelete))
   console.log(nail, prompt)</code></pre>
 <p>The output you are looking for could be something like this:</p>
-<pre class="language-tex wrap"><code class="language-tex wrap">
+<pre class="language-bash wrap"><code class="language-bash wrap">
 -=============| The nail is 14 units long.
 
 ============|   You hit the nail firmly.
-Say that again? I won't play yet.
+I'll say that again. I won't play yet.
 
 ============|   You hit the nail firmly.
 
@@ -5378,7 +5527,7 @@ that it noticed that it had a turn.</li>
 Solution
 </summary>
 <p>You can achieve the result I show above with just three changes, as
-shown below.</p>
+shown in <strong>bold</strong> below.</p>
 <pre class="language-javascript line-numbers"><code class="language-javascript line-numbers"><i>const {
   keyInYN,
   keyInSelect
@@ -5448,7 +5597,7 @@ while (length &gt; 0) {
            + hit + strength[index] + "."
     toDelete = 7
   } else { // it's the AI's turn to play
-    </i><b>console.log("Say that again? I won't play yet.")
+    </i><b>console.log("I'll say that again. I won't play yet.")
     toDelete = 0</b><i>
     force = 0
   }
@@ -5465,19 +5614,19 @@ console.log(win)</i></code></pre>
 </details>
 </section>
 <!-- Get AI to Play a Move -->
-<section id="get-ai-to-play-a-move" aria-labelledby="get-ai-to-play-a-move" data-item="Get AI to Play a Move">
+<section id="the-ai-plays-a-move" aria-labelledby="the-ai-plays-a-move" data-item="The AI Plays a Move">
 <h2>
-<a href="#get-ai-to-play-a-move">Get AI to Play a Move</a>
+<a href="#the-ai-plays-a-move">The AI Plays a Move</a>
 </h2>
 <details class="challenge" open>
 <summary>
-#2 Can you get the AI to play a move, and claim it as its own?
+Challenge 2: Can you get the AI to play a move, and claim instructions?
 </summary>
 <p>Before, only the human player was playing, so you could use the fixed
 phrase <code>You hit the nail</code>, and then add <code>gently</code>
 or <code>firmly</code> or <code>hard</code> after it. Now you’ll need to
-get the the AI to say <code>I  hit the nail ...</code>.</p>
-<pre class="language-tex wrap"><code class="language-tex wrap"><i>-============| The nail is 13 units long.
+get the the AI to say <code>I hit the nail ...</code>.</p>
+<pre class="language-bash wrap"><code class="language-bash wrap"><i>-============| The nail is 13 units long.
 
 ==========|    You hit the nail gently.</i>
 
@@ -5486,7 +5635,9 @@ get the the AI to say <code>I  hit the nail ...</code>.</p>
 <h2 id="coercion">Coercion</h2>
 <p>You’ve already seen that JavaScript allows you to use truthy values
 like <code>12</code> to act as if they were <code>true</code>. You’ve
-heard that <code>0</code> will behave like <code>false</code>.</p>
+heard that <code>0</code> will behave like <code>false</code>.
+JavaScript can make variables of one type behave like variables of a
+different type.</p>
 <p>JavaScript uses a process called <em>coercion</em> when you try to
 combine values of two different types (like Boolean <code>true</code> or
 <code>false</code>) and numbers. Using coercion, JavaScript will convert
@@ -5498,9 +5649,10 @@ Turn <code>false</code> into <code>0</code>
 <p>Here’s a trick for you to try in the Node IDE, to turn
 <code>false</code> into <code>0</code> and <code>true</code> into 1:</p>
 <ol type="1">
-<li>In a new Terminal, type <code>node</code></li>
+<li>In a new Terminal, type <code>node</code>, and then the following
+expressions:</li>
 </ol>
-<pre class="language-tex wrap"><code class="language-tex wrap"><b>node</b>
+<pre class="language-bash wrap"><code class="language-bash wrap"><b>node</b>
 Welcome to Node.js v23.1.0.
 Type ".help" for more information.
 &gt; <b>false + 0</b>
@@ -5508,19 +5660,22 @@ Type ".help" for more information.
 &gt; <b>true + 0</b>
 1</code></pre>
 <p>And just for fun:</p>
-<pre class="language-tex wrap"><code class="language-tex wrap">&gt; true + false
+<pre class="language-bash wrap"><code class="language-bash wrap">&gt; true + false
 1</code></pre>
 <h2 id="coercing-numbers-and-strings">Coercing numbers and strings</h2>
 <p>Sometimes coercion has unexpected consequences. Try this in the Node
 IDE:</p>
-<pre class="language-tex wrap"><code class="language-tex wrap">&gt; 4 + "2"
+<pre class="language-bash wrap"><code class="language-bash wrap">&gt; 4 + "2"
 '42'
 &gt; 4 - "2"
 2</code></pre>
-<p>This happens because <code>+</code> can be use as a string
-concatenation operator, and so that’s how JavaScript decides to use it.
-The <code>-</code> operator is only used with numbers, so the string “2”
-is coerced to a number before the operation.</p>
+<p>The string “42” is created because <code>+</code> can be used as a <a
+href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#string_operators">string
+concatenation operator</a>, and so that’s how JavaScript decides to use
+it. The number 4 is coerced to a string. The <a
+href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Subtraction"><code>-</code>
+subtraction operator</a> is only used with numbers, so the string “2” is
+coerced to a number before the operation.</p>
 </details>
 <h2 id="using-an-array-to-get-the-current-players-pronoun">Using an
 array to get the current player’s pronoun</h2>
@@ -5528,22 +5683,18 @@ array to get the current player’s pronoun</h2>
 needs: “I” for the AI, “You” for the human player that the AI is talking
 to.</p>
 <pre class="language-javascript line-numbers"><code class="language-javascript line-numbers">const players = [ "I", "You" ]</code></pre>
-<p>Now, <code>player</code> will have the value <code>true</code> or
-<code>false</code>. And <code>players[0]</code> will be “I”, while
-<code>player[1]</code> will be “You”.</p>
-<details class="challenge" open>
-<summary>
-Using <code>players</code> and <code>player</code>, coerced with
-<code>0</code>
-</summary>
-<p>Can you see how to use the ideas describe above to get the right
-pronoun for the current player?</p>
+<p>The value of <code>players[0]</code> will be “I”, while
+<code>player[1]</code> will be “You”. The value of the variable player
+will be either <code>true</code> or <code>false</code>. From what you
+tested above, can you see how to get the value ”I” from players when
+player is <code>false</code>, and how to get the value ”You” when player
+is <code>true</code>?</p>
 <details class="solution">
 <summary>
-Solution
+Solution to the pronoun problem
 </summary>
 <p>You can test this your solution in the Node IDE:</p>
-<pre class="language-tex wrap"><code class="language-tex wrap"><b>node</b>
+<pre class="language-bash wrap"><code class="language-bash wrap"><b>node</b>
 Welcome to Node.js v23.1.0.
 Type ".help" for more information.
 &gt; <b>players = [ "I", "You" ]</b>
@@ -5556,7 +5707,6 @@ true
 false
 &gt; <b>players[player + 0] + " hit the nail"</b>
 'I hit the nail'</code></pre>
-</details>
 </details>
 <details class="hint">
 <summary>
@@ -5572,9 +5722,9 @@ value [ “I”, “You” ]</p></li>
 <p>… to generate a prompt that will work for either player.</p></li>
 <li><p>Should you move this code from where it is to a better
 place?</p></li>
-<li><p>Currently, <code>index</code> is declared as a constant in the
-<code>if (player) { ... }</code> block, so it is not available outside
-that block. Can you declare it with <code>let</code> outside the
+<li><p>Currently, <code>index</code> is declared as a <code>const</code>
+in the <code>if (player) { ... }</code> block, so it is not available
+outside that block. Can you declare it with <code>let</code> outside the
 <code>if</code> statement altogether?</p></li>
 <li><p>When the AI chooses a value for <code>force</code>, you will need
 to use an adjusted value of <code>index</code> to get the correct word
@@ -5588,6 +5738,8 @@ from the <code>strengths</code> array.<br />
 <summary>
 Solution to the main challenge
 </summary>
+<p>You can achieve the required result by making
+<strong>changes</strong> in six different lines of code:</p>
 <pre class="language-javascript line-numbers"><code class="language-javascript line-numbers"><i>const {
   keyInYN,
   keyInSelect
@@ -5675,47 +5827,46 @@ console.log(win)</i></code></pre>
 </details>
 </section>
 <!-- Get AI to Play Best Legal Move -->
-<section id="get-ai-to-play-best-legal-move" aria-labelledby="get-ai-to-play-best-legal-move" data-item="Get AI to Play the Best Legal Move">
+<section id="the-ai-plays-a-smart-move" aria-labelledby="the-ai-plays-a-smart-move" data-item="The AI Plays a Smart Move">
 <h2>
-<a href="#get-ai-to-play-best-legal-move">Get AI to Play the Best Legal
-Move</a>
+<a href="#the-ai-plays-a-smart-move">The AI Plays a Smart Move</a>
 </h2>
 <p>As <a
 href="https://www.youtube.com/watch?v=9KABcmczPdg&amp;t=291s">Matt
 Parker explains</a>, the winning strategy is to leave a multiple of 4
-units when you complete your turn.</p>
-<p>It <a
+units when you complete your turn. His Dr Nim game <a
 href="(https://www.youtube.com/watch?v=9KABcmczPdg&amp;t=531s)">will
-always play only one marble</a> if it is in a losing position. This is a
-good strategy when playing against a human who doesn’t understand the
-system, because the human has more marbles to make a mistake with. It’s
-certainly the easiest strategy for a piece of plastic to use.</p>
+always play only one marble</a> if it is in a losing position.</p>
+<p>This is a good strategy when playing against a human who doesn’t
+understand the system, because the human has more marbles to make a
+mistake with. It’s certainly the easiest strategy for a piece of plastic
+to use.</p>
 <details class="challenge" open>
 <summary>
-#3 Get the AI to play the best legal move
+Challenge 3: Can you get the AI to play a smart legal move?
 </summary>
 <p>The AI must choose a value for <code>force</code> between
 <code>1</code> and <code>3</code>, but it can’t always choose to play
 <code>length % 4</code>. If <code>length % 4</code> is 0, you can make
-the AI hit the nail gently, so that it only becomes one unit
-shorter.</p>
+the AI hit the nail gently (the equivalent of Dr Nim taking only one
+marble), so that the nail only becomes one unit shorter.</p>
 <p>Here the AI starts in a losing position, so it plays gently:</p>
-<pre class="language-tex wrap"><code class="language-tex wrap"><i>-===========| The nail is 12 units long.
+<pre class="language-bash wrap"><code class="language-bash wrap"><i>-===========| The nail is 12 units long.
 
 </i><b>===========|  I hit the nail gently.</b></code></pre>
 <p>But if the human player makes a mistake, the AI seizes the
 opportunity to win.</p>
-<pre class="language-tex wrap"><code class="language-tex wrap"></i>==========|    You hit the nail gently.
+<pre class="language-bash wrap"><code class="language-bash wrap"></i>==========|    You hit the nail gently.
 
 </i><b>========|     I hit the nail firmly.</b></code></pre>
 <p>After the AI’s turn, the number of units left is a multiple of four.
 Whatever the human player does, the AI can play to restore a multiple of
 four:</p>
-<pre class="language-tex wrap"><code class="language-tex wrap"><i>=====|        You hit the nail hard.
+<pre class="language-bash wrap"><code class="language-bash wrap"><i>=====|        You hit the nail hard.
 
 </i><b>====|         I hit the nail gently.</b></code></pre>
-<p>After any move the human player can make, the AI is going to win:</p>
-<pre class="language-tex wrap"><code class="language-tex wrap"><i>[1] gently
+<p>After any move the human player can make, the AI is sure to win:</p>
+<pre class="language-bash wrap"><code class="language-bash wrap"><i>[1] gently
 [2] firmly
 [3] hard
 [0] CANCEL</i>
@@ -5750,6 +5901,8 @@ for the AI</p></li>
 <summary>
 Solution
 </summary>
+<p>There are only two lines that you need to
+<strong>change</strong>.</p>
 <pre class="language-javascript line-numbers"><code class="language-javascript line-numbers"><i>const {
   keyInYN,
   keyInSelect
@@ -5839,14 +5992,14 @@ console.log(win)</i></code></pre>
 </details>
 </section>
 <!-- Get AI to Play an Interesting Move -->
-<section id="get-ai-to-play-an-interesting-move" aria-labelledby="get-ai-to-play-an-interesting-move" data-item="Get AI to Play an Interesting Move">
+<section id="the-ai-plays-an-interesting-move" aria-labelledby="the-ai-plays-an-interesting-move" data-item="The AI Plays an Interesting Move">
 <h2>
-<a href="#get-ai-to-play-an-interesting-move">Get AI to Play an
-Interesting Move</a>
+<a href="#the-ai-plays-an-interesting-move">The AI Plays an Interesting
+Move</a>
 </h2>
 <details class="challenge" open>
 <summary>
-#3.1 Can you make the AI play randomly when it is stuck?
+Challenge 3.1: Can you make the AI play randomly when it is losing?
 </summary>
 <p>If the AI always hits gently when it is in a losing position, the
 human player might learn that always hitting hard can sometimes lead to
@@ -5870,9 +6023,9 @@ between <code>0</code> and <code>3</code>, can you imagine how to create
 a number between <code>1</code> and <code>3</code>?</li>
 <li>If <code>Math.floor()</code> reduces a number to the next lower
 integer, can you imagine that there might be a method to raise a number
-to the next higher integer?</li>
+to the nearest higher integer?</li>
 <li><code>Math.ceiling()</code> is not the answer to the last question.
-Programmers don’t like typing. Try this Google search: <a
+Remember that programmers don’t like typing. Try this Google search: <a
 href="https://www.google.com/search?q=js+Math.ceiling">js
 Math.ceiling</a></li>
 </ol>
@@ -5881,6 +6034,8 @@ Math.ceiling</a></li>
 <summary>
 Solution
 </summary>
+<p>There is one changed line and three new lines near the end of the
+script.</p>
 <pre class="language-javascript line-numbers"><code class="language-javascript line-numbers"><i>const {
   keyInYN,
   keyInSelect
@@ -5972,20 +6127,20 @@ console.log(win)</i></code></pre>
 </details>
 </details>
 </section>
-<!-- Get AI to Claim Victory -->
-<section id="get-ai-to-claim-victory" aria-labelledby="get-ai-to-claim-victory" data-item="Get AI to Claim Victory">
+<!-- The AI Claims Victory -->
+<section id="the-ai-claims-victory" aria-labelledby="the-ai-claims-victory" data-item="The AI Claims Victory">
 <h2>
-<a href="#get-ai-to-claim-victory">Get AI to Claim Victory</a>
+<a href="#the-ai-claims-victory">The AI Claims Victory</a>
 </h2>
 <details class="challenge" open>
 <summary>
-#4 Can you make the AI claim victory when it wins?
+Challenge 4: Can you make the AI claim victory when it wins?
 </summary>
 <p>Currently, when the game is over, the last line that is printed in
 the Terminal is “You win!”, even if the AI was the real winner.</p>
 <p>Your challenge here is to get the AI to print “I win!” when it beats
 you:</p>
-<pre class="language-tex wrap"><code class="language-tex wrap">====|            I hit the nail hard.
+<pre class="language-bash wrap"><code class="language-bash wrap">====|            I hit the nail hard.
 
 ===|             You hit the nail gently.
 
@@ -6014,6 +6169,8 @@ If the human player is the winner, <code>player</code> will be
 <summary>
 Solution
 </summary>
+<p>Look for two <strong>changes</strong>: one about a third of the way
+down, one right at the end.</p>
 <pre class="language-javascript line-numbers"><code class="language-javascript line-numbers"><i>const {
   keyInYN,
   keyInSelect
@@ -6109,21 +6266,20 @@ console.log("|", prompt)
 </details>
 </section>
 <!-- Get the AI to Offer to Play Again -->
-<section id="get-the-ai-to-offer-to-play-again" aria-labelledby="get-the-ai-to-offer-to-play-again" data-item="Get the AI to Offer to Play Again">
+<section id="the-ai-offers-to-play-again" aria-labelledby="the-ai-offers-to-play-again" data-item="The AI Offers to Play Again">
 <h2>
-<a href="#get-the-ai-to-offer-to-play-again">Get the AI to Offer to Play
-Again</a>
+<a href="#the-ai-offers-to-play-again">The AI Offers to Play Again</a>
 </h2>
 <details class="challenge" open>
 <summary>
-#5 Get your friends to lose constantly against your game
+Challenge 5: Can you get the AI to offer to play again?
 </summary>
 <p>If your friends play this game once and lose, they might just say
-“Cool game, bro!” and move on to something else. If the game offers them
-a chance for revenge, they might continue playing.</p>
+“Cool game!” and move on to something else. If the game offers them a
+chance for revenge, they might continue playing.</p>
 <p>Here’s how your Terminal should look after you complete this last
 challenge:</p>
-<pre class="language-tex wrap"><code class="language-tex wrap"><i>=|            You hit the nail hard.
+<pre class="language-bash wrap"><code class="language-bash wrap"><i>=|            You hit the nail hard.
 
 |             I hit the nail gently.
 
@@ -6157,28 +6313,28 @@ beginning of your script:</p>
 </code></pre>
 <h2 id="the-options-object">The <code>options</code> object</h2>
 <p>Back in section <a href="#working-with-keyinyn">15. Working with
-keyInYN</a>, you did some tests with the <code>options</code>
-object.</p>
-<p>The object looks like this:</p>
+<code>keyInYN</code></a>, you did some tests with the
+<code>options</code> object.</p>
+<p>If you remember, the <code>options</code> object looks like this:</p>
 <pre class="language-javascript"><code class="language-javascript">const options   = { guide: false }</code></pre>
-<p>If you use it with <code>keyInYN()</code> or
-<code>keyInYNStrict()</code>, it hides the default text
-<code>[y/n]</code> that <code>readline-sync</code> wants to show. It
-makes your game look neater.</p>
-<pre class="language-javascript line-numbers"><code class="language-javascript line-numbers">let player = keyInYN(whoStarts, options)</code></pre>
+<p>If you use this <code>options</code> object with
+<code>keyInYN()</code> or <code>keyInYNStrict()</code>, it hides the
+default text <code>[y/n]</code> that <code>readline-sync</code> wants to
+show. Without this default text, your game look neater.</p>
+<pre class="language-javascript"><code class="language-javascript">let player = keyInYN(whoStarts, options)</code></pre>
 <h2 id="a-string-invitation-to-play-again">A string invitation to play
 again</h2>
 <p>You’ll need to create a variable to contain the string that you will
 print in the Terminal when the game is over. You could do something like
 this:</p>
-<pre class="language-javascript line-numbers"><code class="language-javascript line-numbers">const replay = `
+<pre class="language-javascript"><code class="language-javascript">const replay = `
 Do you want to play again?
 (Type Y for Yes, N for No): `</code></pre>
 <h2 id="alternating-players">Alternating players</h2>
 <p>If the same player starts each time, the game is not so interesting.
 When the game first begins, you can declare a variable with
 <code>let</code> which indicates who will start first next time:</p>
-<pre class="language-javascript wrap"><code class="language-javascript wrap"><i>let player = keyInYN(whoStarts, options)</i>
+<pre class="language-javascript"><code class="language-javascript"><i>let player = keyInYN(whoStarts, options)</i>
 <b>let nextPlayer = !player</b></code></pre>
 <h2 id="a-second-while-loop">A second <code>while</code> loop</h2>
 <p>You’ll need to wrap your current game inside a second
@@ -6186,8 +6342,7 @@ When the game first begins, you can declare a variable with
 <code>playing</code>, you can keep looping in the outer loop so long as
 <code>playing</code> is true. Here’s a simplified version of how this
 can work.</p>
-<pre class="language-javascript line-numbers"><code class="language-javascript line-numbers">
-let playing   = true
+<pre class="language-javascript"><code class="language-javascript">let playing   = true
 
 while (playing) {
   // Initialize a new game
@@ -6196,8 +6351,9 @@ while (playing) {
     // Your current game goes here
   }
 
-  // Somebody won. Ask the player if they want to play again
-  playing    = keyInYNStrict(replay, options)</code></pre>
+  // Somebody won. Ask the human player if they want to play again
+  playing    = keyInYNStrict(replay, options)
+}</code></pre>
 <h2 id="initializing-a-new-game">Initializing a new game</h2>
 <p>The code that you currently use to set up the game will need to be
 inside the <code>while (playing) { }</code> loop, so that a new game is
@@ -6254,6 +6410,8 @@ where these pieces of code should go.</p>
 <summary>
 Solution
 </summary>
+<p>Here you will find all the code snippets that are shown above, each
+in its correct place.</p>
 <pre class="language-javascript line-numbers"><code class="language-javascript line-numbers"><i>const {
   keyInYN,
   keyInSelect</i><b>,
@@ -6411,7 +6569,7 @@ to</li>
 <li>You read error messages, to understand where your assumptions were
 wrong</li>
 <li>You enjoy taking on challenges</li>
-<li>You will be learning something new every day</li>
+<li>You learn something new every day</li>
 </ul>
 <h2 id="most-importantly">Most importantly…</h2>
 <p><strong>You have seen that it is possible to create something
@@ -6427,8 +6585,161 @@ I can improve it, please <a
 href="https://github.com/MERNCraft/Nail-it/issues/new">create an
 issue</a> in this project’s GitHub repository. I’ll get back to you as
 soon as I can.</p>
-<h3 id="enjoy-everything"><em>Enjoy everything!</em></h3>
+<h3 id="happy-coding"><em>Happy coding!</em></h3>
 </details>
+</section>
+<section id="details" aria-labelledby="details" data-item="Details">
+<h2>
+<a href="#details">Details</a>
+</h2>
+<p>As you may have noticed, I like to include coloured blocks which you
+can collapse and ignore if you are in a hurry. These are handled by HTML
+<code>&lt;details&gt;</code> elements. The icons they use can be found
+in <code>MyTutorials.github.io/public/svg/</code>.</p>
+<p>To create one, type the Markdown prefix <code>ddd</code> (for
+<strong>d</strong>etails). You’ll be asked to choose one of the
+following styles:</p>
+<figure>
+<img src="images/Details.webp"
+alt="The dialog for the Details snippet" />
+<figcaption aria-hidden="true">The dialog for the Details
+snippet</figcaption>
+</figure>
+<h2 id="what-the-different-details-classes-look-like">What the different
+<code>details</code> classes look like</h2>
+<details open>
+<summary>
+Generic
+</summary>
+<p>This has no class.</p>
+</details>
+<details class="note" open>
+<summary>
+Note
+</summary>
+<p>This is a note.</p>
+</details>
+<details class="feedback" open>
+<summary>
+Feedback
+</summary>
+<p>This is a request for feedback.</p>
+</details>
+<details class="sandbox" open>
+<summary>
+Sandbox
+</summary>
+<p>This is a sandbox: a place to experiment and make mistakes.</p>
+</details>
+<details class="tip" open>
+<summary>
+Tip
+</summary>
+<p>This is a tip.</p>
+</details>
+<details class="trouble" open>
+<summary>
+Troubleshooting
+</summary>
+<p>Help with troubleshooting. Usually closed</p>
+</details>
+</details>
+<details class="warn" open>
+<summary>
+Warn
+</summary>
+<p>This is a warning.</p>
+</details>
+<details class="alert" open>
+<summary>
+Alert
+</summary>
+<p>This is an alert.</p>
+</details>
+<details class="question" open>
+<summary>
+Question
+</summary>
+<p>This is a question, to make you think ahead.</p>
+</details>
+<details class="challenge" open>
+<summary>
+Challenge
+</summary>
+<p>This is a challenge. You will be asked to find your own way to deal
+with a task before you reveal the solution.</p>
+<details class="hint" open>
+<summary>
+Hint
+</summary>
+<p>You’ll find some clues about how to solve the challenge here.</p>
+</details>
+<details class="solution" open>
+<summary>
+Solution
+</summary>
+<p>You’ll find the solution here.</p>
+</details>
+</details>
+<details class="tldr" open>
+<summary>
+TL;DR
+</summary>
+<p>This is a deep dive into a topic. It’s usually closed.</p>
+</details>
+<details class="pivot" open>
+<summary>
+Pivot
+</summary>
+<p>This concludes a section and introduces the next topic.</p>
+</details>
+<details class="env" open>
+<summary>
+Environment
+</summary>
+<p>Information about code editing and other useful programs.</p>
+</details>
+<details class="story" open>
+<summary>
+Story
+</summary>
+<p>A personal anecdote or business case study. Usually closed.</p>
+</details>
+<h2 id="styling">Styling</h2>
+<p>The “light” colors for the <code>&lt;details&gt;</code> elements are
+defined in the <code>:root</code> section of
+<code>MyTutorials.github.io/public/styles/</code>:</p>
+<pre class="language-css line-numbers" data-start="51"><code class="language-css line-numbers">/* Details */
+  --alert:     #f99;
+  --challenge: #ecf;
+  --env:       #aef;
+  --feedback:  #beb;
+  --note:      #dfd;
+  --pivot:     #9cf;
+  --question:  #fbd;
+  --sandbox:   #fec;
+  --solution:  #d9f6;
+  --story:     #cfe;
+  --tip:       #fe9;
+  --tldr:      #77b;
+  --trouble:   #fc9;
+  --warn:      #fbb;
+  --code:      #0001;</code></pre>
+<p>Colors for “dark” mode are defined a little lower down:</p>
+<pre class="language-css line-numbers" data-start="100"><code class="language-css line-numbers">body:has(#theme-dark:checked) {</code></pre>
+<pre class="skip"><code class="skip">/* lines skipped */</code></pre>
+<pre class="language-css line-numbers" data-start="111"><code class="language-css line-numbers">  /* Details */
+  --alert:     #800;</code></pre>
+<pre class="skip"><code class="skip">/* and so on... */</code></pre>
+<pre class="language-css line-numbers" data-start="133"><code class="language-css line-numbers">}</code></pre>
+<p>The <code>background-color</code>s are generated using the newly
+available <code>color-mix</code> functional notation:</p>
+<pre class="language-css line-numbers" data-start="867"><code class="language-css line-numbers">  background-color: color-mix(
+    in oklab,
+    var(--bg-color),
+    var(--darker)
+  );</code></pre>
+<p>In older browsers, the backgrounds should just appear plain.</p>
 </section>
 <section id="preview" aria-labelledby="preview" data-item="Preview">
 <p><img src="images/NailIt.webp" /></p>
@@ -6476,7 +6787,7 @@ Download the source files
 </summary>
 <p>You can download a ZIP file with three versions of the game in it
 from <a href="https://MERNCraft.github.io/Nail-It/scripts.zip"
-download="">here</a>.</p>
+download="">here</a>. This is what the ZIP file contains:</p>
 <ul>
 <li><code>main.js</code>: the script that you will be learning to
 write</li>
@@ -6497,81 +6808,74 @@ href="https://github.com/MERNCraft/Nail-it">here</a>.</p>
 </section>
 
 <div class="spacer"></div>
-<footer id="footer">
-<button type="button" id="previous" disabled>&lt;</button>
-<span id="previous-name"></span>
+<footer id="content-footer">
+<button type="button" class="previous" disabled>
+  <img src="../public/svg/prev.svg" alt="prev" draggable="false">
+</button>
+<span class="previous-name"></span>
 <span class="spacer"></span>
-<button type="button" id="next">&gt;</button>
-<span id="next-name"></span>
+<button type="button" class="next">
+  <img src="../public/svg/next.svg" alt="next" draggable="false">
+</button>
+<span class="next-name"></span>
 </footer>
 </main>
 
 <nav
 id="menu"
+aria-labelledby="menu"
 class="open"
 >
-<div class="paging">
-<label
-title="Split into sections"
->
-<img src="../public/svg/pages.svg" alt="pages">
-<input
-type="radio"
-name="paging"
-id="pages"
-checked
->
-</label>
-<label
-title="Show as a single page"
->
-<img src="../public/svg/scroll.svg" alt="scroll">
-<input
-type="radio"
-name="paging"
-id="scroll"
->
-</label>
-</div>
-<svg
-id="menu-icon"
-viewBox="0 0 100 100"
-preserveAspectRatio="xMidYMid meet"
->
-<g
-class="menu"
-stroke-width="20"
-stroke-linecap="round"
->
-<path
-d="M5,20 L5,80 H95 L95,20 z"
-fill="#0000"
-stroke="none"
-/>
-<line
-x1="15"
-y1="20"
-x2="85"
-y2="20"
-/>
-<line
-x1="15"
-y1="50"
-x2="85"
-y2="50"
-/>
-<line
-x1="15"
-y1="80"
-x2="85"
-y2="80"
-/>
-</g>
-</svg>
+<div class="theme">
+  <label
+  title="Dark"
+  >
+  <img src="../public/svg/dark.svg" alt="dark">
+  <input
+  type="radio"
+  name="theme"
+  id="theme-dark"
+  checked
+  >
+  </label>
+  <label
+  title="Light"
+  >
+  <img src="../public/svg/light.svg" alt="light">
+  <input
+  type="radio"
+  name="theme"
+  id="theme-light"
+  >
+  </label>
+  </div>
+  <div class="paging">
+  <label
+  title="Split into sections"
+  >
+  <img src="../public/svg/pages.svg" alt="pages">
+  <input
+  type="radio"
+  name="paging"
+  id="pages"
+  checked
+  >
+  </label>
+  <label
+  title="Show as a single page"
+  >
+  <img src="../public/svg/scroll.svg" alt="scroll">
+  <input
+  type="radio"
+  name="paging"
+  id="scroll"
+  >
+  </label>
+  </div>
+<img src="../public/svg/hamburger.svg" alt="menu" id="menu-icon">
 
 <ul id="menu-items">
 </ul>
-
 <div id="repo">
 <a
 href="https://github.com/MERNCraft/Nail-it/issues/new"

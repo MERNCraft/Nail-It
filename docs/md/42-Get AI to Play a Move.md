@@ -1,17 +1,17 @@
 <!-- Get AI to Play a Move -->
 <section
-  id="get-ai-to-play-a-move"
-  aria-labelledby="get-ai-to-play-a-move"
-  data-item="Get AI to Play a Move"
+  id="the-ai-plays-a-move"
+  aria-labelledby="the-ai-plays-a-move"
+  data-item="The AI Plays a Move"
 >
-  <h2><a href="#get-ai-to-play-a-move">Get AI to Play a Move</a></h2>
+  <h2><a href="#the-ai-plays-a-move">The AI Plays  a Move</a></h2>
   
 <details class="challenge" open>
-<summary>#2 Can you get the AI to play a move, and claim it as its own?</summary>
+<summary>Challenge 2: Can you get the AI to play a move, and claim instructions?</summary>
 
-Before, only the human player was playing, so you could use the fixed phrase `You hit the nail `, and then add `gently` or `firmly` or `hard` after it. Now you'll need to get the the AI to say `I  hit the nail ...`.
+Before, only the human player was playing, so you could use the fixed phrase `You hit the nail `, and then add `gently` or `firmly` or `hard` after it. Now you'll need to get the the AI to say `I hit the nail ...`.
 
-```tex-w
+```bash-w
 <i>-============| The nail is 13 units long.
 
 ==========|    You hit the nail gently.</i>
@@ -22,7 +22,7 @@ Before, only the human player was playing, so you could use the fixed phrase `Yo
 
 ## Coercion
 
-You've already seen that JavaScript allows you to use truthy values like `12` to act as if they were `true`. You've heard that `0` will behave like `false`.
+You've already seen that JavaScript allows you to use truthy values like `12` to act as if they were `true`. You've heard that `0` will behave like `false`. JavaScript can make variables of one type behave like variables of a different type.
 
 JavaScript uses a process called _coercion_ when you try to combine values of two different types (like Boolean `true` or `false`) and numbers. Using coercion, JavaScript will convert one of the types into the other.
 
@@ -30,9 +30,9 @@ JavaScript uses a process called _coercion_ when you try to combine values of tw
 <summary>Turn `false` into `0`</summary>
 Here's a trick for you to try in the Node IDE, to turn `false` into `0` and `true` into 1:
 
-1. In a new Terminal, type `node`
+1. In a new Terminal, type `node`, and then the following expressions:
 
-```tex-w
+```bash-w
 <b>node</b>
 Welcome to Node.js v23.1.0.
 Type ".help" for more information.
@@ -44,7 +44,7 @@ Type ".help" for more information.
 
 And just for fun:
 
-```tex-w
+```bash-w
 > true + false
 1
 ```
@@ -53,13 +53,13 @@ And just for fun:
 
 Sometimes coercion has unexpected consequences. Try this in the Node IDE:
 
-```tex-w
+```bash-w
 > 4 + "2"
 '42'
 > 4 - "2"
 2
 ```
-This happens because `+` can be use as a string concatenation operator, and so that's how JavaScript decides to use it. The `-` operator is only used with numbers, so the string "2" is coerced to a number before the operation.
+The string “42” is created because `+` can be used as a [string concatenation operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#string_operators), and so that's how JavaScript decides to use it. The number 4 is coerced to a string. The [`-` subtraction operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Subtraction) is only used with numbers, so the string "2" is coerced to a number before the operation.
 
 </details>
 
@@ -71,18 +71,14 @@ You could create an array with the different pronouns that your game needs: "I" 
 const players = [ "I", "You" ]
 ```
 
-Now, `player` will have the value `true` or `false`. And `players[0]` will be "I", while `player[1]` will be "You".
-
-<details class="challenge" open>
-<summary>Using `players` and `player`, coerced with `0`</summary>
-Can you see how to use the ideas describe above to get the right pronoun for the current player?
+The value of `players[0]` will be "I", while `player[1]` will be "You". The value of the variable player will be either `true` or  `false`. From what you tested above, can you see how to get the value ”I” from players when player is `false`, and how to get the value ”You” when player is `true`?
 
 <details class="solution">
-<summary>Solution</summary>
+<summary>Solution to the pronoun problem</summary>
 
 You can test this your solution in the Node IDE:
 
-```tex-w
+```bash-w
 <b>node</b>
 Welcome to Node.js v23.1.0.
 Type ".help" for more information.
@@ -99,7 +95,6 @@ false
 ```
 
 </details>
-</details>
 
 <details class="hint">
 <summary>Hints for solving the main challenge</summary>
@@ -111,16 +106,16 @@ false
    ```
    ... to generate a prompt that will work for either player.
 4. Should you move this code from where it is to a better place?
-5. Currently, `index` is declared as a constant in the `if (player) { ... }` block, so it is not available outside that block. Can you declare it with `let` outside the `if` statement altogether?
+5. Currently, `index` is declared as a `const` in the `if (player) { ... }` block, so it is not available outside that block. Can you declare it with `let` outside the `if` statement altogether?
 6. When the AI chooses a value for `force`, you will need to use an adjusted value of `index` to get the correct word from the `strengths` array.  
 7. For now, you can make the AI use a `force` of `1` every time.
 
 </details>
 
-
-
 <details class="solution">
 <summary>Solution to the main challenge</summary>
+
+You can achieve the required result by making **changes** in six different lines of code:
 
 ```javascript-
 <i>const {

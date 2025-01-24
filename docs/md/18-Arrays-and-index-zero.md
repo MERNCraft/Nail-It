@@ -48,7 +48,7 @@ To access a particular item in an array, you write the array name followed by sq
 animals[1]
 ```
 
-For [practical and theoretical reasons](https://en.wikipedia.org/wiki/Zero-based_numbering), arrays in JavaScript start counting from zero, not from 1. There are zero items _before_ 'Lion', so `animals[0]` refers to 'Lion'.
+For [practical and theoretical reasons](https://en.wikipedia.org/wiki/Zero-based_numbering), arrays in JavaScript start counting from zero, not from 1. There are zero items _before_ 'Lion', so `animals[0]` refers to 'Lion'. There is one item before ‘Elephant’, so `animals[1]` refers to ‘Elephant'.
 
 ## `animals[index]`
 
@@ -62,7 +62,7 @@ console.log(
 ```
 The adjusted value of `index` ensures that the output in the Terminal shows the correct animal name.
 
-```tex-w
+```bash-w
 <i>[1] Lion  
 </i><b>[2] Elephant</b><i>  
 [3] Crocodile  
@@ -99,7 +99,7 @@ console.log(
 
 ## Adjusting for force
 
-In the final version of your game, vhen you hit the nail "gently", the value returned by `keyInSelect()` will be `0`, but nail will get driven `1` unit into its support.
+In the final version of your game, when you hit the nail "gently", the value returned by `keyInSelect()` will be `0`, but nail will get driven `1` unit into its support.
 
 Conversely, when the AI hits the nail with a force of `3` (for example), the Terminal should show `"I hit the nail hard"`, where "hard" is found at `strength[2]`.
 

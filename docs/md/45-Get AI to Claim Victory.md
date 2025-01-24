@@ -1,19 +1,19 @@
-<!-- Get AI to Claim Victory -->
+<!-- The AI Claims Victory -->
 <section
-  id="get-ai-to-claim-victory"
-  aria-labelledby="get-ai-to-claim-victory"
-  data-item="Get AI to Claim Victory"
+  id="the-ai-claims-victory"
+  aria-labelledby="the-ai-claims-victory"
+  data-item="The AI Claims Victory"
 >
-  <h2><a href="#get-ai-to-claim-victory">Get AI to Claim Victory</a></h2>
+  <h2><a href="#the-ai-claims-victory">The AI Claims Victory</a></h2>
   
 <details class="challenge" open>
-<summary>#4 Can you make the AI claim victory when it wins?</summary>
+<summary>Challenge 4: Can you make the AI claim victory when it wins?</summary>
 
 Currently, when the game is over, the last line that is printed in the Terminal is "You win!", even if the AI was the real winner.
 
 Your challenge here is to get the AI to print "I win!" when it beats you:
 
-```tex-w
+```bash-w
 ====|            I hit the nail hard.
 
 ===|             You hit the nail gently.
@@ -37,6 +37,7 @@ Your challenge here is to get the AI to print "I win!" when it beats you:
 
 <details class="solution">
 <summary>Solution</summary>
+Look for two **changes**: one about a third of the way down, one right at the end.
 
 ```javascript-
 <i>const {

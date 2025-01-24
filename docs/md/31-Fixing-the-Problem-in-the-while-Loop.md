@@ -19,7 +19,7 @@ length = length - force
 nail   = "-" + "=".repeat(length - 1) + "|"
 ```
 
-Before the `while` loop even starts, your code calculates and prints a value for `nail`:
+But also, at line 33 and line 40, before the `while` loop even starts, your code calculates and prints a value for `nail`:
 
 ```javascript-#33
 <b>let nail     = "-" + "=".repeat(length - 1) + "|"</b>
@@ -78,7 +78,7 @@ node main.js
 3. Press `Y`
 4. Press the `3` key on your keyboard every time you are asked how hard you want to hit. If all goes well, your Terminal should look like this:
 
-```tex-w
+```bash-w
 -===========| The nail is 12 units long.
 
 -========| You hit the nail hard.
@@ -104,11 +104,11 @@ Your game stops when `length` becomes `0`, and the result of your last strike is
 2. Press `2` the _first_ time you are asked how hard you want to hit
 3. Press `3` every other time.
 
-It seems that the `length - 1` error is still present.
+Ouch. It seems that the `length - 1` error is still present. Here's the error that the Terminal shows:
 
 <details class="trouble" open>
 <summary>Invalid count value: -3</summary>
-```tex-w
+```bash-w
 -===========| The nail is 12 units long.
 
 -=========| You hit the nail firmly.
@@ -125,13 +125,13 @@ It seems that the `length - 1` error is still present.
 [0] CANCEL
 
 How hard do you plan to hit? [1, 2, 3, 0]: 3
-/Users/james/Tutorials/My Learning Journey/Nail_It/main.js:41
+/path/to/My Learning Journey/Nail_It/main.js:41
   nail   = "-" + "=".repeat(length - 1) + "|"
                      ^
 
 RangeError: Invalid count value: -3
     at String.repeat (&lt;anonymous&gt;)
-    at Object.&lt;anonymous&gt; (/Users/james/Tutorials/My Learning Journey/Nail_It/main.js:41:22)
+    at Object.&lt;anonymous&gt; (/path/to/My Learning Journey/Nail_It/main.js:41:22)
 ```
 
 </details>
@@ -174,8 +174,8 @@ Hint: You only need to add four characters to `main.js` (and two of them are opt
 
 
 <details class="solution">
-<summary>Solution</summary>
-Here's the full script of `main.js` with the required changes.
+<summary>Full solution</summary>
+Here’s the full script of `main.js` with the changes required to allow the player to hit the nail several times shown in **bold**. Note that `while (length)` becomes `while (length > 0)`. 
 
 ```javascript
 <i>const {
@@ -241,7 +241,7 @@ while (</i><b>length > 0</b><i>) {
 
 Now when you run your script, the output in the Terminal should look something like this, even if you hit too hard the last time:
 
-```tex-w
+```bash-w
 -===========| The nail is 12 units long.
 
 -=========| You hit the nail firmly.
@@ -271,7 +271,7 @@ This problem was created because the same lines of code were being executed in t
 
 The problem was solved by rethinking the code so that no repetition was necessary.
 
-At the very end of this guide, you will discover _functions_, which are reusable blocks of code where you can create functionality that you write in one place, and can use from many different places.
+
 
 </details>
 </section>

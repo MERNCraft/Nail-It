@@ -43,7 +43,7 @@ You'll have to play solo.`)
 <summary>index is not defined</summary>
 Here's the error that you will see:
 
-```tex-w
+```bash-w
 <i>-===========| The nail is 12 units long.
 
 [1] gently
@@ -53,12 +53,12 @@ Here's the error that you will see:
 
 How hard do you plan to hit? [1, 2, 3, 0]: 3
 index: 2 strength: hard
-</i><b>/Users/james/Tutorials/My Learning Journey/Nail_It/main.js:51
+</i><b>/path/to/My Learning Journey/Nail_It/main.js:51
 length = length - index
                   ^
 
 ReferenceError: index is not defined
-    at Object.<anonymous> (/Users/james/Tutorials/My Learning Journey/Nail_It/main.js:51:19)</b>
+    at Object.<anonymous> (/path/to/My Learning Journey/Nail_It/main.js:51:19)</b>
 ```
 
 In fact, there will be more information printed in the Terminal, but the key information is shown above.
@@ -86,7 +86,11 @@ length = length - </i><b>index</b>
 
 ## Block scope
 
-For JavaScript, the `index` that is declared inside curly braces (`{ ... }`) is accessible only inside those curly braces. This is due to a concept called _scope_. Any time a variable is declared inside curly braces, the world outside those curly braces cannot touch it. See [MDN's documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/block#block_scoping_rules_with_let_const_class_or_function_declaration_in_strict_mode) for more details.
+JavaScript sets up barriers between different blocks of code so that data in one block doesn't interfere with data from another. It uses curly braces (`{ ... }`) to do this. Humans do something similar with walls and fences and hedges.
+
+![Fences and hedges to keep things safely in place](images/HausWildenrathGarten.jpg){data-title="File:HausWildenrathGarten.jpg" data-credits="[CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.en) by [Bodoklecksel](https://de.wikipedia.org/wiki/Benutzer:Bodoklecksel) | [source](https://commons.wikimedia.org/wiki/File:HausWildenrathGarten.jpg)"}
+
+For JavaScript, the `index` that is _declared_ inside curly braces is _accessible_ only inside those curly braces. This is due to a concept called _scope_. Any time a variable is declared inside curly braces, the world outside those curly braces cannot touch it. See [MDN's documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/block#block_scoping_rules_with_let_const_class_or_function_declaration_in_strict_mode) for more details.
 
 ```javascript-#39
 <b>{</b><i> // it's the human player's turn
@@ -107,14 +111,18 @@ For JavaScript, the `index` that is declared inside curly braces (`{ ... }`) is 
 
 It's like when you call your mother "Mum" (or whatever you call her) _within your family_, everyone knows who you are talking about. But if you hear a stranger on the street use the same word, you know that they are talking about someone else. Within the _scope_ of your family, "Mum" refers to a particular person. Outside the scope of your family, "Mum" means something different.
 
+The scope of a celebrity, on the other hand, is much wider than the scope of your family. If you say “the president”, the word will have the same public meaning for every family in your country. However, if you are talking to another member of your local chess club, “the president” may privately mean “the president of the local chess club.” The name can be redefined in certain contexts.
+
+The same is true in JavaScript: a variable that is declared outside a pair of curly braces has the same meaning when it is used inside the curly braces... unless a new variable with the same name is declared inside the curly braces, in which case the two variables-with-the-same-name can have different values. The value set inside the curly braces will not be available outside, and the value set outides the curly braces will not be available inside. Each variable is exclusive to its own scope.
+
 In the code above, the `index` on line 51 has not been declared using `const` or `let` or even `var`. So JavaScript gives you an error:
 
-```tex-w
+```bash-w
 ReferenceError: index is not defined
 ```
 
 ## Fixing the problem
-To tell the truth, `index` does not hold the right number. As you saw in section [17. Choosing a Number](#choosing-a-number), `index` refers to the position of the word `"hard"` inside the `strength` array, and positions in an array are counted starting from zero.
+To tell the truth, `index` does even not hold the right number. As you saw in section [17. Choosing a Number](#choosing-a-number), `index` refers to the position of the word `"hard"` inside the `strength` array, and positions in an array are counted starting from zero.
 
 What you want is a number that is `index + 1`. Here's how you can create a variable called `force`, using `let`, and give it the value `index + 1`
 
@@ -158,7 +166,7 @@ Because you declare `force` using `let` _outside_ the curly braces:
 <summary>Assignment to constant variable</summary>
 Now you get a new error:
 
-```tex-w
+```bash-w
 <i>-===========| The nail is 12 units long.
 
 [1] gently
@@ -168,12 +176,12 @@ Now you get a new error:
 
 How hard do you plan to hit? [1, 2, 3, 0]: 3
 index: 2 strength: hard</i>
-<b>/Users/james/Tutorials/My Learning Journey/Nail_It/main.js:54
+<b>/path/to/My Learning Journey/Nail_It/main.js:54
 length = length - force
        ^
 
 TypeError: Assignment to constant variable.
-    at Object.<anonymous> (/Users/james/Tutorials/My Learning Journey/Nail_It/main.js:54:8)</b>
+    at Object.<anonymous> (/path/to/My Learning Journey/Nail_It/main.js:54:8)</b>
 ```
 
 This is my fault (but I did it on purpose). On line 22, I got you to declare `length` using `const`. This tells JavaScript that its value will never change.
@@ -188,7 +196,7 @@ So, when on line 54, the script tries to set `length` to a different value...
 length = length - force
 ```
 
-... JavaScript complains.
+... JavaScript rightly complains.
 
 </details>
 
@@ -206,7 +214,7 @@ let length    = 12
 
 Now the output in the Terminal looks good. No errors.
 
-```tex-w
+```bash-w
 -===========| The nail is 12 units long.
 
 [1] gently

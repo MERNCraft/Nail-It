@@ -9,10 +9,10 @@
 
   
 <details class="challenge" open>
-<summary>#1 <After the nail is hit, can you show it at its new length?</summary>
+<summary>Challenge 1: After the nail is hit, can you show it at its new length?</summary>
 Here's what you need to print in the Terminal:
 
-```tex-w
+```bash-w
 <i>-===========| The nail is 12 units long
 
 [1] gently
@@ -54,6 +54,7 @@ The solution below contains some refactoring.
 2. I've  moved the declaration of the `prompt` variable after the declaration of `length`, because `prompt` uses `length`.
 3. I've also declared `prompt` with `let`. This might be a clue for challenge N° 2.
 4. I've removed the `console.log()` statement from the first branch of the `if` statement, because it's not needed anymore.
+5. Changed lines are shown in bold.
 
 ```javascript
 <i>const {

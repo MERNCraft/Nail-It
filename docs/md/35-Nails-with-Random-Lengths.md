@@ -7,11 +7,11 @@
   <h2><a href="#nails-with-random-lengths">Nails with Random Lengths</a></h2>
   
 <details class="challenge" open>
-<summary>#8 Can you give the nail a different length each time?</summary>
+<summary>Challenge 8: Can you give the nail a different length each time?</summary>
 
 Can you choose a nail length in the range 12 - 15 units, to make the game more interesting (when the AI starts to play)? For example:
 
-```tex-w
+```bash-w
 <i>-===========| The nail is </i><b>15</b><i> units long.</i>
 ```
 </details>
@@ -26,7 +26,7 @@ There are three things to note here:
 
 1. `Math.random()` gives a number in the range between `0` and _almost_ `1`. It will never return the value `1`.
 2. If you multiply this number-between-0-and-almost-1 by any number, you will get a number between `0` and _almost_ the number you multiplied by.
-3. [`Math.floor()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor) takes a number and returns the next lowest integer. So `1.999` becomes `1`, and so does `1.001`
+3. [`Math.floor()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor) takes a number and returns the nearest lower integer. So `1.999` becomes `1`, and so does `1.001`
 
 Using these three ideas together, you can create an integer (whole number) which is in the range `0` to `n - 1`, where `n` is the number that you multiply `Math.random()` by.
 
@@ -40,13 +40,13 @@ To get a number between 12 and 15, you could use:
 
 1. In a new Terminal window, open the Node Interactive Development Environment (IDE) by typing:
 
-```tex-w
+```bash-w
 node
 ```
 
 2. Enter the expression `12 + Math.floor(Math.random() * 4)` and press Enter
 
-```tex-w
+```bash-w
 <b>node</b>
 <i>Welcome to Node.js v23.1.0.
 Type ".help" for more information.</i>
@@ -61,7 +61,7 @@ The IDE will give you an number between `12` and `15` (or `12 + (4-1)`).
 
 You should get a different value most times, but sometimes you'll get the same value twice. That's how random it is.
 
-```tex-w
+```bash-w
 > <b>12 + Math.floor(Math.random() * 4)</b>
 14
 > <b>12 + Math.floor(Math.random() * 4)</b>

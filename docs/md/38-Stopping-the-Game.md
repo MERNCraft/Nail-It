@@ -7,11 +7,11 @@
   <h2><a href="#stopping-the-game">Stopping the Game</a></h2>
   
 <details class="challenge" open>
-<summary>#9 Can you stop the game early, before there is a winner?</summary>
+<summary>Challenge 9: Can you stop the game early, before anyone wins?</summary>
 
 If the human player presses `0` when asked how hard to hit, can you make the game end gracefully?
 
-```tex-w
+```bash-w
 <i>-==============| The nail is 15 units long.
 
 ============|    You hit the nail hard.
@@ -26,7 +26,7 @@ How hard do you plan to hit? [1, 2, 3, 0]: </i> <b>0
 Thanks for playing!</b>
 ```
 
-<details class="hint" open>
+<details class="hint">
 <summary>Hints</summary>
 1. You can add a `const` variable called `endGame` with the text that you want to show when the game ends.
 2. You can check if `index < 0` in the `if` statement for the player.
@@ -35,8 +35,10 @@ Thanks for playing!</b>
 
 </details>
 
-<details class="solution" open>
+<details class="solution">
 <summary>Solution</summary>
+
+There are seven **new lines** in two different places.
 
 ```javascript-
 <i>const {

@@ -12,7 +12,7 @@ Remember, back in section [16. A Few Words about `true` and `false`](#true-and-f
 
 ```javascript-w
 if (player) { // it's the human player's turn
-  
+  // TODO: ask the human player for a number between 1 and 3
 } else { // it's the AI's turn to play
   // TODO: choose the number between 1 and 3 to ensure AI wins
   // (if possible)
@@ -39,7 +39,7 @@ Question: What do you expect will happen if you run your script and press any ke
 
 Answer: The game will print the string in the Terminal. And stop.
 
-```tex-w
+```bash-w
 <b>node main.js</b>
 
 -===========| The nail is 12 units long.
@@ -55,6 +55,8 @@ force = 0
 ```
 
 ... have no effect. (So why are they there? 🤔)
+
+I’ve included them so that your game won’t break unexpectedly later. You can ignore them for now.
 
 </details>
 
@@ -116,17 +118,16 @@ Because this solution used copy and paste, there is a _second_ instruction to `r
 ```
 
 The Don't Repeat Yourself principle (DRY) recommends that you never repeat code if you can help it. Can you think of a better way to handle the way the `keyInSelect()` method is loaded?
-</details>
 
 </details>
-
+</details>
 
 <details class="solution">
 <summary>A more elegant solution</summary>
 This second solution has just the same effect, but it is more elegant:
 
 * The `keyInYN` and `keyInSelect` methods of `readline-sync` are loaded explicitly at the beginning of the script.
-* The strings used to display text in the Terminal have been place together with all the other strings, so that it will be easy to find them if they need to be updated or translated.
+* The strings used to display text in the Terminal have been placed together with all the other strings, so that it will be easy to find them if they need to be updated or translated.
 * The string `"\x1B[1A\x1B[K"` has been assigned to its own variable
 
 **You should adopt the solution below, which is why I have given the complete code listing.**

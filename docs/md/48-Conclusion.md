@@ -36,7 +36,7 @@ You have also seen how the process of programming works:
 * You run little tests, to check that you have understood
 * You read error messages, to understand where your assumptions were wrong
 * You enjoy taking on challenges
-* You will be learning something new every day
+* You learn something new every day
 
 ## Most importantly...
 
@@ -46,6 +46,6 @@ You have also seen how the process of programming works:
 <summary>Feedback</summary>
 If you have any questions about this guide, or suggestions about how I can improve it, please [create an issue](https://github.com/MERNCraft/Nail-it/issues/new) in this project's GitHub repository. I'll get back to you as soon as I can.
 
-### _Enjoy everything!_
+### _Happy coding!_
 </details>
 </section>

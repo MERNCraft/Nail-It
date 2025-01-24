@@ -14,7 +14,7 @@ So far, you have prepared code that can:
 
 That's good progress. 
 
-Before moving on to drawing the nail, there are still two more trick that you can learn from the [`readline-sync` documentation](https://www.npmjs.com/package/readline-sync).
+Before moving on to drawing the nail, there are still two more tricks that you can learn from the [`readline-sync` documentation](https://www.npmjs.com/package/readline-sync).
 
 Here's the code from the next example in the [`readline-sync` documentation](https://www.npmjs.com/package/readline-sync). I haven't made any changes to it, because I plan to change it quite radically.
 
@@ -42,7 +42,7 @@ This code creates an interactive slider. Here's how you can test it:
 
 1. Create a new file in your `Tests/readline-sync/` folder:
 
-```tex-w
+```bash-w
 code slider.js
 ```
 
@@ -50,7 +50,7 @@ code slider.js
 3. Save your changes.
 4. In the Terminal, execute the command:
 
-```tex-w
+```bash-w
 node slider.js
 ```
 
@@ -69,7 +69,8 @@ Or to put it another way: Can you guess what this code does?
 console.log('\x1B[1A\x1B[K')
 ```
 
-Do you think it might be connected with the way the slider bar updates itself.
+Do you think it might be connected with the way the slider bar updates itself?
+
 </details>
 
 <details class="sandbox" open>
@@ -77,20 +78,21 @@ Do you think it might be connected with the way the slider bar updates itself.
 Here's how you could test what it does.
 
 1. Create a new file in a new subfolder of your `Nail_It/Tests/` folder:
-```tex-w
+```bash-w
 code ../strings/deleteLines.js
 ```
 
 This line says:
 
-```tex-w
+```bash-w
 * <b>code</b>             Hey VS Code!
 * <b>..</b>               Move to the parent folder of this
                    `readline-sync/` folder (that is: move
                    to the `Nail_It/Tests/` folder)
-* <b>/string</b>          Create a new folder there called `string`
-* <b>/deleteLines.js</b>  Create a JavaScript file there called
-                   `deleteLines.js`
+* <b>/string</b>          Imagine  a new folder there called `string`
+* <b>/deleteLines.js</b>  Imagine a JavaScript file there called
+                   `deleteLines.js`, and open this imaginary file
+                   in your text editor
 ```
 
 2. Paste the following code into your new file:
@@ -112,13 +114,13 @@ console.log('\x1B[1A\x1B[K')
 3. Save the new `deleteLines.js` file.
 4. Tell the Terminal that you want to change directories, to work in the new `Nail_It/Tests/strings/` folder:
 
-```tex-w
+```bash-w
 cd ../strings
 ```
 
 5. Run the script that you have just created:
 
-```tex-w
+```bash-w
 node deleteLines.js
 ```
 
@@ -135,7 +137,7 @@ Can you change `deleteLines.js` so that the last `console.log()` line deletes mo
 
 OK. I'll help you with this one. JavaScript has a method called [`repeat()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/repeat) that you can use with a string. Here's how it works:
 
-```tex-w
+```bash-w
 <b>node</b>
 Welcome to Node.js v23.1.0.
 Type ".help" for more information.

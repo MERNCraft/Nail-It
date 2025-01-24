@@ -7,11 +7,11 @@
   <h2><a href="#how-hard-the-nail-was-hit">How Hard the Nail was Hit</a></h2>
   
   <details class="challenge" open>
-  <summary>#2 Can you show how hard the solo player chose to hit the nail?</summary>
+  <summary>Challenge 2: Can you show how hard the solo player hits the nail?</summary>
 
 Here's what the Terminal should show when you have finished this challenge:
   
-```tex-w
+```bash-w
 <i>-===========| The nail is 12 units long
 
 [1] gently
@@ -31,8 +31,9 @@ How hard do you plan to hit? [1, 2, 3, 0]: 2
 
 </details>
 
-<details class="solution">
+<details class="solution" open>
 <summary>Solution</summary>
+There are three changed lines of code. Look for **bold** text.
 
 ```javascript
 <i>const {
